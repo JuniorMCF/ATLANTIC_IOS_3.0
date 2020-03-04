@@ -27,6 +27,7 @@
 		795DDE78240F3CEB00F4F52E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE76240F3CEB00F4F52E /* LoginViewModel.swift */; };
 		795DDE7A240F3DB000F4F52E /* AllBenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */; };
 		795DDE7C240F3E0D00F4F52E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */; };
+		795DDE80240F418E00F4F52E /* AtlanticDerby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */; };
 		7960240A23F1B70A00F3BCA8 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240923F1B70A00F3BCA8 /* Tournament.swift */; };
 		7960240C23F201F100F3BCA8 /* Sorteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240B23F201F100F3BCA8 /* Sorteo.swift */; };
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
@@ -36,7 +37,6 @@
 		796429BF240DC5860076265A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BE240DC5860076265A /* AppDelegate.swift */; };
 		796429C1240DC5BD0076265A /* CustomLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C0240DC5BC0076265A /* CustomLogout.storyboard */; };
 		796429C3240DC5C30076265A /* CustomEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C2240DC5C30076265A /* CustomEvent.storyboard */; };
-		796429C5240DC6450076265A /* AtlanticDerby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C4240DC6450076265A /* AtlanticDerby.storyboard */; };
 		796429C7240DC6630076265A /* AtlanticDerbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429C6240DC6630076265A /* AtlanticDerbyViewController.swift */; };
 		796429CB240DC72D0076265A /* AllBenefits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429CA240DC72D0076265A /* AllBenefits.storyboard */; };
 		7964E3C22409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */; };
@@ -277,6 +277,7 @@
 		795DDE76240F3CEB00F4F52E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllBenefitsViewController.swift; sourceTree = "<group>"; };
 		795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AtlanticDerby.storyboard; sourceTree = "<group>"; };
 		7960240923F1B70A00F3BCA8 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		7960240B23F201F100F3BCA8 /* Sorteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorteo.swift; sourceTree = "<group>"; };
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -286,7 +287,6 @@
 		796429BE240DC5860076265A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796429C0240DC5BC0076265A /* CustomLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomLogout.storyboard; sourceTree = "<group>"; };
 		796429C2240DC5C30076265A /* CustomEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomEvent.storyboard; sourceTree = "<group>"; };
-		796429C4240DC6450076265A /* AtlanticDerby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AtlanticDerby.storyboard; path = "../../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Benefits/AtlanticDerby/AtlanticDerby.storyboard"; sourceTree = "<group>"; };
 		796429C6240DC6630076265A /* AtlanticDerbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtlanticDerbyViewController.swift; sourceTree = "<group>"; };
 		796429CA240DC72D0076265A /* AllBenefits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllBenefits.storyboard; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Benefits/AllBenefits.storyboard"; sourceTree = "<group>"; };
 		7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBenefitsCollectionViewDelegateAndDatasource.swift; sourceTree = "<group>"; };
@@ -635,7 +635,7 @@
 		7968E35623FF45D6007B6D3A /* AtlanticDerby */ = {
 			isa = PBXGroup;
 			children = (
-				796429C4240DC6450076265A /* AtlanticDerby.storyboard */,
+				795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */,
 				7968E36023FF4B80007B6D3A /* AtlanticDerby2.storyboard */,
 				7968E36A23FF4CBE007B6D3A /* AtlanticDerby3.storyboard */,
 				7968E36C23FF4CCC007B6D3A /* AtlanticDerby4.storyboard */,
@@ -1709,8 +1709,8 @@
 				84ED4FFC23E37F050010D378 /* RafflesDream.storyboard in Resources */,
 				84ED4FF723E37F050010D378 /* Main~.storyboard in Resources */,
 				84626F25240839690068F5A1 /* Notify.storyboard in Resources */,
-				796429C5240DC6450076265A /* AtlanticDerby.storyboard in Resources */,
 				795DDE66240F39AA00F4F52E /* TrophyCategory.storyboard in Resources */,
+				795DDE80240F418E00F4F52E /* AtlanticDerby.storyboard in Resources */,
 				7964E3D02409AAAA0043DD67 /* AgendaCollectionViewCell.xib in Resources */,
 				795DDE68240F3A0A00F4F52E /* Register.storyboard in Resources */,
 				84ED4FF923E37F050010D378 /* RafflesDetail.storyboard in Resources */,
