@@ -28,6 +28,7 @@
 		795DDE7A240F3DB000F4F52E /* AllBenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */; };
 		795DDE7C240F3E0D00F4F52E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */; };
 		795DDE80240F418E00F4F52E /* AtlanticDerby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */; };
+		795DDE82240F424600F4F52E /* AllBenefits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE81240F424600F4F52E /* AllBenefits.storyboard */; };
 		7960240A23F1B70A00F3BCA8 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240923F1B70A00F3BCA8 /* Tournament.swift */; };
 		7960240C23F201F100F3BCA8 /* Sorteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240B23F201F100F3BCA8 /* Sorteo.swift */; };
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
@@ -38,7 +39,6 @@
 		796429C1240DC5BD0076265A /* CustomLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C0240DC5BC0076265A /* CustomLogout.storyboard */; };
 		796429C3240DC5C30076265A /* CustomEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C2240DC5C30076265A /* CustomEvent.storyboard */; };
 		796429C7240DC6630076265A /* AtlanticDerbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429C6240DC6630076265A /* AtlanticDerbyViewController.swift */; };
-		796429CB240DC72D0076265A /* AllBenefits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429CA240DC72D0076265A /* AllBenefits.storyboard */; };
 		7964E3C22409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */; };
 		7964E3C4240967490043DD67 /* AllBenefitsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C3240967490043DD67 /* AllBenefitsCollectionViewCell.swift */; };
 		7964E3C624099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C524099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift */; };
@@ -278,6 +278,7 @@
 		795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllBenefitsViewController.swift; sourceTree = "<group>"; };
 		795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AtlanticDerby.storyboard; sourceTree = "<group>"; };
+		795DDE81240F424600F4F52E /* AllBenefits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllBenefits.storyboard; sourceTree = "<group>"; };
 		7960240923F1B70A00F3BCA8 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		7960240B23F201F100F3BCA8 /* Sorteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorteo.swift; sourceTree = "<group>"; };
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -288,7 +289,6 @@
 		796429C0240DC5BC0076265A /* CustomLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomLogout.storyboard; sourceTree = "<group>"; };
 		796429C2240DC5C30076265A /* CustomEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomEvent.storyboard; sourceTree = "<group>"; };
 		796429C6240DC6630076265A /* AtlanticDerbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtlanticDerbyViewController.swift; sourceTree = "<group>"; };
-		796429CA240DC72D0076265A /* AllBenefits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllBenefits.storyboard; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Benefits/AllBenefits.storyboard"; sourceTree = "<group>"; };
 		7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBenefitsCollectionViewDelegateAndDatasource.swift; sourceTree = "<group>"; };
 		7964E3C3240967490043DD67 /* AllBenefitsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBenefitsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7964E3C524099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RafflesDreamViewCollectionViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
@@ -1257,10 +1257,10 @@
 		84ED4F5723E37F050010D378 /* Benefits */ = {
 			isa = PBXGroup;
 			children = (
+				795DDE81240F424600F4F52E /* AllBenefits.storyboard */,
 				7968E35623FF45D6007B6D3A /* AtlanticDerby */,
 				84ED4F5823E37F050010D378 /* BenefitsCategory */,
 				84ED4F5A23E37F050010D378 /* Benefits.storyboard */,
-				796429CA240DC72D0076265A /* AllBenefits.storyboard */,
 				84ED4F5C23E37F050010D378 /* BenefitDetail */,
 			);
 			path = Benefits;
@@ -1695,9 +1695,9 @@
 				795DDE64240F38D700F4F52E /* ForgotPassword.storyboard in Resources */,
 				84ED500823E37F050010D378 /* Benefits.storyboard in Resources */,
 				84ED500523E37F050010D378 /* News.storyboard in Resources */,
-				796429CB240DC72D0076265A /* AllBenefits.storyboard in Resources */,
 				84ED4FEC23E37F050010D378 /* Club.storyboard in Resources */,
 				84ED4FF023E37F050010D378 /* TrophyDetail.storyboard in Resources */,
+				795DDE82240F424600F4F52E /* AllBenefits.storyboard in Resources */,
 				7968E36B23FF4CBE007B6D3A /* AtlanticDerby3.storyboard in Resources */,
 				84ED501023E37F050010D378 /* Benefits~.storyboard in Resources */,
 				795DDE63240F38D700F4F52E /* Login.storyboard in Resources */,
