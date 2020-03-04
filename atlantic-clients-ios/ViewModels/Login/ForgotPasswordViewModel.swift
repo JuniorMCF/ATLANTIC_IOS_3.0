@@ -24,6 +24,7 @@ protocol ForgotPasswordViewModelProtocol {
     func viewDidLoad()
 
     func tapForgotPassword()
+    func recoveryPassword()
     // Outputs
     
     var showTitles: ((ForgotPasswordTitles) -> Void)? { get set }
@@ -32,8 +33,12 @@ protocol ForgotPasswordViewModelProtocol {
 }
 
 class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
-    
-  
+    func recoveryPassword() {
+        
+        
+        
+    }
+
     var showTitles: ((ForgotPasswordTitles) -> Void)?
 
     var presentForgotPassword: (() -> Void)?

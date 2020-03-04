@@ -17,18 +17,20 @@
 		795C77D62402C746000036AB /* TournamentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C77D52402C746000036AB /* TournamentDetails.swift */; };
 		795DDE54240EA9C600F4F52E /* HorarioCollectionViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE53240EA9C600F4F52E /* HorarioCollectionViewDatasourceAndDelegate.swift */; };
 		795DDE56240EAB8A00F4F52E /* HorarioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE55240EAB8A00F4F52E /* HorarioCollectionViewCell.swift */; };
+		795DDE63240F38D700F4F52E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE61240F38D700F4F52E /* Login.storyboard */; };
+		795DDE64240F38D700F4F52E /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE62240F38D700F4F52E /* ForgotPassword.storyboard */; };
+		795DDE66240F39AA00F4F52E /* TrophyCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE65240F39AA00F4F52E /* TrophyCategory.storyboard */; };
+		795DDE68240F3A0A00F4F52E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE67240F3A0A00F4F52E /* Register.storyboard */; };
+		795DDE73240F3CA900F4F52E /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE71240F3CA900F4F52E /* ForgotPasswordViewController.swift */; };
+		795DDE74240F3CA900F4F52E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE72240F3CA900F4F52E /* LoginViewController.swift */; };
+		795DDE77240F3CEB00F4F52E /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE75240F3CEA00F4F52E /* ForgotPasswordViewModel.swift */; };
+		795DDE78240F3CEB00F4F52E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE76240F3CEB00F4F52E /* LoginViewModel.swift */; };
+		795DDE7A240F3DB000F4F52E /* AllBenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */; };
+		795DDE7C240F3E0D00F4F52E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */; };
 		7960240A23F1B70A00F3BCA8 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240923F1B70A00F3BCA8 /* Tournament.swift */; };
 		7960240C23F201F100F3BCA8 /* Sorteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240B23F201F100F3BCA8 /* Sorteo.swift */; };
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
 		7961E09423EBBBC9009E8189 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09323EBBBC9009E8189 /* Route.swift */; };
-		796429AB240DBDF70076265A /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429AA240DBDF70076265A /* Register.storyboard */; };
-		796429AD240DC19D0076265A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429AC240DC19D0076265A /* LoginViewController.swift */; };
-		796429AF240DC1BF0076265A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429AE240DC1BF0076265A /* Login.storyboard */; };
-		796429B1240DC1E40076265A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429B0240DC1E40076265A /* LoginViewModel.swift */; };
-		796429B3240DC28B0076265A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429B2240DC28B0076265A /* ForgotPasswordViewModel.swift */; };
-		796429B5240DC2AD0076265A /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429B4240DC2AC0076265A /* ForgotPassword.storyboard */; };
-		796429B7240DC2C30076265A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429B6240DC2C30076265A /* ForgotPasswordViewController.swift */; };
-		796429B9240DC3860076265A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429B8240DC3860076265A /* ProfileViewController.swift */; };
 		796429BB240DC3A60076265A /* CustomLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BA240DC3A60076265A /* CustomLogout.swift */; };
 		796429BD240DC3AC0076265A /* CustomEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BC240DC3AC0076265A /* CustomEvent.swift */; };
 		796429BF240DC5860076265A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BE240DC5860076265A /* AppDelegate.swift */; };
@@ -36,9 +38,7 @@
 		796429C3240DC5C30076265A /* CustomEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C2240DC5C30076265A /* CustomEvent.storyboard */; };
 		796429C5240DC6450076265A /* AtlanticDerby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C4240DC6450076265A /* AtlanticDerby.storyboard */; };
 		796429C7240DC6630076265A /* AtlanticDerbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429C6240DC6630076265A /* AtlanticDerbyViewController.swift */; };
-		796429C9240DC6E00076265A /* TrophyCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C8240DC6E00076265A /* TrophyCategory.storyboard */; };
 		796429CB240DC72D0076265A /* AllBenefits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429CA240DC72D0076265A /* AllBenefits.storyboard */; };
-		796429CD240DC7A30076265A /* AllBenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429CC240DC7A30076265A /* AllBenefitsViewController.swift */; };
 		7964E3C22409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */; };
 		7964E3C4240967490043DD67 /* AllBenefitsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C3240967490043DD67 /* AllBenefitsCollectionViewCell.swift */; };
 		7964E3C624099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3C524099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift */; };
@@ -267,18 +267,20 @@
 		795C77D52402C746000036AB /* TournamentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetails.swift; sourceTree = "<group>"; };
 		795DDE53240EA9C600F4F52E /* HorarioCollectionViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCollectionViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
 		795DDE55240EAB8A00F4F52E /* HorarioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioCollectionViewCell.swift; sourceTree = "<group>"; };
+		795DDE61240F38D700F4F52E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		795DDE62240F38D700F4F52E /* ForgotPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
+		795DDE65240F39AA00F4F52E /* TrophyCategory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrophyCategory.storyboard; sourceTree = "<group>"; };
+		795DDE67240F3A0A00F4F52E /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		795DDE71240F3CA900F4F52E /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		795DDE72240F3CA900F4F52E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		795DDE75240F3CEA00F4F52E /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		795DDE76240F3CEB00F4F52E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllBenefitsViewController.swift; sourceTree = "<group>"; };
+		795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7960240923F1B70A00F3BCA8 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		7960240B23F201F100F3BCA8 /* Sorteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorteo.swift; sourceTree = "<group>"; };
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7961E09323EBBBC9009E8189 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		796429AA240DBDF70076265A /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Register.storyboard; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Register/Register.storyboard"; sourceTree = "<group>"; };
-		796429AC240DC19D0076265A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Controllers/Login/LoginViewController.swift"; sourceTree = "<group>"; };
-		796429AE240DC1BF0076265A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Login/Login.storyboard"; sourceTree = "<group>"; };
-		796429B0240DC1E40076265A /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/ViewModels/Login/LoginViewModel.swift"; sourceTree = "<group>"; };
-		796429B2240DC28B0076265A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewModel.swift; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/ViewModels/Login/ForgotPasswordViewModel.swift"; sourceTree = "<group>"; };
-		796429B4240DC2AC0076265A /* ForgotPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ForgotPassword.storyboard; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Login/ForgotPassword.storyboard"; sourceTree = "<group>"; };
-		796429B6240DC2C30076265A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Controllers/Login/ForgotPasswordViewController.swift"; sourceTree = "<group>"; };
-		796429B8240DC3860076265A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Controllers/Profile/ProfileViewController.swift"; sourceTree = "<group>"; };
 		796429BA240DC3A60076265A /* CustomLogout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogout.swift; sourceTree = "<group>"; };
 		796429BC240DC3AC0076265A /* CustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEvent.swift; sourceTree = "<group>"; };
 		796429BE240DC5860076265A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -286,9 +288,7 @@
 		796429C2240DC5C30076265A /* CustomEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomEvent.storyboard; sourceTree = "<group>"; };
 		796429C4240DC6450076265A /* AtlanticDerby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AtlanticDerby.storyboard; path = "../../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Benefits/AtlanticDerby/AtlanticDerby.storyboard"; sourceTree = "<group>"; };
 		796429C6240DC6630076265A /* AtlanticDerbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtlanticDerbyViewController.swift; sourceTree = "<group>"; };
-		796429C8240DC6E00076265A /* TrophyCategory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TrophyCategory.storyboard; path = "../../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Tourney/TrophyCategory/TrophyCategory.storyboard"; sourceTree = "<group>"; };
 		796429CA240DC72D0076265A /* AllBenefits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllBenefits.storyboard; path = "../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Storyboards/Benefits/AllBenefits.storyboard"; sourceTree = "<group>"; };
-		796429CC240DC7A30076265A /* AllBenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllBenefitsViewController.swift; path = "../../../../../../../Documents/atlantic-clients-ios-develop/atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"; sourceTree = "<group>"; };
 		7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBenefitsCollectionViewDelegateAndDatasource.swift; sourceTree = "<group>"; };
 		7964E3C3240967490043DD67 /* AllBenefitsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBenefitsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7964E3C524099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RafflesDreamViewCollectionViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
@@ -925,12 +925,12 @@
 		84ED4EF923E37F050010D378 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */,
 				7964E3D32409B14A0043DD67 /* Agenda */,
 				84626F2D24083B780068F5A1 /* NotifyCollectionViewCell.swift */,
 				84626F2E24083B780068F5A1 /* NotifyDatasourceAndDelegate.swift */,
 				84626F2C24083B780068F5A1 /* NotifyViewController.swift */,
 				84ED4EFA23E37F050010D378 /* ProfileDetailViewController.swift */,
-				796429B8240DC3860076265A /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -995,7 +995,7 @@
 		84ED4F1023E37F050010D378 /* AllBenefits */ = {
 			isa = PBXGroup;
 			children = (
-				796429CC240DC7A30076265A /* AllBenefitsViewController.swift */,
+				795DDE79240F3DAF00F4F52E /* AllBenefitsViewController.swift */,
 				7964E3C12409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift */,
 				7964E3C3240967490043DD67 /* AllBenefitsCollectionViewCell.swift */,
 			);
@@ -1074,8 +1074,8 @@
 		84ED4F2523E37F050010D378 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				796429AC240DC19D0076265A /* LoginViewController.swift */,
-				796429B6240DC2C30076265A /* ForgotPasswordViewController.swift */,
+				795DDE71240F3CA900F4F52E /* ForgotPasswordViewController.swift */,
+				795DDE72240F3CA900F4F52E /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1152,7 +1152,7 @@
 		84ED4F3323E37F050010D378 /* TrophyCategory */ = {
 			isa = PBXGroup;
 			children = (
-				796429C8240DC6E00076265A /* TrophyCategory.storyboard */,
+				795DDE65240F39AA00F4F52E /* TrophyCategory.storyboard */,
 			);
 			path = TrophyCategory;
 			sourceTree = "<group>";
@@ -1225,8 +1225,8 @@
 		84ED4F4B23E37F050010D378 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				795DDE67240F3A0A00F4F52E /* Register.storyboard */,
 				84ED4F4C23E37F050010D378 /* RegisterPassword.storyboard */,
-				796429AA240DBDF70076265A /* Register.storyboard */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1327,8 +1327,8 @@
 		84ED4F6E23E37F050010D378 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				796429AE240DC1BF0076265A /* Login.storyboard */,
-				796429B4240DC2AC0076265A /* ForgotPassword.storyboard */,
+				795DDE62240F38D700F4F52E /* ForgotPassword.storyboard */,
+				795DDE61240F38D700F4F52E /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1537,8 +1537,8 @@
 		84ED4FA323E37F050010D378 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				796429B0240DC1E40076265A /* LoginViewModel.swift */,
-				796429B2240DC28B0076265A /* ForgotPasswordViewModel.swift */,
+				795DDE75240F3CEA00F4F52E /* ForgotPasswordViewModel.swift */,
+				795DDE76240F3CEB00F4F52E /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1684,17 +1684,15 @@
 				84ED4FF123E37F050010D378 /* Tourneys.storyboard in Resources */,
 				796429C1240DC5BD0076265A /* CustomLogout.storyboard in Resources */,
 				796429C3240DC5C30076265A /* CustomEvent.storyboard in Resources */,
-				796429B5240DC2AD0076265A /* ForgotPassword.storyboard in Resources */,
-				796429AF240DC1BF0076265A /* Login.storyboard in Resources */,
 				84ED500B23E37F050010D378 /* Events.storyboard in Resources */,
 				84ED4FF323E37F050010D378 /* CareerAward.storyboard in Resources */,
 				798F881E2408446A0020517F /* TrophyLose.storyboard in Resources */,
-				796429AB240DBDF70076265A /* Register.storyboard in Resources */,
 				84626F28240839D00068F5A1 /* ProfileDetail.storyboard in Resources */,
 				7968E36F23FF4CDD007B6D3A /* AtlanticDerby5.storyboard in Resources */,
 				84ED500A23E37F050010D378 /* BenefitDetail.storyboard in Resources */,
 				798F882E2408B5710020517F /* PositionDetail40.storyboard in Resources */,
 				845FB7942405BFB1001A7BF8 /* CustomProgress.storyboard in Resources */,
+				795DDE64240F38D700F4F52E /* ForgotPassword.storyboard in Resources */,
 				84ED500823E37F050010D378 /* Benefits.storyboard in Resources */,
 				84ED500523E37F050010D378 /* News.storyboard in Resources */,
 				796429CB240DC72D0076265A /* AllBenefits.storyboard in Resources */,
@@ -1702,6 +1700,7 @@
 				84ED4FF023E37F050010D378 /* TrophyDetail.storyboard in Resources */,
 				7968E36B23FF4CBE007B6D3A /* AtlanticDerby3.storyboard in Resources */,
 				84ED501023E37F050010D378 /* Benefits~.storyboard in Resources */,
+				795DDE63240F38D700F4F52E /* Login.storyboard in Resources */,
 				845FB7AB24060621001A7BF8 /* Tutorial.storyboard in Resources */,
 				84ED4FFE23E37F050010D378 /* RegisterPassword.storyboard in Resources */,
 				84ED4FFD23E37F050010D378 /* Raffles.storyboard in Resources */,
@@ -1711,8 +1710,9 @@
 				84ED4FF723E37F050010D378 /* Main~.storyboard in Resources */,
 				84626F25240839690068F5A1 /* Notify.storyboard in Resources */,
 				796429C5240DC6450076265A /* AtlanticDerby.storyboard in Resources */,
+				795DDE66240F39AA00F4F52E /* TrophyCategory.storyboard in Resources */,
 				7964E3D02409AAAA0043DD67 /* AgendaCollectionViewCell.xib in Resources */,
-				796429C9240DC6E00076265A /* TrophyCategory.storyboard in Resources */,
+				795DDE68240F3A0A00F4F52E /* Register.storyboard in Resources */,
 				84ED4FF923E37F050010D378 /* RafflesDetail.storyboard in Resources */,
 				84ED4FF823E37F050010D378 /* Chats.storyboard in Resources */,
 				7968E36D23FF4CCC007B6D3A /* AtlanticDerby4.storyboard in Resources */,
@@ -1860,11 +1860,9 @@
 				84ED507A23E382EF0010D378 /* ClubViewModel.swift in Sources */,
 				84ED507B23E382EF0010D378 /* SettingsViewModel.swift in Sources */,
 				797CCE4C23FCA0FF0085D61A /* EventDetail.swift in Sources */,
-				796429B3240DC28B0076265A /* ForgotPasswordViewModel.swift in Sources */,
 				84ED507C23E382EF0010D378 /* PaymentsViewModel.swift in Sources */,
 				84ED507D23E382EF0010D378 /* RafflesViewModel.swift in Sources */,
 				84626F3324083BCD0068F5A1 /* Notify.swift in Sources */,
-				796429B7240DC2C30076265A /* ForgotPasswordViewController.swift in Sources */,
 				84ED507E23E382EF0010D378 /* RafflesDetailViewModel.swift in Sources */,
 				7944D8EA23EB5DD6007A4033 /* Constants.swift in Sources */,
 				84ED507F23E382EF0010D378 /* RafflesDreamViewModel.swift in Sources */,
@@ -1874,6 +1872,7 @@
 				79758F8E24018C68003F31AA /* AtlanticDerby3ViewModel.swift in Sources */,
 				84ED508123E382EF0010D378 /* RegisterPasswordViewModel.swift in Sources */,
 				84ED508223E382EF0010D378 /* RegisterViewModel.swift in Sources */,
+				795DDE78240F3CEB00F4F52E /* LoginViewModel.swift in Sources */,
 				7964E3D52409C21B0043DD67 /* ProfileAgendaViewModel.swift in Sources */,
 				796E480D23ED235100E51063 /* FotoEvent.swift in Sources */,
 				795C624D240B452F00A0841F /* Horario.swift in Sources */,
@@ -1887,6 +1886,7 @@
 				7964E3C824099E4D0043DD67 /* RafflesDreamCollectionViewCell.swift in Sources */,
 				84ED508A23E382EF0010D378 /* ProfileDetailViewModel.swift in Sources */,
 				79758F902401926F003F31AA /* AD3CollectionViewCell.swift in Sources */,
+				795DDE7A240F3DB000F4F52E /* AllBenefitsViewController.swift in Sources */,
 				84ED508B23E382EF0010D378 /* ProfileViewModel.swift in Sources */,
 				84ED508C23E382EF0010D378 /* NewsViewModel.swift in Sources */,
 				796E480B23ED210200E51063 /* Foto.swift in Sources */,
@@ -1904,7 +1904,6 @@
 				84ED509523E382EF0010D378 /* BreakfastViewModel.swift in Sources */,
 				84ED509623E382EF0010D378 /* MainViewModel.swift in Sources */,
 				84ED509723E382EF0010D378 /* OnBoardingViewModel.swift in Sources */,
-				796429CD240DC7A30076265A /* AllBenefitsViewController.swift in Sources */,
 				84ED509823E382EF0010D378 /* Label.swift in Sources */,
 				79758F8C24018C36003F31AA /* AD3CollectionViewDelegateAndDatasource.swift in Sources */,
 				84ED509923E382EF0010D378 /* View.swift in Sources */,
@@ -1916,6 +1915,7 @@
 				84ED509C23E382EF0010D378 /* TextFieldDetails.swift in Sources */,
 				7964E3C624099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift in Sources */,
 				798F882A24085A2F0020517F /* TournamentTable.swift in Sources */,
+				795DDE73240F3CA900F4F52E /* ForgotPasswordViewController.swift in Sources */,
 				84ED509D23E382EF0010D378 /* Button.swift in Sources */,
 				84ED509F23E382EF0010D378 /* SceneDelegate.swift in Sources */,
 				84ED503E23E382D60010D378 /* ClubViewController.swift in Sources */,
@@ -1936,10 +1936,10 @@
 				84ED504523E382D60010D378 /* ReminderViewController.swift in Sources */,
 				84ED504623E382D60010D378 /* RafflesDreamViewController.swift in Sources */,
 				84ED504723E382D60010D378 /* RafflesDetailViewController.swift in Sources */,
+				795DDE74240F3CA900F4F52E /* LoginViewController.swift in Sources */,
 				84ED504823E382D60010D378 /* RafflesTableViewDatasourceAndDelegate.swift in Sources */,
 				795DDE56240EAB8A00F4F52E /* HorarioCollectionViewCell.swift in Sources */,
 				84ED504923E382D60010D378 /* RafflesTableViewCell.swift in Sources */,
-				796429AD240DC19D0076265A /* LoginViewController.swift in Sources */,
 				84ED504A23E382D60010D378 /* RafflesViewController.swift in Sources */,
 				84ED504B23E382D60010D378 /* RegisterPasswordViewController.swift in Sources */,
 				84ED50A423E3832B0010D378 /* BenefitsCategoryViewModel.swift in Sources */,
@@ -1954,6 +1954,7 @@
 				84ED505123E382D60010D378 /* TrophyDetailCollectionViewCell.swift in Sources */,
 				84ED505223E382D60010D378 /* TrophyDetailCollectionViewDatasourceAndDelegate.swift in Sources */,
 				84ED505323E382D60010D378 /* TrophyDetailViewController.swift in Sources */,
+				795DDE7C240F3E0D00F4F52E /* ProfileViewController.swift in Sources */,
 				84ED505423E382D60010D378 /* CareerResultsViewController.swift in Sources */,
 				796429BB240DC3A60076265A /* CustomLogout.swift in Sources */,
 				84ED505523E382D60010D378 /* CareerAwardViewController.swift in Sources */,
@@ -1974,7 +1975,6 @@
 				84ED506223E382D60010D378 /* NewsViewController.swift in Sources */,
 				84626F3124083B780068F5A1 /* NotifyDatasourceAndDelegate.swift in Sources */,
 				84ED506323E382D60010D378 /* NewsViewContoller+CollectionViewDatasource.swift in Sources */,
-				796429B9240DC3860076265A /* ProfileViewController.swift in Sources */,
 				84ED506423E382D60010D378 /* BenefitsCategoryViewController.swift in Sources */,
 				84ED506523E382D60010D378 /* BenefitsCategoryCollectionViewDatasourceAndDelegate.swift in Sources */,
 				7964E3D72409C4A10043DD67 /* AgendaViewController.swift in Sources */,
@@ -1984,7 +1984,6 @@
 				84ED506623E382D60010D378 /* BenefitsCategoryCollectionViewCell.swift in Sources */,
 				7944D8EC23EB5F5F007A4033 /* User.swift in Sources */,
 				7964E3D22409B1440043DD67 /* ProfileAgendaViewController.swift in Sources */,
-				796429B1240DC1E40076265A /* LoginViewModel.swift in Sources */,
 				84ED506723E382D60010D378 /* BenefitsTableViewDelegateAndDatasource.swift in Sources */,
 				796429BD240DC3AC0076265A /* CustomEvent.swift in Sources */,
 				84ED506823E382D60010D378 /* BenefitsViewController.swift in Sources */,
@@ -2010,6 +2009,7 @@
 				84ED507723E382D60010D378 /* ViewController.swift in Sources */,
 				7968E36923FF4C97007B6D3A /* AtlanticDerby5ViewController.swift in Sources */,
 				845FB7AD2406067C001A7BF8 /* TutorialVC.swift in Sources */,
+				795DDE77240F3CEB00F4F52E /* ForgotPasswordViewModel.swift in Sources */,
 				79758F942401A16B003F31AA /* AD4CollectionViewDelegateAndDatasource.swift in Sources */,
 				798F8826240859030020517F /* TrophyLoseCollectionViewDatasourceAndDelegate.swift in Sources */,
 				84ED507823E382D60010D378 /* OnBoardingCollectionViewCell.swift in Sources */,

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OmL-uk-q7w">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OmL-uk-q7w">
                                 <rect key="frame" x="0.0" y="44" width="320" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -28,15 +28,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-trophy" id="f5o-hv-PNe">
-                                                    <rect key="frame" x="110" y="30" width="100" height="100"/>
+                                                    <rect key="frame" x="70" y="30" width="180" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="KaC-z4-0Z1"/>
                                                         <constraint firstAttribute="height" constant="100" id="QoH-Ly-xKl"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-Gx-jTq" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="139" y="138" width="42" height="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-Gx-jTq" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="90" y="138" width="141" height="11"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -57,16 +57,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp">
-                                <rect key="frame" x="7" y="527" width="300" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-5J-wKz">
-                                <rect key="frame" x="7" y="498" width="300" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp">
+                                <rect key="frame" x="7" y="527" width="297" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,9 +66,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="h2c-Bs-0Nd" firstAttribute="bottom" secondItem="kOG-I5-LHp" secondAttribute="bottom" constant="20" id="Itu-3w-NXz"/>
+                            <constraint firstItem="h2c-Bs-0Nd" firstAttribute="trailing" secondItem="kOG-I5-LHp" secondAttribute="trailing" constant="16" id="QB3-Hy-kb7"/>
                             <constraint firstItem="OmL-uk-q7w" firstAttribute="top" secondItem="h2c-Bs-0Nd" secondAttribute="top" id="RfK-rR-aOs"/>
                             <constraint firstItem="OmL-uk-q7w" firstAttribute="leading" secondItem="h2c-Bs-0Nd" secondAttribute="leading" id="Xeq-ki-O1c"/>
+                            <constraint firstItem="kOG-I5-LHp" firstAttribute="leading" secondItem="h2c-Bs-0Nd" secondAttribute="leading" constant="7" id="ZrC-s6-z6T"/>
                             <constraint firstItem="h2c-Bs-0Nd" firstAttribute="trailing" secondItem="OmL-uk-q7w" secondAttribute="trailing" id="aJ3-Nb-jMc"/>
+                            <constraint firstItem="kOG-I5-LHp" firstAttribute="top" secondItem="OmL-uk-q7w" secondAttribute="bottom" constant="40" id="gcT-0K-WUA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h2c-Bs-0Nd"/>
                     </view>

@@ -14,7 +14,7 @@ import SwiftyJSON
 struct LoginTitles {
     
     var screenTitle: String = "BIENVENIDO"
-    var dniPlaceholder: String = "DNI"
+    var dniPlaceholder: String = "Documento"
     var passwordPlaceholder: String = "Contraseña"
     var buttonTitle: String = "Iniciar Sessión"
     var newUserPlaceholder: String = "Crear nuevo usuario"

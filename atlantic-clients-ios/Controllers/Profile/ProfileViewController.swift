@@ -27,10 +27,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var termsLabel: Label!
     @IBOutlet weak var logOutView: UIView!
     @IBOutlet weak var logOutLabel: Label!
-
-    
+ 
+    var customLogout : CustomLogout!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         profileView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapProfile)))
         settingsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapSettings)))
@@ -54,7 +56,8 @@ class ProfileViewController: UIViewController {
     }
     
     @objc private func tapLogOut() {
-        viewModel.tapLogOut()
+        appDelegate.customLogout = CustomLogout(parent: self,title: "Atlantic", message: "¿Desea cerrar sesión?",tipo:"profileLogout")
+        appDelegate.customLogout.showProgress()
     }
     @objc private func tapNotify(){
         viewModel.pushNotify()
@@ -106,6 +109,7 @@ class ProfileViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
         viewController.modalPresentationStyle = .fullScreen
+        
         present(viewController, animated: false, completion: nil)
     }
     func presentAgenda(){

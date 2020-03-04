@@ -34,8 +34,13 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet weak var reminderButton: Button!
     @IBOutlet weak var pointsLabel: Label!
     @IBOutlet weak var awardTitleLabel: Label!
-    @IBOutlet var puntosLabel: Label!
     
+    
+    
+    @IBOutlet var vContainerHidden: UIView!
+    @IBOutlet var titlePuntosLabel: Label!
+    @IBOutlet var puntosLabel: Label!
+    @IBOutlet var winLabel: Label!
     
     override func viewDidLoad() {
         super.viewDidLoad()
