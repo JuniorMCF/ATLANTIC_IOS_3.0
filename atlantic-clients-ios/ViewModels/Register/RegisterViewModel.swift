@@ -58,10 +58,12 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
         if(dni == ""){
             
         }else{
-            let parameters = ["dni":dni]
-            let dominio = Constants().urlBase+Constants().postValidarDni
-           
-            AF.request(dominio,method: .post,parameters: parameters,encoding: JSONEncoding.default,headers:nil).responseJSON{(response) in
+            
+            var dominioUrl = URL(string: Constants().urlBase+Constants().postValidarDni)
+            dominioUrl = dominioUrl?.appending("dni", value: dni)
+            let url = dominioUrl!.absoluteString
+            
+            AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
             switch response.result{
                 
             case.success(let value):

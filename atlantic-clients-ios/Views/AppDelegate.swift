@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //cobros
     var cobros = [Cobros]()
     var sorteos = [Sorteo]()
-    
+    var window: UIWindow?
     //customProgress
     var progressDialog : CustomProgress!
     var customLogout: CustomLogout!
