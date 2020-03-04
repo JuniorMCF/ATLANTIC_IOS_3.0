@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XfH-Th-FRv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Torneos-->
+        <scene sceneID="oQV-PX-oWp">
+            <objects>
+                <viewController storyboardIdentifier="TourneysID" id="rwk-o7-GcI" customClass="TourneyViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12X-2j-Uzg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SZd-yW-Qb2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TourneyCellID" rowHeight="146" id="Qbz-xF-CxL" customClass="TourneyTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbz-xF-CxL" id="hDL-EA-1da">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-ben1" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-FO-gWu">
+                                                    <rect key="frame" x="107.5" y="20" width="160" height="106"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="7bf-ZM-yBK"/>
+                                                        <constraint firstAttribute="height" constant="100" id="fEt-9o-0r4"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9aW-FO-gWu" firstAttribute="centerX" secondItem="hDL-EA-1da" secondAttribute="centerX" id="AJ0-qJ-Id9"/>
+                                                <constraint firstAttribute="bottom" secondItem="9aW-FO-gWu" secondAttribute="bottom" constant="20" id="TYQ-8F-Uaj"/>
+                                                <constraint firstItem="9aW-FO-gWu" firstAttribute="top" secondItem="hDL-EA-1da" secondAttribute="top" constant="20" id="mqD-zY-8OH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tourneyImage" destination="9aW-FO-gWu" id="RjT-xI-anC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SZd-yW-Qb2" firstAttribute="leading" secondItem="Gqp-iA-UNE" secondAttribute="leading" id="78Z-Ja-DO8"/>
+                            <constraint firstItem="Gqp-iA-UNE" firstAttribute="trailing" secondItem="SZd-yW-Qb2" secondAttribute="trailing" id="fcX-q9-pHS"/>
+                            <constraint firstItem="Gqp-iA-UNE" firstAttribute="bottom" secondItem="SZd-yW-Qb2" secondAttribute="bottom" id="m6i-yU-yJf"/>
+                            <constraint firstItem="SZd-yW-Qb2" firstAttribute="top" secondItem="Gqp-iA-UNE" secondAttribute="top" id="pDV-fp-BMy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gqp-iA-UNE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Torneos" id="8Oe-u7-UBg"/>
+                    <connections>
+                        <outlet property="tourneyTableView" destination="SZd-yW-Qb2" id="52e-ra-Bx4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tw-7h-wT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.8" y="61.619190404797607"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CrM-PM-NWH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XfH-Th-FRv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZdE-qg-ypa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rwk-o7-GcI" kind="relationship" relationship="rootViewController" id="UvM-Xr-l87"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaG-aH-fnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="61.619190404797607"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img-ben1" width="160" height="100"/>
+    </resources>
+</document>

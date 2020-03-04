@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ndx-LE-TSb">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="4Nf-DL-BF4">
+            <objects>
+                <tabBarController storyboardIdentifier="MainID" automaticallyAdjustsScrollViewInsets="NO" id="ndx-LE-TSb" customClass="MainTabBarViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NdI-zo-zOg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wcF-3Y-dcx" kind="relationship" relationship="viewControllers" id="AoY-ZG-fVy"/>
+                        <segue destination="x2f-qs-8nB" kind="relationship" relationship="viewControllers" id="SA6-3V-eGt"/>
+                        <segue destination="rG1-bo-imN" kind="relationship" relationship="viewControllers" id="oFb-W5-cE9"/>
+                        <segue destination="bgU-iS-mbp" kind="relationship" relationship="viewControllers" id="Q5i-WE-FZz"/>
+                        <segue destination="Ifr-AH-PcL" kind="relationship" relationship="viewControllers" id="vka-qS-jBL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqd-sA-Ny8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="171.36431784107947"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="chH-EJ-28k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" id="bgU-iS-mbp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Eventos" image="icon-events" id="E40-wd-vJl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vw1-8v-3wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="260"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="fKY-yH-Ee4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" id="wcF-3Y-dcx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house.fill" catalog="system" id="SbG-CA-KRh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGm-bq-JeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="-40"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="mva-ZV-VEY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chats" id="P5N-MT-BJn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="icon-chats" id="QiF-Q1-5S5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIG-yt-n4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="57"/>
+        </scene>
+        <!--Club-->
+        <scene sceneID="0cf-ol-QFS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Club" id="rG1-bo-imN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Club" image="icon-club" id="U0c-C5-uac"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8b-LS-hsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="193"/>
+        </scene>
+        <!--Payments-->
+        <scene sceneID="4eQ-E3-EbP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payments" id="x2f-qs-8nB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cobros" image="icon-payments" id="9Rl-u1-3Y4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TjI-aC-wU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760" y="124"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="8jn-iz-F7V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="Ifr-AH-PcL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Perfil" image="icon-user" id="vHD-Ds-sgQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LJ-Is-dE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="327"/>
+        </scene>
+        <!--Benefits-->
+        <scene sceneID="GXa-wh-PuJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Benefits" id="9jY-Vx-n1U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Beneficios" image="icon-user" id="Ae0-B0-4v9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKz-Ud-BOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="icon-chats" width="24" height="24"/>
+        <image name="icon-club" width="24" height="24"/>
+        <image name="icon-events" width="18" height="20"/>
+        <image name="icon-payments" width="28" height="27"/>
+        <image name="icon-user" width="16" height="16"/>
+    </resources>
+</document>

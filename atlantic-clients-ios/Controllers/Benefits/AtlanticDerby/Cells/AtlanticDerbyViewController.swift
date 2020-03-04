@@ -1,0 +1,84 @@
+//
+//  AtlanticDerbyViewController.swift
+//  atlantic-clients-ios
+//
+//  Created by Junior on 2/20/20.
+//  Copyright © 2020 Atlantic City. All rights reserved.
+//
+
+import UIKit
+
+class AtlanticDerbyViewController: UIViewController {
+    
+    
+    var benefit = Benefits()
+    
+    @IBOutlet var titleLabel: Label!
+    @IBOutlet var fechaLabel: Label!
+    @IBOutlet var pointsLabel: Label!
+    @IBOutlet var seekBar: UISlider!
+    @IBOutlet var puntosMinLabel: Label!
+    @IBOutlet var recordingButton: Button!
+    @IBOutlet var proxCarreraLabel: Label!
+    
+    
+    @IBOutlet var terminosLabel: Label!
+    @IBOutlet var fechaActualizadaLabel: Label!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bind()
+        // Do any additional setup after loading the view.
+    }
+    func bind(){
+        titleLabel.setRafflesTitleGoldCenter(with: benefit.nombre)
+        fechaLabel.setBenefitDetailTitleCenter(with: "Fecha: "+benefit.fechaTexto)
+        pointsLabel.setBenefitDetailTitleCenter(with: "Usted tiene "+String(benefit.puntos)+" puntos")
+        puntosMinLabel.setDateModify2(with: "¡Le faltan "+String(benefit.puntos_falta)+" puntos para participar en la carrera!")
+        proxCarreraLabel.setBenefitDetailTitleCenter(with: "Próxima carrera:\n"+benefit.fechaProximaTexto)
+        recordingButton.setRemindButton(with: "Crear recordatorio")
+        terminosLabel.setRafflesSubUnderline(with: "Vér términos y condiciones")
+        
+        
+        
+        seekBar.setThumbImage(UIImage(named: "ic_derby"), for: .normal)
+        seekBar.tintColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
+        
+        //puntos derby
+        let points = benefit.puntos
+        let pointsF = benefit.puntos_falta
+        if(pointsF == 0){
+            seekBar.setValue(100, animated: false)
+        }else{
+            let temp = Float((points*100)/pointsF)
+            seekBar.setValue(temp, animated: false)
+        }
+        //fecha y hora
+        let fecha = (benefit.fechaActualizacion as NSString).doubleValue
+        let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "HH:mm"
+        dateFormatter2.locale = NSLocale.current
+        dateFormatter2.timeZone = TimeZone(abbreviation: "GMT")
+        let txtFecha = dateFormatter.string(from: date)
+        let txtHour = dateFormatter2.string(from: date)
+        fechaActualizadaLabel.setDateModify(with: "Actualizado el "+txtFecha+" a las "+txtHour+" hrs")
+        
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLv-qy-lsC">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Grand Prix-->
+        <scene sceneID="uQm-Rk-efB">
+            <objects>
+                <viewController storyboardIdentifier="TrophyCategoryID" id="KE0-MM-t2s" customClass="TrophyCategoryViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2NL-vi-Tfq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OmL-uk-q7w">
+                                <rect key="frame" x="0.0" y="44" width="320" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrophyCategoryCellID" rowHeight="157" id="YHI-Hw-owK" customClass="TrophyCategoryTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHI-Hw-owK" id="IeW-52-dJG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-trophy" id="f5o-hv-PNe">
+                                                    <rect key="frame" x="110" y="30" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="KaC-z4-0Z1"/>
+                                                        <constraint firstAttribute="height" constant="100" id="QoH-Ly-xKl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-Gx-jTq" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="139" y="138" width="42" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f5o-hv-PNe" firstAttribute="top" secondItem="IeW-52-dJG" secondAttribute="top" constant="30" id="4hN-mB-g5i"/>
+                                                <constraint firstAttribute="bottom" secondItem="I0l-Gx-jTq" secondAttribute="bottom" constant="8" id="Vro-68-gMn"/>
+                                                <constraint firstItem="f5o-hv-PNe" firstAttribute="centerX" secondItem="IeW-52-dJG" secondAttribute="centerX" id="gHs-lD-EIE"/>
+                                                <constraint firstItem="I0l-Gx-jTq" firstAttribute="centerX" secondItem="IeW-52-dJG" secondAttribute="centerX" id="iYb-a7-hf1"/>
+                                                <constraint firstItem="I0l-Gx-jTq" firstAttribute="top" secondItem="f5o-hv-PNe" secondAttribute="bottom" constant="8" id="kjd-g1-72Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="levelTitle" destination="I0l-Gx-jTq" id="fvI-KJ-8t4"/>
+                                            <outlet property="trophyImageView" destination="f5o-hv-PNe" id="6KM-2E-xC8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp">
+                                <rect key="frame" x="7" y="527" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r6-5J-wKz">
+                                <rect key="frame" x="7" y="498" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OmL-uk-q7w" firstAttribute="top" secondItem="h2c-Bs-0Nd" secondAttribute="top" id="RfK-rR-aOs"/>
+                            <constraint firstItem="OmL-uk-q7w" firstAttribute="leading" secondItem="h2c-Bs-0Nd" secondAttribute="leading" id="Xeq-ki-O1c"/>
+                            <constraint firstItem="h2c-Bs-0Nd" firstAttribute="trailing" secondItem="OmL-uk-q7w" secondAttribute="trailing" id="aJ3-Nb-jMc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h2c-Bs-0Nd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grand Prix" id="pci-6L-8L0"/>
+                    <connections>
+                        <outlet property="trophyCategoryTableView" destination="OmL-uk-q7w" id="8Ny-1S-jY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P51-w3-Gvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="-3.1690140845070425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vZZ-qq-54a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KLv-qy-lsC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vwj-2S-ukX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KE0-MM-t2s" kind="relationship" relationship="rootViewController" id="fWU-QW-BTr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCp-cx-gxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="-3.1690140845070425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img-trophy" width="92" height="92"/>
+    </resources>
+</document>

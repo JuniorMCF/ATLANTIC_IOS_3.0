@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i5B-Sd-jW3">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beneficios-->
+        <scene sceneID="Wmi-Gs-QFK">
+            <objects>
+                <viewController storyboardIdentifier="BenefitsID" id="nV2-n7-exV" customClass="BenefitsViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FgJ-h4-xnP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDX-wG-XsI">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BenefitsCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BenefitsCellID" rowHeight="146" id="ztJ-RC-vsf" customClass="BenefitsTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ztJ-RC-vsf" id="hQG-UN-kXV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-ben1" translatesAutoresizingMaskIntoConstraints="NO" id="PyA-eA-Jdq">
+                                                    <rect key="frame" x="107.5" y="20" width="160" height="106"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="MDs-7u-iIh"/>
+                                                        <constraint firstAttribute="width" constant="160" id="f79-DV-rNX"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PyA-eA-Jdq" firstAttribute="top" secondItem="hQG-UN-kXV" secondAttribute="top" constant="20" id="G4v-zT-tQb"/>
+                                                <constraint firstAttribute="bottom" secondItem="PyA-eA-Jdq" secondAttribute="bottom" constant="20" id="KIi-aR-Dfk"/>
+                                                <constraint firstItem="PyA-eA-Jdq" firstAttribute="centerX" secondItem="hQG-UN-kXV" secondAttribute="centerX" id="M1x-8R-A3y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="benefitImageView" destination="PyA-eA-Jdq" id="NV4-4a-oqQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WrM-X1-AF1" firstAttribute="bottom" secondItem="yDX-wG-XsI" secondAttribute="bottom" id="Olc-bT-34e"/>
+                            <constraint firstItem="yDX-wG-XsI" firstAttribute="top" secondItem="WrM-X1-AF1" secondAttribute="top" id="n4e-Xu-W5Z"/>
+                            <constraint firstItem="yDX-wG-XsI" firstAttribute="leading" secondItem="WrM-X1-AF1" secondAttribute="leading" id="oxK-nc-lnR"/>
+                            <constraint firstItem="WrM-X1-AF1" firstAttribute="trailing" secondItem="yDX-wG-XsI" secondAttribute="trailing" id="vhx-v0-eDt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WrM-X1-AF1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Beneficios" id="Wpo-3F-Bai">
+                        <barButtonItem key="backBarButtonItem" title=" " id="c13-Xe-T9i"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="benefitsTableView" destination="yDX-wG-XsI" id="PEC-qq-uFG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8G-wb-wb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3004" y="768.66566716641682"/>
+        </scene>
+        <!--Beneficios-->
+        <scene sceneID="dyd-Dg-5NB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i5B-Sd-jW3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Beneficios" image="icon-club" id="h4h-1U-WvX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vpe-bP-QM3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nV2-n7-exV" kind="relationship" relationship="rootViewController" id="2hq-YZ-RMv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xS-Kl-xfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2064.8000000000002" y="768.66566716641682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-club" width="24" height="24"/>
+        <image name="img-ben1" width="160" height="100"/>
+    </resources>
+</document>

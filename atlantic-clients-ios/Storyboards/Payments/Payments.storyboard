@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IdR-W3-1J5">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mis Cobros-->
+        <scene sceneID="slT-cB-sG8">
+            <objects>
+                <viewController storyboardIdentifier="PaymentsID" id="BMy-aT-bvq" customClass="PaymentViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6OP-IC-1Aj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1uR-p8-cFl">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="brm-Tc-H0H">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCellID" rowHeight="120" id="6Fj-iX-PxE" customClass="PaymentTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Fj-iX-PxE" id="Xma-0d-E5W">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fc-f5-h9d">
+                                                    <rect key="frame" x="12" y="20" width="120" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="5mW-Pj-3jR"/>
+                                                        <constraint firstAttribute="height" constant="80" id="OB9-uJ-f6Z"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-s6-vr4">
+                                                    <rect key="frame" x="144" y="20" width="219" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwP-ry-da3" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="219" height="26.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-1b-eu4" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="26.5" width="219" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-Lb-sD0">
+                                                            <rect key="frame" x="0.0" y="53.5" width="219" height="26.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-is-WWQ" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="109.5" height="26.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxX-wY-20A" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                                    <rect key="frame" x="109.5" y="0.0" width="109.5" height="26.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hqU-s6-vr4" firstAttribute="leading" secondItem="5Fc-f5-h9d" secondAttribute="trailing" constant="12" id="4y7-fi-YYE"/>
+                                                <constraint firstAttribute="bottom" secondItem="hqU-s6-vr4" secondAttribute="bottom" constant="20" id="8ek-TK-LmK"/>
+                                                <constraint firstItem="5Fc-f5-h9d" firstAttribute="leading" secondItem="Xma-0d-E5W" secondAttribute="leading" constant="12" id="HCa-jJ-YkD"/>
+                                                <constraint firstAttribute="trailing" secondItem="hqU-s6-vr4" secondAttribute="trailing" constant="12" id="Ugg-4i-f6b"/>
+                                                <constraint firstItem="hqU-s6-vr4" firstAttribute="top" secondItem="Xma-0d-E5W" secondAttribute="top" constant="20" id="e0d-He-ZYW"/>
+                                                <constraint firstItem="5Fc-f5-h9d" firstAttribute="centerY" secondItem="Xma-0d-E5W" secondAttribute="centerY" id="kCd-gZ-0Wq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="payImageView" destination="5Fc-f5-h9d" id="zAE-nS-MI1"/>
+                                            <outlet property="payLabel" destination="Evj-1b-eu4" id="EaQ-2J-eXF"/>
+                                            <outlet property="stateLabel" destination="WxX-wY-20A" id="f8L-Ud-KQI"/>
+                                            <outlet property="stateTitleLabel" destination="UFo-is-WWQ" id="2FV-58-9ho"/>
+                                            <outlet property="titleLabel" destination="nwP-ry-da3" id="yq6-Rf-kVw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1uR-p8-cFl" firstAttribute="leading" secondItem="EaS-11-bM2" secondAttribute="leading" id="2sk-A2-5nm"/>
+                            <constraint firstItem="1uR-p8-cFl" firstAttribute="trailing" secondItem="EaS-11-bM2" secondAttribute="trailing" id="31b-tx-yB5"/>
+                            <constraint firstItem="1uR-p8-cFl" firstAttribute="top" secondItem="EaS-11-bM2" secondAttribute="top" id="3sV-zO-vBh"/>
+                            <constraint firstItem="brm-Tc-H0H" firstAttribute="leading" secondItem="EaS-11-bM2" secondAttribute="leading" id="8Xd-Uh-ywD"/>
+                            <constraint firstItem="brm-Tc-H0H" firstAttribute="top" secondItem="1uR-p8-cFl" secondAttribute="bottom" id="E2m-5B-EUm"/>
+                            <constraint firstItem="EaS-11-bM2" firstAttribute="bottom" secondItem="brm-Tc-H0H" secondAttribute="bottom" id="If0-Qj-1p6"/>
+                            <constraint firstItem="EaS-11-bM2" firstAttribute="trailing" secondItem="brm-Tc-H0H" secondAttribute="trailing" id="n8j-JY-a11"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EaS-11-bM2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mis Cobros" id="k3D-h6-1gM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fyc-dS-U0r"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="paymentSearchBar" destination="1uR-p8-cFl" id="LjP-nZ-fyK"/>
+                        <outlet property="paymentsTableView" destination="brm-Tc-H0H" id="8BV-pk-f3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4M-42-ebJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="277.51124437781112"/>
+        </scene>
+        <!--Cobros-->
+        <scene sceneID="m9t-zc-POS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IdR-W3-1J5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cobros" image="icon-payments" id="iFZ-Ee-pei"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="AYR-HD-pU5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BMy-aT-bvq" kind="relationship" relationship="rootViewController" id="gjU-4C-1V6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5r-PN-I11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-payments" width="28" height="27"/>
+    </resources>
+</document>

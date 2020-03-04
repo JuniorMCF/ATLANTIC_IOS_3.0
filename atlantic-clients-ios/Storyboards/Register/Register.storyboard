@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wth-XG-oJ8">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register Document View Controller-->
+        <scene sceneID="rQR-f6-7Kd">
+            <objects>
+                <viewController storyboardIdentifier="RegisterID" id="ojz-bP-peX" customClass="RegisterDocumentViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHS-89-lME">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-lX-D1A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-pK-fNn" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo" id="sML-3e-LHJ">
+                                        <rect key="frame" x="40" y="54" width="240" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kN7-Rl-ms4" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="242" width="240" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-Wy-DJj" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="386" width="240" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aaX-a0-hh3" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="193" width="280" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vrd-vg-ToP" customClass="TextField2" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="315" width="240" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3A4-gU-N28">
+                                        <rect key="frame" x="8" y="8" width="20" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_left_arrow">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBackLogin:" destination="ojz-bP-peX" eventType="touchUpInside" id="Vcl-Uc-ryl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AiK-HD-8MU" firstAttribute="trailing" secondItem="4Xd-Wy-DJj" secondAttribute="trailing" constant="40" id="6WM-L8-Swl"/>
+                                    <constraint firstItem="AiK-HD-8MU" firstAttribute="bottom" secondItem="4Xd-Wy-DJj" secondAttribute="bottom" constant="142" id="Xrb-Vc-8EZ"/>
+                                    <constraint firstItem="4Xd-Wy-DJj" firstAttribute="centerX" secondItem="AiK-HD-8MU" secondAttribute="centerX" id="YpN-uQ-JpD"/>
+                                    <constraint firstItem="4Xd-Wy-DJj" firstAttribute="leading" secondItem="AiK-HD-8MU" secondAttribute="leading" constant="40" id="rH9-pN-PSc"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="AiK-HD-8MU"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wMu-8N-tg7" firstAttribute="bottom" secondItem="6bX-lX-D1A" secondAttribute="bottom" id="5P9-8O-XPo"/>
+                            <constraint firstItem="wMu-8N-tg7" firstAttribute="trailing" secondItem="6bX-lX-D1A" secondAttribute="trailing" id="BKu-mc-S3o"/>
+                            <constraint firstItem="6bX-lX-D1A" firstAttribute="top" secondItem="wMu-8N-tg7" secondAttribute="top" id="BuE-J6-PNb"/>
+                            <constraint firstItem="Kra-pK-fNn" firstAttribute="top" secondItem="wMu-8N-tg7" secondAttribute="top" id="M5p-KS-ate"/>
+                            <constraint firstItem="6bX-lX-D1A" firstAttribute="width" secondItem="ZHS-89-lME" secondAttribute="width" id="Ymc-f0-NEg"/>
+                            <constraint firstItem="6bX-lX-D1A" firstAttribute="leading" secondItem="wMu-8N-tg7" secondAttribute="leading" id="Z3x-LA-zcr"/>
+                            <constraint firstItem="wMu-8N-tg7" firstAttribute="bottom" secondItem="Kra-pK-fNn" secondAttribute="bottom" id="flT-t0-Tdi"/>
+                            <constraint firstItem="wMu-8N-tg7" firstAttribute="trailing" secondItem="Kra-pK-fNn" secondAttribute="trailing" id="puA-ui-ADh"/>
+                            <constraint firstItem="Kra-pK-fNn" firstAttribute="leading" secondItem="wMu-8N-tg7" secondAttribute="leading" id="rn1-R9-CH1"/>
+                            <constraint firstItem="Kra-pK-fNn" firstAttribute="width" secondItem="ZHS-89-lME" secondAttribute="width" id="sll-d6-LMk"/>
+                            <constraint firstItem="6bX-lX-D1A" firstAttribute="height" secondItem="ZHS-89-lME" secondAttribute="height" id="wCA-OR-luL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wMu-8N-tg7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AvL-1G-ULX"/>
+                    <connections>
+                        <outlet property="docNumberLabel" destination="kN7-Rl-ms4" id="bYZ-5y-wMG"/>
+                        <outlet property="docNumberTextField" destination="Vrd-vg-ToP" id="CK4-Rx-Rh4"/>
+                        <outlet property="nextButton" destination="4Xd-Wy-DJj" id="yCq-7R-jrB"/>
+                        <outlet property="titleLabel" destination="aaX-a0-hh3" id="TQ0-L5-saM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2OT-v6-efV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="71.83098591549296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vZp-jc-qxe">
+            <objects>
+                <navigationController storyboardIdentifier="NavRegisterID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wth-XG-oJ8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b4A-Wb-TgK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ojz-bP-peX" kind="relationship" relationship="rootViewController" id="8Wx-FV-461"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ki-OJ-G9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84.057971014492765" y="72.321428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_inicio" width="540" height="960"/>
+        <image name="ic_left_arrow" width="19.5" height="31.5"/>
+        <image name="img_logo" width="308.5" height="173.5"/>
+    </resources>
+</document>

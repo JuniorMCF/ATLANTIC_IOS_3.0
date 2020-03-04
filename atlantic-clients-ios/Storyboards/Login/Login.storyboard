@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5GP-kO-g4o">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Lxg-yp-Zyh">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="5GP-kO-g4o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Rf-jE-g9G">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lC1-ah-pin" kind="relationship" relationship="rootViewController" id="Ed2-nW-ZXa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lI-Ub-Jv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-994" y="-6"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="PH1-kq-QoO">
+            <objects>
+                <viewController storyboardIdentifier="LoginID" automaticallyAdjustsScrollViewInsets="NO" id="lC1-ah-pin" customClass="LoginViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R00-TP-0aM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="1Ix-d4-NOU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSL-xm-2nF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-JE-hi0" customClass="TextField" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="290" width="295" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clL-X7-coS" customClass="TextField" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="345" width="295" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOE-ra-dDK" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="112" y="401" width="150" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapLogin" destination="lC1-ah-pin" eventType="touchUpInside" id="UAt-FQ-Joc"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="W0D-WR-cnx">
+                                        <rect key="frame" x="40" y="100" width="295" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXc-oE-mhc" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="250" width="295" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.50196078430000002" green="0.79607843140000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7N-Bj-HEl" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="606" width="160" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="crear usuario"/>
+                                        <connections>
+                                            <action selector="tapNewUser" destination="lC1-ah-pin" eventType="touchUpInside" id="GML-RI-poM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-5h-VyW" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="606" width="160" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapForgotPassword" destination="lC1-ah-pin" eventType="touchUpInside" id="gWv-EC-iVc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-KB-PE5" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="464" width="22" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="unchecked_checkbox"/>
+                                        <connections>
+                                            <action selector="tapTerminos:" destination="lC1-ah-pin" eventType="touchUpInside" id="1DU-bd-KSQ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZz-yF-g69" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="80" y="464" width="255" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LSL-xm-2nF" firstAttribute="height" secondItem="R00-TP-0aM" secondAttribute="height" id="JdS-Td-XTX"/>
+                            <constraint firstItem="LSL-xm-2nF" firstAttribute="width" secondItem="R00-TP-0aM" secondAttribute="width" id="aVW-uh-Lna"/>
+                            <constraint firstItem="1Ix-d4-NOU" firstAttribute="height" secondItem="R00-TP-0aM" secondAttribute="height" id="kD4-2d-HfR"/>
+                            <constraint firstItem="1Ix-d4-NOU" firstAttribute="width" secondItem="R00-TP-0aM" secondAttribute="width" id="wgJ-Ys-jZQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nk8-bK-a2X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fZn-wq-Jny"/>
+                    <connections>
+                        <outlet property="dniTextField" destination="ncf-JE-hi0" id="w4u-Nd-Lc1"/>
+                        <outlet property="forgotPasswordButton" destination="zKP-5h-VyW" id="zEE-bl-dKK"/>
+                        <outlet property="loginButton" destination="VOE-ra-dDK" id="4gd-ug-mvT"/>
+                        <outlet property="newUserButton" destination="Z7N-Bj-HEl" id="djX-TG-Thq"/>
+                        <outlet property="passwordTextField" destination="clL-X7-coS" id="XC6-MX-WUH"/>
+                        <outlet property="terminosButton" destination="N8f-KB-PE5" id="aFs-9T-xdp"/>
+                        <outlet property="terminosLabel" destination="uZz-yF-g69" id="5Uz-Ck-c3Y"/>
+                        <outlet property="titleLabel" destination="bXc-oE-mhc" id="EAW-uf-E25"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNb-h1-oa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231.19999999999999" y="-7.6461769115442282"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_inicio" width="540" height="960"/>
+        <image name="img_logo" width="308.5" height="173.5"/>
+        <image name="unchecked_checkbox" width="64" height="64"/>
+    </resources>
+</document>

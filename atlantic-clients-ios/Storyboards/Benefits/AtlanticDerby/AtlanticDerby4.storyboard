@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n8X-jM-nx1">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="12i-5j-LbF">
+            <objects>
+                <navigationController id="n8X-jM-nx1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qt6-m5-Qvr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1gn-cA-aeG" kind="relationship" relationship="rootViewController" id="ak5-Lc-Avu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6f-za-Aso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1877" y="-590"/>
+        </scene>
+        <!--Atlantic Derby-->
+        <scene sceneID="Gt3-5l-QwW">
+            <objects>
+                <viewController storyboardIdentifier="AtlanticDerby4ID" id="1gn-cA-aeG" customClass="AtlanticDerby4ViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OvT-xA-Ohf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="87" translatesAutoresizingMaskIntoConstraints="NO" id="9LF-tt-6WM">
+                                <rect key="frame" x="20" y="44.000000000000007" width="374" height="127.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puY-5a-U1z" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUB-qF-eBG" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="107.33333333333334" width="374" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-d0-3VK">
+                                <rect key="frame" x="20" y="614.33333333333337" width="374" height="91.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-aK-wkh" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81i-GX-WYJ" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71.333333333333258" width="374" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Gz-Yc-k4u">
+                                <rect key="frame" x="42" y="241" width="330" height="290"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="34d-Sb-bkr">
+                                    <size key="itemSize" width="327" height="69"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="AD4CellID" translatesAutoresizingMaskIntoConstraints="NO" id="0oO-Wj-nNQ" customClass="AD4CollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="1.6666666666666667" y="0.0" width="327" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GL5-yd-gCg">
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-hD-i7V" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="107" y="22" width="110" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="327" height="69"/>
+                                        <connections>
+                                            <outlet property="puestoLabel" destination="hcp-hD-i7V" id="acl-L5-GWp"/>
+                                            <outlet property="view" destination="GL5-yd-gCg" id="X4W-TJ-4Ll"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kg5-d0-3VK" firstAttribute="top" secondItem="3Gz-Yc-k4u" secondAttribute="bottom" constant="83.333333333333371" id="1t4-gJ-CJ9"/>
+                            <constraint firstItem="3Gz-Yc-k4u" firstAttribute="top" secondItem="9LF-tt-6WM" secondAttribute="bottom" constant="69.333333333333314" id="6Tb-mF-Drp"/>
+                            <constraint firstItem="9LF-tt-6WM" firstAttribute="top" secondItem="fyI-I2-i7v" secondAttribute="top" id="MKO-f7-SE1"/>
+                            <constraint firstItem="fyI-I2-i7v" firstAttribute="bottom" secondItem="Kg5-d0-3VK" secondAttribute="bottom" constant="30" id="Snu-U0-Nta"/>
+                            <constraint firstItem="Kg5-d0-3VK" firstAttribute="leading" secondItem="fyI-I2-i7v" secondAttribute="leading" constant="20" id="WR0-co-YLn"/>
+                            <constraint firstItem="fyI-I2-i7v" firstAttribute="trailing" secondItem="Kg5-d0-3VK" secondAttribute="trailing" constant="20" id="ZQh-it-OVX"/>
+                            <constraint firstItem="9LF-tt-6WM" firstAttribute="leading" secondItem="fyI-I2-i7v" secondAttribute="leading" constant="20" id="bN5-f3-Ao3"/>
+                            <constraint firstItem="fyI-I2-i7v" firstAttribute="trailing" secondItem="3Gz-Yc-k4u" secondAttribute="trailing" constant="42" id="g4F-yt-pkz"/>
+                            <constraint firstItem="fyI-I2-i7v" firstAttribute="trailing" secondItem="9LF-tt-6WM" secondAttribute="trailing" constant="20" id="gLC-mm-Ree"/>
+                            <constraint firstItem="3Gz-Yc-k4u" firstAttribute="leading" secondItem="fyI-I2-i7v" secondAttribute="leading" constant="42" id="gTo-u9-mD3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyI-I2-i7v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Atlantic Derby" id="VlF-bc-Hg7">
+                        <barButtonItem key="backBarButtonItem" title=" " id="dg9-hZ-RFD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="AD4CollectionView" destination="3Gz-Yc-k4u" id="Ykt-4p-z5a"/>
+                        <outlet property="carreraLabel" destination="fUB-qF-eBG" id="Jvf-wM-Q07"/>
+                        <outlet property="fechaModificacionLabel" destination="81i-GX-WYJ" id="nc8-Pc-Urt"/>
+                        <outlet property="terminosLabel" destination="yuV-aK-wkh" id="QLU-LI-fDZ"/>
+                        <outlet property="titleLabel" destination="puY-5a-U1z" id="s53-GG-a61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyM-xr-SpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075.3623188405797" y="-590.21739130434787"/>
+        </scene>
+    </scenes>
+</document>

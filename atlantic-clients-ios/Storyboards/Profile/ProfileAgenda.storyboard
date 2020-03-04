@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qKi-SP-6rO">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LwB-CG-gER">
+            <objects>
+                <navigationController id="qKi-SP-6rO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xko-nV-CyR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hnA-aw-Krg" kind="relationship" relationship="rootViewController" id="ywO-2j-HRM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOw-dH-fS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-870" y="-118"/>
+        </scene>
+        <!--Profile Agenda View Controller-->
+        <scene sceneID="caY-ha-Asp">
+            <objects>
+                <viewController storyboardIdentifier="ProfileAgendaID" id="hnA-aw-Krg" customClass="ProfileAgendaViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oss-rA-34M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Bc-Iz-RTQ">
+                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MVj-TF-gEm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Bc-Iz-RTQ" firstAttribute="leading" secondItem="QcM-Ei-vMK" secondAttribute="leading" id="N3f-da-FNZ"/>
+                            <constraint firstItem="MVj-TF-gEm" firstAttribute="leading" secondItem="QcM-Ei-vMK" secondAttribute="leading" id="OgU-Le-GgK"/>
+                            <constraint firstItem="QcM-Ei-vMK" firstAttribute="bottom" secondItem="9Bc-Iz-RTQ" secondAttribute="bottom" id="P5g-pw-fTK"/>
+                            <constraint firstItem="QcM-Ei-vMK" firstAttribute="trailing" secondItem="9Bc-Iz-RTQ" secondAttribute="trailing" id="eQ2-EE-V7U"/>
+                            <constraint firstItem="9Bc-Iz-RTQ" firstAttribute="top" secondItem="MVj-TF-gEm" secondAttribute="bottom" id="lqA-Tl-IQX"/>
+                            <constraint firstItem="MVj-TF-gEm" firstAttribute="top" secondItem="QcM-Ei-vMK" secondAttribute="top" id="uBt-fR-exM"/>
+                            <constraint firstItem="QcM-Ei-vMK" firstAttribute="trailing" secondItem="MVj-TF-gEm" secondAttribute="trailing" id="zDU-YD-z3S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QcM-Ei-vMK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F8J-WX-JQW"/>
+                    <connections>
+                        <outlet property="viewPager" destination="9Bc-Iz-RTQ" id="ROP-Zy-C4d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPu-Vo-XCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="-118.20652173913044"/>
+        </scene>
+        <!--Agenda View Controller-->
+        <scene sceneID="YzU-Kq-Ak7">
+            <objects>
+                <viewController storyboardIdentifier="AgendaID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="add-Dd-XVI" customClass="AgendaViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="evM-ay-4bL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FZf-s8-5nz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBA-eM-5c3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="264"/>
+        </scene>
+    </scenes>
+</document>

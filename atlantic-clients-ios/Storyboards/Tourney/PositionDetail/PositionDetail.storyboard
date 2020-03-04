@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w5T-X3-TVa">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Grand Prix-->
+        <scene sceneID="njz-8A-lFa">
+            <objects>
+                <viewController storyboardIdentifier="PositionDetailID" id="2Li-i2-7jZ" customClass="PositionDetailViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P7R-ut-4rZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcW-YR-QvU">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axr-Nq-5cc" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="40" width="42" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="AHA-HV-DJa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv1-QR-EQA" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="190" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P9-bX-FaM" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="211" width="42" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="tuw-zK-2YD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdJ-xX-L1c" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="251" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xj-uK-Sp6" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="276" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_copa" translatesAutoresizingMaskIntoConstraints="NO" id="siu-69-Qmc">
+                                        <rect key="frame" x="115" y="75" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="79h-0w-5vC"/>
+                                            <constraint firstAttribute="width" constant="90" id="QQY-uj-kp2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6n-NY-3Fb" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="454" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-nv-cEb" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="483" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8i8-E7-noc" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="347" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="H5M-ti-73G"/>
+                                            <constraint firstAttribute="height" constant="40" id="y1A-Gv-EBr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapPaymentsButton:" destination="2Li-i2-7jZ" eventType="touchUpInside" id="Hks-Hc-slv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="D6n-NY-3Fb" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="0pc-WN-4U7"/>
+                                    <constraint firstItem="9Xj-uK-Sp6" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="4Ng-Gi-PHw"/>
+                                    <constraint firstItem="6P9-bX-FaM" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="AZ3-um-c7l"/>
+                                    <constraint firstItem="wdJ-xX-L1c" firstAttribute="top" secondItem="6P9-bX-FaM" secondAttribute="bottom" constant="25" id="Dtd-Vf-bo6"/>
+                                    <constraint firstItem="siu-69-Qmc" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="Fd5-RS-SxL"/>
+                                    <constraint firstItem="Jv1-QR-EQA" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="OIw-XO-0R8"/>
+                                    <constraint firstItem="D6n-NY-3Fb" firstAttribute="top" secondItem="8i8-E7-noc" secondAttribute="bottom" constant="67" id="OQR-Z1-6wP"/>
+                                    <constraint firstAttribute="bottom" secondItem="1c5-nv-cEb" secondAttribute="bottom" constant="20" id="QNb-fX-QNo"/>
+                                    <constraint firstItem="siu-69-Qmc" firstAttribute="top" secondItem="Axr-Nq-5cc" secondAttribute="bottom" constant="20" id="Y58-uf-Mxn"/>
+                                    <constraint firstItem="6P9-bX-FaM" firstAttribute="top" secondItem="Jv1-QR-EQA" secondAttribute="bottom" id="cIw-BC-mZ0"/>
+                                    <constraint firstItem="1c5-nv-cEb" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="eT3-O0-CVH"/>
+                                    <constraint firstItem="Jv1-QR-EQA" firstAttribute="top" secondItem="siu-69-Qmc" secondAttribute="bottom" constant="25" id="k8f-o0-hMj"/>
+                                    <constraint firstItem="1c5-nv-cEb" firstAttribute="top" secondItem="D6n-NY-3Fb" secondAttribute="bottom" constant="8" id="m44-AG-5Lg"/>
+                                    <constraint firstItem="8i8-E7-noc" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="pee-9r-KPq"/>
+                                    <constraint firstItem="Axr-Nq-5cc" firstAttribute="top" secondItem="LcW-YR-QvU" secondAttribute="top" constant="40" id="qrO-qc-Uwk"/>
+                                    <constraint firstItem="9Xj-uK-Sp6" firstAttribute="top" secondItem="wdJ-xX-L1c" secondAttribute="bottom" constant="4" id="vjQ-5c-8z3"/>
+                                    <constraint firstItem="wdJ-xX-L1c" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="ww2-of-kGc"/>
+                                    <constraint firstItem="8i8-E7-noc" firstAttribute="top" secondItem="9Xj-uK-Sp6" secondAttribute="bottom" constant="48" id="zFr-Pd-pMj"/>
+                                    <constraint firstItem="Axr-Nq-5cc" firstAttribute="centerX" secondItem="LcW-YR-QvU" secondAttribute="centerX" id="ztu-lP-4Av"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LcW-YR-QvU" firstAttribute="top" secondItem="jEW-Tj-8Mt" secondAttribute="top" id="8YE-xs-pgQ"/>
+                            <constraint firstItem="LcW-YR-QvU" firstAttribute="leading" secondItem="jEW-Tj-8Mt" secondAttribute="leading" id="93L-uD-cys"/>
+                            <constraint firstItem="jEW-Tj-8Mt" firstAttribute="bottom" secondItem="LcW-YR-QvU" secondAttribute="bottom" id="apf-Z6-3OF"/>
+                            <constraint firstItem="jEW-Tj-8Mt" firstAttribute="trailing" secondItem="LcW-YR-QvU" secondAttribute="trailing" id="n23-06-exk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jEW-Tj-8Mt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grand Prix" id="pnt-4U-Rho"/>
+                    <connections>
+                        <outlet property="fechaActualizadaLabel" destination="1c5-nv-cEb" id="Rbf-j8-xkr"/>
+                        <outlet property="payTitle" destination="8i8-E7-noc" id="ua6-o6-oAd"/>
+                        <outlet property="positionLabel" destination="Jv1-QR-EQA" id="96r-mc-Uus"/>
+                        <outlet property="positionTitleLabel" destination="Axr-Nq-5cc" id="O6q-PB-k8e"/>
+                        <outlet property="postTitleLabel" destination="6P9-bX-FaM" id="Ost-gD-bZO"/>
+                        <outlet property="terminosLabel" destination="D6n-NY-3Fb" id="Ytj-3h-nt5"/>
+                        <outlet property="winLabel" destination="9Xj-uK-Sp6" id="qQq-S6-XZW"/>
+                        <outlet property="winTitleLabel" destination="wdJ-xX-L1c" id="Bcm-7Q-xbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGl-6s-4MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.5" y="117.25352112676056"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c53-33-wWz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w5T-X3-TVa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3JN-xF-CMF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Li-i2-7jZ" kind="relationship" relationship="rootViewController" id="3FY-hV-Khb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyY-mI-kvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="117.25352112676056"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_copa" width="100" height="111.33333587646484"/>
+    </resources>
+</document>

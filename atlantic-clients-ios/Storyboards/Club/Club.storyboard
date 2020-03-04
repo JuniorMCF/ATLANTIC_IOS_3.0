@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lf-Q5-Vsj">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Club-->
+        <scene sceneID="8js-59-z6p">
+            <objects>
+                <viewController id="UFm-3w-ZAs" customClass="ClubViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="76a-Aq-bgi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mZ6-n9-NHV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClubCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClubCellID" rowHeight="154" id="DEa-nI-Yvh" customClass="ClubTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="154"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DEa-nI-Yvh" id="BcZ-gJ-clS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-1d-W8w">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="154"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2R-au-ZCW" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="32" y="100" width="0.0" height="22"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="x2R-au-ZCW" firstAttribute="top" secondItem="BcZ-gJ-clS" secondAttribute="top" constant="100" id="LlT-Vu-kV9"/>
+                                                <constraint firstItem="x2R-au-ZCW" firstAttribute="leading" secondItem="BcZ-gJ-clS" secondAttribute="leading" constant="32" id="QSs-Rq-WWb"/>
+                                                <constraint firstAttribute="bottom" secondItem="x2R-au-ZCW" secondAttribute="bottom" constant="32" id="T4b-Vx-PrG"/>
+                                                <constraint firstAttribute="trailing" secondItem="yoG-1d-W8w" secondAttribute="trailing" id="XAS-Ze-JsH"/>
+                                                <constraint firstAttribute="bottom" secondItem="yoG-1d-W8w" secondAttribute="bottom" id="Yga-g4-rsb"/>
+                                                <constraint firstAttribute="trailing" secondItem="x2R-au-ZCW" secondAttribute="trailing" constant="32" id="h5j-1d-BUO"/>
+                                                <constraint firstItem="yoG-1d-W8w" firstAttribute="leading" secondItem="BcZ-gJ-clS" secondAttribute="leading" id="hLZ-fu-Jku"/>
+                                                <constraint firstItem="yoG-1d-W8w" firstAttribute="top" secondItem="BcZ-gJ-clS" secondAttribute="top" id="pvJ-sU-mFl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="img" destination="yoG-1d-W8w" id="jdi-ti-r5b"/>
+                                            <outlet property="title" destination="x2R-au-ZCW" id="2bJ-d1-SXY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qPZ-TN-tKb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Club" id="5Bq-XE-QU2">
+                        <barButtonItem key="backBarButtonItem" title=" " id="yy3-h4-mqL"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clubTableView" destination="mZ6-n9-NHV" id="fDX-FO-Hhe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwK-8B-n2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="-741.67916041979015"/>
+        </scene>
+        <!--Club-->
+        <scene sceneID="Yz2-AZ-WgR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lf-Q5-Vsj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Club" image="icon-club" id="Vc4-eK-NFp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="00f-qA-nvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UFm-3w-ZAs" kind="relationship" relationship="rootViewController" id="Cdk-OE-cNB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxA-uW-LiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786.39999999999998" y="-741.67916041979015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-club" width="24" height="24"/>
+    </resources>
+</document>

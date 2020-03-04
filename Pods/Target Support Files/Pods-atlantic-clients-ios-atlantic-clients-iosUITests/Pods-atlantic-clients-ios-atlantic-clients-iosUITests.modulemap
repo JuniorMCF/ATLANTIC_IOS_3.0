@@ -1,0 +1,6 @@
+framework module Pods_atlantic_clients_ios_atlantic_clients_iosUITests {
+  umbrella header "Pods-atlantic-clients-ios-atlantic-clients-iosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
