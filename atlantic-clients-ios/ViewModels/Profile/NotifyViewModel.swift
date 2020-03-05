@@ -19,10 +19,12 @@ protocol NotifyViewModelProtocol {
     
     var showTitles: (([Notify]) -> Void)? { get set }
     var loadDatasources : (([Notify])-> Void)?{get set}
+    var successHideNotify: (() -> Void)?{get set}
+    func hideNofity(clienteId:String,notifySelectId:String)
 }
 
 class NotifyViewModel: NotifyViewModelProtocol {
-    
+    var successHideNotify: (() -> Void)?
     var showTitles: (([Notify]) -> Void)?
     var loadDatasources : (([Notify])-> Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -58,7 +60,6 @@ class NotifyViewModel: NotifyViewModelProtocol {
                                      notify.mensaje = value["mensaje"].stringValue
                                      self.datasourcce.append(notify)
                                  }
-                                 
                                  self.loadDatasources?(self.datasourcce)
                               }else {
                                  //en otros casos
@@ -82,6 +83,29 @@ class NotifyViewModel: NotifyViewModelProtocol {
         
         
         loadDatasources?(titles)
+    }
+    
+    func hideNofity(clienteId:String, notifySelectId:String){
+        
+        var url = URL(string: Constants().urlBase + Constants().postHideNotify)
+        url = url?.appending("clienteId", value: clienteId)
+        url = url?.appending("notificationId", value: notifySelectId)
+        
+        let url2 = url?.absoluteString as! String
+        
+        AF.request(url2, method: .post, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: {(response) in
+            switch response.result{
+            case .success(let value):
+                self.successHideNotify?()
+                print(value)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+            
+        })
+        
     }
     
 }

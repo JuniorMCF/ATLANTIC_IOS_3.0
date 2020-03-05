@@ -11,7 +11,7 @@ import var CommonCrypto.CC_MD5_DIGEST_LENGTH
 import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
 import EventKit
-
+import UIKit
 class Utils{
     
     
@@ -38,7 +38,6 @@ class Utils{
         let fecha2 = fecha.doubleValue
         var date = Date(timeIntervalSince1970: TimeInterval(fecha2/1000))
         date = date.addingTimeInterval(60*60*8)
-        print(date)
         let store = EKEventStore()
         store.requestAccess(to: .event, completion: {(granted, error) in
             if(!granted) { return}
@@ -63,7 +62,6 @@ class Utils{
       
         let calendar = Calendar.current
         let now = Date()
-        print(now)
         
         let unitFlags: NSCalendar.Unit = [.second, .minute, .hour, .day, .weekOfYear, .month, .year]
         var components = (calendar as NSCalendar).components(unitFlags, from: date, to: now, options: [])
@@ -150,4 +148,115 @@ extension URL {
         // Returns the url from new url components
         return urlComponents.url!
     }
+}
+
+
+extension UILabel{
+    @IBInspectable var fontSizeScale: CGFloat{
+        get{
+            return self.fontSizeScale
+        }set{
+            var current_Size : CGFloat = 0.0
+            current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+            let FinalSize : CGFloat = newValue * current_Size
+            self.font = self.font.withSize(FinalSize)
+        }
+    }
+    
+}
+
+
+extension UITextView{
+    @IBInspectable var fontSizeScale: CGFloat{
+        get{
+            return self.fontSizeScale
+        }set{
+            var current_Size : CGFloat = 0.0
+            current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+            let FinalSize : CGFloat = newValue * current_Size
+            self.font = self.font!.withSize(FinalSize)
+        }
+    }
+    
+}
+
+
+extension UITextField{
+    @IBInspectable var fontSizeScale: CGFloat{
+        get{
+            return self.fontSizeScale
+        }set{
+            var current_Size : CGFloat = 0.0
+            current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+            let FinalSize : CGFloat = newValue * current_Size
+            
+            self.font = .systemFont(ofSize: FinalSize)
+            
+        }
+    }
+    
+}
+
+extension UIButton{
+    @IBInspectable var fontSizeScale: CGFloat{
+        get{
+            return self.fontSizeScale
+        }set{
+            var current_Size : CGFloat = 0.0
+            current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+            let FinalSize : CGFloat = newValue * current_Size
+            
+            self.titleLabel?.font = .systemFont(ofSize: FinalSize)
+            
+        }
+    }
+
+}
+
+
+
+
+extension UIView {
+
+    @IBInspectable var shadow: Bool {
+        get {
+            return layer.shadowOpacity > 0.0
+        }
+        set {
+            if newValue == true {
+                self.addShadow()
+            }
+        }
+    }
+
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            let current_Size = (UIScreen.main.bounds.width/320)
+            self.layer.cornerRadius = newValue * current_Size
+
+            // Don't touch the masksToBound property if a shadow is needed in addition to the cornerRadius
+            if shadow == false {
+                self.layer.masksToBounds = true
+            }
+        }
+    }
+
+
+    func addShadow(shadowColor: CGColor = UIColor.black.cgColor,
+               shadowOffset: CGSize = CGSize(width: 1.0, height: 2.0),
+               shadowOpacity: Float = 0.4,
+               shadowRadius: CGFloat = 3.0) {
+        layer.shadowColor = shadowColor
+        layer.shadowOffset = shadowOffset
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowRadius = shadowRadius
+    }
+    
+    
+    
+  
+    
 }

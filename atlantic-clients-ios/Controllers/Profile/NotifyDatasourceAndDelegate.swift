@@ -9,12 +9,14 @@
 import UIKit
 
 class NotifyDatasourceAndDelegate: NSObject {
-        private var items: [Notify] = []
+       var items: [Notify] = []
        private var viewModel: NotifyViewModelProtocol
+       private var parentView : NotifyViewController!
        
-       init(items: [Notify], viewModel: NotifyViewModelProtocol) {
+    init(items: [Notify], viewModel: NotifyViewModelProtocol, parentView : NotifyViewController) {
            self.items = items
            self.viewModel = viewModel
+           self.parentView = parentView
        }
 }
 
@@ -30,39 +32,26 @@ extension NotifyDatasourceAndDelegate: UICollectionViewDataSource {
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.cornerRadius = 20
         cell.layer.borderWidth = 1
-        
+        cell.ocultarNotifyButton.tag = indexPath.row
         let positions = items[indexPath.row]
         cell.prepare(item: positions)
+        cell.ocultarNotifyButton.addTarget(self, action: #selector(hideNotify(_:)), for: .touchUpInside)
         return cell
+    }
+    
+    @objc func hideNotify(_ sender: UIButton){
+        var buttonCenter = CGPoint(x: sender.bounds.origin.x + sender.bounds.size.width/2,
+                                   y: sender.bounds.origin.y + sender.bounds.size.height/2);
+        
+        let point = sender.convert(buttonCenter, to: self.parentView.notifyView)
+        let notifySelectId = items[sender.tag].id
+        parentView.showViewOption(posX: point.x + sender.frame.width, posY: point.y - sender.frame.height,notifySelectID: notifySelectId,position: sender.tag)
     }
     
 }
 extension NotifyDatasourceAndDelegate: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //viewModel.didItemSelected(indexPath)
-        print("ga1")
-    }
-    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)-> UICollectionViewCell{
-        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "NotifyCellID", for: indexPath) as! NotifyCollectionViewCell
-        //añades algo para identificarlo, pero al botón, por ejemplo
-        cell.ocultarNotifyButton.tag = indexPath.row
-        //añades el target
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        cell.ocultarNotifyButton.addGestureRecognizer(tap)
-        cell.ocultarNotifyButton.isUserInteractionEnabled = true
-        return cell
-    }
+
     
-    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        
-        
-        print("gaaa")
-    }
-    
-    
-    @objc func tapOcultarNOtify(){
-        print("gaaa") //no sale :V no va a dar click
-    }
    
 }
 extension NotifyDatasourceAndDelegate: UICollectionViewDelegateFlowLayout {

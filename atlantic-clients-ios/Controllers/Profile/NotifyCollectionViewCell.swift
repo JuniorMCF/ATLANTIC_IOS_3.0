@@ -49,10 +49,7 @@ class NotifyCollectionViewCell: UICollectionViewCell {
         subrayadoTitle.isUserInteractionEnabled = true
         ocultarNotifyButton.isUserInteractionEnabled = true
         campanaImage.isUserInteractionEnabled = false
-        
     }
-
-    
 
     func prepare(item: Notify) {
         let hoy = Date()
@@ -60,15 +57,10 @@ class NotifyCollectionViewCell: UICollectionViewCell {
         let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
 
         
-        
-        
-        
         titleAgendaLabel.text = Utils().timeAgoSince(date)
         messageAgendaLabel.text = item.mensaje
         actionOcutarNotify.layer.cornerRadius = 10
-        showItems()
-        
-        
+       // showItems()
     }
 
 }
