@@ -62,7 +62,7 @@ class AtlanticDerby5ViewController: UIViewController {
 
         titleLabel.setRafflesTitleGoldCenter(with: benefit.nombre)
        
-        proximaCarreraLabel.setSubTitleViewLabelCenter(with: "Próxima carrera: \(benefit.fechaProximaTexto)")
+        proximaCarreraLabel.setSubTitleViewLabelCenterLarge(with: "Próxima carrera: \(benefit.fechaProximaTexto)")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones") // abrir un webview
         recordatorioButton.setRemindButton(with: "Crear recordatorio")
         

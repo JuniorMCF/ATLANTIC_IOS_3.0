@@ -35,8 +35,8 @@ class AtlanticDerby3ViewController: UIViewController {
     @IBOutlet var AD3CollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        AD3CollectionView.layer.cornerRadius = 20
-        AD3CollectionView.backgroundColor = .gray
+        AD3CollectionView.layer.cornerRadius = 25
+        AD3CollectionView.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.862745098, alpha: 1)
         bind()
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,22 +48,43 @@ class AtlanticDerby3ViewController: UIViewController {
         viewModel.presentTitles = presentTitles(data:)
     }
     func presentTitles(data:[String]){
+        
         titleLabel.setRafflesTitleGoldCenter(with: "¡Ha ganado!")
-        puestoLabel.setSubTitleViewLabelCenter(with: "1er puesto-carrera oro")
-        gananciaLabel.setSubTitleViewLabelCenter(with: "$50")
-        resultadoTitle.setRafflesSubTitleCenter(with: "Resultados:")
+        puestoLabel.setSubTitleViewLabelCenterLarge(with: String(benefit.posicion)+"º puesto - "+benefit.nombre)
+        if(benefit.tipoMoneda == "dólares"){
+            gananciaLabel.setSubTitleViewLabelCenterLarge(with: "$ "+String(Int(benefit.premio)))
+        }else if (benefit.tipoMoneda == "soles"){
+            gananciaLabel.setSubTitleViewLabelCenterLarge(with: "S/ "+String(Int(benefit.premio)))
+        }
+        //gananciaLabel.setSubTitleViewLabelCenterLarge(with: "$50")
+        resultadoTitle.setSubTitleViewLabelCenterLarge(with: "Resultados:")
         
         cobrosButton.setRemindButton(with: "IR A MIS COBROS")
-        proximaCarreraLabel.setSubTitleViewLabelCenter(with: "Próxima carrera:\n Carrera diamante 12:00hrs")
+        proximaCarreraLabel.setSubTitleViewLabelCenterLarge(with: "Próxima carrera:\n"+benefit.fechaProximaTexto)
        
        
         recordatorioButton.setRemindButton(with: "Crear recordatorio")
        
-        terminosLabel.setSubTitleViewLabelCenter(with: "Ver términos y condiciones")
-        fechaActualizacionLabel.setSubTitleViewLabelCenter(with: "actualizado el 28/12/19 a las 09:00 hrs")
+        terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
+        
+        let fecha = (benefit.fechaActualizacion as NSString).doubleValue
+        let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "HH:mm"
+        dateFormatter2.locale = NSLocale.current
+        dateFormatter2.timeZone = TimeZone(abbreviation: "GMT")
+        let txtFecha = dateFormatter.string(from: date)
+        let txtHour = dateFormatter2.string(from: date)
+        
+        fechaActualizacionLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour+" hrs")
     }
     
-    func loadDatasources(datasources: [String]) {
+    func loadDatasources(datasources: [Puestos]) {
         ad3CollectionViewDD = AD3CollectionViewDelegateAndDatasource(items: datasources,
                                                                      viewModel:viewModel)
         AD3CollectionView.dataSource = ad3CollectionViewDD

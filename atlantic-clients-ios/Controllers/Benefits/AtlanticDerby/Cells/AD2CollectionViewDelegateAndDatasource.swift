@@ -9,10 +9,10 @@
 import UIKit
 
 class AD2CollectionViewDelegateAndDatasource: NSObject {
-    private var items: [String] = []
+    private var items: [Puestos] = []
     private var viewModel: AtlanticDerby2ViewModelProtocol
     
-    init(items: [String], viewModel: AtlanticDerby2ViewModelProtocol) {
+    init(items: [Puestos], viewModel: AtlanticDerby2ViewModelProtocol) {
         self.items = items
         self.viewModel = viewModel
     }

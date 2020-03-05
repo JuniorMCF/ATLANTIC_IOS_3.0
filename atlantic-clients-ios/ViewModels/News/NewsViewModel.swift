@@ -200,7 +200,7 @@ class NewsViewModel: NewsViewModelProtocol {
                                     benefit.fechaTexto  = value["fecha_texto"].stringValue
                                     benefit.fechaProximaTexto = value["fecha_proxima_texto"].stringValue
                                     benefit.estado  = value["estado"].intValue
-                                    benefit.tipoMoneda  = value["tipoMoneda"].intValue
+                                    benefit.tipoMoneda  = value["tipoMoneda"].stringValue
                                     benefit.fecha  = value["fecha"].stringValue
                                     if(value["esCarrera"].stringValue.isEmpty){
                                         benefit.esCarrera  = nil
@@ -399,7 +399,7 @@ class NewsViewModel: NewsViewModelProtocol {
                                         let value = JSON(data)
                                         
                                         benefit.tipo = value["tipo"].stringValue
-                                        benefit.tipoMoneda = value["tipo_moneda"].intValue
+                                        benefit.tipoMoneda = value["tipo_moneda"].stringValue
                                         benefit.carrera_es_domingo = value["carrera_es_domingo"].boolValue
                                         benefit.carrera_hay = value["carrera_hay"].boolValue
                                         benefit.carrera_participa = value["carrera_participa"].boolValue

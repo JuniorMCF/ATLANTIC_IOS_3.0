@@ -12,8 +12,8 @@ class AD2CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var image: UIImageView!
     @IBOutlet var puestoLabel: UILabel!
-    func prepare(data:String){
-        image.image = UIImage(named: data)
-        puestoLabel.text = data
+    func prepare(data: Puestos){
+        image.image = UIImage(named: data.foto)
+        puestoLabel.text = data.puesto
     }
 }

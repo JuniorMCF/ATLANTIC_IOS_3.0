@@ -50,6 +50,12 @@ class Label: UILabel {
         font = UIFont(name: "Avenir-Medium", size: 15)!
         textAlignment = .center
     }
+    public func setSubTitleViewLabelCenterLarge(with setText: String) {
+        textColor   = .black
+        text        = setText
+        font = UIFont(name: "Avenir-Medium", size: 22)!
+        textAlignment = .center
+    }
     
     public func setLinkLabel(with setText: String) {
         textColor = .white

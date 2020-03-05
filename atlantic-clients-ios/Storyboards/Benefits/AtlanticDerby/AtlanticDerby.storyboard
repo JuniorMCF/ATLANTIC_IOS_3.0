@@ -75,27 +75,27 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QcG-lX-jAI">
-                                <rect key="frame" x="60" y="574" width="294" height="40"/>
+                                <rect key="frame" x="60" y="564" width="294" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnV-xI-j2a" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="266" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="259" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="266" id="ASp-Ig-qhu"/>
-                                            <constraint firstAttribute="height" constant="30" id="DyK-pe-k7S"/>
+                                            <constraint firstAttribute="height" constant="50" id="DyK-pe-k7S"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-diary" translatesAutoresizingMaskIntoConstraints="NO" id="9Ra-Di-lUd">
-                                        <rect key="frame" x="276" y="0.0" width="18" height="40"/>
+                                        <rect key="frame" x="269" y="0.0" width="25" height="50"/>
                                         <color key="tintColor" name="Color-Inactive"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="18" id="5eJ-PI-PpJ"/>
-                                            <constraint firstAttribute="height" constant="30" id="Bec-Jf-cou"/>
+                                            <constraint firstAttribute="width" constant="25" id="5eJ-PI-PpJ"/>
+                                            <constraint firstAttribute="height" constant="25" id="Bec-Jf-cou"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="w6i-a1-6dX"/>
+                                    <constraint firstAttribute="height" constant="50" id="w6i-a1-6dX"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AQ6-fw-NlT">
@@ -126,7 +126,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bLt-Fn-sJY">
-                                <rect key="frame" x="42" y="503.33333333333331" width="330" height="40.666666666666686"/>
+                                <rect key="frame" x="42" y="493.33333333333331" width="330" height="40.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-Hz-8U1" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="20.333333333333332"/>
@@ -153,10 +153,14 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wQw-Cx-EAZ">
-                                <rect key="frame" x="32" y="155" width="350" height="50"/>
+                                <rect key="frame" x="32" y="155" width="350" height="80"/>
                                 <subviews>
                                     <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-3t-2xS">
-                                        <rect key="frame" x="-2" y="0.0" width="354" height="51"/>
+                                        <rect key="frame" x="-2" y="0.0" width="354" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="YvQ-QL-bh2"/>
+                                            <constraint firstAttribute="width" secondItem="Azj-3t-2xS" secondAttribute="height" multiplier="177:40" id="d96-LF-iWa"/>
+                                        </constraints>
                                         <color key="minimumTrackTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" red="0.50921252770000003" green="0.0041918112069999998" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,7 +169,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Azj-3t-2xS" secondAttribute="bottom" id="2Bn-2n-MiO"/>
                                     <constraint firstItem="Azj-3t-2xS" firstAttribute="top" secondItem="wQw-Cx-EAZ" secondAttribute="top" id="BfW-Ie-dio"/>
-                                    <constraint firstAttribute="height" constant="50" id="M8s-iz-JV8"/>
+                                    <constraint firstAttribute="height" constant="80" id="M8s-iz-JV8"/>
                                     <constraint firstItem="Azj-3t-2xS" firstAttribute="leading" secondItem="wQw-Cx-EAZ" secondAttribute="leading" id="ZQO-aI-e9v"/>
                                     <constraint firstAttribute="trailing" secondItem="Azj-3t-2xS" secondAttribute="trailing" id="zC6-Rg-xTE"/>
                                 </constraints>

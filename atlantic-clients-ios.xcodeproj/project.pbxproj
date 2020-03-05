@@ -50,6 +50,7 @@
 		7964E3D72409C4A10043DD67 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964E3D62409C4A10043DD67 /* AgendaViewController.swift */; };
 		7964E3D92409C4E80043DD67 /* ProfileAgenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7964E3D82409C4E80043DD67 /* ProfileAgenda.storyboard */; };
 		79651D9C23ECC4B900FC5C54 /* ImagenNoticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79651D9B23ECC4B900FC5C54 /* ImagenNoticia.swift */; };
+		7965E2492410820E00E3955C /* Puestos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7965E2482410820E00E3955C /* Puestos.swift */; };
 		7966CC2A2400A1A10023401E /* AD2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966CC292400A1A10023401E /* AD2CollectionViewCell.swift */; };
 		7966CC2E2400A4670023401E /* AD2CollectionViewDelegateAndDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966CC2D2400A4670023401E /* AD2CollectionViewDelegateAndDatasource.swift */; };
 		7966CC302400A7C00023401E /* AtlanticDerby2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966CC2F2400A7C00023401E /* AtlanticDerby2ViewModel.swift */; };
@@ -300,6 +301,7 @@
 		7964E3D62409C4A10043DD67 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		7964E3D82409C4E80043DD67 /* ProfileAgenda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAgenda.storyboard; sourceTree = "<group>"; };
 		79651D9B23ECC4B900FC5C54 /* ImagenNoticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenNoticia.swift; sourceTree = "<group>"; };
+		7965E2482410820E00E3955C /* Puestos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puestos.swift; sourceTree = "<group>"; };
 		7966CC292400A1A10023401E /* AD2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD2CollectionViewCell.swift; sourceTree = "<group>"; };
 		7966CC2D2400A4670023401E /* AD2CollectionViewDelegateAndDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD2CollectionViewDelegateAndDatasource.swift; sourceTree = "<group>"; };
 		7966CC2F2400A7C00023401E /* AtlanticDerby2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlanticDerby2ViewModel.swift; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 				795C77D52402C746000036AB /* TournamentDetails.swift */,
 				798F882924085A2F0020517F /* TournamentTable.swift */,
 				795C624C240B452F00A0841F /* Horario.swift */,
+				7965E2482410820E00E3955C /* Puestos.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1940,6 +1943,7 @@
 				84ED504823E382D60010D378 /* RafflesTableViewDatasourceAndDelegate.swift in Sources */,
 				795DDE56240EAB8A00F4F52E /* HorarioCollectionViewCell.swift in Sources */,
 				84ED504923E382D60010D378 /* RafflesTableViewCell.swift in Sources */,
+				7965E2492410820E00E3955C /* Puestos.swift in Sources */,
 				84ED504A23E382D60010D378 /* RafflesViewController.swift in Sources */,
 				84ED504B23E382D60010D378 /* RegisterPasswordViewController.swift in Sources */,
 				84ED50A423E3832B0010D378 /* BenefitsCategoryViewModel.swift in Sources */,

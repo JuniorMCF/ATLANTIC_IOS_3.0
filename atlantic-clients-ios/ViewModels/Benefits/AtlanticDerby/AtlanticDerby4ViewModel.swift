@@ -22,7 +22,8 @@ class AtlanticDerby4ViewModel : AtlanticDerby4ViewModelProtocol{
 
     
     func viewDidLoad(){
-        let list = ["ic_coup_1","ic_coup_2","ic_coup_3"]
+        let list = ["1er puesto: $50","2do puesto: $20","3er puesto: $10"]
+        
         loadDataSources?(list)
         presentTitles?(list)
     }

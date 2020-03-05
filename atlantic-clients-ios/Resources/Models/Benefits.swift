@@ -29,7 +29,7 @@ class Benefits{
     var fechaTexto = ""
     var fechaProximaTexto = ""
     var estado = 0
-    var tipoMoneda = 0
+    var tipoMoneda = ""
     var fecha = ""
     var esCarrera : Bool?
     var fechaProxima = ""

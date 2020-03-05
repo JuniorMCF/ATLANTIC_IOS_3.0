@@ -28,8 +28,8 @@ class AtlanticDerby2ViewController: UIViewController {
     @IBOutlet var fechaModificacionLabel: Label!
     override func viewDidLoad() {
         super.viewDidLoad()
-        AD2CollectionView.layer.cornerRadius = 20
-        AD2CollectionView.backgroundColor = .gray
+        AD2CollectionView.layer.cornerRadius = 25
+        AD2CollectionView.backgroundColor =  #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.862745098, alpha: 1)
         bind()
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,15 +40,30 @@ class AtlanticDerby2ViewController: UIViewController {
         viewModel.presentTitles = presentTitles(data:)
     }
     func presentTitles(data:[String]){
-        fechaLabel.setBenefitDetailTitleCenter(with: "¡Pronto tendrá mas opciones de ganar!")
-        titleLabel.setBenefitDetailTitleCenter(with: "Carrera")
-        proximaCarreraLabel.setSubTitleViewLabelCenter(with: "Próxima carrera:\n Carrera diamante a las 22:00hrs")
+        fechaLabel.setBenefitDetailTitleCenter(with: "¡Pronto tendrá más oportunidades de ganar!")
+        titleLabel.setBenefitDetailTitleCenter(with: benefit.nombre)
+        proximaCarreraLabel.setSubTitleViewLabelCenter(with: "Próxima carrera:\n"+benefit.fechaProximaTexto)
         recordatorioButton.setRemindButton(with: "Crear recordatorio")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
-        fechaModificacionLabel.setSubTitleViewLabel(with: "actualizado el 28/12/19 a las 09:00 hrs")
+        
+        let fecha = (benefit.fechaActualizacion as NSString).doubleValue
+        let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "HH:mm"
+        dateFormatter2.locale = NSLocale.current
+        dateFormatter2.timeZone = TimeZone(abbreviation: "GMT")
+        let txtFecha = dateFormatter.string(from: date)
+        let txtHour = dateFormatter2.string(from: date)
+        
+        fechaModificacionLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour+" hrs")
     }
     
-    func loadDatasources(datasources: [String]) {
+    func loadDatasources(datasources: [Puestos]) {
         ad2CollectionViewDD = AD2CollectionViewDelegateAndDatasource(items: datasources,
                                                                      viewModel:viewModel)
         AD2CollectionView.dataSource = ad2CollectionViewDD

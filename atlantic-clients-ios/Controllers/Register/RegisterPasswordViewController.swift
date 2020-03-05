@@ -55,6 +55,7 @@ class RegisterPasswordViewController: UIViewController {
     
     @IBAction func tapRegister() {
         viewModel.tapRegister()
+        
     }
     
     private func addTapGesture() {
