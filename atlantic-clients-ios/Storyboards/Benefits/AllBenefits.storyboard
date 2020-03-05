@@ -99,6 +99,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="ud2-q1-n76"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="CreateReminder:" destination="Y9j-zr-Ait" eventType="touchUpInside" id="ROw-LY-Yi3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uS4-CE-i1U" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                 <rect key="frame" x="189" y="4" width="30" height="30"/>

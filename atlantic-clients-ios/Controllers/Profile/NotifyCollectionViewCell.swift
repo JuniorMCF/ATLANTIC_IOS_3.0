@@ -59,20 +59,11 @@ class NotifyCollectionViewCell: UICollectionViewCell {
         let fecha = (item.fecha as NSString).doubleValue
         let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd"
-        dateFormatter.locale = NSLocale.current
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
-        
-        let calendar = Calendar.current
-        // Replace the hour (time) of both dates with 00:00
-        let date1 = calendar.startOfDay(for:date)
-        let date2 = calendar.startOfDay(for:hoy)
-        
-        let components = calendar.dateComponents([Calendar.Component.day], from: date1, to: date2)
         
         
-        titleAgendaLabel.text = "Hace \(components.day!) dias"
+        
+        
+        titleAgendaLabel.text = Utils().timeAgoSince(date)
         messageAgendaLabel.text = item.mensaje
         actionOcutarNotify.layer.cornerRadius = 10
         showItems()

@@ -67,6 +67,7 @@ class TrophyLoseViewController: UIViewController {
         dateFormatter2.dateFormat = "HH:mm"
         dateFormatter2.locale = NSLocale.current
         dateFormatter2.timeZone = TimeZone(abbreviation: "GMT")
+        
         let txtFecha = dateFormatter.string(from: date)
         let txtHour = dateFormatter2.string(from: date)
         

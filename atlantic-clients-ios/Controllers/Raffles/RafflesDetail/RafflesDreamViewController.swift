@@ -43,7 +43,8 @@ class RafflesDreamViewController: UIViewController {
     }
     
     @IBAction func createReminderButton(_ sender: Any) {
-        viewModel.tapCreateReminder()
+        let fecha = (sorteo.fecha as NSString)
+        Utils().saveEvent(title: sorteo.nombreSorteo, fecha: fecha)
     }
     
     func bind() {

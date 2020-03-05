@@ -72,6 +72,14 @@ class AllBenefitsViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func CreateReminder(_ sender: Any) {
+        let fecha = (benefit.fecha as NSString)
+        Utils().saveEvent(title: benefit.nombre, fecha: fecha)
+        
+    }
+    
+    
 
     func bind() {
         viewModel.showTitles = showTitles(titles: )
