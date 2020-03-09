@@ -13,7 +13,7 @@ target 'atlantic-clients-ios' do
   pod 'AlamofireImage', '~> 4.0.0-beta.6'
   pod 'MaterialComponents/ActivityIndicator'
   pod "youtube-ios-player-helper", "~> 0.1.4"
-
+  pod "SwiftToast"
 
   target 'atlantic-clients-iosTests' do
     inherit! :search_paths

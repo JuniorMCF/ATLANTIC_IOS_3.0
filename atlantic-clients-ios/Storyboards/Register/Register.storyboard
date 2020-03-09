@@ -92,6 +92,105 @@
             </objects>
             <point key="canvasLocation" x="825" y="71.83098591549296"/>
         </scene>
+        <!--Register Sucess View Controller-->
+        <scene sceneID="1ie-Nv-Jzu">
+            <objects>
+                <viewController storyboardIdentifier="RegisterSuccessID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vEB-Zo-MgS" customClass="RegisterSucessViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6t-md-xxQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="0Hg-Qk-cuu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-ja-YP4" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo" id="aCZ-8L-bhY">
+                                        <rect key="frame" x="40" y="54" width="240" height="114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bId-OX-uEL" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="481" width="240" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapNext:" destination="ojz-bP-peX" eventType="touchUpInside" id="FqB-sh-SAM"/>
+                                            <action selector="tapRegisterUser:" destination="vEB-Zo-MgS" eventType="touchUpInside" id="gNn-LI-SBS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqh-wh-fhL" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="193" width="240" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69N-k3-hKE" customClass="TextField" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="271" width="240" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvU-dm-eYj">
+                                        <rect key="frame" x="8" y="27" width="20" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_left_arrow">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBackLogin:" destination="ojz-bP-peX" eventType="touchUpInside" id="5VA-MY-Vbi"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-ew-pRW" customClass="TextField" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="315" width="240" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ok5-7Y-P1h">
+                                        <rect key="frame" x="40" y="359" width="240" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9t-rF-g8o" customClass="TextField" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="432" width="240" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qIg-ja-YP4" firstAttribute="height" secondItem="L6t-md-xxQ" secondAttribute="height" id="e2m-13-jcV"/>
+                            <constraint firstItem="0Hg-Qk-cuu" firstAttribute="width" secondItem="L6t-md-xxQ" secondAttribute="width" id="hm8-Om-YyM"/>
+                            <constraint firstItem="0Hg-Qk-cuu" firstAttribute="height" secondItem="L6t-md-xxQ" secondAttribute="height" id="iVX-t8-yVP"/>
+                            <constraint firstItem="qIg-ja-YP4" firstAttribute="width" secondItem="L6t-md-xxQ" secondAttribute="width" id="sU6-kO-Oxc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Hl-id-zCO"/>
+                    </view>
+                    <connections>
+                        <outlet property="advertenciaTextArea" destination="ok5-7Y-P1h" id="373-ZS-JaI"/>
+                        <outlet property="confirmPasswordTextField" destination="h9t-rF-g8o" id="IGu-lS-kVC"/>
+                        <outlet property="dniTextField" destination="69N-k3-hKE" id="vIe-6x-VmY"/>
+                        <outlet property="passwordTextField" destination="a8g-ew-pRW" id="fbw-75-dOa"/>
+                        <outlet property="registerButton" destination="bId-OX-uEL" id="fcx-uY-cZh"/>
+                        <outlet property="titleLabel" destination="rqh-wh-fhL" id="ZhU-Jr-fTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnl-op-eRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.625" y="55.985915492957744"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="vZp-jc-qxe">
             <objects>

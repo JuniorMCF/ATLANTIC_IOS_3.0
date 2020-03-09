@@ -260,3 +260,52 @@ extension UIView {
   
     
 }
+extension UITextField{
+    func setBorderBottom(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
+        bottomLine.backgroundColor = UIColor.black.cgColor
+        self.borderStyle = UITextField.BorderStyle.none
+        self.layer.addSublayer(bottomLine)
+    }
+    func delBorderBottom(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
+        bottomLine.backgroundColor = UIColor.white.cgColor
+        self.borderStyle = UITextField.BorderStyle.none
+        self.layer.addSublayer(bottomLine)
+    }
+}
+
+
+extension UIViewController {
+
+func showToast(message : String) {
+    let large = CGFloat(message.count*10)
+    print(large)
+    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - large/2, y: self.view.frame.size.height-self.view.frame.size.height/10, width: large, height: 35))
+    toastLabel.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+    toastLabel.textColor = UIColor.black
+    toastLabel.textAlignment = .center;
+    toastLabel.text = message
+    toastLabel.alpha = 1.0
+    toastLabel.layer.cornerRadius = 10;
+    toastLabel.clipsToBounds  =  true
+    toastLabel.font = UIFont(name: "IranSansMobile", size: 18)
+    self.view.addSubview(toastLabel)
+    UIView.animate(withDuration: 4.0, delay: 1.0, options: .curveEaseOut, animations: {
+         toastLabel.alpha = 0.0
+    }, completion: {(isCompleted) in
+        toastLabel.removeFromSuperview()
+    })
+} }
+
+extension Date {
+    var millisecondsSince1970:Int64 {
+        return Int64((self.timeIntervalSince1970 * 1000.0).rounded())
+    }
+
+    init(milliseconds:Int64) {
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+    }
+}

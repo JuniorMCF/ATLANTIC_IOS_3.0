@@ -48,6 +48,10 @@ class RegisterDocumentViewController: UIViewController {
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.pushRegisterPassword = pushRegisterPassword
+        viewModel.showToast = toast(message:)
+    }
+    func toast(message:String){
+         self.showToast(message: message)
     }
     
     func showTitles(titles: RegisterDocumentTitles) {
@@ -59,9 +63,12 @@ class RegisterDocumentViewController: UIViewController {
     
     }
     
-    func pushRegisterPassword() {
-        let storyBoard = UIStoryboard(name: "RegisterPassword", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "RegisterPasswordID")
+    func pushRegisterPassword(dni:String) {
+        
+        
+        let storyBoard = UIStoryboard(name: "Register", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "RegisterSuccessID") as! RegisterSucessViewController
+        viewController.dni = dni
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

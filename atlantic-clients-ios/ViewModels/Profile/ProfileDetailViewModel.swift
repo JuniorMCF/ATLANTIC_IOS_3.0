@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import Alamofire
+import SwiftyJSON
 struct DetailTitles {
     var nameTitle: String = "Nombres"
     var nameText: String = "Leonardo"
@@ -31,14 +32,45 @@ protocol ProfileDetailViewModelProtocol {
     // Inputs
     
     func viewDidLoad()
-    
+    func saveProfile(celular:String, direccion:String, fechaNac:String, email:String, clienteId :String)
     // Outputs
     
     var showTitles: ((DetailTitles) -> Void)? { get set }
- 
+    var presentToast: ((String)->Void)? {get set}
 }
 
 class ProfileDetailViewModel: ProfileDetailViewModelProtocol {
+    var presentToast: ((String) -> Void)?
+
+    
+    func saveProfile(celular:String, direccion:String, fechaNac:String, email:String, clienteId :String) {
+        
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postUpdateUserData)
+        dominioUrl = dominioUrl?.appending("celular", value: celular)
+        dominioUrl = dominioUrl?.appending("direccion", value: direccion)
+        dominioUrl = dominioUrl?.appending("fechaNac", value: fechaNac)
+        dominioUrl = dominioUrl?.appending("email", value: email)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print(json)
+                     self.presentToast?("datos actualizados correctamente")
+
+                    break
+                case.failure(let error):
+                   
+                    print(error)
+                    break
+                }
+                
+            }
+    }
+    
     
     var showTitles: ((DetailTitles) -> Void)?
     

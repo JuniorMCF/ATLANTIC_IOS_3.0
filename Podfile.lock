@@ -15,6 +15,7 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - SnapKit (5.0.1)
+  - SwiftToast (1.1.3)
   - SwiftyJSON (4.3.0)
   - youtube-ios-player-helper (0.1.6)
 
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - CarbonKit
   - MaterialComponents/ActivityIndicator
   - SnapKit (~> 5.0.0)
+  - SwiftToast
   - SwiftyJSON (~> 4.0)
   - youtube-ios-player-helper (~> 0.1.4)
 
@@ -37,6 +39,7 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - SnapKit
+    - SwiftToast
     - SwiftyJSON
     - youtube-ios-player-helper
 
@@ -49,9 +52,10 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 8e6ffdff292e214c26981285dfe78f384d30f769
+PODFILE CHECKSUM: 3dd275955bcee2ec6347953a13836310f7b65711
 
 COCOAPODS: 1.8.4

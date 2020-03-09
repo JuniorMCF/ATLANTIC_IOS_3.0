@@ -64,6 +64,10 @@
 		7968E36B23FF4CBE007B6D3A /* AtlanticDerby3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7968E36A23FF4CBE007B6D3A /* AtlanticDerby3.storyboard */; };
 		7968E36D23FF4CCC007B6D3A /* AtlanticDerby4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7968E36C23FF4CCC007B6D3A /* AtlanticDerby4.storyboard */; };
 		7968E36F23FF4CDD007B6D3A /* AtlanticDerby5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7968E36E23FF4CDD007B6D3A /* AtlanticDerby5.storyboard */; };
+		796DB9EC241562B30041790D /* RegisterSucessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DB9EB241562B30041790D /* RegisterSucessViewController.swift */; };
+		796DB9EE241564E80041790D /* RegisterSucessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DB9ED241564E80041790D /* RegisterSucessViewModel.swift */; };
+		796DB9F0241598210041790D /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DB9EF241598210041790D /* RecoveryPasswordViewController.swift */; };
+		796DB9F42415D30D0041790D /* RecoveryPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DB9F32415D30D0041790D /* RecoveryPasswordViewModel.swift */; };
 		796E480723ED208D00E51063 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E480623ED208D00E51063 /* News.swift */; };
 		796E480923ED20D900E51063 /* Benefits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E480823ED20D900E51063 /* Benefits.swift */; };
 		796E480B23ED210200E51063 /* Foto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E480A23ED210200E51063 /* Foto.swift */; };
@@ -315,6 +319,10 @@
 		7968E36A23FF4CBE007B6D3A /* AtlanticDerby3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AtlanticDerby3.storyboard; sourceTree = "<group>"; };
 		7968E36C23FF4CCC007B6D3A /* AtlanticDerby4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AtlanticDerby4.storyboard; sourceTree = "<group>"; };
 		7968E36E23FF4CDD007B6D3A /* AtlanticDerby5.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AtlanticDerby5.storyboard; sourceTree = "<group>"; };
+		796DB9EB241562B30041790D /* RegisterSucessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewController.swift; sourceTree = "<group>"; };
+		796DB9ED241564E80041790D /* RegisterSucessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSucessViewModel.swift; sourceTree = "<group>"; };
+		796DB9EF241598210041790D /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
+		796DB9F32415D30D0041790D /* RecoveryPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewModel.swift; sourceTree = "<group>"; };
 		796E480623ED208D00E51063 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		796E480823ED20D900E51063 /* Benefits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefits.swift; sourceTree = "<group>"; };
 		796E480A23ED210200E51063 /* Foto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foto.swift; sourceTree = "<group>"; };
@@ -867,6 +875,7 @@
 			children = (
 				84ED4EE523E37F050010D378 /* RegisterPasswordViewController.swift */,
 				84ED4EE623E37F050010D378 /* RegisterDocumentViewController.swift */,
+				796DB9EB241562B30041790D /* RegisterSucessViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1079,6 +1088,7 @@
 			children = (
 				795DDE71240F3CA900F4F52E /* ForgotPasswordViewController.swift */,
 				795DDE72240F3CA900F4F52E /* LoginViewController.swift */,
+				796DB9EF241598210041790D /* RecoveryPasswordViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1412,6 +1422,7 @@
 			children = (
 				84ED4F8023E37F050010D378 /* RegisterPasswordViewModel.swift */,
 				84ED4F8123E37F050010D378 /* RegisterViewModel.swift */,
+				796DB9ED241564E80041790D /* RegisterSucessViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1542,6 +1553,7 @@
 			children = (
 				795DDE75240F3CEA00F4F52E /* ForgotPasswordViewModel.swift */,
 				795DDE76240F3CEB00F4F52E /* LoginViewModel.swift */,
+				796DB9F32415D30D0041790D /* RecoveryPasswordViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1900,8 +1912,10 @@
 				84ED509123E382EF0010D378 /* AllBenefitsViewModel.swift in Sources */,
 				84ED509223E382EF0010D378 /* EventDetailViewModel.swift in Sources */,
 				7964E3C4240967490043DD67 /* AllBenefitsCollectionViewCell.swift in Sources */,
+				796DB9EC241562B30041790D /* RegisterSucessViewController.swift in Sources */,
 				84ED509323E382EF0010D378 /* EventsViewModel.swift in Sources */,
 				845FB7972405C09C001A7BF8 /* CustomProgress.swift in Sources */,
+				796DB9F0241598210041790D /* RecoveryPasswordViewController.swift in Sources */,
 				84ED509423E382EF0010D378 /* DinnerViewModel.swift in Sources */,
 				7966CC2A2400A1A10023401E /* AD2CollectionViewCell.swift in Sources */,
 				84ED509523E382EF0010D378 /* BreakfastViewModel.swift in Sources */,
@@ -1977,6 +1991,7 @@
 				84ED506023E382D60010D378 /* PromotionsCollectionViewDelegateAndDatasource.swift in Sources */,
 				84ED506123E382D60010D378 /* NewsViewContoller+CollectionViewDelegate.swift in Sources */,
 				84ED506223E382D60010D378 /* NewsViewController.swift in Sources */,
+				796DB9F42415D30D0041790D /* RecoveryPasswordViewModel.swift in Sources */,
 				84626F3124083B780068F5A1 /* NotifyDatasourceAndDelegate.swift in Sources */,
 				84ED506323E382D60010D378 /* NewsViewContoller+CollectionViewDatasource.swift in Sources */,
 				84ED506423E382D60010D378 /* BenefitsCategoryViewController.swift in Sources */,
@@ -2013,6 +2028,7 @@
 				84ED507723E382D60010D378 /* ViewController.swift in Sources */,
 				7968E36923FF4C97007B6D3A /* AtlanticDerby5ViewController.swift in Sources */,
 				845FB7AD2406067C001A7BF8 /* TutorialVC.swift in Sources */,
+				796DB9EE241564E80041790D /* RegisterSucessViewModel.swift in Sources */,
 				795DDE77240F3CEB00F4F52E /* ForgotPasswordViewModel.swift in Sources */,
 				79758F942401A16B003F31AA /* AD4CollectionViewDelegateAndDatasource.swift in Sources */,
 				798F8826240859030020517F /* TrophyLoseCollectionViewDatasourceAndDelegate.swift in Sources */,
@@ -2206,6 +2222,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5KNT26NZ3;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2224,6 +2241,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5KNT26NZ3;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

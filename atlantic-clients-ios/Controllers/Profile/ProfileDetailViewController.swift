@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireImage
+
 class ProfileDetailViewController: UIViewController {
     
     var viewModel: ProfileDetailViewModelProtocol! = ProfileDetailViewModel()
@@ -63,7 +64,26 @@ class ProfileDetailViewController: UIViewController {
     
     func bind() {
         viewModel.showTitles = showTitles(titles: )
+        viewModel.presentToast = presentToast(response:)
     }
+    func presentToast(response:String){
+        denyModify()
+        let date = birthdateTextField.text!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        let dateObj = dateFormatter.date(from: date)
+        let fecha = dateObj!.millisecondsSince1970
+        let datestring = Int64(fecha)
+
+        appDelegate.usuario.fechaNac = String(datestring)
+        appDelegate.usuario.celular = phoneTextField.text!
+        appDelegate.usuario.email = emailTextField.text!
+        appDelegate.usuario.direccion = addressTextField.text!
+        self.showToast(message: response)
+    }
+    
     
     func showTitles(titles: DetailTitles) {
         let usuario = appDelegate.usuario
@@ -84,6 +104,7 @@ class ProfileDetailViewController: UIViewController {
         nameTextField.setTextFieldStyle(with: usuario.nombre)
         birthdateLabel.setTitleProfileLabel(with: titles.birthdateTitle)
         let fechaNac = (usuario.fechaNac as NSString).doubleValue
+        
         let date = Date(timeIntervalSince1970: TimeInterval(fechaNac/1000.0))
 
         let dateFormatter = DateFormatter()
@@ -104,17 +125,29 @@ class ProfileDetailViewController: UIViewController {
         saveButton.setRemindButton(with: titles.saveTitle)
     }
     func allowModify(){
+        let usuario = appDelegate.usuario
         editButton.isUserInteractionEnabled = false
-        nameTextField.isUserInteractionEnabled = true
+        nameTextField.isUserInteractionEnabled = false
         birthdateTextField.isUserInteractionEnabled =  true
-        dniTextField.isUserInteractionEnabled =  true
+        dniTextField.isUserInteractionEnabled =  false
         phoneTextField.isUserInteractionEnabled =  true
         emailTextField.isUserInteractionEnabled =  true
         addressTextField.isUserInteractionEnabled =  true
         saveButton.isUserInteractionEnabled =  true
         saveButton.alpha = 1.0
+       
+ 
+        
+        birthdateTextField.setBorderBottom()
+        phoneTextField.setBorderBottom()
+        emailTextField.setBorderBottom()
+        addressTextField.setBorderBottom()
+        saveButton.isUserInteractionEnabled =  true
+        
     }
     func denyModify(){
+        let usuario = appDelegate.usuario
+        editButton.isUserInteractionEnabled = true
         nameTextField.isUserInteractionEnabled = false
         birthdateTextField.isUserInteractionEnabled = false
         dniTextField.isUserInteractionEnabled = false
@@ -122,15 +155,25 @@ class ProfileDetailViewController: UIViewController {
         emailTextField.isUserInteractionEnabled = false
         addressTextField.isUserInteractionEnabled = false
         saveButton.isUserInteractionEnabled = false
+        //quitamos los underlines
+
+        birthdateTextField.delBorderBottom()
+        
+        phoneTextField.delBorderBottom()
+        emailTextField.delBorderBottom()
+        addressTextField.delBorderBottom()
+        
+        
         saveButton.alpha = 0.0
     }
+    
     
     @IBAction func tapEditButton(_ sender: Any) {
         allowModify()
         
     }
     @IBAction func tapSaveButton(_ sender: Any) {
-        //viewModel.saveProfile()
+        viewModel.saveProfile(celular:phoneTextField.text!, direccion:addressTextField.text!, fechaNac:birthdateTextField.text!, email:emailTextField.text!, clienteId :appDelegate.usuario.clienteId)
     }
     private func addTapGesture() {
         view.isUserInteractionEnabled = true
@@ -138,6 +181,7 @@ class ProfileDetailViewController: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
+
 
 }
 
@@ -158,3 +202,4 @@ extension ProfileDetailViewController: UITextFieldDelegate {
         return true
     }
 }
+

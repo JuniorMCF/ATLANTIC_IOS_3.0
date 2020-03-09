@@ -35,14 +35,15 @@ protocol RegisterDocumentViewModelProtocol {
     
     var showTitles: ((RegisterDocumentTitles) -> Void)? { get set }
     var loadPickerData: ((PickerData) -> Void)? { get set }
-    var pushRegisterPassword: (() -> Void)? { get set }
+    var pushRegisterPassword: ((String) -> Void)? { get set }
+    var showToast:((String)->Void)?{get set}
 }
 
 class RegisterViewModel: RegisterDocumentViewModelProtocol {
-    
+    var showToast: ((String) -> Void)?
     var loadPickerData: ((PickerData) -> Void)?
     var showTitles: ((RegisterDocumentTitles) -> Void)?
-    var pushRegisterPassword: (() -> Void)?
+    var pushRegisterPassword: ((String) -> Void)?
     
     func viewDidLoad() {
         let titles = RegisterDocumentTitles()
@@ -68,35 +69,26 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
                 
             case.success(let value):
                          let json = JSON(value)
-                         print(json)
-                         let data = json.stringValue.data(using: .utf8)
-                         do {
-                             // make sure this JSON is in the format we expect
-                             if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
-                                 // try to read out a string array
-                                let resultado = json["resultado"] as! String
-                                
-                                if(resultado == "200"){
-                                    
-                                    let response = json["response"] as! NSArray
-                                    //enviar data
-                                   
-                                 }else {
-                                    //en otros casos
+                         let resultado = json["resultado"].stringValue
+                         let response = json["response"].stringValue
+                         if(resultado == "200"){
                             
-                                 }
-                                 
-                                
-                                 
-                             }
-                         } catch let error as NSError {
+                            self.pushRegisterPassword?(dni)
+                           
+                         }else {
+                            if(resultado == "400"){
+                                self.showToast?(response)
+                            }else{
+                               self.showToast?(response)
+                            }
+                            //en otros casos
                             
-                             print("Failed to load: \(error.localizedDescription)")
                          }
+
                          
                         break
                     case.failure(let error):
-                       
+                       self.showToast?("Error: revise su conexión e intentelo nuevamente")
                         print(error)
                         break
                     }
@@ -109,7 +101,7 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
         
         
         
-        pushRegisterPassword?()
+        
     }
  
 }

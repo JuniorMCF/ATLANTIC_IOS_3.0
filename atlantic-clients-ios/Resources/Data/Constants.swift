@@ -53,7 +53,6 @@ class Constants {
     var postAgregarActividadCobro = "agregarActividadCobro"
     var postHideNotify = "HideNotify"
     
-    
  
     //variable para guardar datos en rom
     var preferences : UserDefaults? = nil

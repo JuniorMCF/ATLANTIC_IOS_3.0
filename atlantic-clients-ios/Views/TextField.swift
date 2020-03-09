@@ -106,6 +106,32 @@ class TextField: UITextField {
         
         //Reducir
     }
+    public func setDNIStyle3(with placeHolder: String) {
+        //DNI
+        textColor = .black
+        
+        font = UIFont(name: "HelveticaNeue", size: 17)!
+        attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        keyboardType = .numberPad
+        autocorrectionType = .no
+        returnKeyType = .next
+        borderStyle = .none
+        //Reducir
+    }
+    public func setDNIStyleSucessRegister(with placeHolder: String) {
+        //DNI
+        textColor = .white
+        
+        font = UIFont(name: "HelveticaNeue-Bold", size: 17)!
+        attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        keyboardType = .numberPad
+        textAlignment = .center
+        autocorrectionType = .no
+        returnKeyType = .next
+        borderStyle = .none
+        
+        //Reducir
+    }
     
     public func setDNI2Style(with placeHolder: String) {
            //DNI
@@ -144,5 +170,41 @@ class TextField: UITextField {
         leftView = outerView
         leftViewMode = .always
     }
+    public func setPasswordStyleRegisterSuccess(with placeHolder: String) {
+           //Password
+           textColor = .white
+           
+           font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+           attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+           keyboardType = .alphabet
+           isSecureTextEntry = true
+           returnKeyType = .done
+           borderStyle = .none
+           
+           //Reducir
+           let outerView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 15))
+           let iconView = UIImageView(frame: CGRect(x: 15, y: 0, width: 15, height: 15))
+           let icon = UIImage(named: "ic_password")
+           iconView.tintColor = .white
+           iconView.image = icon
+           outerView.addSubview(iconView)
+           
+           leftView = outerView
+           leftViewMode = .always
+        
+        
+            let outerView2 = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 15))
+            let iconView2 = UIImageView(frame: CGRect(x: 100, y: 0, width: 15, height: 15))
+            let icon2 = UIImage(named: "ic_password")
+            iconView2.tintColor = .white
+            iconView2.image = icon2
+            outerView2.addSubview(iconView2)
+            
+            rightView = outerView2
+            rightViewMode = .always
+        
+        
+            
+       }
     
 }
