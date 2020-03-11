@@ -11,51 +11,51 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AgendaCellID" id="gTV-IL-0wX" customClass="AgendaCollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="542" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="406" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="542" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="406" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-r2-Dr0">
-                        <rect key="frame" x="22" y="49" width="97" height="104"/>
+                        <rect key="frame" x="1" y="25" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJW-pV-F7r" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                        <rect key="frame" x="141" y="49" width="381" height="30"/>
+                        <rect key="frame" x="123" y="37" width="269" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omk-54-sKA" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                        <rect key="frame" x="141" y="86" width="381" height="30"/>
+                        <rect key="frame" x="123" y="65" width="269" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2A-XH-VJ5" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                        <rect key="frame" x="141" y="123" width="381" height="30"/>
+                        <rect key="frame" x="123" y="92" width="269" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5P-sy-paH" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                        <rect key="frame" x="302" y="161" width="220" height="30"/>
+                        <rect key="frame" x="212" y="121" width="180" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3h-fv-Vwx" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                        <rect key="frame" x="517" y="0.0" width="25" height="25"/>
+                        <rect key="frame" x="386" y="1" width="19" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <state key="normal" image="ic_cancel_24px"/>
                     </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="479" height="142"/>
+            <size key="customSize" width="343" height="202"/>
             <connections>
                 <outlet property="acompanantesButton" destination="L5P-sy-paH" id="Ut2-jy-DP3"/>
                 <outlet property="buffeteSubtitleLabel" destination="omk-54-sKA" id="mzB-wl-XAP"/>
@@ -64,7 +64,7 @@
                 <outlet property="fechaLabel" destination="F2A-XH-VJ5" id="uEX-3c-Vfn"/>
                 <outlet property="foto" destination="ziV-r2-Dr0" id="tg2-Yd-Mfx"/>
             </connections>
-            <point key="canvasLocation" x="442.02898550724643" y="145.98214285714286"/>
+            <point key="canvasLocation" x="394.20289855072468" y="162.72321428571428"/>
         </collectionViewCell>
     </objects>
     <resources>

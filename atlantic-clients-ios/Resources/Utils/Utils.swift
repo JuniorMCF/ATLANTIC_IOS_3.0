@@ -14,7 +14,71 @@ import EventKit
 import UIKit
 class Utils{
     
-    
+    func getDia(weekDay:Int)->String{
+        var txtDia = ""
+        if(weekDay == 1){
+            txtDia = "DOMINGO"
+        }
+        if(weekDay == 2){
+            txtDia = "LUNES"
+        }
+        if(weekDay == 3){
+            txtDia = "MARTES"
+        }
+        if(weekDay == 4){
+            txtDia = "MIERCOLES"
+        }
+        if(weekDay == 5){
+            txtDia = "JUEVES"
+        }
+        if(weekDay == 6){
+            txtDia = "VIERNES"
+        }
+        if(weekDay == 7){
+            txtDia = "SABADO"
+        }
+        return txtDia
+    }
+    func getMonth(month:String)->String{
+        var txtMes = ""
+        if(month == "01"){
+            txtMes = "ENERO"
+        }
+        if(month == "02"){
+            txtMes = "FEBRERO"
+        }
+        if(month == "03"){
+            txtMes = "MARZO"
+        }
+        if(month == "04"){
+            txtMes = "ABRIL"
+        }
+        if(month == "05"){
+            txtMes = "MAYO"
+        }
+        if(month == "06"){
+            txtMes = "JUNIO"
+        }
+        if(month == "07"){
+            txtMes = "JULIO"
+        }
+        if(month == "08"){
+            txtMes = "AGOSTO"
+        }
+        if(month == "09"){
+            txtMes = "SETIEMBRE"
+        }
+        if(month == "10"){
+            txtMes = "OCTUBRE"
+        }
+        if(month == "11"){
+            txtMes = "NOVIEMBRE"
+        }
+        if(month == "12"){
+            txtMes = "DICIEMBRE"
+        }
+        return txtMes
+    }
     
     func MD5(string: String) -> String {
         let length = Int(CC_MD5_DIGEST_LENGTH)

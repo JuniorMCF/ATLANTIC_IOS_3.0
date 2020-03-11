@@ -37,8 +37,8 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
     var presentNotify: (()->Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var eventList = [Event]()
-    var tipoList = [String]()
     var eventHashMap : [String: [Event]] = ["":[Event]()]
+    var tipoList : [String] = []
     func viewDidLoad() {
         let titles = EventDetailPreview()
         let parameters = ["clienteId":appDelegate.usuario.clienteId]
@@ -48,7 +48,7 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
             
         case.success(let value):
                      let json = JSON(value)
-                     
+                     print(json)
                      let data = json.stringValue.data(using: .utf8)
                      do {
                          // make sure this JSON is in the format we expect
@@ -63,26 +63,37 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
                                 let array = JSON(response)
                                 
                                 for tipo in array.arrayValue {
-                                    let tipo1 = JSON(tipo["tipo"])
-                                    self.tipoList.append(tipo1[0]["nombreTipo"].stringValue)
+                                    let evento = JSON(tipo["evento"])
+                                    
                                     self.eventList.removeAll()
-                                    for data in tipo1.arrayValue
+                                    for data in evento.arrayValue
                                     {
                                         let event = Event()
                                         let value = JSON(data)
-                                        
-                                        event.clienteId = value["clienteId"].intValue
+                                        event.id = value["evento_id"].intValue
+                                        event.clienteId = value["cliente_id"].intValue
                                         event.descripcion = value["descripcion"].stringValue
                                         event.esPrincipal = value["es_principal"].boolValue
                                         event.fecha = value["fecha"].stringValue
-                                        event.foto = value["foto"].stringValue
-                                        event.nAcompanantes = value["nAcompanantes"].stringValue
+                                        let fotos = value["fotos"].arrayValue
+                                        for data in fotos{
+                                            let val = JSON(data)
+                                            let foto = FotoEvent()
+                                            foto.foto = val["foto"].stringValue
+                                            foto.esPrincipal = val["es_principal"].boolValue
+                                            event.fotos.append(foto)
+                                        }
+                                        event.nAcompanantes = value["nroAcompañantes"].stringValue
                                         event.nombre = value["nombre"].stringValue
+                                        event.descripcion = value["descripcion"].stringValue
                                         event.nombreCorto = value["nombre_corto"].stringValue
                                         event.nombreTipo = value["nombreTipo"].stringValue
                                         event.show = value["show"].stringValue
                                         event.tituloShow = value["titulo_show"].stringValue
                                         event.video = value["video"].stringValue
+                                        event.agendaId = value["agendaId"].intValue
+                                        event.horarioId = value["horarioId"].intValue
+                                        self.tipoList.append(event.nombreTipo)
                                         self.eventList.append(event)
                                         
                                     }
@@ -93,7 +104,6 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
                                 
                                 eventDetailPreview.list = list
                                 eventDetailPreview.tipoList = self.tipoList
-                              
                                 
                      
                             //enviar data

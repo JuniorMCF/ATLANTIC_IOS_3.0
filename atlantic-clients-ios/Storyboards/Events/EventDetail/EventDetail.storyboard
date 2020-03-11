@@ -257,7 +257,7 @@
                                                         <rect key="frame" x="0.0" y="70" width="280" height="409.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-QJ-zVb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="274.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="275.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQr-tm-VCF" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
@@ -278,7 +278,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDY-J3-F1I" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="36" width="272" height="24.5"/>
+                                                                        <rect key="frame" x="0.0" y="36" width="272" height="24"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -453,6 +453,7 @@
                         <outlet property="registerButton" destination="hkU-qK-hSd" id="sza-PT-EUm"/>
                         <outlet property="showLabel" destination="rDY-J3-F1I" id="BMW-fq-Sd6"/>
                         <outlet property="showTitleLabel" destination="IQr-tm-VCF" id="wLW-FS-drE"/>
+                        <outlet property="tabBar" destination="Tew-Mp-hs5" id="UDp-gR-LUC"/>
                         <outlet property="titleLabel" destination="ONr-tg-FDV" id="bLF-bB-d6L"/>
                         <outlet property="viewBuffet" destination="dqz-j7-Ybc" id="qpm-RB-mG9"/>
                         <outlet property="webview" destination="U6G-LQ-3tB" id="Dqe-ef-5qg"/>

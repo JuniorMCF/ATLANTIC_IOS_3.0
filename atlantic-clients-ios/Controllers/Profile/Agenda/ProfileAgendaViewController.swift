@@ -65,8 +65,9 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
     
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         let screen = self.storyboard?.instantiateViewController(withIdentifier: "AgendaID") as! AgendaViewController
-        //screen.items = items.list[Int(index)]
-        //screen.tipo = items[Int(index)].tipo
+        if(items.list.count>0){
+            screen.items = items.list[Int(index)]
+        }
         return screen
     }
 

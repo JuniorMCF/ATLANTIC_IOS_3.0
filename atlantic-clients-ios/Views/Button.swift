@@ -30,6 +30,15 @@ class Button: UIButton {
         layer.cornerRadius = 20.0
     }
     
+    public func setFirstButton3(with title: String) {
+           setTitle(title, for: .normal)
+           setTitleColor(.white, for: .normal)
+           titleLabel?.font =  UIFont(name: "HelveticaNeue-Bold", size: 14)!
+           backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
+           self.contentEdgeInsets = UIEdgeInsets(top: 15, left: 30, bottom: 15, right: 30)
+           layer.cornerRadius = 0.0
+    }
+    
     public func setFirstButton2(with title: String) {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)

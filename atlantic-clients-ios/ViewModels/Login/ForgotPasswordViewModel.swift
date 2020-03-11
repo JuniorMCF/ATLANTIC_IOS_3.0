@@ -60,7 +60,65 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
                                         let resultado = json["resultado"] as! String
                                          if(resultado == "200"){
                                             //showToast?()
-                                            let response = json["response"] as! NSArray
+                                            let response = json["response"] as! [String:String]
+                                            var celular = ""
+                                            var clienteId = ""
+                                            for data in response.keys{
+                                                if data == "celular"{
+                                                    celular = response[data]!
+                                                }
+                                                if data == "clienteId"{
+                                                    clienteId = response[data]!
+                                                }
+                                            }
+                                            let dominio = "https://verify.twilio.com/v2/Services/VA805c252a4cf3629ea451eae186cac91e/Verifications"
+                                            let headers: HTTPHeaders! = [.authorization("Basic QUNjYWVhNzZmN2Q5YmYzYzA2MzkxYTlhY2ZmODY2ZTQ2NDoxYTNiOWY1MTdmZTI0Mjg4OGRkZWU3YjNlM2E4ZDJiNQ=="),.contentType("application/x-www-form-urlencoded")
+                                            ]
+                                            var dominioUrl = URL(string: dominio)
+                                                              /*dominioUrl = dominioUrl?.appending("To", value:"+51"+"966893533")
+                                                              dominioUrl = dominioUrl?.appending("Channel", value:"sms")
+                                                              dominioUrl = dominioUrl?.appending("Locale", value:"es")
+                                                              let url = dominioUrl!.absoluteString
+                                            */
+                                            
+                                            
+                                            let parameters = ["To":"+51"+"966893533","Channel":"sms","Locale":"es"]
+                                            AF.request(dominio,method: .get,parameters: parameters,encoding:  URLEncoding.default,headers:headers).responseJSON{(response) in
+                                                              switch response.result{
+                                                                  
+                                                              case.success(let value):
+                                                                           let json = JSON(value)
+                                                                           print(json)
+                                                                           let data = json.stringValue.data(using: .utf8)
+                                                                            do {
+                                                                                // make sure this JSON is in the format we expect
+                                                                                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                                                                                    // try to read out a string array
+                                                                                   let resultado = json["resultado"] as! String
+                                                                                    if(resultado == "200"){
+                                                                                       //showToast?()
+
+                                                                                    }else if (resultado == "400")  {
+                                                                                        //usuario no existe
+                                                                                    }else if (resultado == "401" ){
+                                                                                        //clave incorrecta
+                                                                                    }
+                                                                                  
+                                                                                    
+                                                                                }
+                                                                            } catch let error as NSError {
+                                                                               
+                                                                                print("Failed to load: \(error.localizedDescription)")
+                                                                            }
+                                                                            
+                                                                           break
+                                                                      case.failure(let error):
+                                                                      
+                                                                          print(error)
+                                                                          break
+                                                                      }
+                                                                      
+                                                                  }
                                             
                                             
                                          }else if (resultado == "400")  {
@@ -83,7 +141,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
                                break
                            }
                            
-                       }
+                }
             }else{
                 self.showToast?("Longitud minima 8")
             }

@@ -8,10 +8,10 @@
 
 import UIKit
 import youtube_ios_player_helper
-
 class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     
     // Mark: - ViewModel
+    @IBOutlet var tabBar: UINavigationItem!
     
     private var viewModel  = EventDetailViewModel()
     
@@ -129,15 +129,18 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
                 }
             }
         }else{
-            if(fotos[0].foto.count == 0){
+            tabBar.title = "Agenda"
+            if(event.fotos.count == 0){
                 listFotos.append("")
             }else{
-                for foto in fotos[0].foto{
-               
+                for foto in event.fotos{
+                    listFotos.append(foto.foto)
                 }
             }
 
         }
+       
+        
         bannerCollectionViewDD = BannerCollectionViewDatasourceAndDelegate(items: listFotos , pageControl: bannerPageControl)
         bannerCollectionView.dataSource = bannerCollectionViewDD
         bannerCollectionView.delegate = bannerCollectionViewDD
@@ -197,10 +200,10 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         let myComponents = myCalendar!.components(.weekday, from: date)
         let weekDay = myComponents.weekday
         var txtDia = ""
-        txtDia = getDia(weekDay: weekDay!)
+        txtDia = Utils().getDia(weekDay: weekDay!)
         let txtDiaNumero = dateFormatter2.string(from: date)
         let mes = dateFormatter3.string(from: date)
-        let txtMes = getMonth(month:mes)
+        let txtMes = Utils().getMonth(month:mes)
         dateLabel.setDetailSubTitle(with: txtDia + " " + txtDiaNumero + " " + txtMes)
         hoursLabel.setDetailSubTitle(with: titles.hours)
 
@@ -219,71 +222,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         registerButton.setRemindButton2(with: titles.registerTitle)
         
     }
-    func getDia(weekDay:Int)->String{
-        var txtDia = ""
-        if(weekDay == 1){
-            txtDia = "DOMINGO"
-        }
-        if(weekDay == 2){
-            txtDia = "LUNES"
-        }
-        if(weekDay == 3){
-            txtDia = "MARTES"
-        }
-        if(weekDay == 4){
-            txtDia = "MIERCOLES"
-        }
-        if(weekDay == 5){
-            txtDia = "JUEVES"
-        }
-        if(weekDay == 6){
-            txtDia = "VIERNES"
-        }
-        if(weekDay == 7){
-            txtDia = "SABADO"
-        }
-        return txtDia
-    }
-    func getMonth(month:String)->String{
-        var txtMes = ""
-        if(month == "01"){
-            txtMes = "ENERO"
-        }
-        if(month == "02"){
-            txtMes = "FEBRERO"
-        }
-        if(month == "03"){
-            txtMes = "MARZO"
-        }
-        if(month == "04"){
-            txtMes = "ABRIL"
-        }
-        if(month == "05"){
-            txtMes = "MAYO"
-        }
-        if(month == "06"){
-            txtMes = "JUNIO"
-        }
-        if(month == "07"){
-            txtMes = "JULIO"
-        }
-        if(month == "08"){
-            txtMes = "AGOSTO"
-        }
-        if(month == "09"){
-            txtMes = "SETIEMBRE"
-        }
-        if(month == "10"){
-            txtMes = "OCTUBRE"
-        }
-        if(month == "11"){
-            txtMes = "NOVIEMBRE"
-        }
-        if(month == "12"){
-            txtMes = "DICIEMBRE"
-        }
-        return txtMes
-    }
+
     func loadDatasources(datasources: [Horario]) {
         /*
         var horarioslist = [Horario]()

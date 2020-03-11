@@ -31,6 +31,8 @@
 		795DDE82240F424600F4F52E /* AllBenefits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE81240F424600F4F52E /* AllBenefits.storyboard */; };
 		7960240A23F1B70A00F3BCA8 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240923F1B70A00F3BCA8 /* Tournament.swift */; };
 		7960240C23F201F100F3BCA8 /* Sorteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240B23F201F100F3BCA8 /* Sorteo.swift */; };
+		796059F92418252800977BD7 /* AgendaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796059F82418252800977BD7 /* AgendaViewModel.swift */; };
+		796059FB241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */; };
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
 		7961E09423EBBBC9009E8189 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09323EBBBC9009E8189 /* Route.swift */; };
 		796429BB240DC3A60076265A /* CustomLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BA240DC3A60076265A /* CustomLogout.swift */; };
@@ -286,6 +288,8 @@
 		795DDE81240F424600F4F52E /* AllBenefits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllBenefits.storyboard; sourceTree = "<group>"; };
 		7960240923F1B70A00F3BCA8 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		7960240B23F201F100F3BCA8 /* Sorteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorteo.swift; sourceTree = "<group>"; };
+		796059F82418252800977BD7 /* AgendaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewModel.swift; sourceTree = "<group>"; };
+		796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCollectionViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7961E09323EBBBC9009E8189 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		796429BA240DC3A60076265A /* CustomLogout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogout.swift; sourceTree = "<group>"; };
@@ -625,6 +629,7 @@
 				7964E3CD2409AAAA0043DD67 /* AgendaCollectionViewCell.swift */,
 				7964E3CE2409AAAA0043DD67 /* AgendaCollectionViewCell.xib */,
 				7964E3D62409C4A10043DD67 /* AgendaViewController.swift */,
+				796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */,
 			);
 			path = Agenda;
 			sourceTree = "<group>";
@@ -1481,6 +1486,7 @@
 				84ED4F8F23E37F050010D378 /* ProfileDetailViewModel.swift */,
 				84ED4F9023E37F050010D378 /* ProfileViewModel.swift */,
 				7964E3D42409C21B0043DD67 /* ProfileAgendaViewModel.swift */,
+				796059F82418252800977BD7 /* AgendaViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1887,6 +1893,7 @@
 				79758F8E24018C68003F31AA /* AtlanticDerby3ViewModel.swift in Sources */,
 				84ED508123E382EF0010D378 /* RegisterPasswordViewModel.swift in Sources */,
 				84ED508223E382EF0010D378 /* RegisterViewModel.swift in Sources */,
+				796059F92418252800977BD7 /* AgendaViewModel.swift in Sources */,
 				795DDE78240F3CEB00F4F52E /* LoginViewModel.swift in Sources */,
 				7964E3D52409C21B0043DD67 /* ProfileAgendaViewModel.swift in Sources */,
 				796E480D23ED235100E51063 /* FotoEvent.swift in Sources */,
@@ -1919,6 +1926,7 @@
 				84ED509423E382EF0010D378 /* DinnerViewModel.swift in Sources */,
 				7966CC2A2400A1A10023401E /* AD2CollectionViewCell.swift in Sources */,
 				84ED509523E382EF0010D378 /* BreakfastViewModel.swift in Sources */,
+				796059FB241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift in Sources */,
 				84ED509623E382EF0010D378 /* MainViewModel.swift in Sources */,
 				84ED509723E382EF0010D378 /* OnBoardingViewModel.swift in Sources */,
 				84ED509823E382EF0010D378 /* Label.swift in Sources */,

@@ -26,7 +26,7 @@ class Constants {
     var getEventoHorario = "EventoHorario"
     var getBuffet = "BuffetEvento"
     var getLogoInicio = "LogoInicio"
-    var getAgenda = "Agenda"
+    var getAgenda = "AgendaDetalles"
     var getObtenerTelefono = "ObtenerTelefono"
     var getImagenNoticia = "ImagenNoticia"
     var getRutaFotos = "RutaFotos"
