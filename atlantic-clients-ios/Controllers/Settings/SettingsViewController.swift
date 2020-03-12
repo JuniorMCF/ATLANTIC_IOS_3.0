@@ -14,13 +14,14 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var activeLabel: Label!
     @IBOutlet weak var changePasswordLabel: Label!
+    @IBOutlet var switchActive: UISwitch!
     
-
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bind()
-        viewModel.viewDidLoad()
+        viewModel.viewDidLoad(clienteId: String(appDelegate.usuario.clienteId), isActivo: false)
         
     }
     
@@ -29,8 +30,10 @@ class SettingsViewController: UIViewController {
     }
     
     func showTitles(titles: SettingsTitles) {
+        let estadoSwitch = appDelegate.switchState
         activeLabel.setSubTitleViewLabel(with: titles.activeTitle)
         changePasswordLabel.setSubTitleViewLabel(with: titles.changePassword)
+        
     }
 
 }

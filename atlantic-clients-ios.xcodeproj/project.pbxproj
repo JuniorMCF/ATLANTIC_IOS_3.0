@@ -35,6 +35,7 @@
 		796059FB241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */; };
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
 		7961E09423EBBBC9009E8189 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09323EBBBC9009E8189 /* Route.swift */; };
+		7962C3B4241A968600701714 /* RecoveryPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7962C3B3241A968600701714 /* RecoveryPassword.storyboard */; };
 		796429BB240DC3A60076265A /* CustomLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BA240DC3A60076265A /* CustomLogout.swift */; };
 		796429BD240DC3AC0076265A /* CustomEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BC240DC3AC0076265A /* CustomEvent.swift */; };
 		796429BF240DC5860076265A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BE240DC5860076265A /* AppDelegate.swift */; };
@@ -292,6 +293,7 @@
 		796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCollectionViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7961E09323EBBBC9009E8189 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		7962C3B3241A968600701714 /* RecoveryPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecoveryPassword.storyboard; sourceTree = "<group>"; };
 		796429BA240DC3A60076265A /* CustomLogout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogout.swift; sourceTree = "<group>"; };
 		796429BC240DC3AC0076265A /* CustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEvent.swift; sourceTree = "<group>"; };
 		796429BE240DC5860076265A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1150,6 +1152,7 @@
 			children = (
 				84ED4F2823E37F050010D378 /* OnBoardingCollectionViewCell.swift */,
 				84ED4F3123E37F050010D378 /* Settings.storyboard */,
+				7962C3B3241A968600701714 /* RecoveryPassword.storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1728,6 +1731,7 @@
 				84ED4FED23E37F050010D378 /* Settings.storyboard in Resources */,
 				84ED500423E37F050010D378 /* Payments~.storyboard in Resources */,
 				84ED4FFC23E37F050010D378 /* RafflesDream.storyboard in Resources */,
+				7962C3B4241A968600701714 /* RecoveryPassword.storyboard in Resources */,
 				84ED4FF723E37F050010D378 /* Main~.storyboard in Resources */,
 				84626F25240839690068F5A1 /* Notify.storyboard in Resources */,
 				795DDE66240F39AA00F4F52E /* TrophyCategory.storyboard in Resources */,
