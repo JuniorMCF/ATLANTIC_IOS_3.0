@@ -112,7 +112,7 @@ class Button: UIButton {
     public func setRemindButton(with title: String) {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
-        layer.cornerRadius = 8.0
+        layer.cornerRadius = 15.0
         titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 17)!
         backgroundColor  = #colorLiteral(red: 0.6941176471, green: 0.07450980392, blue: 0.1843137255, alpha: 1)
     }

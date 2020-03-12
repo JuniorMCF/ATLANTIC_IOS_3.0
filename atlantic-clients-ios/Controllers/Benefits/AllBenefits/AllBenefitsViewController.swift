@@ -36,8 +36,10 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet weak var awardTitleLabel: Label!
     
     
-    
-    @IBOutlet var vContainerHidden: UIView!
+    @IBOutlet var viewParentHidden: UIView!
+    @IBOutlet var vHidden: UIView!// ocultar esta vista cuando sea domingos regalones y reducir el tamaño del contenedor en 100
+    @IBOutlet var buttonView: UIView!//mover esta vista en domingos regalones
+
     @IBOutlet var titlePuntosLabel: Label!
     @IBOutlet var puntosLabel: Label!
     @IBOutlet var winLabel: Label!
@@ -102,13 +104,18 @@ class AllBenefitsViewController: UIViewController {
             dateLabel.setBenefitDetailTitle(with: "Fecha: "+titles.dateSwap)
             underLineView.alpha = 1.0
             reminderButton.setRemindButton(with: titles.reminderTitle)
+            //moviendo las vistas
+            vHidden.alpha = 0
+            vHidden.frame = CGRect(x: 0 , y: self.vHidden.layer.position.y, width: self.vHidden.frame.width, height: 0)
+            let alturahidden = vHidden.frame.height
+            buttonView.frame = CGRect(x: 0 , y:  self.vHidden.layer.position.y, width: self.buttonView.frame.width, height: self.buttonView.frame.height)
             
-            //transformar el formato de fecha  dd/MM/yy    y   la hora  hh:mm
+            viewParentHidden.frame =  CGRect(x: 0 , y: self.viewParentHidden.layer.position.y, width: self.viewParentHidden.frame.width, height: self.viewParentHidden.frame.height-alturahidden)
             pointsLabel.setRafflesSubUnderline(with: "Vér terminos y condiciones")
             
             let fecha = (benefit.fechaActualizacion as NSString).doubleValue
             let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
-
+            //transformar el formato de fecha  dd/MM/yy    y   la hora  hh:mm
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yy"
             dateFormatter.locale = NSLocale.current
@@ -127,8 +134,8 @@ class AllBenefitsViewController: UIViewController {
             
         }else{
             tabBar.title = "Beneficios"
-            dateSwapLabel.setRafflesTitleGoldCenter(with: benefit.nombre)
-            dateLabel.setBenefitDetailTitleCenter(with: "Fecha: "+titles.dateSwap)
+            dateSwapLabel.setRafflesTitleGold(with: benefit.nombre)
+            dateLabel.setBenefitDetailTitle(with: "Fecha: "+titles.dateSwap)
             underLineView.alpha = 0.0
             reminderButton.setRemindButton(with: titles.reminderTitle)
             

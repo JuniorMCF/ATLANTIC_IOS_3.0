@@ -25,6 +25,7 @@ class TrophyCategoryViewController: UIViewController {
     var tipo = ""
     // Mark: - Outlets
     
+    @IBOutlet var terminosLabel: Label!
     @IBOutlet weak var trophyCategoryTableView: UITableView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
@@ -44,6 +45,7 @@ class TrophyCategoryViewController: UIViewController {
         trophyCategoryTableViewDD = TrophyCategoryTableViewDatasourceAndDelegate(items: datasource, viewModel: viewModel)
         trophyCategoryTableView.dataSource =  trophyCategoryTableViewDD
         trophyCategoryTableView.delegate = trophyCategoryTableViewDD
+        terminosLabel.setRafflesSubUnderline(with: "términos y condiciones")
         self.trophyCategory = datasource
         self.trophyCategoryTableView.reloadData()
     }

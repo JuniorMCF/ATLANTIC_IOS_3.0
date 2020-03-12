@@ -64,7 +64,7 @@ class AgendaViewController: UIViewController {
         }
         
         func loadDatasources(datasource:BreakfastDatasources) {
-            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items)
+            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel)
             collectionView.dataSource = AgendaCollectionViewDD
             collectionView.delegate = self
             self.breakfast = datasource.items

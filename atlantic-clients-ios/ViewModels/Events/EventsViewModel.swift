@@ -69,7 +69,8 @@ class EventsViewModel: EventsViewModelProtocol {
                                     {
                                         let event = Event()
                                         let value = JSON(data)
-                                        event.id = value["evento_id"].intValue
+                                        event.id = value["id"].intValue
+                                        event.eventoId = value["evento_id"].intValue
                                         event.clienteId = value["cliente_id"].intValue
                                         event.descripcion = value["descripcion"].stringValue
                                         event.esPrincipal = value["es_principal"].boolValue

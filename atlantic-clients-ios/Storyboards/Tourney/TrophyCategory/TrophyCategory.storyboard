@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OmL-uk-q7w">
-                                <rect key="frame" x="0.0" y="44" width="320" height="443"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrophyCategoryCellID" rowHeight="157" id="YHI-Hw-owK" customClass="TrophyCategoryTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
@@ -57,8 +57,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp">
-                                <rect key="frame" x="7" y="527" width="297" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                <rect key="frame" x="7" y="537" width="297" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,18 +66,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="h2c-Bs-0Nd" firstAttribute="bottom" secondItem="kOG-I5-LHp" secondAttribute="bottom" constant="20" id="Itu-3w-NXz"/>
+                            <constraint firstItem="h2c-Bs-0Nd" firstAttribute="bottom" secondItem="kOG-I5-LHp" secondAttribute="bottom" constant="10" id="Itu-3w-NXz"/>
                             <constraint firstItem="h2c-Bs-0Nd" firstAttribute="trailing" secondItem="kOG-I5-LHp" secondAttribute="trailing" constant="16" id="QB3-Hy-kb7"/>
                             <constraint firstItem="OmL-uk-q7w" firstAttribute="top" secondItem="h2c-Bs-0Nd" secondAttribute="top" id="RfK-rR-aOs"/>
                             <constraint firstItem="OmL-uk-q7w" firstAttribute="leading" secondItem="h2c-Bs-0Nd" secondAttribute="leading" id="Xeq-ki-O1c"/>
                             <constraint firstItem="kOG-I5-LHp" firstAttribute="leading" secondItem="h2c-Bs-0Nd" secondAttribute="leading" constant="7" id="ZrC-s6-z6T"/>
                             <constraint firstItem="h2c-Bs-0Nd" firstAttribute="trailing" secondItem="OmL-uk-q7w" secondAttribute="trailing" id="aJ3-Nb-jMc"/>
-                            <constraint firstItem="kOG-I5-LHp" firstAttribute="top" secondItem="OmL-uk-q7w" secondAttribute="bottom" constant="40" id="gcT-0K-WUA"/>
+                            <constraint firstItem="kOG-I5-LHp" firstAttribute="top" secondItem="OmL-uk-q7w" secondAttribute="bottom" constant="5" id="gcT-0K-WUA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h2c-Bs-0Nd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grand Prix" id="pci-6L-8L0"/>
                     <connections>
+                        <outlet property="terminosLabel" destination="kOG-I5-LHp" id="XVo-bK-PN7"/>
                         <outlet property="trophyCategoryTableView" destination="OmL-uk-q7w" id="8Ny-1S-jY8"/>
                     </connections>
                 </viewController>

@@ -90,7 +90,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         bind()
         prepareCollectionViews()
         presentBanner()
-        viewModel.viewDidLoad(eventoId: event.id)
+        viewModel.viewDidLoad(eventoId: event.eventoId)
         viewModel.loadDatasources = loadDatasources(datasources:)
     }
     
