@@ -113,6 +113,7 @@
 		84657C2A2406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84657C292406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift */; };
 		846BAB91240D89A700FE8E0E /* BuffetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAB8F240D89A600FE8E0E /* BuffetCell.swift */; };
 		846BAB92240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAB90240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift */; };
+		84B62C86241AC757006E5EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */; };
 		84ED4FEC23E37F050010D378 /* Club.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED4F2F23E37F050010D378 /* Club.storyboard */; };
 		84ED4FED23E37F050010D378 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED4F3123E37F050010D378 /* Settings.storyboard */; };
 		84ED4FEF23E37F050010D378 /* PositionDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED4F3623E37F050010D378 /* PositionDetail.storyboard */; };
@@ -380,6 +381,8 @@
 		84657C292406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewDelegateAndData.swift; sourceTree = "<group>"; };
 		846BAB8F240D89A600FE8E0E /* BuffetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffetCell.swift; sourceTree = "<group>"; };
 		846BAB90240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffetCollectionViewDataAndDelegate.swift; sourceTree = "<group>"; };
+		84B62C84241AC515006E5EA4 /* atlantic-clients-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "atlantic-clients-ios.entitlements"; sourceTree = "<group>"; };
+		84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84ED4ECB23E37F050010D378 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		84ED4ECC23E37F050010D378 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		84ED4ECD23E37F050010D378 /* TextField2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField2.swift; sourceTree = "<group>"; };
@@ -737,6 +740,8 @@
 		8428024423E379FB002FB622 /* atlantic-clients-ios */ = {
 			isa = PBXGroup;
 			children = (
+				84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */,
+				84B62C84241AC515006E5EA4 /* atlantic-clients-ios.entitlements */,
 				7943B6DF23EB5CE600174017 /* Resources */,
 				84ED4ED123E37F050010D378 /* Controllers */,
 				84ED4F2A23E37F050010D378 /* Storyboards */,
@@ -1736,6 +1741,7 @@
 				84626F25240839690068F5A1 /* Notify.storyboard in Resources */,
 				795DDE66240F39AA00F4F52E /* TrophyCategory.storyboard in Resources */,
 				795DDE80240F418E00F4F52E /* AtlanticDerby.storyboard in Resources */,
+				84B62C86241AC757006E5EA4 /* GoogleService-Info.plist in Resources */,
 				7964E3D02409AAAA0043DD67 /* AgendaCollectionViewCell.xib in Resources */,
 				795DDE68240F3A0A00F4F52E /* Register.storyboard in Resources */,
 				84ED4FF923E37F050010D378 /* RafflesDetail.storyboard in Resources */,
@@ -2233,14 +2239,15 @@
 			baseConfigurationReference = 463DBD9E2751AE55B0FD752A /* Pods-atlantic-clients-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U5KNT26NZ3;
+				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.atlantic-clients-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2252,14 +2259,15 @@
 			baseConfigurationReference = A2F0654FDC6973BD6973707D /* Pods-atlantic-clients-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U5KNT26NZ3;
+				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.atlantic-clients-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
