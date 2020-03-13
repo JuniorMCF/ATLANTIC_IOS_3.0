@@ -57,11 +57,11 @@ class PositionDetailViewController: UIViewController {
     
     func showTitles(titles: PositionDetailTitles) {
         
-        positionTitleLabel.setRafflesSub(with: "Usted ocupa el puesto:")
-        positionLabel.setPositionTitle(with: "\(torneo.posicion)°")
-        postTitleLabel.setRafflesSub(with: titles.postTitle)
+        positionTitleLabel.setRafflesSubCenter(with: "Usted ocupa el puesto:")
+        positionLabel.setPositionTitleGold(with: "\(torneo.posicion)°")
+        postTitleLabel.setRafflesSubCenter(with: titles.postTitle)
         winTitleLabel.setAwardTitle(with: titles.winTitle)
-        postTitleLabel.setRafflesSub(with: titles.postTitle)
+        postTitleLabel.setRafflesSubCenter(with: titles.postTitle)
         
         winLabel.setAwardTitle(with: "$ \(torneo.premio)0")
 

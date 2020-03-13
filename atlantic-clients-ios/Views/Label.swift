@@ -185,6 +185,12 @@ class Label: UILabel {
         font        = UIFont(name: "Avenir-Medium", size: 15)!
         textAlignment = .left
     }
+    public func setRafflesSubCenter(with setText: String) {
+        textColor   = .black
+        text        = setText
+        font        = UIFont(name: "Avenir-Medium", size: 15)!
+        textAlignment = .center
+    }
     public func setRafflesSubUnderline(with setText: String) {
         textColor   = .black
         text        = setText
@@ -269,11 +275,20 @@ class Label: UILabel {
         //numberOfLines   = 0
     }
     
-    public func setPositionTitle(with setText: String) {
-        textColor = .black
+    public func setPositionTitleGold(with setText: String) {
+        textColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         font = UIFont(name: "Avenir-Black", size: 50)!
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
     }
+    public func setPositionTitle(with setText: String) {
+        textColor = .black
+           font = UIFont(name: "Avenir-Black", size: 50)!
+           text = setText
+           textAlignment = .center
+           //numberOfLines   = 0
+       }
+    
+    
 }
