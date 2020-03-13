@@ -2243,14 +2243,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2D26F150-C825-4F49-A1D5-D09B7A78E35B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2259,7 +2259,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
@@ -2272,7 +2272,7 @@
             <Locations>
                <Location
                   uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183 - ffec5588d5ae9cbc"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.sorteo.getter : atlantic_clients_ios.Sorteo"
@@ -2287,7 +2287,7 @@
                </Location>
                <Location
                   uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183 - 99de99fd6d9430b0"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.sorteo.setter : atlantic_clients_ios.Sorteo"
@@ -2302,7 +2302,7 @@
                </Location>
                <Location
                   uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183 - a162eb0d51f037a3"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.sorteo.modify : atlantic_clients_ios.Sorteo"
@@ -2317,7 +2317,7 @@
                </Location>
                <Location
                   uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183 - 72d68ab3aa4d083c"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.sorteo.modify : atlantic_clients_ios.Sorteo with unmangled suffix &quot;.resume.0&quot;"
@@ -2332,7 +2332,7 @@
                </Location>
                <Location
                   uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183 - fc82b7353948cafb"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; atlantic_clients_ios.RafflesDreamViewController"
@@ -2347,7 +2347,7 @@
                </Location>
                <Location
                   uuid = "3C46ECAA-146F-440D-9C4B-E05C9CB37183 - 46cad87ff67fb1a7"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;atlantic_clients_ios.RafflesDreamViewController&gt;"
@@ -2367,14 +2367,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1998D62A-BB8D-49FA-ACFC-0D1B1A8A6725"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "loadDatasources(datasource:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2383,14 +2383,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "766E51BD-4E51-4641-A964-ED0545DE9BD6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "loadDatasources(datasource:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2399,14 +2399,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B02751F7-5685-4FC6-A4F2-F7B8F7E14B5F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "loadDatasources(datasource:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2415,7 +2415,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
@@ -2428,7 +2428,7 @@
             <Locations>
                <Location
                   uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36 - c9371d315e88fa22"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.fotos.getter : Swift.Array&lt;atlantic_clients_ios.Foto&gt;"
@@ -2443,7 +2443,7 @@
                </Location>
                <Location
                   uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36 - e02c8c09cf9f7cb6"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.fotos.setter : Swift.Array&lt;atlantic_clients_ios.Foto&gt;"
@@ -2458,7 +2458,7 @@
                </Location>
                <Location
                   uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36 - 35c4cf38706055c1"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.fotos.modify : Swift.Array&lt;atlantic_clients_ios.Foto&gt;"
@@ -2473,7 +2473,7 @@
                </Location>
                <Location
                   uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36 - a7f8d1c42b863d60"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.fotos.modify : Swift.Array&lt;atlantic_clients_ios.Foto&gt; with unmangled suffix &quot;.resume.0&quot;"
@@ -2488,7 +2488,7 @@
                </Location>
                <Location
                   uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36 - fc82b7353948cafb"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; atlantic_clients_ios.RafflesDreamViewController"
@@ -2503,7 +2503,7 @@
                </Location>
                <Location
                   uuid = "89EB6C17-B6CA-41B9-B783-B5BBF6F40F36 - 46cad87ff67fb1a7"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "atlantic_clients_ios.RafflesDreamViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;atlantic_clients_ios.RafflesDreamViewController&gt;"
@@ -2523,14 +2523,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3A49D675-9ABC-43EE-8994-0F2AE655D79C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2545,8 +2545,8 @@
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2561,8 +2561,8 @@
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
             <Locations>
@@ -4567,6 +4567,22 @@
             endingLineNumber = "138"
             landmarkName = "presentBanner()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6443E5A-111D-4883-9898-AB43A2D5425D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "RafflesDreamViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

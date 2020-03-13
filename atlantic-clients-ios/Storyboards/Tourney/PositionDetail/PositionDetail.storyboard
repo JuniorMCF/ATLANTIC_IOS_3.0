@@ -59,10 +59,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_copa" translatesAutoresizingMaskIntoConstraints="NO" id="siu-69-Qmc">
-                                                <rect key="frame" x="115" y="75" width="90" height="90.000000000000028"/>
+                                                <rect key="frame" x="124" y="75" width="72" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="79h-0w-5vC"/>
-                                                    <constraint firstAttribute="width" constant="90" id="QQY-uj-kp2"/>
+                                                    <constraint firstAttribute="width" secondItem="siu-69-Qmc" secondAttribute="height" multiplier="0.8:1" id="vYK-Qk-UVR"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6n-NY-3Fb" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
@@ -93,7 +93,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="D6n-NY-3Fb" secondAttribute="trailing" constant="20" id="1cU-om-EXj"/>
                                             <constraint firstItem="wdJ-xX-L1c" firstAttribute="top" secondItem="6P9-bX-FaM" secondAttribute="bottom" constant="25" id="Dtd-Vf-bo6"/>
-                                            <constraint firstItem="siu-69-Qmc" firstAttribute="leading" secondItem="LcW-YR-QvU" secondAttribute="leading" constant="115" id="H40-b7-Zg5"/>
+                                            <constraint firstItem="siu-69-Qmc" firstAttribute="leading" secondItem="LcW-YR-QvU" secondAttribute="leading" constant="124" id="H40-b7-Zg5"/>
                                             <constraint firstItem="D6n-NY-3Fb" firstAttribute="leading" secondItem="LcW-YR-QvU" secondAttribute="leading" constant="20" id="HnD-da-6O7"/>
                                             <constraint firstAttribute="trailing" secondItem="9Xj-uK-Sp6" secondAttribute="trailing" constant="20" id="I7E-cA-Cns"/>
                                             <constraint firstItem="1c5-nv-cEb" firstAttribute="leading" secondItem="LcW-YR-QvU" secondAttribute="leading" constant="20" id="IcR-vb-9Xb"/>
@@ -109,7 +109,7 @@
                                             <constraint firstAttribute="trailing" secondItem="1c5-nv-cEb" secondAttribute="trailing" constant="20" id="g7W-AQ-QCA"/>
                                             <constraint firstAttribute="trailing" secondItem="6P9-bX-FaM" secondAttribute="trailing" constant="20" id="hol-qo-Pyy"/>
                                             <constraint firstItem="Jv1-QR-EQA" firstAttribute="top" secondItem="siu-69-Qmc" secondAttribute="bottom" constant="25" id="k8f-o0-hMj"/>
-                                            <constraint firstAttribute="trailing" secondItem="siu-69-Qmc" secondAttribute="trailing" constant="115" id="kYR-Qf-W7s"/>
+                                            <constraint firstAttribute="trailing" secondItem="siu-69-Qmc" secondAttribute="trailing" constant="124" id="kYR-Qf-W7s"/>
                                             <constraint firstAttribute="trailing" secondItem="wdJ-xX-L1c" secondAttribute="trailing" constant="20" id="lAU-hg-NXf"/>
                                             <constraint firstItem="1c5-nv-cEb" firstAttribute="top" secondItem="D6n-NY-3Fb" secondAttribute="bottom" constant="8" id="m44-AG-5Lg"/>
                                             <constraint firstAttribute="trailing" secondItem="8i8-E7-noc" secondAttribute="trailing" constant="60" id="m6n-34-lVQ"/>

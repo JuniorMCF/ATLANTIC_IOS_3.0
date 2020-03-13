@@ -22,6 +22,7 @@ class RafflesDreamViewController: UIViewController {
     var sorteo = Sorteo()
     // Mark: - Outlets
     var fotos = [Foto]()
+    var posicion = 0
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var headerView: UIView!
@@ -45,6 +46,29 @@ class RafflesDreamViewController: UIViewController {
     @IBAction func createReminderButton(_ sender: Any) {
         let fecha = (sorteo.fecha as NSString)
         Utils().saveEvent(title: sorteo.nombreSorteo, fecha: fecha)
+    }
+    
+    @IBAction func rightCV(_ sender: Any) {
+        if(posicion < fotos.count-1){
+            let lastSection = collectionView.numberOfSections - 1
+
+            let indexPath = IndexPath(row: posicion+1, section: lastSection)
+
+            self.collectionView.scrollToItem(at: indexPath, at: .right, animated: true)
+            posicion += 1
+        }
+        
+    }
+    
+    @IBAction func leftCV(_ sender: Any) {
+        if(posicion > 0){
+            let lastSection = collectionView.numberOfSections - 1
+
+            let indexPath = IndexPath(row: posicion-1, section: lastSection)
+
+            self.collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+            posicion -= 1
+        }
     }
     
     func bind() {
