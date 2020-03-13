@@ -262,6 +262,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		846874E9241BCD8B0021DC74 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		06114461E21531A2903A6829 /* Pods-atlantic-clients-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-iosTests/Pods-atlantic-clients-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		119617D62D937129AB3B157B /* Pods_atlantic_clients_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atlantic_clients_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1603,6 +1616,7 @@
 				8428023F23E379FB002FB622 /* Frameworks */,
 				8428024023E379FB002FB622 /* Resources */,
 				F3236F6426E0370C795F114F /* [CP] Embed Pods Frameworks */,
+				846874E9241BCD8B0021DC74 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);

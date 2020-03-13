@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
         
         if #available(iOS 10.0, *) {
@@ -51,6 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Messaging.messaging().delegate = self as MessagingDelegate
         application.registerForRemoteNotifications()
         
+        	
+        
         
         return true
     }
@@ -68,8 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        if let messageID = userInfo[gcmMessageIDKey] {
          print("Message ID: \(messageID)")
        }
-
-      
        // Print full message.
        print(userInfo)
     }
@@ -92,12 +95,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      if let message = userInfo["gcm.notification.message"] {
            print("Message : \(message)")
          }
-
+     
+       
+     Constants().saveNotify(isActive: false)
+     //self.notification()
       // Print full message.
      print(userInfo)
 
       completionHandler(UIBackgroundFetchResult.newData)
     }
+    
     
     
 }
@@ -134,7 +141,6 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
          let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "homeView") as? HomeVC
          
          rootViewController.pushViewController(vc!, animated: true)*/
-        
         completionHandler([.alert, .badge, .sound])
     } else { // If app is not active you can show banner, sound and badge.
         
@@ -167,7 +173,6 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
              rootViewController.pushViewController(vc!, animated: true)*/
           
           print("aca modificamos las notificaciones")
-        
           // Change this to your preferred presentation option
           completionHandler([.alert, .badge, .sound])
         
@@ -205,10 +210,36 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
        //print("save data")
     //aca enviamos al hacer click
     
-     
 
     completionHandler()
   }
+    
+    func notification(){
+        print("aca 1")
+    
+          let center = UNUserNotificationCenter.current()
+
+            let content = UNMutableNotificationContent()
+            content.title = "Late wake up call"
+            content.body = "The early bird catches the worm, but the second mouse gets the cheese."
+            
+            content.userInfo = ["customData": "fizzbuzz"]
+            content.sound = UNNotificationSound.default
+            
+            /*var dateComponents = DateComponents()
+            dateComponents.hour = 10
+            dateComponents.minute = 30*/
+            //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+             
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+            center.add(request)
+        
+      
+        
+        
+    }
+    
+    
     
     
 }
@@ -219,7 +250,6 @@ extension AppDelegate:MessagingDelegate{
         
       let tokenPush = fcmToken
       print("Firebase registration token: \(fcmToken)")
-        
         
 
       let dataDict:[String: String] = ["token": fcmToken]
@@ -232,5 +262,33 @@ extension AppDelegate:MessagingDelegate{
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
         print("messagin \(messaging)  remoteMessage \(remoteMessage)")
     }
+}
+
+
+extension ViewController: UNUserNotificationCenterDelegate {
+
+    //for displaying notification when app is in foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+
+        //If you don't want to show notification when app is open, do something here else and make a return here.
+        //Even you you don't implement this delegate method, you will not see the notification on the specified controller. So, you have to implement this delegate and make sure the below line execute. i.e. completionHandler.
+
+        completionHandler([.alert, .badge, .sound])
+    }
+
+    // For handling tap and user actions
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+        switch response.actionIdentifier {
+        case "action1":
+            print("Action First Tapped")
+        case "action2":
+            print("Action Second Tapped")
+        default:
+            break
+        }
+        completionHandler()
+    }
+
 }
 

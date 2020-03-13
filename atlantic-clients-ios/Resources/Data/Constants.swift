@@ -81,6 +81,16 @@ class Constants {
     func getUsername()->String{
         return getPreference().object(forKey:"username" ) as! String
     }
+    
+    func saveNotify(isActive:Bool){
+        getPreference().set(isActive,forKey:"notify")
+        getPreference().synchronize()
+    }
+    func getNotify()->Bool{
+        return getPreference().object(forKey:"notify" ) as? Bool ?? false
+    }
+    
+    
     func savePassword(password:String){
         getPreference().set(password,forKey:"password")
         getPreference().synchronize()

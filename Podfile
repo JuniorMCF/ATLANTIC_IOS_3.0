@@ -15,6 +15,7 @@ target 'atlantic-clients-ios' do
   pod "youtube-ios-player-helper", "~> 0.1.4"
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
+  pod 'IQKeyboardManagerSwift'
   target 'atlantic-clients-iosTests' do
     inherit! :search_paths
     # Pods for testing

@@ -81,6 +81,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.5.1):
     - GoogleUtilities/Logger
+  - IQKeyboardManagerSwift (6.5.5)
   - MaterialComponents/ActivityIndicator (105.0.1):
     - MaterialComponents/Palettes
     - MaterialComponents/private/Application
@@ -109,6 +110,7 @@ DEPENDENCIES:
   - CarbonKit
   - Firebase/Analytics
   - Firebase/Messaging
+  - IQKeyboardManagerSwift
   - MaterialComponents/ActivityIndicator
   - SnapKit (~> 5.0.0)
   - SwiftyJSON (~> 4.0)
@@ -132,6 +134,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - IQKeyboardManagerSwift
     - MaterialComponents
     - MDFInternationalization
     - MotionAnimator
@@ -160,6 +163,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 653963cf5be60fb59cf051e070f0836fdc305f81
   GoogleDataTransportCCTSupport: 84e4d4bbab642f2e9d83ee65d78aca2b5527d314
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   MaterialComponents: cfc2fbc3a380238821ea1786d237e21b32d8514e
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
@@ -171,6 +175,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 0cd22b699dc698edbf24e80ad4bcb2453b7d46a9
+PODFILE CHECKSUM: 203f74d83a94e36718a37f03ba551a0714ebd4d1
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0.beta.2
