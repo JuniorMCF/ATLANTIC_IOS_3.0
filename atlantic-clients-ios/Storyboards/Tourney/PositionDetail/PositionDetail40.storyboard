@@ -150,7 +150,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="yvt-iL-sSF"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="m6M-IX-DSF" firstAttribute="trailing" secondItem="eN7-ja-qV7" secondAttribute="trailing" id="0c1-NZ-7f2"/>
                             <constraint firstItem="m6M-IX-DSF" firstAttribute="leading" secondItem="eN7-ja-qV7" secondAttribute="leading" id="7vP-wB-RBm"/>
