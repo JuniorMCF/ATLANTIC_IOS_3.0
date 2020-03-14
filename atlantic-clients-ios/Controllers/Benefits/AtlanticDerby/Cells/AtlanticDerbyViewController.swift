@@ -38,9 +38,13 @@ class AtlanticDerbyViewController: UIViewController {
         recordingButton.setRemindButton(with: "Crear recordatorio")
         terminosLabel.setRafflesSubUnderline(with: "Vér términos y condiciones")
         
+    
+        let ratio : CGFloat = 1.2
+        let thumbImage : UIImage = UIImage(named: "ic_derby3x")!
+        let size = CGSize( width: thumbImage.size.width * ratio, height: thumbImage.size.height * ratio )
+        seekBar.setThumbImage(seekBar.imageWithImage(image: thumbImage, scaledToSize: size), for: .normal)
         
         
-        seekBar.setThumbImage(UIImage(named: "ic_derby"), for: .normal)
         seekBar.tintColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         
         //puntos derby

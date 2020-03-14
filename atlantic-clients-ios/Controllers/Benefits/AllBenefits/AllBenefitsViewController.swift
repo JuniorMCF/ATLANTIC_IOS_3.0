@@ -44,6 +44,8 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet var puntosLabel: Label!
     @IBOutlet var winLabel: Label!
     
+    @IBOutlet var rightButton: UIButton!
+    @IBOutlet var leftButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,6 +91,16 @@ class AllBenefitsViewController: UIViewController {
         
     }
     func loadDatasources(datasource: Benefits) {
+        if(datasource.fotos.count == 1){
+            pageControl.isUserInteractionEnabled = false
+            pageControl.alpha = 0.0
+            leftButton.isUserInteractionEnabled = false
+            rightButton.isUserInteractionEnabled = false
+            leftButton.alpha = 0.0
+            rightButton.alpha = 0.0
+        }
+        
+        
         allBenefitsCollecionViewDD = AllBenefitsCollectionViewDelegateAndDatasource(items:datasource.fotos, viewModel: viewModel, pageControl: self.pageControl,collectionView: collectionView)
         collectionView.dataSource =  allBenefitsCollecionViewDD
         collectionView.delegate = allBenefitsCollecionViewDD

@@ -38,65 +38,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9LF-tt-6WM">
-                                <rect key="frame" x="20" y="74" width="374" height="65.666666666666686"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puY-5a-U1z" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUB-qF-eBG" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="45.333333333333329" width="374" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="tAc-ke-nCQ"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-d0-3VK">
-                                <rect key="frame" x="20" y="665.33333333333337" width="374" height="50.666666666666629"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-aK-wkh" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81i-GX-WYJ" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30.333333333333258" width="374" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="A4F-8P-FMx"/>
-                                </constraints>
-                            </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Gz-Yc-k4u">
-                                <rect key="frame" x="60" y="209" width="294" height="373"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puY-5a-U1z" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                <rect key="frame" x="20" y="112" width="374" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3Gz-Yc-k4u">
+                                <rect key="frame" x="60" y="306" width="294" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="34d-Sb-bkr">
-                                    <size key="itemSize" width="327" height="69"/>
+                                    <size key="itemSize" width="288" height="69"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="AD4CellID" translatesAutoresizingMaskIntoConstraints="NO" id="0oO-Wj-nNQ" customClass="AD4CollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="-16.666666666666668" y="0.0" width="327" height="69"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="AD4CellID" translatesAutoresizingMaskIntoConstraints="NO" id="0oO-Wj-nNQ" customClass="AD4CollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="0.0" width="288" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GL5-yd-gCg">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="69"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GL5-yd-gCg">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-hD-i7V" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="311" height="53"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-hD-i7V" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="52" y="23" width="183" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -104,7 +72,7 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="327" height="69"/>
+                                        <size key="customSize" width="288" height="69"/>
                                         <connections>
                                             <outlet property="puestoLabel" destination="hcp-hD-i7V" id="acl-L5-GWp"/>
                                             <outlet property="view" destination="GL5-yd-gCg" id="X4W-TJ-4Ll"/>
@@ -112,20 +80,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUB-qF-eBG" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                <rect key="frame" x="20" y="213" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-aK-wkh" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                <rect key="frame" x="20" y="656" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81i-GX-WYJ" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                <rect key="frame" x="20" y="686" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Kg5-d0-3VK" firstAttribute="top" secondItem="3Gz-Yc-k4u" secondAttribute="bottom" constant="83.333333333333371" id="1t4-gJ-CJ9"/>
-                            <constraint firstItem="3Gz-Yc-k4u" firstAttribute="top" secondItem="9LF-tt-6WM" secondAttribute="bottom" constant="69.333333333333314" id="6Tb-mF-Drp"/>
-                            <constraint firstItem="9LF-tt-6WM" firstAttribute="top" secondItem="fyI-I2-i7v" secondAttribute="top" constant="30" id="MKO-f7-SE1"/>
-                            <constraint firstItem="fyI-I2-i7v" firstAttribute="bottom" secondItem="Kg5-d0-3VK" secondAttribute="bottom" constant="20" id="Snu-U0-Nta"/>
-                            <constraint firstItem="Kg5-d0-3VK" firstAttribute="leading" secondItem="fyI-I2-i7v" secondAttribute="leading" constant="20" id="WR0-co-YLn"/>
-                            <constraint firstItem="fyI-I2-i7v" firstAttribute="trailing" secondItem="Kg5-d0-3VK" secondAttribute="trailing" constant="20" id="ZQh-it-OVX"/>
-                            <constraint firstItem="9LF-tt-6WM" firstAttribute="leading" secondItem="fyI-I2-i7v" secondAttribute="leading" constant="20" id="bN5-f3-Ao3"/>
-                            <constraint firstItem="fyI-I2-i7v" firstAttribute="trailing" secondItem="3Gz-Yc-k4u" secondAttribute="trailing" constant="60" id="g4F-yt-pkz"/>
-                            <constraint firstItem="fyI-I2-i7v" firstAttribute="trailing" secondItem="9LF-tt-6WM" secondAttribute="trailing" constant="20" id="gLC-mm-Ree"/>
-                            <constraint firstItem="3Gz-Yc-k4u" firstAttribute="leading" secondItem="fyI-I2-i7v" secondAttribute="leading" constant="60" id="gTo-u9-mD3"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fyI-I2-i7v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Atlantic Derby" id="VlF-bc-Hg7">

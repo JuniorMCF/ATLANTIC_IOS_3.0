@@ -35,6 +35,12 @@ class RafflesDreamViewController: UIViewController {
     @IBOutlet weak var pointsLabel: Label!
     @IBOutlet weak var necesaryPointsLabel: Label!
 
+    
+    
+    @IBOutlet var rightButton: UIButton!
+    @IBOutlet var leftButton: UIButton!
+    
+    
     @IBOutlet var fechaActualizadaLabel: Label!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +84,16 @@ class RafflesDreamViewController: UIViewController {
 
     }
     func loadDatasources(datasource: [Foto]) {
+        if(datasource.count == 1){
+            pageControl.isUserInteractionEnabled = false
+            pageControl.alpha = 0.0
+            leftButton.isUserInteractionEnabled = false
+            rightButton.isUserInteractionEnabled = false
+            leftButton.alpha = 0.0
+            rightButton.alpha = 0.0
+        }
+        
+        
         rafflesDreamCollecionViewDD = RafflesDreamViewCollectionViewDatasourceAndDelegate(items:datasource, viewModel: viewModel, pageControl: self.pageControl,collectionView: collectionView)
         collectionView.dataSource =  rafflesDreamCollecionViewDD
         collectionView.delegate = rafflesDreamCollecionViewDD

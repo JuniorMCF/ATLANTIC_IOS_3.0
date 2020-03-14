@@ -263,10 +263,12 @@
                         <outlet property="collectionView" destination="R3f-ia-iTg" id="txG-9l-ooc"/>
                         <outlet property="dateLabel" destination="Yfg-Kx-ews" id="tFN-hQ-LQY"/>
                         <outlet property="dateSwapLabel" destination="3Hs-wi-Kyb" id="19C-jK-YvE"/>
+                        <outlet property="leftButton" destination="ljy-w7-fCE" id="5N4-HP-bez"/>
                         <outlet property="pageControl" destination="cco-Cz-lX6" id="TpC-9z-q6R"/>
                         <outlet property="pointsLabel" destination="rfh-9x-cXp" id="uh3-ha-xBT"/>
                         <outlet property="puntosLabel" destination="U1x-qy-KD7" id="EJG-2P-sVB"/>
                         <outlet property="reminderButton" destination="qDw-Z8-A6T" id="EvJ-9f-Wfo"/>
+                        <outlet property="rightButton" destination="tdX-6A-1Mo" id="bhk-Gg-QsF"/>
                         <outlet property="tabBar" destination="mcg-jf-0sw" id="fkx-wh-NZz"/>
                         <outlet property="titlePuntosLabel" destination="V7k-U8-PHx" id="ebH-kq-Us7"/>
                         <outlet property="underLineView" destination="Dba-XR-Bdi" id="7Ya-ik-D6S"/>

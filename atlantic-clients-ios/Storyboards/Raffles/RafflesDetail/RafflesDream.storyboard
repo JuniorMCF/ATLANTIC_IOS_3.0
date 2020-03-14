@@ -251,6 +251,7 @@
                         <outlet property="dateLabel" destination="kIE-Gg-oao" id="CeR-NF-Qj2"/>
                         <outlet property="fechaActualizadaLabel" destination="MbD-9B-iOY" id="2v9-Bm-MqG"/>
                         <outlet property="headerView" destination="nZt-H0-dxf" id="1Th-WH-YHM"/>
+                        <outlet property="leftButton" destination="sIW-CB-IrB" id="MM7-6v-Oux"/>
                         <outlet property="necesaryPointsLabel" destination="q9r-GQ-f3e" id="tHu-aM-RcJ"/>
                         <outlet property="nextDateLabel" destination="Jx4-bg-Vz9" id="rHA-de-puR"/>
                         <outlet property="optionsLabel" destination="Yo7-Q1-5Hd" id="n3c-qe-04l"/>
@@ -258,6 +259,7 @@
                         <outlet property="pageControl" destination="a89-Gq-iKr" id="vEo-wO-9a7"/>
                         <outlet property="pointsLabel" destination="FPB-vY-KFj" id="mE8-Nc-bjZ"/>
                         <outlet property="reminderButton" destination="r99-2U-nrp" id="Fqh-Wv-DQi"/>
+                        <outlet property="rightButton" destination="Cc9-8f-w68" id="T4r-yU-whj"/>
                         <outlet property="titleLabel" destination="qDB-3B-DtW" id="Me8-fD-tHl"/>
                     </connections>
                 </viewController>
