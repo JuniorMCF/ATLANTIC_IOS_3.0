@@ -26,6 +26,7 @@ class PromotionsCollectionViewDelegateAndDatasource: NSObject {
 
 extension PromotionsCollectionViewDelegateAndDatasource: UICollectionViewDataSource {
     
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -51,8 +52,13 @@ extension PromotionsCollectionViewDelegateAndDatasource: UICollectionViewDataSou
     }
 }
 
-extension PromotionsCollectionViewDelegateAndDatasource: UICollectionViewDelegate {
- 
+extension PromotionsCollectionViewDelegateAndDatasource: UICollectionViewDelegateFlowLayout {
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+    }
+    
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView.tag == 0 else { return }
         let center = CGPoint(x: scrollView.contentOffset.x + (scrollView.frame.width / 2),

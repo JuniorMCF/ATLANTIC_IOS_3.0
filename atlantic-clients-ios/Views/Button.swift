@@ -25,9 +25,10 @@ class Button: UIButton {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         titleLabel?.font =  UIFont(name: "HelveticaNeue-Bold", size: 17)!
+        fontSizeScale = 17
         backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
-        self.contentEdgeInsets = UIEdgeInsets(top: 15, left: 30, bottom: 15, right: 30)
-        layer.cornerRadius = 20.0
+        cornerRadius = 20.0
+      //  layer.cornerRadius = 20.0
     }
     
     public func setFirstButton3(with title: String) {
@@ -73,6 +74,7 @@ class Button: UIButton {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScale = 12
         titleLabel?.textAlignment = .left
         titleLabel?.attributedText = NSAttributedString(string: title, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         backgroundColor = .none
@@ -83,6 +85,7 @@ class Button: UIButton {
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont(name: "Avenir-Medium", size: 15)!
         titleLabel?.textAlignment = .right
+        fontSizeScale = 12
         titleLabel?.attributedText = NSAttributedString(string: title, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         backgroundColor = .none
         

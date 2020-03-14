@@ -16,7 +16,7 @@ struct LoginTitles {
     var screenTitle: String = "BIENVENIDO"
     var dniPlaceholder: String = "Documento"
     var passwordPlaceholder: String = "Contraseña"
-    var buttonTitle: String = "Iniciar Sessión"
+    var buttonTitle: String = "Iniciar Sesión"
     var newUserPlaceholder: String = "Crear nuevo usuario"
     var forgotPasswordTitle: String = "¿Olvidó su contraseña?"
     

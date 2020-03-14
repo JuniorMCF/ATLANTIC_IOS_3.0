@@ -118,7 +118,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     func prepareCollectionViews() {
         // Flow Promotions
         let flow = UICollectionViewFlowLayout()
-        flow.itemSize = CGSize(width: view.frame.width, height: promotionsCollectionView.frame.height)
+        flow.itemSize = CGSize(width: promotionsCollectionView.frame.width, height: promotionsCollectionView.frame.height)
         flow.scrollDirection = .horizontal
         flow.minimumInteritemSpacing = 0
         flow.minimumLineSpacing = 0

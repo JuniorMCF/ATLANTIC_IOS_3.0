@@ -24,8 +24,8 @@ class Label: UILabel {
     
     public func setTitleViewLabel(with setText: String) {
         textColor = .white
-        
         font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+        fontSizeScale = 18
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
@@ -59,7 +59,8 @@ class Label: UILabel {
     
     public func setLinkLabel(with setText: String) {
         textColor = .white
-        font = UIFont(name: "Avenir-Medium", size: 15)!
+        //font = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .left
         attributedText = NSAttributedString(string: setText, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         

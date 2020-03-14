@@ -74,7 +74,10 @@ class TextField: UITextField {
     public func setDNIStyle(with placeHolder: String) {
         //DNI
         textColor = .white
-        font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+        
+       // fontSizeScale = 18
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 18)
+      
         attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         keyboardType = .numberPad
         autocorrectionType = .no
@@ -152,7 +155,9 @@ class TextField: UITextField {
     public func setPasswordStyle(with placeHolder: String) {
         //Password
         textColor = .white
-        font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+        //font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+      
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 18)
         attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         keyboardType = .alphabet
         isSecureTextEntry = true

@@ -227,6 +227,13 @@ extension UILabel{
         }
     }
     
+    func fontSizeScaleFamily(family:String, size : CGFloat) {
+        var current_Size : CGFloat = 0.0
+        current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+        let FinalSize : CGFloat = size * current_Size
+        self.font = UIFont(name: family, size: FinalSize)
+    }
+    
 }
 
 
@@ -246,6 +253,7 @@ extension UITextView{
 
 
 extension UITextField{
+   
     @IBInspectable var fontSizeScale: CGFloat{
         get{
             return self.fontSizeScale
@@ -258,6 +266,15 @@ extension UITextField{
             
         }
     }
+    
+    func fontSizeScaleFamily(family:String, size : CGFloat) {
+        var current_Size : CGFloat = 0.0
+        current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+        let FinalSize : CGFloat = size * current_Size
+        self.font = UIFont(name: family, size: FinalSize)
+    }
+    
+    
     
 }
 
@@ -274,6 +291,14 @@ extension UIButton{
             
         }
     }
+    
+    func fontSizeScaleFamily(family:String, size : CGFloat) {
+        var current_Size : CGFloat = 0.0
+        current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+        let FinalSize : CGFloat = size * current_Size
+        self.titleLabel?.font = UIFont(name: family, size: FinalSize)
+    }
+    
 
 }
 
