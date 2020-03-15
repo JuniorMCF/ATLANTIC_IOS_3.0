@@ -22,8 +22,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxz-CF-BLp" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-p4-7C1">
+                                            <switch opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-p4-7C1">
                                                 <rect key="frame" x="278" y="4.5" width="51" height="31"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="onTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="0.42830357142857145" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="isCheckedSwitch:" destination="ai7-HH-rPZ" eventType="valueChanged" id="0qV-6p-467"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOj-RR-VRU" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="10" width="42" height="20.5"/>
@@ -34,6 +44,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="L8r-p4-7C1" firstAttribute="height" secondItem="GOj-RR-VRU" secondAttribute="height" multiplier="1.5122" id="4hG-tk-COt"/>
                                             <constraint firstItem="GOj-RR-VRU" firstAttribute="centerY" secondItem="Zxz-CF-BLp" secondAttribute="centerY" id="BWf-jl-rgv"/>
                                             <constraint firstAttribute="trailing" secondItem="L8r-p4-7C1" secondAttribute="trailing" constant="8" id="NJc-fp-JqO"/>
                                             <constraint firstItem="GOj-RR-VRU" firstAttribute="centerY" secondItem="Zxz-CF-BLp" secondAttribute="centerY" id="RzL-4P-E72"/>
@@ -75,6 +86,7 @@
                     <connections>
                         <outlet property="activeLabel" destination="GOj-RR-VRU" id="mVz-mq-NRp"/>
                         <outlet property="changePasswordLabel" destination="qIM-fz-npz" id="Ktn-iz-pEB"/>
+                        <outlet property="changePasswordView" destination="UoJ-6I-Zm7" id="LJS-tK-xJU"/>
                         <outlet property="switchActive" destination="L8r-p4-7C1" id="gf1-wf-Jhu"/>
                     </connections>
                 </viewController>

@@ -175,6 +175,21 @@ class TextField: UITextField {
         leftView = outerView
         leftViewMode = .always
     }
+    public func setPassword(with placeHolder: String) {
+        //Password
+        textColor = .black
+        //font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+    
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 18)
+        keyboardType = .alphabet
+        isSecureTextEntry = true
+        returnKeyType = .done
+        borderStyle = .none
+        
+        //Reducir
+
+    }
+    
     public func setPasswordStyleRegisterSuccess(with placeHolder: String) {
            //Password
            textColor = .white

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NN-Lv-wWm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="616"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SfM-O7-aKC" userLabel="HeaderView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-ia-iTg">
-                                                <rect key="frame" x="-1" y="0.0" width="416" height="177"/>
+                                                <rect key="frame" x="-1" y="0.0" width="416" height="221"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y0L-o7-hBM">
                                                     <size key="itemSize" width="325" height="166"/>
@@ -33,7 +33,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="AllBenefitsCellID" id="Chb-bb-84Z" customClass="AllBenefitsCollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="5.5" width="325" height="166"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="325" height="166"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="325" height="166"/>
@@ -53,13 +53,13 @@
                                                 </cells>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cco-Cz-lX6">
-                                                <rect key="frame" x="12" y="142" width="386" height="35"/>
+                                                <rect key="frame" x="12" y="186" width="386" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </pageControl>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdX-6A-1Mo">
-                                                <rect key="frame" x="370" y="64" width="35" height="51"/>
+                                                <rect key="frame" x="370" y="80" width="35" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="ic_rigth_arrow"/>
                                                 <connections>
@@ -67,7 +67,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljy-w7-fCE">
-                                                <rect key="frame" x="15" y="64" width="35" height="51"/>
+                                                <rect key="frame" x="15" y="80" width="35" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="ic_left_arrow"/>
                                                 <connections>
@@ -87,14 +87,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2u-6n-yUl">
-                                        <rect key="frame" x="0.0" y="177" width="414" height="316"/>
+                                        <rect key="frame" x="0.0" y="221" width="414" height="410"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dba-XR-Bdi">
-                                                <rect key="frame" x="20" y="71" width="374" height="0.5"/>
+                                                <rect key="frame" x="20" y="71" width="374" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dM-Dm-EfR">
-                                                <rect key="frame" x="20" y="81.5" width="362" height="60"/>
+                                                <rect key="frame" x="20" y="82" width="362" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDw-Z8-A6T" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="11" width="250" height="37"/>
@@ -128,7 +128,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Ojt-5L-0z7">
-                                                <rect key="frame" x="32" y="248" width="350" height="48"/>
+                                                <rect key="frame" x="32" y="342" width="350" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-9x-cXp" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
@@ -162,10 +162,10 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Hf1-2O-dFN">
-                                                <rect key="frame" x="20" y="151.5" width="374" height="76.5"/>
+                                                <rect key="frame" x="20" y="152" width="374" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puk-F5-YYJ" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="6" y="56" width="366" height="20.5"/>
+                                                        <rect key="frame" x="6" y="56" width="366" height="114"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -235,6 +235,7 @@
                                     <constraint firstItem="SfM-O7-aKC" firstAttribute="leading" secondItem="7NN-Lv-wWm" secondAttribute="leading" id="VwM-4f-8eZ"/>
                                     <constraint firstItem="w2u-6n-yUl" firstAttribute="leading" secondItem="7NN-Lv-wWm" secondAttribute="leading" id="nk6-12-SIv"/>
                                     <constraint firstItem="SfM-O7-aKC" firstAttribute="height" secondItem="7NN-Lv-wWm" secondAttribute="height" multiplier="0.35868" id="o9l-Po-L3t"/>
+                                    <constraint firstItem="SfM-O7-aKC" firstAttribute="width" secondItem="7NN-Lv-wWm" secondAttribute="width" id="oAY-nL-shG"/>
                                     <constraint firstItem="SfM-O7-aKC" firstAttribute="top" secondItem="7NN-Lv-wWm" secondAttribute="top" id="qVG-5c-bNJ"/>
                                     <constraint firstAttribute="bottom" secondItem="SfM-O7-aKC" secondAttribute="bottom" constant="410" id="r2z-Qt-GeD"/>
                                     <constraint firstAttribute="trailing" secondItem="w2u-6n-yUl" secondAttribute="trailing" id="sJs-N3-2Ik"/>

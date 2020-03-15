@@ -83,6 +83,7 @@ class LoginViewModel: LoginViewModelProtocol {
     func tapLogin(dni:String,password:String,terminos:Bool) {
         
         if(terminos == true){
+                tapTerminos(estado: true)
                 if(dni == "" || password == ""){
                     if(dni == ""){
                         //return ingrese campo
@@ -130,11 +131,15 @@ class LoginViewModel: LoginViewModelProtocol {
                                                 Constants().savePassword(password: password)
                                                 Constants().saveTerminos(terminoState: true)
                                                 Constants().saveLogin(isLogin: true)
-                                                 self.progressDialog.hideProgress()
+                                                
+                                                self.progressDialog.hideProgress()
                                                 self.presentOnboarding?()
+                                                
                                              }else if (resultado == "400")  {
+                                                self.progressDialog.hideProgress()
                                                  //usuario no existe
                                              }else if (resultado == "401" ){
+                                                self.progressDialog.hideProgress()
                                                  //clave incorrecta
                                              }
                                            
@@ -155,7 +160,7 @@ class LoginViewModel: LoginViewModelProtocol {
                             }
                 }
         }else{
-            
+             tapTerminos(estado: false)
         }
         
         
