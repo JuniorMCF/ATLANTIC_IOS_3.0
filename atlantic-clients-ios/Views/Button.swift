@@ -28,6 +28,7 @@ class Button: UIButton {
         fontSizeScale = 17
         backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         cornerRadius = 20.0
+        
       //  layer.cornerRadius = 20.0
     }
     

@@ -35,7 +35,7 @@
 		796059FB241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */; };
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
 		7961E09423EBBBC9009E8189 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09323EBBBC9009E8189 /* Route.swift */; };
-		7962C3B4241A968600701714 /* RecoveryPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7962C3B3241A968600701714 /* RecoveryPassword.storyboard */; };
+		7962C3B4241A968600701714 /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7962C3B3241A968600701714 /* ChangePassword.storyboard */; };
 		796429BB240DC3A60076265A /* CustomLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BA240DC3A60076265A /* CustomLogout.swift */; };
 		796429BD240DC3AC0076265A /* CustomEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BC240DC3AC0076265A /* CustomEvent.swift */; };
 		796429BF240DC5860076265A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BE240DC5860076265A /* AppDelegate.swift */; };
@@ -94,6 +94,8 @@
 		798F882A24085A2F0020517F /* TournamentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F882924085A2F0020517F /* TournamentTable.swift */; };
 		798F882C2408B54A0020517F /* PositionDetail40ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F882B2408B54A0020517F /* PositionDetail40ViewController.swift */; };
 		798F882E2408B5710020517F /* PositionDetail40.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798F882D2408B5710020517F /* PositionDetail40.storyboard */; };
+		79C29EC1241D903600CB30C3 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C29EC0241D903600CB30C3 /* ChangePasswordViewController.swift */; };
+		79C29EC3241D908000CB30C3 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C29EC2241D908000CB30C3 /* ChangePasswordViewModel.swift */; };
 		8428024F23E37A0A002FB622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428024E23E37A0A002FB622 /* Assets.xcassets */; };
 		8428025D23E37A0B002FB622 /* atlantic_clients_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428025C23E37A0B002FB622 /* atlantic_clients_iosTests.swift */; };
 		8428026823E37A0B002FB622 /* atlantic_clients_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428026723E37A0B002FB622 /* atlantic_clients_iosUITests.swift */; };
@@ -307,7 +309,7 @@
 		796059FA241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCollectionViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7961E09323EBBBC9009E8189 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		7962C3B3241A968600701714 /* RecoveryPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecoveryPassword.storyboard; sourceTree = "<group>"; };
+		7962C3B3241A968600701714 /* ChangePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
 		796429BA240DC3A60076265A /* CustomLogout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogout.swift; sourceTree = "<group>"; };
 		796429BC240DC3AC0076265A /* CustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEvent.swift; sourceTree = "<group>"; };
 		796429BE240DC5860076265A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -366,6 +368,8 @@
 		798F882924085A2F0020517F /* TournamentTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTable.swift; sourceTree = "<group>"; };
 		798F882B2408B54A0020517F /* PositionDetail40ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionDetail40ViewController.swift; sourceTree = "<group>"; };
 		798F882D2408B5710020517F /* PositionDetail40.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PositionDetail40.storyboard; sourceTree = "<group>"; };
+		79C29EC0241D903600CB30C3 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		79C29EC2241D908000CB30C3 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		8428024223E379FB002FB622 /* atlantic-clients-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atlantic-clients-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8428024723E379FB002FB622 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8428024C23E379FC002FB622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -858,6 +862,7 @@
 			isa = PBXGroup;
 			children = (
 				84ED4ED723E37F050010D378 /* SettingsViewController.swift */,
+				79C29EC0241D903600CB30C3 /* ChangePasswordViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1170,7 +1175,7 @@
 			children = (
 				84ED4F2823E37F050010D378 /* OnBoardingCollectionViewCell.swift */,
 				84ED4F3123E37F050010D378 /* Settings.storyboard */,
-				7962C3B3241A968600701714 /* RecoveryPassword.storyboard */,
+				7962C3B3241A968600701714 /* ChangePassword.storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1412,6 +1417,7 @@
 			isa = PBXGroup;
 			children = (
 				84ED4F7623E37F050010D378 /* SettingsViewModel.swift */,
+				79C29EC2241D908000CB30C3 /* ChangePasswordViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1750,7 +1756,7 @@
 				84ED4FED23E37F050010D378 /* Settings.storyboard in Resources */,
 				84ED500423E37F050010D378 /* Payments~.storyboard in Resources */,
 				84ED4FFC23E37F050010D378 /* RafflesDream.storyboard in Resources */,
-				7962C3B4241A968600701714 /* RecoveryPassword.storyboard in Resources */,
+				7962C3B4241A968600701714 /* ChangePassword.storyboard in Resources */,
 				84ED4FF723E37F050010D378 /* Main~.storyboard in Resources */,
 				84626F25240839690068F5A1 /* Notify.storyboard in Resources */,
 				795DDE66240F39AA00F4F52E /* TrophyCategory.storyboard in Resources */,
@@ -1947,6 +1953,7 @@
 				84ED509323E382EF0010D378 /* EventsViewModel.swift in Sources */,
 				845FB7972405C09C001A7BF8 /* CustomProgress.swift in Sources */,
 				796DB9F0241598210041790D /* RecoveryPasswordViewController.swift in Sources */,
+				79C29EC3241D908000CB30C3 /* ChangePasswordViewModel.swift in Sources */,
 				84ED509423E382EF0010D378 /* DinnerViewModel.swift in Sources */,
 				7966CC2A2400A1A10023401E /* AD2CollectionViewCell.swift in Sources */,
 				84ED509523E382EF0010D378 /* BreakfastViewModel.swift in Sources */,
@@ -2009,6 +2016,7 @@
 				796429BB240DC3A60076265A /* CustomLogout.swift in Sources */,
 				84ED505523E382D60010D378 /* CareerAwardViewController.swift in Sources */,
 				84ED505623E382D60010D378 /* CareerViewController.swift in Sources */,
+				79C29EC1241D903600CB30C3 /* ChangePasswordViewController.swift in Sources */,
 				797CCE4A23FCA0C90085D61A /* EventDetailPreview.swift in Sources */,
 				84ED505723E382D60010D378 /* TourneyTableViewCell.swift in Sources */,
 				84ED505823E382D60010D378 /* TourneyTableViewDatasourceAndDelegate.swift in Sources */,
