@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="326" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-perfil" id="6Cz-da-JPv">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-perfil" id="6Cz-da-JPv">
                                         <rect key="frame" x="113" y="80" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -32,7 +32,7 @@
                                             <constraint firstAttribute="width" constant="100" id="Wol-O3-obM"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-camera" id="cjs-Sr-tFG">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-camera" id="cjs-Sr-tFG">
                                         <rect key="frame" x="175" y="150" width="25" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -43,7 +43,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="72L-KF-8sg"/>
                                     <constraint firstItem="6Cz-da-JPv" firstAttribute="centerX" secondItem="h1q-S1-scM" secondAttribute="centerX" constant="3" id="FG6-oU-j45"/>
                                     <constraint firstItem="6Cz-da-JPv" firstAttribute="centerY" secondItem="h1q-S1-scM" secondAttribute="centerY" id="Qna-Bw-Ffb"/>
                                     <constraint firstItem="cjs-Sr-tFG" firstAttribute="centerX" secondItem="h1q-S1-scM" secondAttribute="centerX" constant="27.5" id="ZUT-7k-kEh"/>
@@ -72,6 +71,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bef-AC-Wae"/>
                                                 </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -89,6 +89,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="CJF-cg-54g"/>
                                                 </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -106,6 +107,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="8Ad-ag-zSD"/>
                                                 </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -123,6 +125,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="XdZ-5r-I64"/>
                                                 </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -140,6 +143,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="1wC-JR-VOO"/>
                                                 </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -157,6 +161,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="hPH-O4-zd4"/>
                                                 </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>

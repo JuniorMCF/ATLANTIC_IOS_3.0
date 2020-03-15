@@ -144,7 +144,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Q2j-uh-gb8" firstAttribute="top" secondItem="eWZ-gk-ngb" secondAttribute="bottom" constant="8" id="0xE-8S-cqt"/>
                                             <constraint firstItem="JTe-Gn-v8Q" firstAttribute="leading" secondItem="eKy-dx-lmJ" secondAttribute="leading" constant="52" id="1J3-8W-0tp"/>

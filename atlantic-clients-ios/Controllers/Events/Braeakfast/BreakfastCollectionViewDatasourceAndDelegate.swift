@@ -21,7 +21,6 @@ class BreakfastCollectionViewDatasourceAndDelegate: NSObject {
 
 extension BreakfastCollectionViewDatasourceAndDelegate: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(items.count)
         return items.count
     }
     

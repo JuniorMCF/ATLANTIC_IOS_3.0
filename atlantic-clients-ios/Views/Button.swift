@@ -34,9 +34,10 @@ class Button: UIButton {
     public func setFirstButton3(with title: String) {
            setTitle(title, for: .normal)
            setTitleColor(.white, for: .normal)
-           titleLabel?.font =  UIFont(name: "HelveticaNeue-Bold", size: 14)!
+           
+           fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 12)
            backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
-           self.contentEdgeInsets = UIEdgeInsets(top: 15, left: 30, bottom: 15, right: 30)
+           self.contentEdgeInsets = UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20)
            layer.cornerRadius = 0.0
     }
     
@@ -116,7 +117,8 @@ class Button: UIButton {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 15.0
-        titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 17)!
+        
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 17)
         backgroundColor  = #colorLiteral(red: 0.6941176471, green: 0.07450980392, blue: 0.1843137255, alpha: 1)
     }
     public func setRemindButton2(with title: String) {

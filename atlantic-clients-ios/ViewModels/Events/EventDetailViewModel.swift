@@ -84,11 +84,11 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     var presentRegister: (() -> Void)?
     var loadBuffets : (([[String]]) -> Void)?
     var listHorarios = [Horario]()
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     func viewDidLoad(eventoId:Int) {
         let titles = EventDetailTitles()
         showTitles?(titles)
-        let parameters = ["eventoId": eventoId]
+        let parameters = ["eventoId": eventoId,"clienteId": appDelegate.usuario.clienteId] as [String : Any]
         print("parameters",parameters)
         AF.request(Constants().urlBase+Constants().getEventoHorario,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
         switch response.result{

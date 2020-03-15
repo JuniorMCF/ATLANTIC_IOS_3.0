@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDX-wG-XsI">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BenefitsCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BenefitsCellID" rowHeight="146" id="ztJ-RC-vsf" customClass="BenefitsTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="146"/>
@@ -41,6 +41,7 @@
                                                 <constraint firstItem="PyA-eA-Jdq" firstAttribute="centerX" secondItem="hQG-UN-kXV" secondAttribute="centerX" id="M1x-8R-A3y"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="benefitImageView" destination="PyA-eA-Jdq" id="NV4-4a-oqQ"/>
                                         </connections>

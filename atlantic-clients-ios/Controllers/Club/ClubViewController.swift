@@ -27,9 +27,9 @@ class ClubViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        clubTableView.rowHeight = clubTableView.frame.height/3 - 39
-        
+        let height = UIApplication.shared.statusBarFrame.height + self.navigationController!.navigationBar.frame.height
+        let tabHeight = self.parent?.tabBarController?.tabBar.frame.size.height
+        clubTableView.rowHeight = ((self.parent?.view.frame.height)! - tabHeight! - height ) / 3
         bind()
         viewModel.viewDidLoad()
     }

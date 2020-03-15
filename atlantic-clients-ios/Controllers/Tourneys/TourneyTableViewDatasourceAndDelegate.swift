@@ -31,6 +31,7 @@ extension TourneyTableViewDatasourceAndDelegate: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TourneyCellID") as? TourneyTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         //let tourney = items[indexPath.row]
         
         let dominio = "https://clienteatlantic.azurewebsites.net/admin/upload/promocion/"

@@ -37,7 +37,10 @@ class EventsViewController: UIViewController, CarbonTabSwipeNavigationDelegate {
             carbonTabSwipeNavigation.insert(intoRootViewController: self)
             carbonTabSwipeNavigation.setIndicatorColor(.black)
             carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
+            
             carbonTabSwipeNavigation.setSelectedColor(.black)
+            carbonTabSwipeNavigation.toolbar.isTranslucent = false
+            carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds
             let screenWidth = Int(screenSize.width)
             let tam = screenWidth
@@ -54,6 +57,9 @@ class EventsViewController: UIViewController, CarbonTabSwipeNavigationDelegate {
             carbonTabSwipeNavigation.setIndicatorColor(.black)
             carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
             carbonTabSwipeNavigation.setSelectedColor(.black)
+            carbonTabSwipeNavigation.toolbar.isTranslucent = false
+            
+            carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds
             let screenWidth = Int(screenSize.width)
             let tam = screenWidth/titles.tipoList.count

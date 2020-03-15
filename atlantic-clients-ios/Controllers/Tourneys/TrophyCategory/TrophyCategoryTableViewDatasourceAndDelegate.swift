@@ -31,6 +31,7 @@ extension TrophyCategoryTableViewDatasourceAndDelegate: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TrophyCategoryCellID") as? TrophyCategoryTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         let dominio = "http://clienteatlantic.azurewebsites.net/admin/upload/promocion/"
         AF.request(dominio + items[indexPath.row].logo).responseImage { response in
                    

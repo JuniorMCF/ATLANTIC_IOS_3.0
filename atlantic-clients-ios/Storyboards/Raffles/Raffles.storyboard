@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lyj-Nm-Br2">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RafflesCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RafflesCellID" rowHeight="146" id="5X0-vz-iiL" customClass="RafflesTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="146"/>
@@ -41,6 +41,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="NY4-3Y-jwD" secondAttribute="bottom" constant="20" id="FX0-n3-cJn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="rafflesImageView" destination="NY4-3Y-jwD" id="9Ax-61-F16"/>
                                         </connections>

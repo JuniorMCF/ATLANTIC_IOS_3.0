@@ -150,7 +150,8 @@ class Label: UILabel {
     public func setRafflesTitleGoldCenter(with setText: String) {
         textColor   = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 28)!
+        //font        = UIFont(name: "Avenir-Medium", size: 28)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 28)
         textAlignment = .center
     }
     
@@ -169,7 +170,8 @@ class Label: UILabel {
     public func setDateModify2(with setText: String) {
         textColor   = .gray
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 15)!
+       
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         textAlignment = .center
     }
     public func setRafflesSubTitleCenter(with setText: String) {
@@ -195,7 +197,7 @@ class Label: UILabel {
     public func setRafflesSubUnderline(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .center
         let textRange = NSMakeRange(0, setText.count)
         let attributedText = NSMutableAttributedString(string: setText)
@@ -235,7 +237,7 @@ class Label: UILabel {
     public func setBenefitDetailTitleCenter(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 20)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
         textAlignment = .center
     }
     

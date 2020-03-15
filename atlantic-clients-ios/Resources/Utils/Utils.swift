@@ -121,6 +121,12 @@ class Utils{
         })
     }
     
+    func sizeScaled(size : CGFloat) -> CGFloat{
+        var current_Size : CGFloat = 0.0
+        current_Size = (UIScreen.main.bounds.width/320) //320*568 is my base
+        let FinalSize : CGFloat = size * current_Size
+        return FinalSize
+    }
 
     public func timeAgoSince(_ date: Date) -> String {
       
@@ -302,7 +308,18 @@ extension UIButton{
 
 }
 
+@IBDesignable
+    class CustomSlider: UISlider {
+       /// custom slider track height
+       @IBInspectable var trackHeight: CGFloat = 3
 
+       override func trackRect(forBounds bounds: CGRect) -> CGRect {
+           // Use properly calculated rect
+           var newRect = super.trackRect(forBounds: bounds)
+           newRect.size.height = trackHeight
+           return newRect
+       }
+}
 
 
 extension UIView {

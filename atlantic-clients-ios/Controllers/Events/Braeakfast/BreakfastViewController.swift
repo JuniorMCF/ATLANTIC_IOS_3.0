@@ -35,6 +35,7 @@ class BreakfastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
         
         // SetupGrid view
@@ -55,8 +56,10 @@ class BreakfastViewController: UIViewController {
     
     func setupGridView() {
         let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
-        flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
-        flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
+        flow.minimumInteritemSpacing = 10
+        flow.minimumLineSpacing = 10
+        let width = (collectionView.frame.width - 10) / 2
+        flow.itemSize = CGSize(width: width, height: width)
     }
 
     func bind() {
@@ -75,7 +78,7 @@ class BreakfastViewController: UIViewController {
         let storyboard = UIStoryboard(name: "EventDetail", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "EventDetailID") as! EventsDetailViewController
         viewController.event = item
-        viewController.modalPresentationStyle = .fullScreen
+       // viewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
@@ -83,19 +86,7 @@ class BreakfastViewController: UIViewController {
 
 extension BreakfastViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = self.calculateWith()
-        return CGSize(width: width, height: width)
-    }
     
-    func calculateWith() -> CGFloat {
-        let estimatedWidth = CGFloat(estimateWidth)
-        let cellCount = floor(CGFloat(self.view.frame.size.width / estimatedWidth))
-        
-        let margin = CGFloat(cellMarginSize * 2)
-        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
-        return width
-    }
 }
 extension BreakfastViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

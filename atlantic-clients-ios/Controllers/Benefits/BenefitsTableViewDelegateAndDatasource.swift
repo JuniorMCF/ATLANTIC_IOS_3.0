@@ -30,6 +30,7 @@ extension BenefitsTableViewDelegateAndDatasource: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BenefitsCellID") as? BenefitsTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         let benefit = items[indexPath.row]
         
         let dominio = "https://clienteatlantic.azurewebsites.net/admin/upload/promocion/"

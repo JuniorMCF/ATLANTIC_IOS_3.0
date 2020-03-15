@@ -31,6 +31,7 @@ extension RafflesTableViewDatasourceAndDelegate: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RafflesCellID") as? RafflesTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         let raffles = items[indexPath.row]
         
         let dominio = "https://clienteatlantic.azurewebsites.net/admin/upload/promocion/"

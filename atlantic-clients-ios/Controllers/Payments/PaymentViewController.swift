@@ -29,6 +29,21 @@ class PaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+        
+            paymentSearchBar.searchBarStyle = .default
+            paymentSearchBar.searchTextField.backgroundColor = UIColor.white
+            paymentSearchBar.searchTextField.layer.borderColor = UIColor.black.cgColor
+            
+            let glassIconView = paymentSearchBar.searchTextField.leftView as? UIImageView
+            glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
+            glassIconView?.tintColor = .gray
+            
+            paymentSearchBar.searchTextField.textColor = .black
+            
+        }
+        
+    
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Cobros", message: "Obteniendo cobros ...")
         appDelegate.progressDialog.isHome = true
         
