@@ -4707,8 +4707,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4723,8 +4723,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4739,8 +4739,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4755,8 +4755,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4771,8 +4771,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4787,8 +4787,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4803,8 +4803,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4819,8 +4819,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4835,8 +4835,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4845,70 +4845,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A2477693-DC02-466D-997D-F7D6FA618CC3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
-            landmarkName = "showTitles(titles:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6F6E7C4A-251C-4CD2-A8A7-9CBAE38BD126"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
-            landmarkName = "showTitles(titles:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1DE914CE-7EF4-4B64-BCAA-66CE5FBB3796"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
-            landmarkName = "showTitles(titles:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D6E9A7B-394B-49A8-BE08-B503F1B3C343"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
-            landmarkName = "showTitles(titles:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1602CC6-E841-4E0C-B107-274644DC8DEA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4924,6 +4860,70 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "6F6E7C4A-251C-4CD2-A8A7-9CBAE38BD126"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
+            landmarkName = "showTitles(titles:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DE914CE-7EF4-4B64-BCAA-66CE5FBB3796"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "showTitles(titles:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D6E9A7B-394B-49A8-BE08-B503F1B3C343"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "showTitles(titles:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1602CC6-E841-4E0C-B107-274644DC8DEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "showTitles(titles:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "7A50D6A3-454A-4C27-89E8-885545C9385D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -4931,8 +4931,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4947,8 +4947,8 @@
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "showTitles(titles:)"
             landmarkType = "7">
          </BreakpointContent>

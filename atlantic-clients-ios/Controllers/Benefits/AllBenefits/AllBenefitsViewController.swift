@@ -47,7 +47,6 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet var leFaltanLabel: Label!
     //VISTA 2
     
-    @IBOutlet var newFechaLabel2: Label!
     @IBOutlet var view2: UIView!
     @IBOutlet var terminosLabel2: Label!
     @IBOutlet var fechaActualizacionLabel2: Label!
@@ -56,7 +55,6 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet var leFaltanLabel2: Label!
     @IBOutlet var remindButton2: Button!
     @IBOutlet var newFechaLabel: Label!
-    @IBOutlet var seekBar2: UISlider!
     @IBOutlet var viewButton2: UIView!
     @IBOutlet var rightButton: UIButton!
     @IBOutlet var leftButton: UIButton!
@@ -64,10 +62,6 @@ class AllBenefitsViewController: UIViewController {
         super.viewDidLoad()
         view2.alpha = 0
         view2.isUserInteractionEnabled = false
-        seekBar2.isUserInteractionEnabled = false
-        seekBar2.alpha = 0
-        newFechaLabel2.isUserInteractionEnabled = false
-        newFechaLabel2.alpha = 0
         
         bind()
         viewModel.viewDidLoad()
@@ -179,8 +173,7 @@ class AllBenefitsViewController: UIViewController {
             
             //CASOS PARA FILTRAR LOS LABELS
             if (benefit.puntos == -2){
-                seekBar2.alpha = 0
-                seekBar2.isUserInteractionEnabled = false
+                
                 puntosLabel2.alpha = 0
                 puntosLabel2.setSubTitleViewLabelRed(with: " ")
                 newFechaLabel.alpha = 0
@@ -191,19 +184,15 @@ class AllBenefitsViewController: UIViewController {
                 leFaltanLabel2.setSubTitleViewLabel(with: " ")
                 
             }else if (benefit.puntos == -1){
-                seekBar2.alpha = 0
-                seekBar2.isUserInteractionEnabled = false
+
                 puntosLabel2.alpha = 0
                 puntosLabel2.setSubTitleViewLabelRed(with: " ")
                 
-                newFechaLabel.setSubTitleViewLabel(with:"Usted ya canjeó su regalo ¡disfrútelo!")
+                puntosLabel2.setSubTitleViewLabelCenter(with:"Usted ya canjeó su regalo ¡disfrútelo!")
                 newFechaLabel.alpha = 0
+                leFaltanLabel2.setSubTitleViewLabelCenter(with: " ")
                 
-                leFaltanLabel2.setSubTitleViewLabel(with: "Usted ya canjeó su regalo ¡disfrútelo!")
-
-                newFechaLabel2.isUserInteractionEnabled = true
-                newFechaLabel2.alpha = 1
-                newFechaLabel2.setSubTitleViewLabel(with: "Próxima fecha: "+benefit.fechaProximaTexto)
+                newFechaLabel.setSubTitleViewLabel(with: "Próxima fecha: "+benefit.fechaProximaTexto)
                 titleLabel2.setSubTitleViewLabel(with: " ")
                 
             }else if ( benefit.puntos >= 0){
@@ -212,16 +201,15 @@ class AllBenefitsViewController: UIViewController {
                     newFechaLabel.setSubTitleViewLabel(with: "Usted todavia no ha empezado a acumular puntos")
                 }else if(benefit.puntos < benefit.puntos_minimo){
                     let progress = (benefit.puntos*100)/benefit.puntos_minimo
-                    seekBar2.setValue(Float(progress), animated: false)
-                    seekBar2.setThumbImage(UIImage(named: "ic_derby3x"), for: .normal)
-                    newFechaLabel.setSubTitleViewLabel(with: "Le faltan ${benefit.puntos_falta} puntos")
+                   
+                   // new fecha sera la secciond e puntos faltantes
+                    newFechaLabel.setSubTitleViewLabelRed(with: "Le faltan "+String(benefit.puntos_falta)+"puntos")
                 }else{
                     let progress = (benefit.puntos*100)/benefit.puntos_minimo
-                    seekBar2.setValue(Float(progress), animated: false)
-                    seekBar2.setThumbImage(UIImage(named: "ic_derby3x"), for: .normal)
-                    newFechaLabel.setSubTitleViewLabel(with: "Ya puede canjear su regalo")
+                    
+                    puntosLabel2.setSubTitleViewLabelCenter(with: "Ya puede canjear su regalo")
                     newFechaLabel.alpha = 0
-                    leFaltanLabel2.setSubTitleViewLabel(with: "¡Ya puede acercarse a canjear su regalo!")
+                    newFechaLabel.setSubTitleViewLabelRed(with: "¡Ya puede acercarse a canjear su regalo!")
 
                 }
 
