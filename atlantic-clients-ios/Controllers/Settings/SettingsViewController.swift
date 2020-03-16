@@ -30,6 +30,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         bind()
+        switchActive.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        
         if(appDelegate.usuario.configNotify == true){
             switchActive.isOn = true
         }else{
