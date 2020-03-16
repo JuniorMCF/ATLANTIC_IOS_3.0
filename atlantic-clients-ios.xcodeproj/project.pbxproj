@@ -99,6 +99,7 @@
 		8428024F23E37A0A002FB622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428024E23E37A0A002FB622 /* Assets.xcassets */; };
 		8428025D23E37A0B002FB622 /* atlantic_clients_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428025C23E37A0B002FB622 /* atlantic_clients_iosTests.swift */; };
 		8428026823E37A0B002FB622 /* atlantic_clients_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428026723E37A0B002FB622 /* atlantic_clients_iosUITests.swift */; };
+		845D1C3F241ED2DE001A006A /* SplashLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D1C3E241ED2DE001A006A /* SplashLoginViewController.swift */; };
 		845FB7942405BFB1001A7BF8 /* CustomProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845FB7932405BFB1001A7BF8 /* CustomProgress.storyboard */; };
 		845FB7972405C09C001A7BF8 /* CustomProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FB7962405C09C001A7BF8 /* CustomProgress.swift */; };
 		845FB79B2405ECFE001A7BF8 /* BubbleShowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FB79A2405ECFE001A7BF8 /* BubbleShowCase.swift */; };
@@ -382,6 +383,7 @@
 		8428026323E37A0B002FB622 /* atlantic-clients-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atlantic-clients-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8428026723E37A0B002FB622 /* atlantic_clients_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atlantic_clients_iosUITests.swift; sourceTree = "<group>"; };
 		8428026923E37A0B002FB622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845D1C3E241ED2DE001A006A /* SplashLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoginViewController.swift; sourceTree = "<group>"; };
 		845FB7932405BFB1001A7BF8 /* CustomProgress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomProgress.storyboard; sourceTree = "<group>"; };
 		845FB7962405C09C001A7BF8 /* CustomProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgress.swift; sourceTree = "<group>"; };
 		845FB79A2405ECFE001A7BF8 /* BubbleShowCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleShowCase.swift; sourceTree = "<group>"; };
@@ -1119,6 +1121,7 @@
 				795DDE71240F3CA900F4F52E /* ForgotPasswordViewController.swift */,
 				795DDE72240F3CA900F4F52E /* LoginViewController.swift */,
 				796DB9EF241598210041790D /* RecoveryPasswordViewController.swift */,
+				845D1C3E241ED2DE001A006A /* SplashLoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2061,6 +2064,7 @@
 				84ED507223E382D60010D378 /* BannerCollectionViewCell.swift in Sources */,
 				84ED507323E382D60010D378 /* BannerCollectionViewDatasourceAndDelegate.swift in Sources */,
 				84ED507423E382D60010D378 /* EventsDetailViewController.swift in Sources */,
+				845D1C3F241ED2DE001A006A /* SplashLoginViewController.swift in Sources */,
 				84ED507523E382D60010D378 /* BreakfastViewController.swift in Sources */,
 				7964E3C22409672B0043DD67 /* AllBenefitsCollectionViewDelegateAndDatasource.swift in Sources */,
 				84657C2A2406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift in Sources */,

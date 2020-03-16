@@ -81,6 +81,7 @@ class LoginViewModel: LoginViewModelProtocol {
 
     
     func tapLogin(dni:String,password:String,terminos:Bool) {
+        let isLogin = Constants().getLogin()
         
         if(terminos == true){
                 tapTerminos(estado: true)
@@ -95,7 +96,10 @@ class LoginViewModel: LoginViewModelProtocol {
                     let user_pass = Utils().MD5(string : password)
                     
                     let parameters = ["dni":dni,"user_pass":user_pass]
-                    progressDialog.showProgress()
+                    if(!isLogin){
+                        progressDialog.showProgress()
+                    }
+                    
                     AF.request(Constants().urlBase+Constants().getLoginClients ,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
                         switch response.result{
                             

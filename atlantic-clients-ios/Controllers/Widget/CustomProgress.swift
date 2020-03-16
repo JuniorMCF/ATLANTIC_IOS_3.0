@@ -68,8 +68,10 @@ class CustomProgress: UIViewController {
     }
     
     func hideProgress(){
-        progressController.view.removeFromSuperview()
-      
+        if(progressController != nil){
+             progressController.view.removeFromSuperview()
+        }
+       
         //progressController.dismiss(animated: false, completion: nil)
     }
     

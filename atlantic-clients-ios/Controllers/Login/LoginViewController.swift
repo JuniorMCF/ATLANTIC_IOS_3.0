@@ -25,12 +25,12 @@ class LoginViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var estadoTerminos = false
-    
+    var splash : SplashLoginViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Login", message: "Iniciando Sesión ...")
         appDelegate.progressDialog.isHome = false
-        
+        splash = SplashLoginViewController(parent: self.parent!)
         loginButton.frame.size = CGSize(width:200 ,height:15)
         terminosButton.frame.size = CGSize(width: 18 , height: 18)
         passwordTextField.returnKeyType = .done
@@ -38,7 +38,12 @@ class LoginViewController: UIViewController {
         addTapGesture()
         bind()
         viewModel.viewDidLoad()
-        viewModel.isLoggin()
+        if(Constants().getLogin()){
+            splash.showSplash()
+            viewModel.isLoggin()
+        }
+        
+        
     }
     
     func bind() {
@@ -66,11 +71,13 @@ class LoginViewController: UIViewController {
     }
     
     func presentOnboarding() {
-        
+        splash.hideSplash()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainID")
         viewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(viewController, animated: false)
+        
+        
     }
     
     func presentRegister() {
