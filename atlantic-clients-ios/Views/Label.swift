@@ -44,6 +44,17 @@ class Label: UILabel {
         text        = setText
         font = UIFont(name: "Avenir-Medium", size: 15)!
     }
+    public func setSubTitleViewLabelRed(with setText: String) {
+           textColor   = .red
+           text        = setText
+           font = UIFont(name: "Avenir-Medium", size: 15)!
+       }
+    public func setSubTitleViewLabelRedCenter(with setText: String) {
+        textColor   = .red
+        text        = setText
+        font = UIFont(name: "Avenir-Medium", size: 18)!
+        textAlignment = .center
+    }
     public func setSubTitleViewLabelCenter(with setText: String) {
         textColor   = .black
         text        = setText

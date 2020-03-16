@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b5i-yt-27x">
-                                <rect key="frame" x="20" y="84" width="335" height="80"/>
+                                <rect key="frame" x="15" y="84" width="345" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxz-CF-BLp" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-p4-7C1">
-                                                <rect key="frame" x="278" y="4.5" width="51" height="31"/>
+                                                <rect key="frame" x="296" y="4.5" width="51" height="31"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="0.42830357142857145" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,7 +46,7 @@
                                         <constraints>
                                             <constraint firstItem="L8r-p4-7C1" firstAttribute="height" secondItem="GOj-RR-VRU" secondAttribute="height" multiplier="1.5122" id="4hG-tk-COt"/>
                                             <constraint firstItem="GOj-RR-VRU" firstAttribute="centerY" secondItem="Zxz-CF-BLp" secondAttribute="centerY" id="BWf-jl-rgv"/>
-                                            <constraint firstAttribute="trailing" secondItem="L8r-p4-7C1" secondAttribute="trailing" constant="8" id="NJc-fp-JqO"/>
+                                            <constraint firstAttribute="trailing" secondItem="L8r-p4-7C1" secondAttribute="trailing" id="NJc-fp-JqO"/>
                                             <constraint firstItem="GOj-RR-VRU" firstAttribute="centerY" secondItem="Zxz-CF-BLp" secondAttribute="centerY" id="RzL-4P-E72"/>
                                             <constraint firstItem="L8r-p4-7C1" firstAttribute="centerY" secondItem="Zxz-CF-BLp" secondAttribute="centerY" id="cCZ-ha-bHb"/>
                                             <constraint firstItem="GOj-RR-VRU" firstAttribute="leading" secondItem="Zxz-CF-BLp" secondAttribute="leading" id="pMg-7i-XaH"/>
@@ -54,7 +54,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoJ-6I-Zm7">
-                                        <rect key="frame" x="0.0" y="40" width="335" height="40"/>
+                                        <rect key="frame" x="0.0" y="40" width="345" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-fz-npz" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="10" width="42" height="20.5"/>
@@ -77,8 +77,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="b5i-yt-27x" firstAttribute="top" secondItem="gjn-lu-RdT" secondAttribute="top" constant="40" id="NBH-PN-Cpe"/>
-                            <constraint firstItem="b5i-yt-27x" firstAttribute="leading" secondItem="gjn-lu-RdT" secondAttribute="leading" constant="20" id="f3s-gL-voM"/>
-                            <constraint firstAttribute="trailing" secondItem="b5i-yt-27x" secondAttribute="trailing" constant="20" id="hY3-AC-YE0"/>
+                            <constraint firstItem="b5i-yt-27x" firstAttribute="leading" secondItem="gjn-lu-RdT" secondAttribute="leading" constant="15" id="f3s-gL-voM"/>
+                            <constraint firstAttribute="trailing" secondItem="b5i-yt-27x" secondAttribute="trailing" constant="15" id="hY3-AC-YE0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gjn-lu-RdT"/>
                     </view>

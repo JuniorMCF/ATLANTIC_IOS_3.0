@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 struct SettingsTitles {
     
-    var activeTitle: String = "Activar / Desactivar"
+    var activeTitle: String = "Activar / Desactivar Notificaciones"
     var changePassword: String = "Cambiar Contraseña"
     
 }
