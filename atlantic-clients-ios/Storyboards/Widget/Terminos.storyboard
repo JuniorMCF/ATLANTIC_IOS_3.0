@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ic_cancel"/>
                                 <connections>
-                                    <action selector="hideTerms:" destination="fdh-GY-JGl" eventType="touchUpInside" id="B4u-ji-0hq"/>
+                                    <action selector="close:" destination="fdh-GY-JGl" eventType="touchUpInside" id="pUt-IZ-Y9o"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -119,6 +119,7 @@
 		84657C2A2406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84657C292406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift */; };
 		846BAB91240D89A700FE8E0E /* BuffetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAB8F240D89A600FE8E0E /* BuffetCell.swift */; };
 		846BAB92240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAB90240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift */; };
+		849BEC4724217D9400082366 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BEC4624217D9300082366 /* WebKit.framework */; };
 		84B62C86241AC757006E5EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */; };
 		84ED4FEC23E37F050010D378 /* Club.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED4F2F23E37F050010D378 /* Club.storyboard */; };
 		84ED4FED23E37F050010D378 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED4F3123E37F050010D378 /* Settings.storyboard */; };
@@ -406,6 +407,7 @@
 		84657C292406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewDelegateAndData.swift; sourceTree = "<group>"; };
 		846BAB8F240D89A600FE8E0E /* BuffetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffetCell.swift; sourceTree = "<group>"; };
 		846BAB90240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffetCollectionViewDataAndDelegate.swift; sourceTree = "<group>"; };
+		849BEC4624217D9300082366 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		84B62C84241AC515006E5EA4 /* atlantic-clients-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "atlantic-clients-ios.entitlements"; sourceTree = "<group>"; };
 		84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84ED4ECB23E37F050010D378 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849BEC4724217D9400082366 /* WebKit.framework in Frameworks */,
 				84ED50A823E383CB0010D378 /* Pods_atlantic_clients_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1614,6 +1617,7 @@
 		CCC4DE145146712B1951BE8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				849BEC4624217D9300082366 /* WebKit.framework */,
 				84ED50A723E383CB0010D378 /* Pods_atlantic_clients_ios.framework */,
 				119617D62D937129AB3B157B /* Pods_atlantic_clients_ios.framework */,
 				C303BB2828CC779798283D4C /* Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework */,

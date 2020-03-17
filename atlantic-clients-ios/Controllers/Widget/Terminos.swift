@@ -15,8 +15,6 @@ class Terminos: UIViewController
 
         var viewParent : UIViewController!
 
-       var progressController : Terminos!
-
         //variables para enviar
         var url = ""
      
@@ -24,11 +22,10 @@ class Terminos: UIViewController
         
         @IBOutlet var webView: WKWebView!
         
-    var request : URLRequest!
-       
-    @IBAction func hideTerms(_ sender: Any) {
+    @IBAction func close(_ sender: Any) {
         self.hideProgress()
     }
+    
     
         convenience init() {
             self.init(parent: UIViewController(),url: "")
@@ -38,6 +35,7 @@ class Terminos: UIViewController
             self.viewParent = parent
             self.url = url
             super.init(nibName: nil, bundle: nil)
+    
         }
         
         required init?(coder: NSCoder) {
@@ -46,30 +44,26 @@ class Terminos: UIViewController
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
-           
+            let request = URLRequest(url: URL(string: self.url)!)
+            self.webView.load(request)
         }
 
         
         func showProgress(){
             let storyboard = UIStoryboard(name: "Terminos", bundle: nil)
-            progressController = (storyboard.instantiateViewController(withIdentifier: "TerminosID") as! Terminos)
+            let controller = (storyboard.instantiateViewController(withIdentifier: "TerminosID") as! Terminos)
            
-            progressController.modalPresentationStyle = .overCurrentContext
-            
-             viewParent.navigationController?.present(progressController, animated: false, completion: {
-                self.request = URLRequest(url: URL(string: self.url)!)
-                self.webView.load(self.request)
-                })
-            }
+            controller.modalPresentationStyle = .overFullScreen
+            controller.url = self.url
+            //viewParent.present(controller, animated: false, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+            viewParent.navigationController?.present(controller, animated: false, completion: {
+                controller.url = self.url
+               // self.progressController.messageProgress.text = self.message
+            })
+    }
                
         func hideProgress(){
-                if(progressController != nil){
-                       progressController.dismiss(animated: false, completion: nil)
-                        //progressController.view.removeFromSuperview()
-                }
-                   
-                   //progressController.dismiss(animated: false, completion: nil)
+            self.dismiss(animated: false, completion: nil)
         }
         
         
