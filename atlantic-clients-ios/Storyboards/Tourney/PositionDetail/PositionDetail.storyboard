@@ -149,7 +149,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jEW-Tj-8Mt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grand Prix" id="pnt-4U-Rho"/>
+                    <navigationItem key="navigationItem" title="Grand Prix" id="pnt-4U-Rho">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tQP-VK-opa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="fechaActualizadaLabel" destination="1c5-nv-cEb" id="Rbf-j8-xkr"/>
                         <outlet property="payTitle" destination="8i8-E7-noc" id="ua6-o6-oAd"/>
@@ -173,6 +175,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3JN-xF-CMF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

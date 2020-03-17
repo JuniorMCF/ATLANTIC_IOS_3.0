@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ATLANTIC CITY CLUB-->
+        <!-- -->
         <scene sceneID="MkD-ci-ilH">
             <objects>
-                <viewController id="0yB-wY-d86" customClass="NewsViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title=" " id="0yB-wY-d86" customClass="NewsViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t8l-5o-juw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="930"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,7 +335,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGe-7F-6UY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ATLANTIC CITY CLUB" id="yuu-9A-1SE"/>
+                    <navigationItem key="navigationItem" title="ATLANTIC CITY CLUB" id="yuu-9A-1SE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="APi-CC-w3J"/>
+                    </navigationItem>
                     <size key="freeformSize" width="320" height="930"/>
                     <connections>
                         <outlet property="dailyCollectionView" destination="o16-6f-jug" id="ekW-m1-9DN"/>
@@ -361,6 +363,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zj7-DD-cOe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

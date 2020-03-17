@@ -118,14 +118,14 @@ class Button: UIButton {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         
-        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 17)
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 15)
         backgroundColor  = #colorLiteral(red: 0.6941176471, green: 0.07450980392, blue: 0.1843137255, alpha: 1)
     }
     public func setRemindButton2(with title: String) {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 0
-        titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 17)!
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 15)
         backgroundColor  = #colorLiteral(red: 0.6941176471, green: 0.07450980392, blue: 0.1843137255, alpha: 1)
     }
     
@@ -133,7 +133,7 @@ class Button: UIButton {
     public func setWitheButton(with title: String) {
         setTitle(title, for: .normal)
         setTitleColor(.black, for: .normal)
-        titleLabel?.font = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 15)
         backgroundColor  = .white
         layer.cornerRadius = 8.0
     }

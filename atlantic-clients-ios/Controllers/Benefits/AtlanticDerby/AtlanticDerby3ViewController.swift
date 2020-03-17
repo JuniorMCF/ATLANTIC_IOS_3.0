@@ -60,7 +60,7 @@ class AtlanticDerby3ViewController: UIViewController {
         resultadoTitle.setSubTitleViewLabelCenterLarge(with: "Resultados:")
         
         cobrosButton.setRemindButton(with: "IR A MIS COBROS")
-        proximaCarreraLabel.setSubTitleViewLabelCenterLarge(with: "Próxima carrera:\n"+benefit.fechaProximaTexto)
+        proximaCarreraLabel.setSubTitleViewLabelCenter(with: "Próxima carrera:\n"+benefit.fechaProximaTexto)
        
        
         recordatorioButton.setRemindButton(with: "Crear recordatorio")
@@ -86,7 +86,7 @@ class AtlanticDerby3ViewController: UIViewController {
         terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
     }
     @objc func tapTerminos(){
-        let terminos = Terminos(parent: self, url: "url")
+        let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
         terminos.showProgress()
     }
     func loadDatasources(datasources: [Puestos]) {

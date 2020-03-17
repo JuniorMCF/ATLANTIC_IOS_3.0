@@ -65,7 +65,7 @@ class AtlanticDerby2ViewController: UIViewController {
         terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
     }
     @objc func tapTerminos(){
-        let terminos = Terminos(parent: self, url: "url")
+        let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
         terminos.showProgress()
     }
     func loadDatasources(datasources: [Puestos]) {

@@ -73,7 +73,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_copa" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-Rj-AfR">
-                                                <rect key="frame" x="121" y="80.999999999999986" width="90" height="100.00000000000004"/>
+                                                <rect key="frame" x="121" y="81" width="90" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="9xr-ZV-bLY"/>
                                                     <constraint firstAttribute="height" constant="99.999999999999972" id="JgT-mQ-4Pb"/>
