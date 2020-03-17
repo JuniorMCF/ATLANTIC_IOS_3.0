@@ -170,7 +170,8 @@ class AllBenefitsViewController: UIViewController {
             let txtHour = dateFormatter2.string(from: date)
             terminosLabel2.setRafflesSubUnderline(with: "Vér terminos y condiciones")
             fechaActualizacionLabel2.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour+" hrs")
-            
+            terminosLabel2.isUserInteractionEnabled = true
+            terminosLabel2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos2)))
             //CASOS PARA FILTRAR LOS LABELS
             if (benefit.puntos == -2){
                 
@@ -241,7 +242,8 @@ class AllBenefitsViewController: UIViewController {
                 //transformar el formato de fecha  dd/MM/yy    y   la hora  hh:mm
                 pointsLabel.setRafflesSubUnderline(with: "Vér terminos y condiciones")
                 awardTitleLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour)
-                
+                pointsLabel.isUserInteractionEnabled = true
+                pointsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
                 // vista que se oculta en martes regalones
                 
                 titlePuntosLabel.setSubTitleViewLabel(with: "")
@@ -348,5 +350,14 @@ class AllBenefitsViewController: UIViewController {
         haGanadoLabel.isUserInteractionEnabled = false
         leFaltanLabel.isUserInteractionEnabled = false
     }
+    
 
+    @objc func tapTerminos2(){
+            let terminos = Terminos(parent: self, url: "url")
+            terminos.showProgress()
+        }
+    @objc func tapTerminos(){
+               let terminos = Terminos(parent: self, url: "url")
+               terminos.showProgress()
+           }
 }

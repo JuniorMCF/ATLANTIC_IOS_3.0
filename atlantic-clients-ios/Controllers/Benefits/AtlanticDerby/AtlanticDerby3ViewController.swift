@@ -82,8 +82,13 @@ class AtlanticDerby3ViewController: UIViewController {
         let txtHour = dateFormatter2.string(from: date)
         
         fechaActualizacionLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour+" hrs")
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
     }
-    
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
+    }
     func loadDatasources(datasources: [Puestos]) {
         ad3CollectionViewDD = AD3CollectionViewDelegateAndDatasource(items: datasources,
                                                                      viewModel:viewModel)

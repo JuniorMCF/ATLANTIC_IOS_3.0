@@ -48,9 +48,14 @@ class PositionDetail40ViewController: UIViewController {
         
         fechaModificacionLabel.setDateModify(with: "actualizado el \(txtFecha) a las \(txtHour) hrs")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
         // Do any additional setup after loading the view.
     }
-    
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
+    }
 
     /*
     // MARK: - Navigation

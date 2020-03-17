@@ -68,8 +68,14 @@ class LoginViewController: UIViewController {
         newUserButton.setLinkButton(with: titles.newUserPlaceholder)
         forgotPasswordButton.setLinkButton(with: titles.forgotPasswordTitle)
         terminosLabel.setLinkLabel(with: "Acepto los términos y condiciones")
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
     }
-    
+
+    @objc func tapTerminos(){
+            let terminos = Terminos(parent: self, url: "url")
+            terminos.showProgress()
+        }
     func presentOnboarding() {
         splash.hideSplash()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

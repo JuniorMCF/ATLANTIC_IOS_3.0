@@ -30,7 +30,7 @@ class TrophyCategoryViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         bind()
         viewModel.viewDidLoad(tipo:tipo,clienteId:appDelegate.usuario.clienteId)
     }
@@ -45,11 +45,20 @@ class TrophyCategoryViewController: UIViewController {
         trophyCategoryTableViewDD = TrophyCategoryTableViewDatasourceAndDelegate(items: datasource, viewModel: viewModel)
         trophyCategoryTableView.dataSource =  trophyCategoryTableViewDD
         trophyCategoryTableView.delegate = trophyCategoryTableViewDD
+        
+
         terminosLabel.setRafflesSubUnderline(with: "términos y condiciones")
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
+
+
         self.trophyCategory = datasource
         self.trophyCategoryTableView.reloadData()
     }
-    
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
+    }
     func presentTrophyCategory(tournament: Tournament) {
         if(tournament.concluido){
             if(tournament.posicion > 40){

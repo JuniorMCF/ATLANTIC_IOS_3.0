@@ -71,9 +71,13 @@ class AtlanticDerbyViewController: UIViewController {
         let txtFecha = dateFormatter.string(from: date)
         let txtHour = dateFormatter2.string(from: date)
         fechaActualizadaLabel.setDateModify(with: "Actualizado el "+txtFecha+" a las "+txtHour+" hrs")
-        
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
     }
-    
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
+    }
 
     /*
     // MARK: - Navigation

@@ -80,6 +80,13 @@ class TrophyLoseViewController: UIViewController {
         puntosLabel.setSubTitleViewLabelCenter(with: "Tiene hasta el momento "+String(torneo.puntaje)+" puntos")
         posicionLabel.setTitleForgotViewLabel(with: ""+String(torneo.posicion)+"°")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
+
+    }
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
     }
     
     func loadDatasources(datasource: [TournamentTable]) {

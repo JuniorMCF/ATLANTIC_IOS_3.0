@@ -83,9 +83,13 @@ class PositionDetailViewController: UIViewController {
         
         fechaActualizadaLabel.setDateModify(with: "actualizado el \(txtFecha) a las \(txtHour) hrs")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
-        
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
     }
-    
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
+    }
     func presentPayments() {
         navigationController?.popToRootViewController(animated: true)
         //navigationController?.tabBarController?.selectedIndex = 2

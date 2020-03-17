@@ -142,6 +142,8 @@ class RafflesDreamViewController: UIViewController {
         optionsLabel.setRafflesTitle(with: String(sorteo.opciones)+" opciones" )
         pointsLabel.setRafflesSubTitleCenter(with: "¡Le faltan \(sorteo.puntosFalta) puntos para una opción adicional!")
         necesaryPointsLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
+        necesaryPointsLabel.isUserInteractionEnabled = true
+        necesaryPointsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
         let fecha = (sorteo.fechaActualizacion as NSString).doubleValue
         let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
 
@@ -160,7 +162,10 @@ class RafflesDreamViewController: UIViewController {
         
         fechaActualizadaLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour+" hrs")
     }
-    
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
+    }
     func presentCreateReminder() {
         let storyboard = UIStoryboard(name: "Reminder", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ReminderID")

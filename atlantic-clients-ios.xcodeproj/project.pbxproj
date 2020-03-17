@@ -83,6 +83,9 @@
 		79758F942401A16B003F31AA /* AD4CollectionViewDelegateAndDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79758F932401A16B003F31AA /* AD4CollectionViewDelegateAndDatasource.swift */; };
 		79758F962401A1C6003F31AA /* AD4CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79758F952401A1C6003F31AA /* AD4CollectionViewCell.swift */; };
 		79758F982401E146003F31AA /* AtlanticDerby5ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79758F972401E146003F31AA /* AtlanticDerby5ViewModel.swift */; };
+		7975A73F2420454B00550FA1 /* Terminos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975A73E2420454B00550FA1 /* Terminos.storyboard */; };
+		7975A7412420455F00550FA1 /* Terminos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975A7402420455F00550FA1 /* Terminos.swift */; };
+		7975A74324205D0000550FA1 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975A74224205D0000550FA1 /* TermsAndConditions.swift */; };
 		797CCE4A23FCA0C90085D61A /* EventDetailPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CCE4923FCA0C90085D61A /* EventDetailPreview.swift */; };
 		797CCE4C23FCA0FF0085D61A /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CCE4B23FCA0FF0085D61A /* EventDetail.swift */; };
 		7983B41223F3A3E20099762D /* Cobros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983B41123F3A3E20099762D /* Cobros.swift */; };
@@ -358,6 +361,9 @@
 		79758F932401A16B003F31AA /* AD4CollectionViewDelegateAndDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD4CollectionViewDelegateAndDatasource.swift; sourceTree = "<group>"; };
 		79758F952401A1C6003F31AA /* AD4CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD4CollectionViewCell.swift; sourceTree = "<group>"; };
 		79758F972401E146003F31AA /* AtlanticDerby5ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlanticDerby5ViewModel.swift; sourceTree = "<group>"; };
+		7975A73E2420454B00550FA1 /* Terminos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Terminos.storyboard; sourceTree = "<group>"; };
+		7975A7402420455F00550FA1 /* Terminos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminos.swift; sourceTree = "<group>"; };
+		7975A74224205D0000550FA1 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		797CCE4923FCA0C90085D61A /* EventDetailPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010EventDetailPreview.swift"; sourceTree = "<group>"; };
 		797CCE4B23FCA0FF0085D61A /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
 		7983B41123F3A3E20099762D /* Cobros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cobros.swift; sourceTree = "<group>"; };
@@ -800,6 +806,7 @@
 				845FB7AA24060621001A7BF8 /* Tutorial.storyboard */,
 				796429C0240DC5BC0076265A /* CustomLogout.storyboard */,
 				796429C2240DC5C30076265A /* CustomEvent.storyboard */,
+				7975A73E2420454B00550FA1 /* Terminos.storyboard */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -811,6 +818,8 @@
 				845FB79A2405ECFE001A7BF8 /* BubbleShowCase.swift */,
 				796429BA240DC3A60076265A /* CustomLogout.swift */,
 				796429BC240DC3AC0076265A /* CustomEvent.swift */,
+				7975A7402420455F00550FA1 /* Terminos.swift */,
+				7975A74224205D0000550FA1 /* TermsAndConditions.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -1747,6 +1756,7 @@
 				795DDE64240F38D700F4F52E /* ForgotPassword.storyboard in Resources */,
 				84ED500823E37F050010D378 /* Benefits.storyboard in Resources */,
 				84ED500523E37F050010D378 /* News.storyboard in Resources */,
+				7975A73F2420454B00550FA1 /* Terminos.storyboard in Resources */,
 				84ED4FEC23E37F050010D378 /* Club.storyboard in Resources */,
 				84ED4FF023E37F050010D378 /* TrophyDetail.storyboard in Resources */,
 				795DDE82240F424600F4F52E /* AllBenefits.storyboard in Resources */,
@@ -1957,11 +1967,13 @@
 				845FB7972405C09C001A7BF8 /* CustomProgress.swift in Sources */,
 				796DB9F0241598210041790D /* RecoveryPasswordViewController.swift in Sources */,
 				79C29EC3241D908000CB30C3 /* ChangePasswordViewModel.swift in Sources */,
+				7975A74324205D0000550FA1 /* TermsAndConditions.swift in Sources */,
 				84ED509423E382EF0010D378 /* DinnerViewModel.swift in Sources */,
 				7966CC2A2400A1A10023401E /* AD2CollectionViewCell.swift in Sources */,
 				84ED509523E382EF0010D378 /* BreakfastViewModel.swift in Sources */,
 				796059FB241825E600977BD7 /* AgendaCollectionViewDatasourceAndDelegate.swift in Sources */,
 				84ED509623E382EF0010D378 /* MainViewModel.swift in Sources */,
+				7975A7412420455F00550FA1 /* Terminos.swift in Sources */,
 				84ED509723E382EF0010D378 /* OnBoardingViewModel.swift in Sources */,
 				84ED509823E382EF0010D378 /* Label.swift in Sources */,
 				79758F8C24018C36003F31AA /* AD3CollectionViewDelegateAndDatasource.swift in Sources */,

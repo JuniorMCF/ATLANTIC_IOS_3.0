@@ -65,7 +65,14 @@ class AtlanticDerby5ViewController: UIViewController {
         proximaCarreraLabel.setSubTitleViewLabelCenterLarge(with: "Próxima carrera: \(benefit.fechaProximaTexto)")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones") // abrir un webview
         recordatorioButton.setRemindButton(with: "Crear recordatorio")
+        terminosLabel.isUserInteractionEnabled = true
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
+
         
+    }
+    @objc func tapTerminos(){
+        let terminos = Terminos(parent: self, url: "url")
+        terminos.showProgress()
     }
     /*
     // MARK: - Navigation
