@@ -58,11 +58,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_copa" translatesAutoresizingMaskIntoConstraints="NO" id="siu-69-Qmc">
-                                                <rect key="frame" x="124" y="75" width="72" height="90"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_copa" translatesAutoresizingMaskIntoConstraints="NO" id="siu-69-Qmc">
+                                                <rect key="frame" x="120" y="75" width="81" height="90.000000000000028"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="79h-0w-5vC"/>
-                                                    <constraint firstAttribute="width" secondItem="siu-69-Qmc" secondAttribute="height" multiplier="0.8:1" id="vYK-Qk-UVR"/>
+                                                    <constraint firstAttribute="width" secondItem="siu-69-Qmc" secondAttribute="height" multiplier="0.9:1" id="vYK-Qk-UVR"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6n-NY-3Fb" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
@@ -84,6 +84,11 @@
                                                     <constraint firstAttribute="height" constant="40" id="y1A-Gv-EBr"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapPaymentsButton:" destination="2Li-i2-7jZ" eventType="touchUpInside" id="Hks-Hc-slv"/>
                                                 </connections>

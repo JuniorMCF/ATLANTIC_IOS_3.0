@@ -130,6 +130,11 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="Button"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="createReminderButton:" destination="DO1-1f-TOy" eventType="touchUpInside" id="U2J-dS-lqx"/>
                                                         </connections>

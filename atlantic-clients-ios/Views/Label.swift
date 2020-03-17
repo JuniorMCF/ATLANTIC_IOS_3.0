@@ -64,7 +64,7 @@ class Label: UILabel {
     public func setSubTitleViewLabelCenterLarge(with setText: String) {
         textColor   = .black
         text        = setText
-        font = UIFont(name: "Avenir-Medium", size: 22)!
+        font = UIFont(name: "Avenir-Medium", size: 18)!
         textAlignment = .center
     }
     
@@ -149,20 +149,20 @@ class Label: UILabel {
     public func setRafflesTitleGold(with setText: String) {
         textColor   = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 28)!
+        font        = UIFont(name: "Avenir-Medium", size: 20)!
         textAlignment = .left
     }
     public func setRafflesTitle(with setText: String) {
         textColor   = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 28)!
+        font        = UIFont(name: "Avenir-Medium", size: 20)!
         textAlignment = .left
     }
     public func setRafflesTitleGoldCenter(with setText: String) {
         textColor   = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         text        = setText
         //font        = UIFont(name: "Avenir-Medium", size: 28)!
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 28)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
         textAlignment = .center
     }
     
@@ -182,7 +182,7 @@ class Label: UILabel {
         textColor   = .gray
         text        = setText
        
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 12)
         textAlignment = .center
     }
     public func setRafflesSubTitleCenter(with setText: String) {
@@ -208,7 +208,7 @@ class Label: UILabel {
     public func setRafflesSubUnderline(with setText: String) {
         textColor   = .black
         text        = setText
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 12)
         textAlignment = .center
         let textRange = NSMakeRange(0, setText.count)
         let attributedText = NSMutableAttributedString(string: setText)

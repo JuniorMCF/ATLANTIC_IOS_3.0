@@ -353,11 +353,11 @@ class AllBenefitsViewController: UIViewController {
     
 
     @objc func tapTerminos2(){
-            let terminos = Terminos(parent: self, url: "url")
+            let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
             terminos.showProgress()
         }
     @objc func tapTerminos(){
-               let terminos = Terminos(parent: self, url: "url")
+               let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
                terminos.showProgress()
            }
 }
