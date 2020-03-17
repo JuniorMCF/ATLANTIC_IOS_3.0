@@ -21,12 +21,13 @@ class Terminos: UIViewController
         var url = ""
      
         @IBOutlet var vContainer: UIView!
-    
+        
         @IBOutlet var webView: WKWebView!
-    
+        
+    var request : URLRequest!
        
     @IBAction func hideTerms(_ sender: Any) {
-        print("aca")
+        self.hideProgress()
     }
     
         convenience init() {
@@ -45,9 +46,8 @@ class Terminos: UIViewController
         
         override func viewDidLoad() {
             super.viewDidLoad()
-
-            let request = URLRequest(url: URL(string: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")!)
-            webView.load(request)
+            
+           
         }
 
         
@@ -55,22 +55,21 @@ class Terminos: UIViewController
             let storyboard = UIStoryboard(name: "Terminos", bundle: nil)
             progressController = (storyboard.instantiateViewController(withIdentifier: "TerminosID") as! Terminos)
            
-            progressController.modalPresentationStyle = .overFullScreen
+            progressController.modalPresentationStyle = .overCurrentContext
             
-            viewParent.tabBarController?.view.addSubview(progressController.view)
-            
-           // viewParent.view.addSubview(progressController.view)
-           /* viewParent.navigationController?.present(progressController, animated: false, completion: {
-                self.progressController.titleProgress.text = self.titleP
-                self.progressController.messageProgress.text = self.message
-            })*/
-        }
-        
+             viewParent.navigationController?.present(progressController, animated: false, completion: {
+                self.request = URLRequest(url: URL(string: self.url)!)
+                self.webView.load(self.request)
+                })
+            }
+               
         func hideProgress(){
-            
-            progressController.view.removeFromSuperview()
-          
-           // progressController.dismiss(animated: false, completion: nil)
+                if(progressController != nil){
+                       progressController.dismiss(animated: false, completion: nil)
+                        //progressController.view.removeFromSuperview()
+                }
+                   
+                   //progressController.dismiss(animated: false, completion: nil)
         }
         
         

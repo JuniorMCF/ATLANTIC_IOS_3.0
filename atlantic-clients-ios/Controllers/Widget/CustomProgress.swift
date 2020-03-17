@@ -51,27 +51,28 @@ class CustomProgress: UIViewController {
        
         progressController.modalPresentationStyle = .overFullScreen
         
-        if(isHome){
+       /* if(isHome){
             viewParent.tabBarController?.view.addSubview(progressController.view)
         }else{
             viewParent.view.addSubview(progressController.view)
-        }
+        }*/
         
         
        // viewParent.view.addSubview(progressController.view)
-        self.progressController.titleProgress.text = self.titleP
-        self.progressController.messageProgress.text = self.message
-       /* viewParent.navigationController?.present(progressController, animated: false, completion: {
+        //self.progressController.titleProgress.text = self.titleP
+        //self.progressController.messageProgress.text = self.message
+        viewParent.navigationController?.present(progressController, animated: false, completion: {
             self.progressController.titleProgress.text = self.titleP
             self.progressController.messageProgress.text = self.message
-        })*/
+        })
     }
     
     func hideProgress(){
         if(progressController != nil){
-             progressController.view.removeFromSuperview()
+            progressController.dismiss(animated: false, completion: nil)
+             //progressController.view.removeFromSuperview()
         }
-       
+        
         //progressController.dismiss(animated: false, completion: nil)
     }
     

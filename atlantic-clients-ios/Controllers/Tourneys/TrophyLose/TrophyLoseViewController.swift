@@ -39,10 +39,11 @@ class TrophyLoseViewController: UIViewController {
     
     @IBOutlet var terminosLabel: Label!
     @IBOutlet var FechaActualizacionLabel: Label!
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var category: [TournamentTable] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         bind()
         viewModel.viewDidLoad(promocionId: String(torneo.pomocion_id))
         presentTitles(data: torneo)
@@ -85,7 +86,7 @@ class TrophyLoseViewController: UIViewController {
 
     }
     @objc func tapTerminos(){
-        let terminos = Terminos(parent: self, url: "url")
+        let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showProgress()
     }
     

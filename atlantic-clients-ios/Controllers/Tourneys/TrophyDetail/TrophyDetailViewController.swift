@@ -38,11 +38,10 @@ class TrophyDetailViewController: UIViewController {
     @IBOutlet weak var titleAwardsLabel: Label!
     
     @IBOutlet weak var positionsCollectionView: UICollectionView!
-
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         prepare()
-        
         positionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapPositionView)))
 
         bind()

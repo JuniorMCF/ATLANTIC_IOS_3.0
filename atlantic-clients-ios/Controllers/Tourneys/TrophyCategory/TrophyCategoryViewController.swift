@@ -28,9 +28,11 @@ class TrophyCategoryViewController: UIViewController {
     @IBOutlet var terminosLabel: Label!
     @IBOutlet weak var trophyCategoryTableView: UITableView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var terminos : Terminos!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "TORNEOS DOMINGO", message: "Obteniendo torneos ...")
+        appDelegate.progressDialog.isHome = true
         bind()
         viewModel.viewDidLoad(tipo:tipo,clienteId:appDelegate.usuario.clienteId)
     }
@@ -56,7 +58,7 @@ class TrophyCategoryViewController: UIViewController {
         self.trophyCategoryTableView.reloadData()
     }
     @objc func tapTerminos(){
-        let terminos = Terminos(parent: self, url: "url")
+        terminos = Terminos(parent: self, url: "https://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showProgress()
     }
     func presentTrophyCategory(tournament: Tournament) {
@@ -66,13 +68,13 @@ class TrophyCategoryViewController: UIViewController {
                 let viewController = storyboard.instantiateViewController(withIdentifier: "PositionDetail40ID") as! PositionDetail40ViewController
                 viewController.modalPresentationStyle = .fullScreen
                 viewController.torneo = tournament
-                self.navigationController?.pushViewController(viewController, animated: true)
+                self.navigationController?.pushViewController(viewController, animated: false)
             }else{
                 let storyboard = UIStoryboard(name: "PositionDetail", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "PositionDetailID") as! PositionDetailViewController
                 viewController.modalPresentationStyle = .fullScreen
                 viewController.torneo = tournament
-                self.navigationController?.pushViewController(viewController, animated: true)
+                self.navigationController?.pushViewController(viewController, animated: false)
             }
             
             return
@@ -82,7 +84,7 @@ class TrophyCategoryViewController: UIViewController {
             let viewController = storyboard.instantiateViewController(withIdentifier: "TrophyLoseID") as! TrophyLoseViewController
             viewController.torneo = tournament
             viewController.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(viewController, animated: true)
+            self.navigationController?.pushViewController(viewController, animated: false)
             return
         }
     }

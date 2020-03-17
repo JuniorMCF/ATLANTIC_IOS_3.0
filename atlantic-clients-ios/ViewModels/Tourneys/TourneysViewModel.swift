@@ -49,10 +49,11 @@ class TourneyViewModel: TourneyViewModelProtocol {
     var torneoList = [Tournament]()
     var torneoList2 = [Tournament]()
     var torneoHashMap : [String: [Tournament]] = [:] 
-    
+    var progress : CustomProgress!
     func viewDidLoad() {
         let parameters = ["id":appDelegate.usuario.clienteId]
-        
+        progress = appDelegate.progressDialog
+        progress.showProgress()
         AF.request(Constants().urlBase+Constants().getTorneos,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
             switch response.result{
                 
@@ -129,19 +130,22 @@ class TourneyViewModel: TourneyViewModelProtocol {
                                     
                                     
                                     self.loadDatasources?(self.datasources)
+                                     self.progress.hideProgress()
                                  }else {
                                     //en otros casos
-                                    
+                                     self.progress.hideProgress()
                                  }
                                  
                                  
                              }
                          } catch let error as NSError {
+                             self.progress.hideProgress()
                              print("Failed to load: \(error.localizedDescription)")
                          }
                          
                         break
                     case.failure(let error):
+                    self.progress.hideProgress()
                         print(error)
                         break
                     }
@@ -156,6 +160,8 @@ class TourneyViewModel: TourneyViewModelProtocol {
     func didSelectGranPrix(tipo:String,id:String){
         let parameters = ["tipo":tipo,"id":id]
         
+        progress = appDelegate.progressDialog
+        progress.showProgress()
         AF.request(Constants().urlBase+Constants().getTorneosTipo,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
             switch response.result{
                 
@@ -192,9 +198,11 @@ class TourneyViewModel: TourneyViewModelProtocol {
                                         self.torneoList2.append(torneo)
                                         
                                     }
+                                    self.progress.hideProgress()
                                     self.presentGranPrixDetail?(self.torneoList2)
 
                                  }else {
+                                     self.progress.hideProgress()
                                     //en otros casos
                                     
                                  }
@@ -202,11 +210,13 @@ class TourneyViewModel: TourneyViewModelProtocol {
                                  
                              }
                          } catch let error as NSError {
+                             self.progress.hideProgress()
                              print("Failed to load: \(error.localizedDescription)")
                          }
                          
                         break
                     case.failure(let error):
+                        self.progress.hideProgress()
                         print(error)
                         break
                     }

@@ -29,7 +29,8 @@ class TourneyViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Torneos", message: "Obteniendo torneos ...")
+        appDelegate.progressDialog.isHome = true
         bind()
         viewModel.viewDidLoad()
     }
@@ -53,12 +54,12 @@ class TourneyViewController: UIViewController {
          */
         switch isList {
         case true:
-            
             let storyboard = UIStoryboard(name: "TrophyCategory", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "TrophyCategoryID") as! TrophyCategoryViewController
             viewController.tipo = tipo
+
             viewController.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(viewController, animated: true)
+            self.navigationController?.pushViewController(viewController, animated: false)
             return
 
         case false:
@@ -79,15 +80,16 @@ class TourneyViewController: UIViewController {
             if(tournament.posicion > 40){
                 let storyboard = UIStoryboard(name: "PositionDetail40", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "PositionDetail40ID") as! PositionDetail40ViewController
-                viewController.modalPresentationStyle = .fullScreen
                 viewController.torneo = tournament
-                self.navigationController?.pushViewController(viewController, animated: true)
+                viewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(viewController, animated: false)
             }else{
                 let storyboard = UIStoryboard(name: "PositionDetail", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "PositionDetailID") as! PositionDetailViewController
-                viewController.modalPresentationStyle = .fullScreen
+                
                 viewController.torneo = tournament
-                self.navigationController?.pushViewController(viewController, animated: true)
+                viewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(viewController, animated: false)
             }
             
             return

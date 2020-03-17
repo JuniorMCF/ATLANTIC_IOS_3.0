@@ -44,9 +44,11 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
     var presentTrophyCategory: ((Tournament) -> Void)?
     
     var datasources = [Tournament]()
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var progress = CustomProgress()
     func viewDidLoad(tipo:String,clienteId:String) {
-        
+        progress = appDelegate.progressDialog!
+        progress.showProgress()
         let parameters = ["tipo":tipo,"id":clienteId]
          
         AF.request(Constants().urlBase+Constants().getTorneosTipo,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
@@ -84,21 +86,23 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
                                     torneo.tipo = value["tipo"].stringValue
                                     self.datasources.append(torneo)
                                  }
-                                 
+                                self.progress.hideProgress()
                                  self.loadDatasources?(self.datasources)
                               }else {
                                  //en otros casos
-                                 
+                                self.progress.hideProgress()
                               }
                               
                               
                           }
                       } catch let error as NSError {
+                           self.progress.hideProgress()
                           print("Failed to load: \(error.localizedDescription)")
                       }
                       
                      break
                  case.failure(let error):
+                    self.progress.hideProgress()
                      print(error)
                      break
                  }

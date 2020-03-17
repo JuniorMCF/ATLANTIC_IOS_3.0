@@ -69,10 +69,10 @@ class LoginViewController: UIViewController {
         forgotPasswordButton.setLinkButton(with: titles.forgotPasswordTitle)
         terminosLabel.setLinkLabel(with: "Acepto los términos y condiciones")
         terminosLabel.isUserInteractionEnabled = true
-        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
+        terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showTerms)))
     }
 
-    @objc func tapTerminos(){
+    @objc func showTerms(){
             let terminos = Terminos(parent: self, url: "url")
             terminos.showProgress()
         }

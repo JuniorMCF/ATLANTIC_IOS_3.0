@@ -29,16 +29,18 @@ class AgendaViewController: UIViewController {
         // MARK: - IBoulets
         
         @IBOutlet weak var collectionView: UICollectionView!
-        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var progress :CustomProgress!
 
         override func viewDidLoad() {
             super.viewDidLoad()
             
             collectionView.register(UINib(nibName: "AgendaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AgendaCellID")
-            
             // SetupGrid view
             self.setupGridView()
-            
+            progress = CustomProgress(parent: self, title: "Eventos", message: "Obteniendo eventos ...")
+            progress.isHome = true
+            progress.showProgress()
             bind()
             viewModel.viewDidLoad()
         }
@@ -64,11 +66,14 @@ class AgendaViewController: UIViewController {
         }
         
         func loadDatasources(datasource:BreakfastDatasources) {
+           
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel)
             collectionView.dataSource = AgendaCollectionViewDD
             collectionView.delegate = self
             self.breakfast = datasource.items
             self.collectionView.reloadData()
+            progress.hideProgress()
+            
         }
         func presentEventDetail(item:Event){
             let storyboard = UIStoryboard(name: "EventDetail", bundle: nil)

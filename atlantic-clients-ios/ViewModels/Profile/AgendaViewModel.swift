@@ -54,10 +54,13 @@ class AgendaViewModel: AgendaViewModelProtocol {
     var showTitles: ((ProfileTitles) -> Void)?
     var presentEventDetail:((Event)->Void)?
     var loadDatasources: ((BreakfastDatasources) -> Void)?
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var progress :CustomProgress!
     func viewDidLoad() {
         let datasources = BreakfastDatasources()
+        
         loadDatasources?(datasources)
+        
     }
   
     func didEventSelected(event:Event){
