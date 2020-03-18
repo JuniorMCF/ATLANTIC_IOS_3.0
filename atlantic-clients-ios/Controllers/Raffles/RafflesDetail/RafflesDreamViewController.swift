@@ -140,7 +140,7 @@ class RafflesDreamViewController: UIViewController {
         reminderButton.setRemindButton(with: "Crear recordatorio")
         optionsTitleLabel.setRafflesSubTitle(with: "Hasta el momento tiene:")
         optionsLabel.setRafflesTitle(with: String(sorteo.opciones)+" opciones" )
-        pointsLabel.setRafflesSubTitleCenter(with: "¡Le faltan \(sorteo.puntosFalta) puntos para una opción adicional!")
+        pointsLabel.setDateModify(with: "¡Le faltan \(sorteo.puntosFalta) puntos para una opción adicional!")
         necesaryPointsLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
         necesaryPointsLabel.isUserInteractionEnabled = true
         necesaryPointsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))

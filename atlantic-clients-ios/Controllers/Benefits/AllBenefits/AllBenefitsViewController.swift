@@ -55,7 +55,6 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet var leFaltanLabel2: Label!
     @IBOutlet var remindButton2: Button!
     @IBOutlet var newFechaLabel: Label!
-    @IBOutlet var viewButton2: UIView!
     @IBOutlet var rightButton: UIButton!
     @IBOutlet var leftButton: UIButton!
     override func viewDidLoad() {
@@ -126,13 +125,12 @@ class AllBenefitsViewController: UIViewController {
     func showTitles(titles: AllBenefitsTitles) {
         if(benefit.nombre == "Domingos Regalones" || benefit.nombre == "Martes Regalones"){
             //mostramos la vista encima  y anulamos los botones de la vista que se encuentra atras
-            titleLabel2.setSubTitleViewLabel(with: "Hasta el momento tiene:")
-            
+            //dateLabel.setBenefitDetailTitle(with: "Fecha: "+benefit.fechaTexto)
             
             view2.alpha = 1
             view2.isUserInteractionEnabled = true
             notInteractive()
-            
+            titleLabel2.setSubTitleViewLabel(with: "Hasta el momento tiene:")
             tabBar.title = benefit.nombre
             dateSwapLabel.setRafflesTitleGold(with: benefit.nombre)
             let fechaTexto = benefit.fechaTexto
@@ -148,13 +146,13 @@ class AllBenefitsViewController: UIViewController {
             underLineView.alpha = 1.0
             remindButton2.setRemindButton(with: titles.reminderTitle)
             //moviendo las vistas
-            vHidden.alpha = 0
+            /*vHidden.alpha = 0
             vHidden.frame = CGRect(x: 0 , y: self.vHidden.layer.position.y, width: self.vHidden.frame.width, height: 0)
             let alturahidden = vHidden.frame.height
             buttonView.frame = CGRect(x: 0 , y:  self.vHidden.layer.position.y, width: self.buttonView.frame.width, height: self.buttonView.frame.height)
             
             viewParentHidden.frame =  CGRect(x: 0 , y: self.viewParentHidden.layer.position.y, width: self.viewParentHidden.frame.width, height: self.viewParentHidden.frame.height-alturahidden)
-            
+            */
             let fecha = (benefit.fechaActualizacion as NSString).doubleValue
             let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
             //transformar el formato de fecha  dd/MM/yy    y   la hora  hh:mm
@@ -283,31 +281,31 @@ class AllBenefitsViewController: UIViewController {
         // casos dependiendo de si es en soles o en dolares
             let benefitMoneda = benefit.tipoMoneda
             if(benefitMoneda.caseInsensitiveCompare("soles") == .orderedSame){
-                leFaltanLabel.setSubTitleViewLabel(with: "Le faltan "+String(benefit.puntos_falta)+" puntos para ganar: S/"+String(benefit.premio_falta))
+                leFaltanLabel.setSubTitleViewLabelCenter(with: "Le faltan "+String(benefit.puntos_falta)+" puntos para ganar: S/"+String(benefit.premio_falta.intValue))
                 let tipoBenefit = benefit.nombre
                 if(!(tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
-                    haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está ganando $"+String(benefit.premio))
+                    haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está ganando $"+String(benefit.premio.intValue))
                 }else{
-                    haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado S/"+String(benefit.premio))
+                    haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado S/"+String(benefit.premio.intValue))
                 }
 
 
             }else if(benefitMoneda.caseInsensitiveCompare("dólares") == .orderedSame){
-                leFaltanLabel.setSubTitleViewLabel(with: "Le faltan "+String(benefit.puntos_falta)+" puntos para ganar: $"+String(benefit.premio_falta))
+                leFaltanLabel.setSubTitleViewLabelCenter(with: "Le faltan "+String(benefit.puntos_falta)+" puntos para ganar: $"+String(benefit.premio_falta.intValue))
                 let tipoBenefit = benefit.nombre
                 if(!(tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
                     let benefitMoneda = benefit.tipoMoneda
                     if(benefitMoneda.caseInsensitiveCompare("soles") == .orderedSame){
-                       haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está ganando S/"+String(benefit.premio))
+                       haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está ganando S/"+String(benefit.premio.intValue))
                     }else if(benefitMoneda.caseInsensitiveCompare("dólares") == .orderedSame){
-                        haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Está ganando $"+String(benefit.premio))
+                        haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Está ganando $"+String(benefit.premio.intValue))
                     }
                 }else{
                     let benefitMoneda = benefit.tipoMoneda
                     if(benefitMoneda.caseInsensitiveCompare("soles") == .orderedSame){
-                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Ha ganado S/"+String(benefit.premio))
+                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Ha ganado S/"+String(benefit.premio.intValue))
                     }else if(benefitMoneda.caseInsensitiveCompare("dólares") == .orderedSame){
-                        haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado $"+String(benefit.premio))
+                        haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado $"+String(benefit.premio.intValue))
                     }
                 }
             }
@@ -327,9 +325,9 @@ class AllBenefitsViewController: UIViewController {
                 if(!(tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
                     let benefitMoneda = benefit.tipoMoneda
                     if(benefitMoneda.caseInsensitiveCompare("soles") == .orderedSame){
-                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Ha ganado S/"+String(benefit.premio))
+                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Ha ganado S/"+String(benefit.premio.intValue))
                     }else if(benefitMoneda.caseInsensitiveCompare("dólares") == .orderedSame){
-                        haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado $"+String(benefit.premio))
+                        haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado $"+String(benefit.premio.intValue))
                     }
 
                 }
@@ -353,11 +351,11 @@ class AllBenefitsViewController: UIViewController {
     
 
     @objc func tapTerminos2(){
-            let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
+            let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
             terminos.showProgress()
         }
     @objc func tapTerminos(){
-               let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
+               let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
                terminos.showProgress()
            }
 }

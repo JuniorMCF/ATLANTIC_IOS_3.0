@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Raffles Dream View Controller-->
+        <!--Sorteos-->
         <scene sceneID="C3D-Dv-hzD">
             <objects>
                 <viewController storyboardIdentifier="RafflesDreamID" id="DO1-1f-TOy" customClass="RafflesDreamViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26V-hP-jse">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" id="26V-hP-jse">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-H0-dxf" userLabel="HeaderView">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-H0-dxf" userLabel="HeaderView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ajl-7Z-6Zq">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ajl-7Z-6Zq">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="f31-av-FUX"/>
-                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5rl-Rc-hTX">
                                                     <size key="itemSize" width="264" height="139"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -57,22 +57,10 @@
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="ajl-7Z-6Zq" secondAttribute="bottom" id="2dy-jG-m5o"/>
-                                            <constraint firstItem="ajl-7Z-6Zq" firstAttribute="centerY" secondItem="nZt-H0-dxf" secondAttribute="centerY" id="95w-5Q-K69"/>
-                                            <constraint firstItem="ajl-7Z-6Zq" firstAttribute="width" secondItem="nZt-H0-dxf" secondAttribute="width" id="9aF-gJ-x9X"/>
-                                            <constraint firstAttribute="width" constant="320" id="Ikd-gA-Ep2"/>
-                                            <constraint firstAttribute="trailing" secondItem="ajl-7Z-6Zq" secondAttribute="trailing" id="IsD-aN-7A4"/>
-                                            <constraint firstAttribute="height" constant="200" id="V6a-6i-FgC"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Yqr-12-hbv"/>
-                                            <constraint firstItem="ajl-7Z-6Zq" firstAttribute="centerX" secondItem="nZt-H0-dxf" secondAttribute="centerX" id="bR3-k1-xdu"/>
-                                            <constraint firstItem="ajl-7Z-6Zq" firstAttribute="leading" secondItem="nZt-H0-dxf" secondAttribute="leading" id="i0R-o2-s5x"/>
-                                            <constraint firstItem="ajl-7Z-6Zq" firstAttribute="top" secondItem="nZt-H0-dxf" secondAttribute="top" id="zv8-3C-tt8"/>
-                                        </constraints>
                                     </view>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="a89-Gq-iKr">
                                         <rect key="frame" x="9" y="152" width="301" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,41 +81,38 @@
                                             <action selector="rightCV:" destination="DO1-1f-TOy" eventType="touchUpInside" id="CSh-Lo-TSE"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5v-KZ-9Un">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5v-KZ-9Un">
                                         <rect key="frame" x="0.0" y="198" width="320" height="312"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qDB-3B-DtW" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="10" width="277" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qDB-3B-DtW" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="16" width="277" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0OT-7o-wdk">
-                                                <rect key="frame" x="20" y="40.5" width="277" height="45"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-bg-Vz9" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="49" width="292" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIE-Gg-oao" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="70" width="292" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8r-qA-7Nx">
+                                                <rect key="frame" x="20" y="93" width="277" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-bg-Vz9" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIE-Gg-oao" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="277" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8r-qA-7Nx">
-                                                <rect key="frame" x="20" y="93.5" width="277" height="45"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r99-2U-nrp" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="180" height="28"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="28" id="cYN-oq-bHK"/>
-                                                            <constraint firstAttribute="width" constant="180" id="dsw-Ce-I5j"/>
-                                                        </constraints>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r99-2U-nrp" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="11" width="180" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="Button"/>
                                                         <userDefinedRuntimeAttributes>
@@ -139,16 +124,12 @@
                                                             <action selector="createReminderButton:" destination="DO1-1f-TOy" eventType="touchUpInside" id="U2J-dS-lqx"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g68-i1-o2U" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="204" y="12" width="20" height="20"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g68-i1-o2U" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="204" y="14" width="20" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="Xrg-u0-PI7"/>
-                                                            <constraint firstAttribute="width" constant="20" id="YCS-JI-a2I"/>
-                                                            <constraint firstAttribute="width" secondItem="g68-i1-o2U" secondAttribute="height" multiplier="1:1" id="dj7-DZ-kdM"/>
-                                                        </constraints>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="icon-diary"/>
+                                                        <state key="normal" image="ic_calendar"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSizeScale">
                                                                 <real key="value" value="1"/>
@@ -157,104 +138,56 @@
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="g68-i1-o2U" secondAttribute="trailing" constant="41" id="0ob-X0-pfp"/>
-                                                    <constraint firstItem="r99-2U-nrp" firstAttribute="top" secondItem="P8r-qA-7Nx" secondAttribute="top" id="1Kj-mc-TKn"/>
-                                                    <constraint firstItem="r99-2U-nrp" firstAttribute="height" secondItem="P8r-qA-7Nx" secondAttribute="height" multiplier="0.622222" id="ADs-57-Ya5"/>
-                                                    <constraint firstItem="g68-i1-o2U" firstAttribute="top" secondItem="P8r-qA-7Nx" secondAttribute="top" id="Fnz-0d-XAk"/>
-                                                    <constraint firstItem="g68-i1-o2U" firstAttribute="leading" secondItem="r99-2U-nrp" secondAttribute="trailing" constant="24" id="Jvo-2f-LgB"/>
-                                                    <constraint firstAttribute="bottom" secondItem="g68-i1-o2U" secondAttribute="bottom" id="PBP-Ul-l2p"/>
-                                                    <constraint firstAttribute="height" constant="45" id="ecL-wn-ShE"/>
-                                                    <constraint firstItem="r99-2U-nrp" firstAttribute="leading" secondItem="P8r-qA-7Nx" secondAttribute="leading" id="eqN-ut-gcf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="r99-2U-nrp" secondAttribute="bottom" id="fyT-Kh-AbK"/>
-                                                </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-5Z-n1C">
-                                                <rect key="frame" x="20" y="148.5" width="277" height="77.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdE-Ko-jER" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo7-Q1-5Hd" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28.5" width="277" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-vY-KFj" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="57" width="277" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9r-GQ-f3e" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="246" width="277" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdE-Ko-jER" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="150" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbD-9B-iOY" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="271.5" width="277" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo7-Q1-5Hd" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="174" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-vY-KFj" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="217" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9r-GQ-f3e" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="251" width="277" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbD-9B-iOY" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="272" width="277" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="Fm5-5Z-n1C" firstAttribute="top" secondItem="P8r-qA-7Nx" secondAttribute="bottom" constant="10" id="6Oe-eS-2Ns"/>
-                                            <constraint firstItem="0OT-7o-wdk" firstAttribute="top" secondItem="qDB-3B-DtW" secondAttribute="bottom" constant="10" id="8tY-4k-CZ8"/>
-                                            <constraint firstItem="MbD-9B-iOY" firstAttribute="leading" secondItem="g5v-KZ-9Un" secondAttribute="leading" constant="20" id="9fI-69-tyU"/>
-                                            <constraint firstAttribute="trailing" secondItem="0OT-7o-wdk" secondAttribute="trailing" constant="23" id="Adz-nV-Wth"/>
-                                            <constraint firstItem="qDB-3B-DtW" firstAttribute="leading" secondItem="g5v-KZ-9Un" secondAttribute="leading" constant="20" id="BNS-eG-tqA"/>
-                                            <constraint firstItem="q9r-GQ-f3e" firstAttribute="leading" secondItem="g5v-KZ-9Un" secondAttribute="leading" constant="20" id="F80-Sh-d5L"/>
-                                            <constraint firstAttribute="trailing" secondItem="MbD-9B-iOY" secondAttribute="trailing" constant="23" id="FW1-kS-ZrZ"/>
-                                            <constraint firstItem="P8r-qA-7Nx" firstAttribute="leading" secondItem="g5v-KZ-9Un" secondAttribute="leading" constant="20" id="HU3-fD-sUG"/>
-                                            <constraint firstItem="P8r-qA-7Nx" firstAttribute="top" secondItem="0OT-7o-wdk" secondAttribute="bottom" constant="8" symbolic="YES" id="XYq-xN-g9V"/>
-                                            <constraint firstAttribute="trailing" secondItem="qDB-3B-DtW" secondAttribute="trailing" constant="23" id="Y58-Lk-mLm"/>
-                                            <constraint firstItem="q9r-GQ-f3e" firstAttribute="top" secondItem="Fm5-5Z-n1C" secondAttribute="bottom" constant="20" id="Y7Z-gu-PJf"/>
-                                            <constraint firstItem="0OT-7o-wdk" firstAttribute="leading" secondItem="g5v-KZ-9Un" secondAttribute="leading" constant="20" id="ceg-f7-M3B"/>
-                                            <constraint firstAttribute="trailing" secondItem="P8r-qA-7Nx" secondAttribute="trailing" constant="23" id="ewp-5F-qAW"/>
-                                            <constraint firstItem="Fm5-5Z-n1C" firstAttribute="leading" secondItem="g5v-KZ-9Un" secondAttribute="leading" constant="20" id="fmc-Pk-1Gs"/>
-                                            <constraint firstItem="qDB-3B-DtW" firstAttribute="top" secondItem="g5v-KZ-9Un" secondAttribute="top" constant="10" id="hQp-7a-EpC"/>
-                                            <constraint firstItem="MbD-9B-iOY" firstAttribute="top" secondItem="q9r-GQ-f3e" secondAttribute="bottom" constant="5" id="pON-h0-nyF"/>
-                                            <constraint firstAttribute="bottom" secondItem="MbD-9B-iOY" secondAttribute="bottom" constant="20" id="pVC-wd-Ihv"/>
-                                            <constraint firstAttribute="trailing" secondItem="q9r-GQ-f3e" secondAttribute="trailing" constant="23" id="pbC-nd-XZe"/>
-                                            <constraint firstAttribute="trailing" secondItem="Fm5-5Z-n1C" secondAttribute="trailing" constant="23" id="qeY-2p-fIW"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="250" constant="524" id="7M3-Yz-lJX"/>
-                                    <constraint firstItem="g5v-KZ-9Un" firstAttribute="width" secondItem="26V-hP-jse" secondAttribute="width" multiplier="0.990625" constant="3" id="7bg-9U-P00"/>
-                                    <constraint firstItem="g5v-KZ-9Un" firstAttribute="leading" secondItem="26V-hP-jse" secondAttribute="leading" id="7pG-RC-fte"/>
-                                    <constraint firstAttribute="width" constant="320" id="D1X-ee-ztI"/>
-                                    <constraint firstItem="nZt-H0-dxf" firstAttribute="top" secondItem="26V-hP-jse" secondAttribute="top" id="KrA-tP-hVT"/>
-                                    <constraint firstItem="nZt-H0-dxf" firstAttribute="height" secondItem="26V-hP-jse" secondAttribute="height" multiplier="0.381679" id="Sdz-ZT-9zb"/>
-                                    <constraint firstAttribute="bottom" secondItem="g5v-KZ-9Un" secondAttribute="bottom" constant="14" id="SgL-bC-yl2"/>
-                                    <constraint firstItem="nZt-H0-dxf" firstAttribute="width" secondItem="26V-hP-jse" secondAttribute="width" id="nGs-Tl-3Zz"/>
-                                    <constraint firstItem="g5v-KZ-9Un" firstAttribute="top" secondItem="nZt-H0-dxf" secondAttribute="bottom" constant="-2" id="pvC-Jv-qiN"/>
-                                    <constraint firstAttribute="trailing" secondItem="g5v-KZ-9Un" secondAttribute="trailing" id="v9m-4u-9gm"/>
-                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="IH0-hu-0qA"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="9og-oV-cPe"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="26V-hP-jse" firstAttribute="bottom" secondItem="uMW-ha-6ia" secondAttribute="bottom" id="1lu-x6-KC6"/>
-                            <constraint firstItem="26V-hP-jse" firstAttribute="trailing" secondItem="uMW-ha-6ia" secondAttribute="trailing" id="quA-6f-Dnt"/>
-                            <constraint firstItem="26V-hP-jse" firstAttribute="top" secondItem="uMW-ha-6ia" secondAttribute="top" id="xx9-yz-Qkw"/>
-                            <constraint firstItem="26V-hP-jse" firstAttribute="leading" secondItem="uMW-ha-6ia" secondAttribute="leading" id="yiR-Hu-Roj"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uMW-ha-6ia"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uoP-sg-hgJ"/>
+                    <navigationItem key="navigationItem" title="Sorteos" id="uoP-sg-hgJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rBB-rs-7vr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="ajl-7Z-6Zq" id="6Jl-jo-eDE"/>
                         <outlet property="dateLabel" destination="kIE-Gg-oao" id="CeR-NF-Qj2"/>
@@ -301,8 +234,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_calendar" width="204" height="213.5"/>
         <image name="ic_left_arrow" width="19.5" height="31.5"/>
         <image name="ic_rigth_arrow" width="19.5" height="31.5"/>
-        <image name="icon-diary" width="18" height="20"/>
     </resources>
 </document>

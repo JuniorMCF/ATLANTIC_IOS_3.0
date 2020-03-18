@@ -426,3 +426,18 @@ extension UISlider{
         
     }
 }
+extension Int {
+  var doubleValue: Double {
+    return Double(self)
+  }
+}
+extension Double {
+  var intValue: Int {
+    return Int(self)
+  }
+}
+extension Float {
+  var intValue: Int {
+    return Int(self)
+  }
+}

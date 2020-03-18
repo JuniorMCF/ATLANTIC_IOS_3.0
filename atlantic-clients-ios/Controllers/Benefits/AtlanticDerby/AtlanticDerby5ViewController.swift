@@ -71,7 +71,7 @@ class AtlanticDerby5ViewController: UIViewController {
         
     }
     @objc func tapTerminos(){
-        let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
+        let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showProgress()
     }
     /*

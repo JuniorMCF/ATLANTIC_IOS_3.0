@@ -14,7 +14,7 @@ class CustomEvent: UIViewController {
     var viewParent : UIViewController!
     var titleP : String!
     var message : String!
-    var eventDetailViewModel : EventDetailViewModel!
+    var eventDetailViewModel :EventDetailViewModelProtocol =   EventDetailViewModel()
     var progressController : CustomEvent!
     var isHome = false
     //variables para enviar
@@ -96,7 +96,7 @@ class CustomEvent: UIViewController {
     
     func hideProgress(){
         
-        progressController.view.removeFromSuperview()
+        self.view.removeFromSuperview()
       
         //progressController.dismiss(animated: false, completion: nil)
     }

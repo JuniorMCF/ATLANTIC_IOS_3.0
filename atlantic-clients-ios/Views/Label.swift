@@ -42,12 +42,12 @@ class Label: UILabel {
     public func setSubTitleViewLabel(with setText: String) {
         textColor   = .black
         text        = setText
-        font = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
     }
     public func setSubTitleViewLabelRed(with setText: String) {
            textColor   = .red
            text        = setText
-           font = UIFont(name: "Avenir-Medium", size: 15)!
+           fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 17)
        }
     public func setSubTitleViewLabelRedCenter(with setText: String) {
         textColor   = .red
@@ -58,7 +58,7 @@ class Label: UILabel {
     public func setSubTitleViewLabelCenter(with setText: String) {
         textColor   = .black
         text        = setText
-        font = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 14)
         textAlignment = .center
     }
     public func setSubTitleViewLabelCenterGray(with setText: String) {
@@ -155,7 +155,7 @@ class Label: UILabel {
     public func setRafflesTitleGold(with setText: String) {
         textColor   = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 20)!
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 20)
         textAlignment = .left
     }
     public func setRafflesTitle(with setText: String) {
@@ -175,13 +175,13 @@ class Label: UILabel {
     public func setRafflesSubTitle(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 13)!
+         fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .left
     }
     public func setDateModify(with setText: String) {
         textColor   = .gray
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 12)!
+         fontSizeScaleFamily(family: "Avenir-Medium", size: 12)
         textAlignment = .center
     }
     public func setDateModify2(with setText: String) {
@@ -202,7 +202,7 @@ class Label: UILabel {
     public func setRafflesSub(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         textAlignment = .left
     }
     public func setRafflesSubCenter(with setText: String) {
@@ -248,7 +248,7 @@ class Label: UILabel {
     public func setBenefitDetailTitle(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 20)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         textAlignment = .left
     }
     public func setBenefitDetailTitleCenter(with setText: String) {
