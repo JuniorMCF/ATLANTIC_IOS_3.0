@@ -117,7 +117,6 @@ class AllBenefitsViewController: UIViewController {
         allBenefitsCollecionViewDD = AllBenefitsCollectionViewDelegateAndDatasource(items:datasource.fotos, viewModel: viewModel, pageControl: self.pageControl,collectionView: collectionView)
         collectionView.dataSource =  allBenefitsCollecionViewDD
         collectionView.delegate = allBenefitsCollecionViewDD
-        
         self.fotos = datasource.fotos
         self.collectionView.reloadData()
     }
@@ -239,7 +238,7 @@ class AllBenefitsViewController: UIViewController {
                 
                 //transformar el formato de fecha  dd/MM/yy    y   la hora  hh:mm
                 pointsLabel.setRafflesSubUnderline(with: "Vér terminos y condiciones")
-                awardTitleLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour)
+                awardTitleLabel.setDateModify(with: "actualizado el "+txtFecha+" a las "+txtHour+" hrs")
                 pointsLabel.isUserInteractionEnabled = true
                 pointsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
                 // vista que se oculta en martes regalones
