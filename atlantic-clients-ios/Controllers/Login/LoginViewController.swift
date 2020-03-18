@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Login", message: "Iniciando Sesión ...")
         appDelegate.progressDialog.isHome = false
-        splash = SplashLoginViewController(parent: self.parent!)
+        splash = SplashLoginViewController(parent: self)
         loginButton.frame.size = CGSize(width:200 ,height:15)
         terminosButton.frame.size = CGSize(width: 18 , height: 18)
         passwordTextField.returnKeyType = .done
@@ -45,6 +45,12 @@ class LoginViewController: UIViewController {
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.dniTextField.text = ""
+        self.passwordTextField.text = ""
+    }
+    
     
     func bind() {
         viewModel.showTitles = showTitles(titles:)
@@ -78,10 +84,14 @@ class LoginViewController: UIViewController {
         }
     func presentOnboarding() {
         splash.hideSplash()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainID")
-        viewController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(viewController, animated: false)
+        
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        
+        
         
         
     }

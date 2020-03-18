@@ -106,11 +106,30 @@ class ProfileViewController: UIViewController {
     }
     
     func presentLogin() {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
-        viewController.modalPresentationStyle = .fullScreen
+     
+        /*if let destinationViewController = self.navigationController?.viewControllers
+            
+            .filter(
+                
+                {$0.classForCoder == LoginViewController.self})
+            
+            .first {
+            
+            self.navigationController?.popToViewController(destinationViewController, animated: false)
+            
+            
+        }*/
+    //    appDelegate.navigationController = self.navigationController
         
-        present(viewController, animated: false, completion: nil)
+      //  self.navigationController!.viewControllers.removeAll()
+        /*let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
+        appDelegate.window?.rootViewController = UINavigationController(rootViewController: viewController)
+        appDelegate.window?.makeKeyAndVisible()*/
+       /*viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: false, completion: nil)*/
+        
+        
     }
     func presentAgenda(){
         let storyBoard = UIStoryboard(name: "ProfileAgenda", bundle: nil)

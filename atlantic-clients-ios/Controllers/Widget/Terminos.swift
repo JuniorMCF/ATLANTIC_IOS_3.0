@@ -63,6 +63,7 @@ class Terminos: UIViewController
     }
                
         func hideProgress(){
+
             self.dismiss(animated: false, completion: nil)
         }
         

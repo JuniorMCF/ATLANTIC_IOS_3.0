@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var customLogout: CustomLogout!
     var customEvent : CustomEvent!
     //switch
+    var navigationController : UINavigationController!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

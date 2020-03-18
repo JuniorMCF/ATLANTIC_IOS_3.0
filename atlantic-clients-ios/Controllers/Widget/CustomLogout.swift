@@ -66,10 +66,23 @@ class CustomLogout: UIViewController {
         Constants().saveUsername(username: "")
         Constants().savePassword(password: "")
         Constants().saveTerminos(terminoState: false)
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        
+        if let destinationViewController = self.viewParent.parent?.navigationController?.viewControllers
+            
+            .filter(
+                
+                {$0.classForCoder == LoginViewController.self})
+            
+            .first {
+            
+            self.viewParent.parent?.navigationController?.popToViewController(destinationViewController, animated: false)
+            
+        }
+        
+        /*let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
         viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: false, completion: nil)
+        present(viewController, animated: false, completion: nil)*/
         
         
     }
@@ -82,12 +95,9 @@ class CustomLogout: UIViewController {
         progressController = (storyboard.instantiateViewController(withIdentifier: "customLogout") as! CustomLogout)
        
         progressController.modalPresentationStyle = .overFullScreen
+        progressController.viewParent = self.viewParent
+        viewParent.tabBarController?.view.addSubview(progressController.view)
         
-        if(isHome){
-            viewParent.tabBarController?.view.addSubview(progressController.view)
-        }else{
-            viewParent.view.addSubview(progressController.view)
-        }
         
         
        // viewParent.view.addSubview(progressController.view)
@@ -100,9 +110,7 @@ class CustomLogout: UIViewController {
     }
     
     func hideProgress(){
-        progressController.view.removeFromSuperview()
-      
-        //progressController.dismiss(animated: false, completion: nil)
+        self.view.removeFromSuperview()
     }
     
     
