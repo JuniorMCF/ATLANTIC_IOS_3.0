@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-993" y="-12"/>
         </scene>
-        <!--Trophy Lose View Controller-->
+        <!--Grand Prix-->
         <scene sceneID="jFT-7e-t0M">
             <objects>
                 <viewController storyboardIdentifier="TrophyLoseID" id="qKL-P8-fte" customClass="TrophyLoseViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,41 +151,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5O-qe-6rb" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                <rect key="frame" x="227" y="139" width="80" height="80"/>
+                                <rect key="frame" x="211" y="150" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCs-Aa-ERt" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                <rect key="frame" x="20" y="73" width="374" height="20"/>
+                                <rect key="frame" x="20" y="93" width="374" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxz-nW-X6h" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                <rect key="frame" x="20" y="101" width="374" height="20"/>
+                                <rect key="frame" x="20" y="118" width="374" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_copa" id="mgS-iO-Jc6">
-                                <rect key="frame" x="122" y="139" width="80" height="80"/>
+                                <rect key="frame" x="122" y="150" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cyR-x5-RGI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="c5I-xA-hfa"/>
+                    <navigationItem key="navigationItem" title="Grand Prix" id="c5I-xA-hfa">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7BP-ds-oHy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="FechaActualizacionLabel" destination="6JZ-vy-pky" id="eDe-TS-1i8"/>
                         <outlet property="NombreTitle" destination="15A-UG-ZRN" id="5bg-lt-i9Q"/>
                         <outlet property="PremioLabel" destination="75K-tl-IYC" id="Zlm-TD-Mpu"/>
                         <outlet property="PuestoTitle" destination="DVG-gs-NoO" id="vs6-LX-TXB"/>
                         <outlet property="fechaLabel" destination="qCs-Aa-ERt" id="B7b-4h-GhH"/>
+                        <outlet property="nItem" destination="c5I-xA-hfa" id="Nkj-3h-H7q"/>
                         <outlet property="posicionLabel" destination="l5O-qe-6rb" id="2LR-O6-kSR"/>
                         <outlet property="puestoLabel" destination="mxz-nW-X6h" id="Mi7-J8-QwK"/>
                         <outlet property="puntosLabel" destination="dED-IQ-2GB" id="d68-lA-rsv"/>

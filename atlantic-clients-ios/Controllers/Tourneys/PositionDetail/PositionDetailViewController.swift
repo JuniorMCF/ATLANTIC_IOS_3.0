@@ -22,6 +22,7 @@ class PositionDetailViewController: UIViewController {
     var torneo = Tournament()
     // Mark: - Outlets
     
+    @IBOutlet var nItem: UINavigationItem!
     @IBOutlet weak var positionTitleLabel: Label!
     @IBOutlet weak var positionLabel: Label!
     @IBOutlet weak var postTitleLabel: Label!
@@ -36,7 +37,7 @@ class PositionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         bind()
         viewModel.viewDidLoad()
     }
@@ -56,6 +57,9 @@ class PositionDetailViewController: UIViewController {
     }
     
     func showTitles(titles: PositionDetailTitles) {
+        nItem.title = torneo.nombre
+        
+        
         
         positionTitleLabel.setRafflesSubCenter(with: "Usted ocupa el puesto:")
         positionLabel.setPositionTitleGold(with: "\(torneo.posicion)°")

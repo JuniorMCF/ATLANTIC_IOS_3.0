@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grand Prix-->
+        <!--TORNEOS DOMINGO-->
         <scene sceneID="uQm-Rk-efB">
             <objects>
                 <viewController storyboardIdentifier="TrophyCategoryID" id="KE0-MM-t2s" customClass="TrophyCategoryViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h2c-Bs-0Nd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grand Prix" id="pci-6L-8L0"/>
+                    <navigationItem key="navigationItem" title="TORNEOS DOMINGO" id="pci-6L-8L0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ga9-nC-478"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="terminosLabel" destination="kOG-I5-LHp" id="XVo-bK-PN7"/>
                         <outlet property="trophyCategoryTableView" destination="OmL-uk-q7w" id="8Ny-1S-jY8"/>

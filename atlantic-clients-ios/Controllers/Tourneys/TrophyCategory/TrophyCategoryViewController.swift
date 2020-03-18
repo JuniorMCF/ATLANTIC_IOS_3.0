@@ -62,6 +62,7 @@ class TrophyCategoryViewController: UIViewController {
         terminos.showProgress()
     }
     func presentTrophyCategory(tournament: Tournament) {
+        
         if(tournament.concluido){
             if(tournament.posicion > 40){
                 let storyboard = UIStoryboard(name: "PositionDetail40", bundle: nil)

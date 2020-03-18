@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grand Prix-->
+        <!--Position Detail View Controller-->
         <scene sceneID="njz-8A-lFa">
             <objects>
                 <viewController storyboardIdentifier="PositionDetailID" id="2Li-i2-7jZ" customClass="PositionDetailViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,11 +149,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jEW-Tj-8Mt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grand Prix" id="pnt-4U-Rho">
+                    <navigationItem key="navigationItem" id="pnt-4U-Rho">
                         <barButtonItem key="backBarButtonItem" title=" " id="tQP-VK-opa"/>
                     </navigationItem>
                     <connections>
                         <outlet property="fechaActualizadaLabel" destination="1c5-nv-cEb" id="Rbf-j8-xkr"/>
+                        <outlet property="nItem" destination="pnt-4U-Rho" id="Y98-OS-BUg"/>
                         <outlet property="payTitle" destination="8i8-E7-noc" id="ua6-o6-oAd"/>
                         <outlet property="positionLabel" destination="Jv1-QR-EQA" id="96r-mc-Uus"/>
                         <outlet property="positionTitleLabel" destination="Axr-Nq-5cc" id="O6q-PB-k8e"/>

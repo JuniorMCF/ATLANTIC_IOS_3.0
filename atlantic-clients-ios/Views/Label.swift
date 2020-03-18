@@ -61,10 +61,16 @@ class Label: UILabel {
         font = UIFont(name: "Avenir-Medium", size: 15)!
         textAlignment = .center
     }
+    public func setSubTitleViewLabelCenterGray(with setText: String) {
+           textColor   = .gray
+           text        = setText
+           font = UIFont(name: "Avenir-Medium", size: 15)!
+           textAlignment = .center
+       }
     public func setSubTitleViewLabelCenterLarge(with setText: String) {
         textColor   = .black
         text        = setText
-        font = UIFont(name: "Avenir-Medium", size: 17)!
+        font = UIFont(name: "Avenir-Medium", size: 25)!
         textAlignment = .center
     }
     

@@ -18,6 +18,7 @@ class TrophyLoseViewController: UIViewController {
     private var trophyLoseCollectionViewDD: TrophyLoseCollectionViewDatasourceAndDelegate!
     
     
+    @IBOutlet var nItem: UINavigationItem!
     
     @IBOutlet var trophyLoseCollectionView: UICollectionView!
     // Mark: - Properties
@@ -53,6 +54,7 @@ class TrophyLoseViewController: UIViewController {
         viewModel.loadDatasources = loadDatasources
     }
     func presentTitles(data:Tournament){
+        nItem.title = torneo.nombre
         PuestoTitle.text = "Puesto"
         NombreTitle.text = "Nombre"
         puntosTitle.text = "Puntos"
@@ -76,10 +78,10 @@ class TrophyLoseViewController: UIViewController {
         
         
         
-        fechaLabel.setSubTitleViewLabelCenter(with: "Fecha "+torneo.fechaTexto+"")
-        puestoLabel.setSubTitleViewLabelCenter(with: "Usted ocupa el puesto")
-        puntosLabel.setSubTitleViewLabelCenter(with: "Tiene hasta el momento "+String(torneo.puntaje)+" puntos")
-        posicionLabel.setTitleForgotViewLabel(with: ""+String(torneo.posicion)+"°")
+        fechaLabel.setSubTitleViewLabelCenterGray(with: "Fecha "+torneo.fechaTexto+"")
+        puestoLabel.setSubTitleViewLabelCenterGray(with: "Usted ocupa el puesto")
+        puntosLabel.setSubTitleViewLabelCenterGray(with: "Tiene hasta el momento "+String(torneo.puntaje)+" puntos")
+        posicionLabel.setSubTitleViewLabelCenterLarge(with: ""+String(torneo.posicion)+"°")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
         terminosLabel.isUserInteractionEnabled = true
         terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
