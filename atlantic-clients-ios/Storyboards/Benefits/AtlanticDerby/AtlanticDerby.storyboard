@@ -115,6 +115,11 @@
                                                     <constraint firstAttribute="width" constant="300" id="FGN-IS-C3I"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-diary" translatesAutoresizingMaskIntoConstraints="NO" id="9Ra-Di-lUd">
                                                 <rect key="frame" x="354" y="480" width="20" height="20"/>
