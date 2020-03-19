@@ -378,6 +378,7 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
 
 extension NewsCollectionViewDelegateAndData: UICollectionViewDelegate {
  
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView.tag == 0 else { return }
         let center = CGPoint(x: scrollView.contentOffset.x + (scrollView.frame.width / 2),
@@ -385,6 +386,13 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDelegate {
         guard let collectionView = scrollView as? UICollectionView else { return }
        
     }
+}
+
+extension NewsCollectionViewDelegateAndData: UICollectionViewDelegateFlowLayout {
+   
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: collectionView.frame.width / 1.7, height: collectionView.frame.height)
+}
 }
 
 
