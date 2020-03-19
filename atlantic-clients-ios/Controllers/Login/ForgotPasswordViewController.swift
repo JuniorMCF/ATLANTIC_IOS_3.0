@@ -107,6 +107,12 @@ class ForgotPasswordViewController: UIViewController {
         print(option)
         viewModel.getPhone(dni: documentTextField.text!, tipo: option)
     }
+    @IBAction func onBackPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let navViewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
+        navViewController.modalPresentationStyle = .fullScreen
+        present(navViewController, animated: false, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

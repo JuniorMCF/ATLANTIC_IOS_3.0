@@ -123,9 +123,21 @@ class Label: UILabel {
     public func setDetailSubTitle(with setText: String) {
         textColor   = .black
         text        = setText
-        font = UIFont(name: "HelveticaNeue-Bold", size: 16)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         textAlignment = .left
     }
+    public func setTextNormal(with setText: String) {
+        textColor   = .gray
+        text        = setText
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 12)
+        textAlignment = .left
+    }
+    public func setTextNormal2(with setText: String) {
+           textColor   = .gray
+           text        = setText
+           fontSizeScaleFamily(family: "Avenir-Medium", size: 10)
+           textAlignment = .left
+       }
     public func setDetailSubTitleCenter(with setText: String) {
         textColor   = .black
         text        = setText

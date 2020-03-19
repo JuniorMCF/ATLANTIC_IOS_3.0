@@ -17,7 +17,13 @@ class AgendaCollectionViewDatasourceAndDelegate: NSObject {
         }
     }
 
-    extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource {
+extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width*0.92,  height: collectionView.frame.height/6)
+    }
+}
+
+extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             print(items.count)
             return items.count
@@ -52,4 +58,4 @@ class AgendaCollectionViewDatasourceAndDelegate: NSObject {
             }
             
         }
-    }
+}

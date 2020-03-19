@@ -358,7 +358,7 @@
         <scene sceneID="hub-3L-akh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2y-gu-L6M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inicio" image="house.fill" catalog="system" id="8AO-EJ-YFd"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="ic_home" id="8AO-EJ-YFd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zj7-DD-cOe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -381,7 +381,7 @@
     </scenes>
     <resources>
         <image name="daily1" width="279" height="164"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="ic_home" width="33.5" height="31"/>
         <image name="promo1" width="417" height="213"/>
     </resources>
 </document>

@@ -127,7 +127,7 @@
         <scene sceneID="m9t-zc-POS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IdR-W3-1J5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cobros" image="icon-payments" id="iFZ-Ee-pei"/>
+                    <tabBarItem key="tabBarItem" title="Cobros" image="ic_attach_money" id="iFZ-Ee-pei"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="AYR-HD-pU5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -152,6 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon-payments" width="28" height="27"/>
+        <image name="ic_attach_money" width="19" height="33.5"/>
     </resources>
 </document>

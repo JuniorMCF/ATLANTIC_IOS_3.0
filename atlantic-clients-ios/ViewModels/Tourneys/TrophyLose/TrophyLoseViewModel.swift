@@ -27,8 +27,11 @@ class TrophyLoseViewModel: TrophyLoseViewModelProtocol {
     var loadDatasources: (([TournamentTable]) -> Void)?
     var presentTrophyCategory: ((TrophyCategoryTypes) -> Void)?
     var tournamentTableList = [TournamentTable]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var progress = CustomProgress()
     func viewDidLoad(promocionId:String) {
-
+        progress = appDelegate.progressDialog
+        progress.showProgress()
         let parameters = ["promocionId":promocionId]
         
         AF.request(Constants().urlBase+Constants().getTorneosTabla,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
@@ -59,21 +62,23 @@ class TrophyLoseViewModel: TrophyLoseViewModelProtocol {
                                         self.tournamentTableList.append(torneo)
                                         
                                     }
-
+                                    self.progress.hideProgress()
                                     self.loadDatasources?(self.tournamentTableList)
                                  }else {
                                     //en otros casos
-                                    
+                                    self.progress.hideProgress()
                                  }
                                  
                                  
                              }
                          } catch let error as NSError {
+                            self.progress.hideProgress()
                              print("Failed to load: \(error.localizedDescription)")
                          }
                          
                         break
                     case.failure(let error):
+                        self.progress.hideProgress()
                         print(error)
                         break
                     }
