@@ -256,6 +256,7 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
                                       }
 
                  }
+                cell.dailyPromotionLabel.fontSizeScaleFamily(family: "Avenir-Medium", size: 14)
             }
             
             if(tipo.elementsEqual("beneficios")){
@@ -273,6 +274,7 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
                                           
                                       }
                  }
+                cell.dailyPromotionLabel.fontSizeScaleFamily(family: "Avenir-Medium", size: 14)
             }
             
             if(tipo.caseInsensitiveCompare("torneos") == .orderedSame){
@@ -292,6 +294,7 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
                                       }
 
                  }
+                cell.dailyPromotionLabel.fontSizeScaleFamily(family: "Avenir-Medium", size: 14)
             }
             
             

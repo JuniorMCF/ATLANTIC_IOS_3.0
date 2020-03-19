@@ -44,6 +44,7 @@ extension RafflesDreamViewCollectionViewDatasourceAndDelegate: UICollectionViewD
                        switch response.result {
                              case .success(let value):
                                 cell.rafflesDreamImageView.image = value
+                                print(value)
                              case .failure(let error):
                                  print(error)
                                  

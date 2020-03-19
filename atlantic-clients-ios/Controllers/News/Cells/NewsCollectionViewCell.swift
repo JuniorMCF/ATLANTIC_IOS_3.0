@@ -16,6 +16,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
     public func configure() {
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
+        
+        
     }
 
 }

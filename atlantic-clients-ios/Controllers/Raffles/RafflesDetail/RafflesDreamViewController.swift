@@ -113,22 +113,22 @@ class RafflesDreamViewController: UIViewController {
             imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             self.headerView.addSubview(imageView)
         }else{
-            AF.request(dominio + sorteo.fotos[0].foto).responseImage { response in
+           /* AF.request(dominio + sorteo.fotos[0].foto).responseImage { response in
                        
                            switch response.result {
                                  case .success(let value):
                                     let image = value
                                     let imageView = UIImageView(image: image)
                                     imageView.contentMode = .scaleAspectFill
-                                    imageView.frame = self.headerView.bounds
-                                    imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                                    imageView.frame = self.headerView.frame
+                                    /*imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]*/
                                     self.headerView.addSubview(imageView)
                                  case .failure(let error):
                                      print(error)
                                      
                                  }
 
-            }
+            }*/
             
         }
         
