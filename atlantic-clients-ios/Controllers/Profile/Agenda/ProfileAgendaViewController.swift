@@ -28,6 +28,9 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             searchAgend.searchTextField.layer.borderColor = UIColor.black.cgColor
             
             searchAgend.searchTextField.textColor = .black
+            
+            
+            
             let glassIconView = searchAgend.searchTextField.leftView as? UIImageView
             glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
             glassIconView?.tintColor = .gray
@@ -48,8 +51,8 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             carbonTabSwipeNavigation.setIndicatorColor(.black)
             carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
             carbonTabSwipeNavigation.setSelectedColor(.black)
-            carbonTabSwipeNavigation.toolbar.isTranslucent = false
-            
+            carbonTabSwipeNavigation.toolbar.isTranslucent = true
+            carbonTabSwipeNavigation.toolbar.shadow = true
             carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds
             let screenWidth = Int(screenSize.width)
@@ -67,7 +70,9 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             carbonTabSwipeNavigation.setIndicatorColor(.black)
             carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
             carbonTabSwipeNavigation.setSelectedColor(.black)
-            carbonTabSwipeNavigation.toolbar.isTranslucent = false
+            carbonTabSwipeNavigation.toolbar.isTranslucent = true
+            carbonTabSwipeNavigation.toolbar.shadow = true
+            
             
             carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds

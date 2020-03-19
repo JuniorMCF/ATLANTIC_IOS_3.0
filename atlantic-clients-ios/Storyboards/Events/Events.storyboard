@@ -31,7 +31,7 @@
         <scene sceneID="mwG-0U-lPI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BE2-eU-qk1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Eventos" image="icon-events" id="PuY-ek-6bf"/>
+                    <tabBarItem key="tabBarItem" title="Eventos" image="ic_event_note" id="PuY-ek-6bf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pqj-TI-df5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -70,7 +70,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-By-wTl">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-By-wTl">
                                         <rect key="frame" x="70" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hqJ-dS-mqu">
@@ -231,6 +231,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon-events" width="18" height="20"/>
+        <image name="ic_event_note" width="31" height="33.5"/>
     </resources>
 </document>

@@ -15,26 +15,21 @@ protocol ProfileAgendaViewModelProtocol {
     // Inputs
     
     func viewDidLoad()
-    func tapProfile()
-    func tapSettings()
-    func tapLogOut()
-    func pushNotify()
+    
     // Outputs
     
     var showTitles: ((EventDetailPreview) -> Void)? { get set }
-    var pushProfileDetail: (() -> Void)? { get set }
-    var pushSettings: (() -> Void)? { get set }
-    var presentLogin: (() -> Void)? { get set }
-    var presentNotify: (()->Void)?{get set}
+    var loadDatasources: (([Cobros]) -> Void)?{get set}
 }
 
 class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
-    
+
+
     var showTitles: ((EventDetailPreview) -> Void)?
-    var pushProfileDetail: (() -> Void)?
-    var pushSettings: (() -> Void)?
-    var presentLogin: (() -> Void)?
-    var presentNotify: (()->Void)?
+    var loadDatasources: (([Cobros]) -> Void)?
+    
+    
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var eventList = [Event]()
     var eventHashMap : [String: [Event]] = ["":[Event]()]
@@ -135,19 +130,17 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
         
         showTitles?(titles)
     }
+
     
-    func tapProfile() {
-        pushProfileDetail?()
-    }
-    
-    func tapSettings() {
-        pushSettings?()
-    }
-    
-    func tapLogOut() {
-        presentLogin?()
-    }
-    func pushNotify(){
-        presentNotify?()
+    func searchBarTextDidChange(_ searchText: String) {
+        if searchText.isEmpty {
+            let datasources = appDelegate.cobros
+            loadDatasources?(datasources)
+        } else {
+            var datasources = appDelegate.cobros
+            let filteredDatasource = datasources.filter { $0.nombre.contains(searchText) }
+            datasources = filteredDatasource
+            //reloadDatasource?(datasources)
+        }
     }
 }

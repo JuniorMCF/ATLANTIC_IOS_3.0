@@ -36,9 +36,9 @@ class Button: UIButton {
            setTitle(title, for: .normal)
            setTitleColor(.white, for: .normal)
            
-           fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 12)
+           fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 10)
            backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
-           self.contentEdgeInsets = UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20)
+           self.contentEdgeInsets = UIEdgeInsets(top: 15, left: 10, bottom: 15, right: 10)
            layer.cornerRadius = 0.0
     }
     

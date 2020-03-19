@@ -45,7 +45,7 @@ class AgendaCollectionViewCell: UICollectionViewCell {
                                  }
 
             }
-            buffeteTitleLabel.text = "Almuerzo buffet"
+            buffeteTitleLabel.setTextNormal(with: "Almuerzo buffet")
             buffeteSubtitleLabel.setDetailSubTitle(with: event.nombreCorto)
             let fecha = (event.fecha as NSString).doubleValue
             let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
@@ -60,11 +60,11 @@ class AgendaCollectionViewCell: UICollectionViewCell {
             let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier(rawValue: NSGregorianCalendar))
             let myComponents = myCalendar!.components(.weekday, from: date)
             let weekDay = myComponents.weekday
-            fechaLabel.text = Utils().getDia(weekDay: weekDay!)+" "+txtFecha
+            fechaLabel.setTextNormal2(with: Utils().getDia(weekDay: weekDay!)+" "+txtFecha)
             acompanantesButton.setFirstButton3(with: event.nAcompanantes+" Acompañantes")
         }else{
             self.foto.image = UIImage(named: "img_desayuno")
-            buffeteTitleLabel.text = "Almuerzo buffet"
+            buffeteTitleLabel.setTextNormal(with: "Almuerzo buffet")
             buffeteSubtitleLabel.setDetailSubTitle(with: event.nombreCorto)
            let fecha = (event.fecha as NSString).doubleValue
             let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
@@ -79,7 +79,7 @@ class AgendaCollectionViewCell: UICollectionViewCell {
             let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier(rawValue: NSGregorianCalendar))
             let myComponents = myCalendar!.components(.weekday, from: date)
             let weekDay = myComponents.weekday
-            fechaLabel.text = Utils().getDia(weekDay: weekDay!)+" "+txtFecha
+            fechaLabel.setTextNormal2(with: Utils().getDia(weekDay: weekDay!)+" "+txtFecha)
             acompanantesButton.setFirstButton3(with: event.nAcompanantes+" Acompañantes")
         }
     }

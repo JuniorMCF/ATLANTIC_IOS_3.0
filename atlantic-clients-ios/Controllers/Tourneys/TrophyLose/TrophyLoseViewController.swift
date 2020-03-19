@@ -44,7 +44,8 @@ class TrophyLoseViewController: UIViewController {
     var category: [TournamentTable] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        appDelegate.progressDialog = CustomProgress(parent: self, title: torneo.nombre, message: "Obteniendo Posiciones ...")
+        appDelegate.progressDialog.isHome = true
         bind()
         viewModel.viewDidLoad(promocionId: String(torneo.pomocion_id))
         presentTitles(data: torneo)

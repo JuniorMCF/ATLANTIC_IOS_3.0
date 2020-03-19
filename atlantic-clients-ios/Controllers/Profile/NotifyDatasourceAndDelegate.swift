@@ -30,8 +30,19 @@ extension NotifyDatasourceAndDelegate: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.cornerRadius = 20
-        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 25
+        cell.layer.borderWidth = 0.4
+        //sombra
+        cell.layer.backgroundColor = UIColor.white.cgColor
+        cell.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOpacity = 0.3
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cell.layer.shadowRadius = 25
+        cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).cgPath
+        cell.layer.shouldRasterize = true
+        cell.layer.rasterizationScale = true ? UIScreen.main.scale : 1
+        
         cell.ocultarNotifyButton.tag = indexPath.row
         let positions = items[indexPath.row]
         cell.prepare(item: positions)
@@ -56,6 +67,6 @@ extension NotifyDatasourceAndDelegate: UICollectionViewDelegate {
 }
 extension NotifyDatasourceAndDelegate: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width -  collectionView.frame.width/9.5,  height: collectionView.frame.height/5)
+        return CGSize(width: collectionView.frame.width*0.95,  height: collectionView.frame.height/6)
     }
 }

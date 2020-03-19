@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-1d-W8w">
-                                                    <rect key="frame" x="0.0" y="-3" width="375" height="159"/>
+                                                    <rect key="frame" x="0.0" y="-4" width="374" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2R-au-ZCW" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
@@ -96,7 +96,7 @@
         <scene sceneID="Yz2-AZ-WgR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lf-Q5-Vsj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Club" image="icon-club" id="Vc4-eK-NFp"/>
+                    <tabBarItem key="tabBarItem" title="Club" image="ic_star" id="Vc4-eK-NFp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="00f-qA-nvJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -119,6 +119,6 @@
     </scenes>
     <resources>
         <image name="ic_diamond" width="7.5" height="7.5"/>
-        <image name="icon-club" width="24" height="24"/>
+        <image name="ic_star" width="33" height="32"/>
     </resources>
 </document>
