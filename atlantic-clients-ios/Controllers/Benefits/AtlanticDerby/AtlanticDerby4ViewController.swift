@@ -23,10 +23,13 @@ class AtlanticDerby4ViewController: UIViewController {
     @IBOutlet var fechaModificacionLabel: Label!
     
     @IBOutlet var AD4CollectionView: UICollectionView!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         AD4CollectionView.backgroundColor = .white
         bind()
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }

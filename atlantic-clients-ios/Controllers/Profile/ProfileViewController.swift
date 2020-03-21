@@ -39,12 +39,16 @@ class ProfileViewController: UIViewController {
         logOutView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapLogOut)))
         contactView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapNotify)))
         diaryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAgenda)))
-        
+        termsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerms)))
         bind()
         viewModel.viewDidLoad()
         
         separatorView.addSelectBorder(toSide: .Bottom, withColor: UIColor(white: 0.3, alpha: 1).cgColor, andThickness: 1, positionX: 0, positionY: 0, widthLayer: view.frame.width - 64)
         
+    }
+    @objc private func tapTerms(){
+        let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
+        terminos.showProgress()
     }
     
     @objc private func tapProfile() {

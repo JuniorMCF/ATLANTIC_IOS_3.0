@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class PositionDetail40ViewController: UIViewController {
 
     @IBOutlet var titlePuestoLabel: Label!
@@ -20,10 +21,11 @@ class PositionDetail40ViewController: UIViewController {
     @IBOutlet var fechaModificacionLabel: Label!
     
     var torneo = Tournament()
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let fechaActual = Utils().getFechaActual()
+        onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: torneo.nombre, promocionId: String(torneo.pomocion_id))
         titlePuestoLabel.setSubTitleViewLabelCenter(with: "Usted ocupa el puesto:")
         puestoLabel.setSubTitleViewLabel(with: "\(torneo.posicion)°")
         titleRanking.setSubTitleViewLabelCenter(with: "en el ranking")
@@ -56,7 +58,34 @@ class PositionDetail40ViewController: UIViewController {
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showProgress()
     }
+    func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        dominioUrl = dominioUrl?.appending("fechaIngreso", value: fechaIngreso)
+        dominioUrl = dominioUrl?.appending("nombrePromocion", value: nombrePromocion)
+        dominioUrl = dominioUrl?.appending("promocionId", value: promocionId)
+        
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print("statistics",json)
+                     
+                     //self.presentToast?("datos actualizados correctamente")
 
+                    break
+                case.failure(let error):
+                   
+                    print(error)
+                    break
+                }
+                
+            }
+    }
+    
     /*
     // MARK: - Navigation
 

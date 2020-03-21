@@ -19,7 +19,7 @@ class AgendaViewController: UIViewController {
         
         // Mark: - Properties
         
-        var breakfast: [Breakfast] = []
+        var agenda = Event()
         var items = [Event]()
         var tipo = ""
         
@@ -69,8 +69,7 @@ class AgendaViewController: UIViewController {
            
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel)
             collectionView.dataSource = AgendaCollectionViewDD
-            collectionView.delegate = AgendaCollectionViewDD
-            self.breakfast = datasource.items
+            collectionView.delegate = self
             self.collectionView.reloadData()
             progress.hideProgress()
             

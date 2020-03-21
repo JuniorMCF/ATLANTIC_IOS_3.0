@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "tapAgenda()"
+            landmarkName = "tapNotify()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -760,7 +760,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7540DFEF-112A-4B0E-BD33-30C4C9D2135A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentsTableViewDelegateAndDatasource.swift"
@@ -776,7 +776,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4918D0DF-1233-4FDF-9D22-2A0610B3DA1B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentsTableViewDelegateAndDatasource.swift"
@@ -792,7 +792,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9773CFAF-2BDF-4A8C-A7DA-F849F7D31A74"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -808,7 +808,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "68595C87-9797-439A-BE38-69115A4D80FE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -824,7 +824,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F1213BFA-2CF9-4BC4-8AA0-E6BAB8B7CEF1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -840,7 +840,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8C52FF04-E99D-4AC3-8813-2E2DCA037FBD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -856,7 +856,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9E3625C7-D34A-44C2-8EDD-2F409D000F2A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -872,7 +872,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "80C6CCD3-398E-4198-AA86-243C7327EBF9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -888,7 +888,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C1F432B2-18F9-4057-B74D-1B19A54D138E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -904,7 +904,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "70F53DD2-3375-4B3B-BEE4-B46C0E846FB9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -920,7 +920,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5AC33F50-D890-4857-A636-50CFCEB7D16F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -936,7 +936,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "09DF59A3-10F2-4F33-ADCB-924E2859F052"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -952,7 +952,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0B7E7127-0147-464D-9969-9F5B5EC7CD8E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -968,7 +968,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4D83F907-74D4-49C5-ABF3-2F6D18F1622F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Payments/PaymentTableViewCell.swift"
@@ -2235,7 +2235,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "tapTerminos()"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2375,7 +2375,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
-            landmarkName = "loadDatasources(datasource:)"
+            landmarkName = "bind()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2515,7 +2515,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "showTitles(titles:)"
+            landmarkName = "loadDatasources(datasource:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2587,7 +2587,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C978910C-8127-479F-BF0E-AAF87AB15199"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewCollectionViewDatasourceAndDelegate.swift"
@@ -3437,8 +3437,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300">
+            startingLineNumber = "309"
+            endingLineNumber = "309">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3451,8 +3451,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300">
+            startingLineNumber = "309"
+            endingLineNumber = "309">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3465,8 +3465,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300">
+            startingLineNumber = "309"
+            endingLineNumber = "309">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3479,8 +3479,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300">
+            startingLineNumber = "309"
+            endingLineNumber = "309">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3493,8 +3493,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300">
+            startingLineNumber = "309"
+            endingLineNumber = "309">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3507,8 +3507,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
             landmarkName = "ranges(of:options:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3597,7 +3597,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "77D14E46-6F06-4474-8EC1-0B15DCCCC372"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3613,7 +3613,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6A607461-52E4-49B1-B13E-3091704FCB75"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3629,7 +3629,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "44D1C48C-62B2-4E14-A46E-E046899CAC21"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3645,7 +3645,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9F7F40C7-5D31-48D3-996E-7EEB3D93FF81"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3661,7 +3661,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3A65294E-AFB5-4D43-AEAC-D0FADE14AE57"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3677,7 +3677,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6BC14930-E241-4EC9-A631-ECC7A5331DE6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3693,7 +3693,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "13C5C013-692B-48CA-9101-DAFF1125796F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3709,7 +3709,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0E359E17-1166-4CCD-83A9-0271F7DF8E4E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AtlanticDerby/AtlanticDerby3ViewController.swift"
@@ -3933,7 +3933,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "98D01E14-CB8D-4F38-9EA5-FFF25462049E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/ProfileAgendaViewController.swift"
@@ -3949,7 +3949,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "952C9ADA-D345-4BA9-B8D9-62648D0EA727"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/ProfileAgendaViewController.swift"
@@ -3965,7 +3965,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "31974397-B71E-4628-A8E6-9782A52B1BBC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/ProfileAgendaViewController.swift"
@@ -3981,7 +3981,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C426833F-3B38-498F-AED6-39FCA6D680CB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/ProfileAgendaViewController.swift"
@@ -3997,7 +3997,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "408F37A4-6872-4B7F-AE2B-CAA28238B814"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4013,7 +4013,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "259B13E9-EB42-414A-B423-4A373B272DBC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4029,7 +4029,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EBFC94AE-19CF-4AF2-8314-A9C76A1A0D70"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4045,7 +4045,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "89354F1E-3541-4E73-ADD0-C472F1042CE5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4061,7 +4061,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "943346DB-08D7-4D31-8186-E93269B0C68E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4077,7 +4077,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2F14046A-6C29-4734-A9A7-672818EEEB88"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4093,7 +4093,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "06685BB2-C05A-41A4-AB99-31E0F9CA6DD5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4109,7 +4109,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "085D98FF-C32C-4D63-BD1F-CB2C5A356FDD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4125,7 +4125,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "17D380F2-6AE5-49D0-91AA-EA95BC14BDEC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4141,7 +4141,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "98E22800-C9F2-4FA8-8E50-C0FEE3BA2CCE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4157,7 +4157,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C750D6AA-6C11-4D66-B6BA-940650BC0143"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/ProfileAgendaViewController.swift"
@@ -4173,7 +4173,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D1FF8C2A-ACB1-4A61-B9A9-F08943B86749"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4189,7 +4189,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "32C09CE5-5222-4632-B393-3E0C90A98255"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4205,7 +4205,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EDA373AD-A8EB-45AA-BB29-4BD777857B82"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4221,7 +4221,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8BE00125-956E-477E-8376-A0490003E5B6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4237,7 +4237,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0BE46579-142F-40D5-9EDF-FBBF7178172B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4253,7 +4253,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D9C097CE-8FD9-4D47-B17A-905C276C4C71"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4269,7 +4269,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E1500A29-0B0D-4E2F-85B9-2BD516F40151"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4285,7 +4285,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F89FB898-E089-4B41-B45A-1BA5BD2CDEA5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4301,7 +4301,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A802B97D-1024-46A6-A280-8487411274E1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4317,7 +4317,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C1EDDB50-B8DE-47A1-BCF0-1AC947FDFB6B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4333,7 +4333,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F6DCB802-E53D-42C4-9CE3-16690F7C944A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4349,7 +4349,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "74C60EF5-6EDA-47F6-BE52-583C3D7B2A50"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4365,7 +4365,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B997BD33-67B5-439A-ACAB-9CBB3C3219FC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4381,7 +4381,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DDA8CA78-84CF-46D0-84BB-13D13E9E8E48"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4397,7 +4397,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7E0A1A45-5DBD-4F9A-94DC-C7B30DB2F9E0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/ViewModels/Profile/ProfileAgendaViewModel.swift"
@@ -4413,14 +4413,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2C1F4757-B24A-4016-ABFB-544F3BACD687"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4429,14 +4429,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5450F69A-A310-4C70-A6D0-F4CB88F9CC3B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4445,23 +4445,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5B36AC4F-6E84-4B0C-A0D2-8350E5D29B54"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "presentBanner()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF8D2859-7C6A-4294-9EE6-6A1EC9EC4E48"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
@@ -4476,15 +4460,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D9E3FB3E-6037-46E1-8B43-43EA07A6D65A"
-            shouldBeEnabled = "Yes"
+            uuid = "DF8D2859-7C6A-4294-9EE6-6A1EC9EC4E48"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9E3FB3E-6037-46E1-8B43-43EA07A6D65A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4493,39 +4493,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "57FDE8E9-2AFD-476F-B59A-663E9E6AC5EF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "presentBanner()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D3F29E85-64E5-4CC2-B55A-81C194433B59"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "presentBanner()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B6EBF696-1CAF-4102-A8C4-1AC9B1F32F72"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
@@ -4540,15 +4508,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DE27D9EB-3282-42B3-B926-9C60D02820F7"
-            shouldBeEnabled = "Yes"
+            uuid = "D3F29E85-64E5-4CC2-B55A-81C194433B59"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6EBF696-1CAF-4102-A8C4-1AC9B1F32F72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE27D9EB-3282-42B3-B926-9C60D02820F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4637,7 +4637,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AD970502-265C-424B-93AB-626314330253"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Settings/SettingsViewController.swift"
@@ -4645,15 +4645,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "isCheckedSwitch(_:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4085C911-44EC-4D26-BD35-7F70CFDF2926"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Settings/SettingsViewController.swift"
@@ -4661,8 +4661,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "isCheckedSwitch(_:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -4749,7 +4749,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E47345DC-0464-4306-9B6E-B8646A964077"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4765,7 +4765,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0B54E0CE-44B2-49A5-A9C9-4ABF0DA35B8F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4781,7 +4781,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "56247D09-6C19-4C6E-AF27-CF6AD0715B38"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4797,7 +4797,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E0F846F3-BF59-4835-9F37-04391F7DD14B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4813,7 +4813,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C08A2E7B-24B7-4417-AF5D-BA5293708C2F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4829,7 +4829,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8C09F241-4036-4D6C-986F-982FB9A986BC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4845,7 +4845,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A2477693-DC02-466D-997D-F7D6FA618CC3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4861,7 +4861,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F6E7C4A-251C-4CD2-A8A7-9CBAE38BD126"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4877,7 +4877,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1DE914CE-7EF4-4B64-BCAA-66CE5FBB3796"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4893,7 +4893,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6D6E9A7B-394B-49A8-BE08-B503F1B3C343"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4909,7 +4909,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A1602CC6-E841-4E0C-B107-274644DC8DEA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4925,7 +4925,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7A50D6A3-454A-4C27-89E8-885545C9385D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -4941,7 +4941,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "78189373-430E-4B16-9295-87983F6496D7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Benefits/AllBenefits/AllBenefitsViewController.swift"
@@ -5015,6 +5015,38 @@
             endingLineNumber = "30"
             landmarkName = "init()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F92E74A5-EDB6-45B5-8F3F-71FF53DB838F - 30802b4539b62c40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "atlantic_clients_ios.Terminos.__allocating_init() -&gt; atlantic_clients_ios.Terminos"
+                  moduleName = "atlantic-clients-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junior/Desktop/Atlantic-clients-final/ATLANTIC_IOS_3.0/atlantic-clients-ios/Controllers/Widget/Terminos.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "F92E74A5-EDB6-45B5-8F3F-71FF53DB838F - c3e15a98eb3f8b28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "atlantic_clients_ios.Terminos.init() -&gt; atlantic_clients_ios.Terminos"
+                  moduleName = "atlantic-clients-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/junior/Desktop/Atlantic-clients-final/ATLANTIC_IOS_3.0/atlantic-clients-ios/Controllers/Widget/Terminos.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -5030,6 +5062,150 @@
             startingLineNumber = "57"
             endingLineNumber = "57"
             landmarkName = "showProgress()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E725309A-DDE1-4775-8228-044BEB083890"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/AgendaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "presentEventDetail(item:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F6996C0-D4F3-4B66-AF2E-5F97EDAC84F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/AgendaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30DC0005-A25E-4608-B49F-B8BE19DEE46D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Profile/Agenda/AgendaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB449E28-87F9-4074-967C-7489903E7904"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E558E54-7B9B-4044-9C0F-EBBF34A4B767"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC464B01-1394-431F-A7F3-0497DB6BFC6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41F96C80-56C1-4C70-8854-3443CD691AD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC22F4BF-3C1D-42A5-9EB0-3BD513806B3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB82E6B3-C32F-4A58-AD48-018D45372584"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Raffles/RafflesDetail/RafflesDreamViewCollectionViewDatasourceAndDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

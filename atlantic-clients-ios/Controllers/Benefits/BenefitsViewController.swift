@@ -60,6 +60,7 @@ class BenefitsViewController: UIViewController {
                 let viewController = storyboard.instantiateViewController(withIdentifier: "AllBenefitsID") as! AllBenefitsViewController
                 viewController.modalPresentationStyle = .fullScreen
                 viewController.benefit = type
+                viewController.tipo = 0 //martes y domingo regalon
                 self.navigationController?.pushViewController(viewController, animated: true)
                 return
         }else{
@@ -70,6 +71,7 @@ class BenefitsViewController: UIViewController {
                     let viewController = storyboard.instantiateViewController(withIdentifier: "AllBenefitsID") as! AllBenefitsViewController
                     viewController.modalPresentationStyle = .fullScreen
                     viewController.benefit = type
+                    viewController.tipo = 1 //otros detalles
                     self.navigationController?.pushViewController(viewController, animated: true)
                     return
             }else{

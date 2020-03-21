@@ -48,6 +48,13 @@ class PaymentViewController: UIViewController {
         appDelegate.progressDialog.isHome = true
         
         bind()
+        var promotionListid : [String] = []
+        for data in payments{
+            promotionListid.append(data.id)
+        }
+    
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fecha: Utils().getFechaActual(), promocionIdList:promotionListid)
+        
         viewModel.viewDidLoad()
         addTapGesture()
         paymentSearchBar.delegate = self

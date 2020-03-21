@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 protocol AtlanticDerby4ViewModelProtocol{
     //funciones de entrada
      func viewDidLoad()
-    
+    func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String)
     //variables de salida
     var loadDataSources:(([String])->Void)?{get set}
     var presentTitles:(([String])->Void)?{get set}
@@ -19,7 +21,33 @@ protocol AtlanticDerby4ViewModelProtocol{
 class AtlanticDerby4ViewModel : AtlanticDerby4ViewModelProtocol{
     var loadDataSources: (([String]) -> Void)?
     var presentTitles: (([String]) -> Void)?
+    func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        dominioUrl = dominioUrl?.appending("fechaIngreso", value: fechaIngreso)
+        dominioUrl = dominioUrl?.appending("nombrePromocion", value: nombrePromocion)
+        dominioUrl = dominioUrl?.appending("promocionId", value: promocionId)
+        
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print("statistics",json)
+                     
+                     //self.presentToast?("datos actualizados correctamente")
 
+                    break
+                case.failure(let error):
+                   
+                    print(error)
+                    break
+                }
+                
+            }
+    }
     
     func viewDidLoad(){
         let list = ["1er puesto: $50","2do puesto: $20","3er puesto: $10"]

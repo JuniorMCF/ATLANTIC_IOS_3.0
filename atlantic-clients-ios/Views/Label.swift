@@ -42,7 +42,7 @@ class Label: UILabel {
     public func setSubTitleViewLabel(with setText: String) {
         textColor   = .black
         text        = setText
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 14)
     }
     public func setSubTitleViewLabelRed(with setText: String) {
            textColor   = .red

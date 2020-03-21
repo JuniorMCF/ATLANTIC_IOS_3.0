@@ -41,7 +41,7 @@ protocol PaymentsViewModelProtocol {
     
     func viewDidLoad()
     func searchBarTextDidChange(_ searchText: String)
-    
+    func onStart(clienteId: String,fecha : String,promocionIdList : [String])
     // Mark: - Outputs (Closures)
 
     var loadDatasources: (([Cobros]) -> Void)? { get set }
@@ -56,6 +56,32 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var progress : CustomProgress!
     
+    func onStart(clienteId: String,fecha : String,promocionIdList : [String]) {
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadCobro)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        dominioUrl = dominioUrl?.appending("fecha", value: fecha)
+        let listData = Utils().listToString(list: promocionIdList)
+        dominioUrl = dominioUrl?.appending("promocionIdList", value: listData)
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print("statistics",json)
+                     
+                     //self.presentToast?("datos actualizados correctamente")
+
+                    break
+                case.failure(let error):
+                   
+                    print(error)
+                    break
+                }
+                
+            }
+    }
     func viewDidLoad() {
         let parameters = ["id": appDelegate.usuario.clienteId]
         progress = appDelegate.progressDialog

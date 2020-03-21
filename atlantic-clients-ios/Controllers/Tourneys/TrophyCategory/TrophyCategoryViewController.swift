@@ -34,6 +34,7 @@ class TrophyCategoryViewController: UIViewController {
         appDelegate.progressDialog = CustomProgress(parent: self, title: "TORNEOS DOMINGO", message: "Obteniendo torneos ...")
         appDelegate.progressDialog.isHome = true
         bind()
+        
         viewModel.viewDidLoad(tipo:tipo,clienteId:appDelegate.usuario.clienteId)
     }
     

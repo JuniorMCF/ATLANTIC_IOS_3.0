@@ -33,11 +33,14 @@ class AtlanticDerby3ViewController: UIViewController {
     @IBOutlet var resultadoTitle: Label!
     
     @IBOutlet var AD3CollectionView: UICollectionView!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         AD3CollectionView.layer.cornerRadius = 25
         AD3CollectionView.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.862745098, alpha: 1)
         bind()
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }

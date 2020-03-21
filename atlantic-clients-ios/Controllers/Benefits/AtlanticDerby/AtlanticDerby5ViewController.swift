@@ -27,9 +27,14 @@ class AtlanticDerby5ViewController: UIViewController {
     
     @IBOutlet var fechaModificadaLabel: Label!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
+        
+        
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }

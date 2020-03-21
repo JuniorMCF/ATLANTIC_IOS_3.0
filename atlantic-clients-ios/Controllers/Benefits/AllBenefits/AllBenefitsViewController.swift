@@ -21,7 +21,7 @@ class AllBenefitsViewController: UIViewController {
     
     var titles: [AllBenefitsTitles] = []
     var fotos = [Foto]()
-    
+    var tipo = -1
     var benefit = Benefits()
     // Mark: - Outlets
     var posicion = 0
@@ -57,12 +57,25 @@ class AllBenefitsViewController: UIViewController {
     @IBOutlet var newFechaLabel: Label!
     @IBOutlet var rightButton: UIButton!
     @IBOutlet var leftButton: UIButton!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         view2.alpha = 0
         view2.isUserInteractionEnabled = false
         
         bind()
+        if(tipo == 0){
+            let fechaActual = Utils().getFechaActual()
+            viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
+        }else if(tipo == 1){
+            let fechaActual = Utils().getFechaActual()
+            viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
+        }
+        
+        
+        
+        
         viewModel.viewDidLoad()
     }
     

@@ -47,6 +47,10 @@ class TrophyLoseViewController: UIViewController {
         appDelegate.progressDialog = CustomProgress(parent: self, title: torneo.nombre, message: "Obteniendo Posiciones ...")
         appDelegate.progressDialog.isHome = true
         bind()
+        
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: torneo.nombre, promocionId: String(torneo.pomocion_id))
+        
         viewModel.viewDidLoad(promocionId: String(torneo.pomocion_id))
         presentTitles(data: torneo)
     }

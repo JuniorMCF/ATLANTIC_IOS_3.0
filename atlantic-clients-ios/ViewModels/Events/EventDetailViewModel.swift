@@ -76,6 +76,35 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
         
     }
     
+    func onStart(clienteId: String,fechaIngreso : String,nombreEvento :String,eventoId: String) {
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadEvento)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        dominioUrl = dominioUrl?.appending("fechaIngreso", value: fechaIngreso)
+        dominioUrl = dominioUrl?.appending("nombreEvento", value: nombreEvento)
+        dominioUrl = dominioUrl?.appending("eventoId", value: eventoId)
+        
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print("statistics",json)
+                     
+                     //self.presentToast?("datos actualizados correctamente")
+
+                    break
+                case.failure(let error):
+                   
+                    print(error)
+                    break
+                }
+                
+            }
+    }
+    
+    //(@Query("clienteId") clienteId: String, @Query("fechaIngreso") fechaIngreso : String,@Query("nombreEvento") nombreEvento :String, @Query("eventoId") eventoId: String)
     var showTitles: ((EventDetailTitles) -> Void)?
 
     var loadDatasources: (([Horario]) -> Void)?

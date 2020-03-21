@@ -60,6 +60,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         
         appDelegate.customEvent = CustomEvent(parent: self,title: "Eventos", message: "Esta seguro que se quiere registrar en este evento",viewModel: viewModel,id: appDelegate.usuario.clienteId, horarioId: String(event.horarioId), acompanantes: total )
         appDelegate.customEvent.showProgress()
+        
         //viewModel.saveData()
         
     }
@@ -86,8 +87,9 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         super.viewDidLoad()
         webview.delegate = self
         //webview.load(withVideoId: "M7lc1UVf-VE",playerVars:playerVars as! [AnyHashable : Any])
-        
         bind()
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombreEvento: event.nombre, eventoId: String(event.eventoId))
         prepareCollectionViews()
         presentBanner()
         viewModel.viewDidLoad(eventoId: event.eventoId)
@@ -128,16 +130,23 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
                     }
                 }
             }
+
+            
         }else{
             tabBar.title = "Agenda"
             if(event.fotos.count == 0){
                 listFotos.append("")
             }else{
                 for foto in event.fotos{
-                    listFotos.append(foto.foto)
+                    if(!foto.esPrincipal){
+                        listFotos.append(foto.foto)
+                    }
+                    
                 }
             }
-
+            registerButton.isUserInteractionEnabled = false
+            registerButton.alpha = 0.0
+            registerButton.isHidden = true
         }
        
         

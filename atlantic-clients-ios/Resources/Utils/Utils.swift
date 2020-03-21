@@ -120,6 +120,29 @@ class Utils{
             
         })
     }
+    func listToString(list:[String])->String{
+        var toString = "{"
+        let sizeList = list.count
+        var count = 0
+        for data in list{
+            if(count<sizeList-1){
+                 toString = toString + data + ","
+                 count += 1
+            }else{
+                toString = toString + data + "}"
+            }
+            
+        }
+        return toString
+    }
+    func getFechaActual()->String{
+        var someDateTime = ""
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        someDateTime = formatter.string(from: currentDateTime)
+        return someDateTime
+    }
     
     func sizeScaled(size : CGFloat) -> CGFloat{
         var current_Size : CGFloat = 0.0

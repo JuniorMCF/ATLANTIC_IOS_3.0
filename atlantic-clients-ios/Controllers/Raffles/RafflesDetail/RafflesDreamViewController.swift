@@ -42,10 +42,14 @@ class RafflesDreamViewController: UIViewController {
     
     
     @IBOutlet var fechaActualizadaLabel: Label!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bind()
+        let fechaIngreso = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaIngreso, nombrePromocion: sorteo.nombreSorteo, promocionId: String(sorteo.promocionId)) // guarda data para analitycs
         viewModel.viewDidLoad()
     }
     
@@ -81,7 +85,7 @@ class RafflesDreamViewController: UIViewController {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentCreateReminder = presentCreateReminder
         loadDatasources(datasource: sorteo.fotos)
-
+        
     }
     func loadDatasources(datasource: [Foto]) {
         if(datasource.count == 1){

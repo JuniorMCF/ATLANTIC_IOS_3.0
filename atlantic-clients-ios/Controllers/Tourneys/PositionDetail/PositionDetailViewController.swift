@@ -34,10 +34,11 @@ class PositionDetailViewController: UIViewController {
     
     @IBOutlet var fechaActualizadaLabel: Label!
     
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: torneo.nombre, promocionId: String(torneo.pomocion_id))
         bind()
         viewModel.viewDidLoad()
     }

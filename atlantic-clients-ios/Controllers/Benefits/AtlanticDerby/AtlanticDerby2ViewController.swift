@@ -26,11 +26,14 @@ class AtlanticDerby2ViewController: UIViewController {
     
     @IBOutlet var terminosLabel: Label!
     @IBOutlet var fechaModificacionLabel: Label!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         AD2CollectionView.layer.cornerRadius = 25
         AD2CollectionView.backgroundColor =  #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.862745098, alpha: 1)
         bind()
+        let fechaActual = Utils().getFechaActual()
+        viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }

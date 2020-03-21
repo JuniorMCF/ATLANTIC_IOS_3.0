@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class AtlanticDerbyViewController: UIViewController {
     
     
@@ -24,9 +25,13 @@ class AtlanticDerbyViewController: UIViewController {
     
     @IBOutlet var terminosLabel: Label!
     @IBOutlet var fechaActualizadaLabel: Label!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        let fechaActual = Utils().getFechaActual()
+        onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
+        
         // Do any additional setup after loading the view.
     }
     func bind(){
@@ -79,6 +84,33 @@ class AtlanticDerbyViewController: UIViewController {
         terminos.showProgress()
     }
 
+    func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        dominioUrl = dominioUrl?.appending("fechaIngreso", value: fechaIngreso)
+        dominioUrl = dominioUrl?.appending("nombrePromocion", value: nombrePromocion)
+        dominioUrl = dominioUrl?.appending("promocionId", value: promocionId)
+        
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print("statistics",json)
+                     
+                     //self.presentToast?("datos actualizados correctamente")
+
+                    break
+                case.failure(let error):
+                   
+                    print(error)
+                    break
+                }
+                
+            }
+    }
     /*
     // MARK: - Navigation
 
