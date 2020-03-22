@@ -11,9 +11,11 @@ import UIKit
 class AgendaCollectionViewDatasourceAndDelegate: NSObject {
     private var items: [Event] = []
     private var viewModel: AgendaViewModelProtocol
-    init(items: [Event],viewModel: AgendaViewModelProtocol) {
+    private var viewParent: AgendaViewController
+    init(items: [Event],viewModel: AgendaViewModelProtocol,viewParent: AgendaViewController) {
             self.items = items
             self.viewModel = viewModel
+            self.viewParent = viewParent
         }
     }
 
@@ -49,8 +51,9 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
                 
             }
         @objc func delAgenda(_ sender: UIButton){
-            print("tag",sender.tag)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let alert = DelAgenda(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?")
+            
             let agendaSelectId = items[sender.tag].agendaId
             viewModel.deleteData(eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId))
             for index in 0...items.count-1{

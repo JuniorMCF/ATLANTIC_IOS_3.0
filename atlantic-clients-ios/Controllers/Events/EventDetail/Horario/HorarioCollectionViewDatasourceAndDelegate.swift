@@ -37,6 +37,8 @@ extension HorarioCollectionViewDatasourceAndDelegate: UICollectionViewDataSource
         
         if(horarios[indexPath.row].seleccionado == 0){
             cell.contentView.backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
+        }else{
+            cell.contentView.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         }
         
         

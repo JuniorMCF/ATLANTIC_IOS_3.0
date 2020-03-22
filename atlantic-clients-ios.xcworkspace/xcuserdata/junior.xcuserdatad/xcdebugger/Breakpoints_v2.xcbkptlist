@@ -3373,10 +3373,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "ranges(of:options:)"
-            landmarkType = "7">
+            startingLineNumber = "366"
+            endingLineNumber = "366">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3389,10 +3387,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "ranges(of:options:)"
-            landmarkType = "7">
+            startingLineNumber = "366"
+            endingLineNumber = "366">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3405,10 +3401,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "ranges(of:options:)"
-            landmarkType = "7">
+            startingLineNumber = "366"
+            endingLineNumber = "366">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3421,10 +3415,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "ranges(of:options:)"
-            landmarkType = "7">
+            startingLineNumber = "366"
+            endingLineNumber = "366">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3437,10 +3429,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "ranges(of:options:)"
-            landmarkType = "7">
+            startingLineNumber = "366"
+            endingLineNumber = "366">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3453,8 +3443,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
             landmarkName = "ranges(of:options:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4365,8 +4355,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4375,22 +4365,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5450F69A-A310-4C70-A6D0-F4CB88F9CC3B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "show(message:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B36AC4F-6E84-4B0C-A0D2-8350E5D29B54"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4406,6 +4380,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "5B36AC4F-6E84-4B0C-A0D2-8350E5D29B54"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "presentBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "DF8D2859-7C6A-4294-9EE6-6A1EC9EC4E48"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -4413,8 +4403,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4429,8 +4419,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4445,8 +4435,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4461,8 +4451,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4477,8 +4467,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4493,8 +4483,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5069,8 +5059,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5085,8 +5075,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5101,8 +5091,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5117,8 +5107,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5133,8 +5123,8 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "presentBanner()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5229,9 +5219,9 @@
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "hideViews()"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "show(message:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -5239,23 +5229,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6CDD332A-AA0B-4A71-9986-8BD03D550574"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
-            landmarkName = "loadDatasources(datasources:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3BD0E6A2-BE3B-4779-9741-23104B120EDB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
@@ -5270,15 +5244,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "09AEA9AF-A65D-450A-A341-9781B18B4558"
+            uuid = "3ABE0530-6D8A-4089-AD6D-189F34C423C7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
+            landmarkName = "loadDatasources(datasources:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32CF7FD1-31AA-4908-95EB-779BDE22A841"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
+            landmarkName = "loadDatasources(datasources:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9487D62C-415F-4B84-A491-1FF68DC3EE0E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "loadDatasources(datasources:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14D5C459-27D7-413B-A222-031B28136C61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "atlantic-clients-ios/Controllers/Events/EventDetail/EventsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "loadDatasources(datasources:)"
             landmarkType = "7">
          </BreakpointContent>

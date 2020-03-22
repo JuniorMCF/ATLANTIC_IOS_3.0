@@ -140,7 +140,8 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         moreButton.isUserInteractionEnabled = false
         lessButton.alpha = 0.0
         lessButton.isUserInteractionEnabled = false
-        
+        acompanantesView.isUserInteractionEnabled = false
+        acompanantesView.alpha = 0.0
         numberssistantLabel.text = String(total)
         
         registerButton.isUserInteractionEnabled = false
@@ -285,8 +286,24 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         for horario in horariolist{
             if(horario.registrado == true){
                 hideViews()
+                
             }
         }
+        for index in 0...horariolist.count-1{
+            if(horariolist[index].registrado == true){
+                horariolist[index].seleccionado = 1
+            }
+        }
+        
+        
+        if(tipo == "0"){
+            horarioCollectionViewDD = HorarioCollectionViewDatasourceAndDelegate(horarios: horariolist,viewModel: viewModel)
+            horarioCollectionView.dataSource = horarioCollectionViewDD
+            horarioCollectionView.delegate = horarioCollectionViewDD
+            horarioCollectionView.reloadData()
+            horarioCollectionView.isUserInteractionEnabled = false
+        }
+        
        
     }
     

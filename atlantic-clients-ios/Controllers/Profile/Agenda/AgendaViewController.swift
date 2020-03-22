@@ -66,7 +66,7 @@ class AgendaViewController: UIViewController {
             viewModel.presentReloadData = presentReloadData(list:)
         }
         func presentReloadData(list:[Event]){
-            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  list,viewModel: viewModel)
+            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  list,viewModel: viewModel, viewParent: self)
             collectionView.dataSource = AgendaCollectionViewDD
             collectionView.delegate = self
             self.collectionView.reloadData()
@@ -75,7 +75,7 @@ class AgendaViewController: UIViewController {
         
         func loadDatasources(datasource:BreakfastDatasources) {
            
-            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel)
+            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel,viewParent: self)
             collectionView.dataSource = AgendaCollectionViewDD
             collectionView.delegate = self
             self.collectionView.reloadData()
