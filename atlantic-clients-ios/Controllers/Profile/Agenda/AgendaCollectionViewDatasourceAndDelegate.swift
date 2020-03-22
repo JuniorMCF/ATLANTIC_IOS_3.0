@@ -41,6 +41,7 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
                     foto = data.foto
                 }
             }
+            
             cell.eliminarAgendaButton.tag = indexPath.row
             cell.eliminarAgendaButton.addTarget(self, action: #selector(delAgenda(_:)), for: .touchUpInside)
             cell.prepare(foto: foto,event:items[indexPath.row])
@@ -48,14 +49,18 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
                 
             }
         @objc func delAgenda(_ sender: UIButton){
+            print("tag",sender.tag)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let agendaSelectId = items[sender.tag].agendaId
             viewModel.deleteData(eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId))
-            for data in items{
-                if data.id == items[sender.tag].id{
-                    items.remove(at: data.id)
+            for index in 0...items.count-1{
+                if items[index].id == items[sender.tag].id{
+                    items.remove(at:index )
+                    break
                 }
             }
+            viewModel.reloadData(data:items)
+            
             
         }
 }

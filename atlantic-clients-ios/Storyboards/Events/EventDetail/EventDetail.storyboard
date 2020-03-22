@@ -122,7 +122,7 @@
                                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorarioCellID" id="622-AT-YdV" customClass="HorarioCollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="2" width="276" height="46"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PWx-7O-vn0">
+                                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PWx-7O-vn0">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="276" height="46"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <subviews>
@@ -140,6 +140,7 @@
                                                                                 </collectionViewCellContentView>
                                                                                 <size key="customSize" width="276" height="46"/>
                                                                                 <connections>
+                                                                                    <outlet property="contentView" destination="PWx-7O-vn0" id="hG5-6z-bjR"/>
                                                                                     <outlet property="hora" destination="OVC-wi-Onm" id="6vF-RQ-B9w"/>
                                                                                 </connections>
                                                                             </collectionViewCell>
@@ -257,7 +258,7 @@
                                                         <rect key="frame" x="0.0" y="70" width="280" height="409.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-QJ-zVb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="275.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="276.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQr-tm-VCF" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
@@ -440,6 +441,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="320" height="1100"/>
                     <connections>
+                        <outlet property="acompanantesView" destination="yxA-rq-q6y" id="fCx-bm-X3o"/>
                         <outlet property="assistantLabel" destination="73B-c6-NMp" id="FcL-yp-dUM"/>
                         <outlet property="bannerCollectionView" destination="8tJ-kQ-4QB" id="dJU-sB-EIX"/>
                         <outlet property="bannerPageControl" destination="Jwp-gm-Zze" id="SFC-8O-phI"/>
@@ -448,6 +450,8 @@
                         <outlet property="dateLabel" destination="17Z-hn-FaV" id="1LW-R2-YCA"/>
                         <outlet property="horarioCollectionView" destination="8hT-1D-kx2" id="X0A-4P-8bI"/>
                         <outlet property="hoursLabel" destination="QVV-ws-fui" id="lbf-8u-yIV"/>
+                        <outlet property="lessButton" destination="uPX-aX-XsU" id="C28-GY-bG8"/>
+                        <outlet property="moreButton" destination="ZxZ-MM-Fki" id="o6W-EV-Iak"/>
                         <outlet property="nameShowLabel" destination="FEc-Uk-iWz" id="ZzY-yx-Bhs"/>
                         <outlet property="numberssistantLabel" destination="pUp-mf-xUd" id="V3E-n4-3zU"/>
                         <outlet property="registerButton" destination="hkU-qK-hSd" id="sza-PT-EUm"/>

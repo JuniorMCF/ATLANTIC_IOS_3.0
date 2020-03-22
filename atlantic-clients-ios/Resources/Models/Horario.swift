@@ -11,4 +11,5 @@ class Horario{
     var id = -1
     var fecha = ""
     var registrado = false
+    var seleccionado = 0 // no seleccionado 0 , seleccionado 1
 }

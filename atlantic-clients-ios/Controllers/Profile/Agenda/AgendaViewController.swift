@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CarbonKit
 class AgendaViewController: UIViewController {
         // Mark: - ViewModel
         
@@ -25,7 +25,7 @@ class AgendaViewController: UIViewController {
         
         var estimateWidth = 300.0
         var cellMarginSize = 16.0
-        
+        var carbonkit : CarbonTabSwipeNavigationDelegate!
         // MARK: - IBoulets
         
         @IBOutlet weak var collectionView: UICollectionView!
@@ -63,6 +63,14 @@ class AgendaViewController: UIViewController {
         func bind() {
             viewModel.loadDatasources = loadDatasources(datasource:)
             viewModel.presentEventDetail = presentEventDetail(item:)
+            viewModel.presentReloadData = presentReloadData(list:)
+        }
+        func presentReloadData(list:[Event]){
+            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  list,viewModel: viewModel)
+            collectionView.dataSource = AgendaCollectionViewDD
+            collectionView.delegate = self
+            self.collectionView.reloadData()
+            
         }
         
         func loadDatasources(datasource:BreakfastDatasources) {

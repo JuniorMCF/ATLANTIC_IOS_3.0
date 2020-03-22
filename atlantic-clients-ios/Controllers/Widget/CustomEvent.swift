@@ -29,17 +29,13 @@ class CustomEvent: UIViewController {
     var tipo = ""
     
     convenience init() {
-        self.init(parent: UIViewController(),title: "", message: "", viewModel: EventDetailViewModel(),id:"", horarioId:"", acompanantes: 0 )
+        self.init(parent: UIViewController(),title: "", message: "")
     }
 
-    init(parent: UIViewController,title: String, message: String,viewModel: EventDetailViewModel,id:String, horarioId: String, acompanantes: Int ){
+    init(parent: UIViewController,title: String, message: String ){
         self.viewParent = parent
         self.titleP = title
         self.message = message
-        self.eventDetailViewModel = viewModel
-        self.id = id
-        self.horarioId = horarioId
-        self.acompanantes = acompanantes
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -67,9 +63,10 @@ class CustomEvent: UIViewController {
     }
     
     @IBAction func tapOk(_ sender: Any) {
-        
-        self.eventDetailViewModel.saveData(id: id, horarioId: horarioId, acompanantes: acompanantes)
-        
+        let parent = self.viewParent as! EventsDetailViewController
+        parent.viewModel.saveData?()
+        self.hideProgress()
+        //
     }
     
     @IBAction func tapCancel(_ sender: Any) {
@@ -84,7 +81,7 @@ class CustomEvent: UIViewController {
         viewParent.tabBarController?.view.addSubview(progressController.view)
        
         
-        
+        progressController.viewParent = self.viewParent
        // viewParent.view.addSubview(progressController.view)
         self.progressController.titleProgress.text = self.titleP
         self.progressController.messageProgress.text = self.message
