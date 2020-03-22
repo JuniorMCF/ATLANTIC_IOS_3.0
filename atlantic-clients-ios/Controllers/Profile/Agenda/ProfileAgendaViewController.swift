@@ -74,6 +74,7 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             carbonTabSwipeNavigation.toolbar.shadow = true
             
             
+            
             carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds
             let screenWidth = Int(screenSize.width)
@@ -91,6 +92,10 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
         let screen = self.storyboard?.instantiateViewController(withIdentifier: "AgendaID") as! AgendaViewController
         if(items.list.count>0){
             screen.items = items.list[Int(index)]
+            screen.carbonkit = self
+
+            
+            
         }
         return screen
     }

@@ -1,21 +1,21 @@
 //
-//  CustomEvent.swift
+//  DelAgenda.swift
 //  atlantic-clients-ios
 //
-//  Created by Junior on 3/1/20.
+//  Created by Junior on 3/22/20.
 //  Copyright © 2020 Atlantic City. All rights reserved.
 //
 
 import UIKit
 import MaterialComponents.MaterialActivityIndicator
 
-class CustomEvent: UIViewController {
+class DelAgenda: UIViewController {
     
     var viewParent : UIViewController!
     var titleP : String!
     var message : String!
     var eventDetailViewModel :EventDetailViewModelProtocol =   EventDetailViewModel()
-    var progressController : CustomEvent!
+    var progressController : DelAgenda!
     var isHome = false
     //variables para enviar
     var id = ""
@@ -54,27 +54,25 @@ class CustomEvent: UIViewController {
         activityIndicator.startAnimating()
         ok.setTitle("ACEPTAR", for: .normal)
         ok.setTitleColor(.white, for: .normal)
-        ok.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
-        ok.layer.cornerRadius = 15.0
+        ok.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        
         cancel.setTitle("CANCELAR", for: .normal)
         cancel.setTitleColor(.white, for: .normal)
-        cancel.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
-        cancel.layer.cornerRadius = 15.0
+        cancel.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        
     }
     
     @IBAction func tapOk(_ sender: Any) {
-        let parent = self.viewParent as! EventsDetailViewController
-        parent.viewModel.saveData?()
         self.hideProgress()
-        //
+       
     }
     
     @IBAction func tapCancel(_ sender: Any) {
             self.hideProgress()
     }
     func showProgress(){
-        let storyboard = UIStoryboard(name: "CustomEvent", bundle: nil)
-        progressController = (storyboard.instantiateViewController(withIdentifier: "customEvent") as! CustomEvent)
+        let storyboard = UIStoryboard(name: "DelAgenda", bundle: nil)
+        progressController = (storyboard.instantiateViewController(withIdentifier: "delAgendaID") as! DelAgenda)
        
         progressController.modalPresentationStyle = .overFullScreen
         
@@ -97,7 +95,14 @@ class CustomEvent: UIViewController {
       
         //progressController.dismiss(animated: false, completion: nil)
     }
-    
-    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

@@ -13,7 +13,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     // Mark: - ViewModel
     @IBOutlet var tabBar: UINavigationItem!
     
-    private var viewModel  = EventDetailViewModel()
+    var viewModel  :EventDetailViewModelProtocol = EventDetailViewModel()
     
     private var bannerCollectionViewDD: BannerCollectionViewDatasourceAndDelegate!
     private var horarioCollectionViewDD: HorarioCollectionViewDatasourceAndDelegate!
@@ -27,8 +27,11 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     var coinsDetail: [EventDetailTitles] = []
     var event = Event()
     var tipo = "1"
-    
+    var selectHorario = ""
+    var nAcompanantes = 0
+    var total = 0//total de acompañantes seleccionados
     // MARK: - IBoulets
+    var horariolist : [Horario] = []
     @IBOutlet weak var cvBuffet: UICollectionView!
     @IBOutlet weak var viewBuffet: UIView!
 
@@ -46,6 +49,9 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     @IBOutlet weak var showTitleLabel: Label!
     @IBOutlet weak var nameShowLabel: Label!
 
+    @IBOutlet var lessButton: UIButton!
+    @IBOutlet var moreButton: UIButton!
+    @IBOutlet var acompanantesView: UIView!
     @IBOutlet var webview: YTPlayerView!
     @IBOutlet weak var assistantLabel: Label!
     @IBOutlet weak var numberssistantLabel: Label!
@@ -57,15 +63,21 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     ]
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     @IBAction func tapRegister(_ sender: Any) {
+        if(selectHorario != ""){
+            appDelegate.customEvent = CustomEvent(parent: self,title: "Eventos", message: "Esta seguro que se quiere registrar en este evento")
+            appDelegate.customEvent.showProgress()
+        }else{
+            show(message: "Seleccione Horario")
+        }
         
-        appDelegate.customEvent = CustomEvent(parent: self,title: "Eventos", message: "Esta seguro que se quiere registrar en este evento",viewModel: viewModel,id: appDelegate.usuario.clienteId, horarioId: String(event.horarioId), acompanantes: total )
-        appDelegate.customEvent.showProgress()
-        
-        //viewModel.saveData()
         
     }
+    func saveData(){
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Evento", message: "Registrando Evento...")
+        viewModel.saveData(clienteId : appDelegate.usuario.clienteId,horarioId:selectHorario,nroAcom:String(total))
+    }
     @IBAction func lessAcompanantes(_ sender: Any) {
-        let nAcompanantes = (event.nAcompanantes as NSString).integerValue
+        nAcompanantes = (event.nAcompanantes as NSString).integerValue
         if(total > 0){
             total -= 1
             numberssistantLabel.text = String(total)
@@ -74,15 +86,18 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     }
     
     @IBAction func moreAcompanantes(_ sender: Any) {
-        let nAcompanantes = (event.nAcompanantes as NSString).integerValue
+        nAcompanantes = (event.nAcompanantes as NSString).integerValue
         if(total < nAcompanantes){
             total += 1
             numberssistantLabel.text = String(total)
         }
         
     }
+    func getHorarioId(horarioId:String){
+        self.selectHorario = horarioId
+    }
     
-    var total = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webview.delegate = self
@@ -113,6 +128,27 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         viewModel.showTitles = showTitles(titles:)
         viewModel.loadDatasources = loadDatasources(datasources:)
         viewModel.loadBuffets = loadBuffets(buffets:)
+        viewModel.getHorarioId = getHorarioId(horarioId :)
+        viewModel.saveData = saveData
+        viewModel.showToast = show(message:)
+        viewModel.hideViews = hideViews
+        
+    }
+   
+    func hideViews(){
+        moreButton.alpha = 0.0
+        moreButton.isUserInteractionEnabled = false
+        lessButton.alpha = 0.0
+        lessButton.isUserInteractionEnabled = false
+        acompanantesView.isUserInteractionEnabled = false
+        acompanantesView.alpha = 0.0
+        numberssistantLabel.text = String(total)
+        
+        registerButton.isUserInteractionEnabled = false
+        registerButton.alpha = 0.0
+    }
+    func show(message:String){
+        showToast(message: message)
     }
     func presentBanner(){
         var fotos = event.fotos
@@ -130,7 +166,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
                     }
                 }
             }
-
+            
             
         }else{
             tabBar.title = "Agenda"
@@ -242,10 +278,31 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         horarioslist.append(horarios)
         */
         //horarios collectionview
-        horarioCollectionViewDD = HorarioCollectionViewDatasourceAndDelegate(horarios: datasources)
+        horarioCollectionViewDD = HorarioCollectionViewDatasourceAndDelegate(horarios: datasources,viewModel: viewModel)
+        horariolist = datasources
         horarioCollectionView.dataSource = horarioCollectionViewDD
         horarioCollectionView.delegate = horarioCollectionViewDD
+        //QUITAR CONSTRAINT
+        for horario in horariolist{
+            if(horario.registrado == true){
+                hideViews()
+                
+            }
+        }
+        for index in 0...horariolist.count-1{
+            if(horariolist[index].registrado == true){
+                horariolist[index].seleccionado = 1
+            }
+        }
         
+        
+        if(tipo == "0"){
+            horarioCollectionViewDD = HorarioCollectionViewDatasourceAndDelegate(horarios: horariolist,viewModel: viewModel)
+            horarioCollectionView.dataSource = horarioCollectionViewDD
+            horarioCollectionView.delegate = horarioCollectionViewDD
+            horarioCollectionView.reloadData()
+            horarioCollectionView.isUserInteractionEnabled = false
+        }
         
        
     }

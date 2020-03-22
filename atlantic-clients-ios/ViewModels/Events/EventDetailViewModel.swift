@@ -59,22 +59,88 @@ protocol EventDetailViewModelProtocol {
     func viewDidLoad(eventoId:Int)
     func tapExpand()
     func tapRegister()
-    func saveData(id:String,horarioId:String,acompanantes:Int)
-    
+    func onStart(clienteId: String,fechaIngreso : String,nombreEvento :String,eventoId: String) 
+    func saveData(clienteId:String,horarioId:String,nroAcom:String)
+    func setHorario(horarioId:String)
     // Mark: - Outputs (Closures)
     
     var showTitles: ((EventDetailTitles) -> Void)? { get set}
     var loadDatasources: (([Horario]) -> Void)? { get set }
     var expandView: (() -> Void)? { get set }
     var loadBuffets : (([[String]]) -> Void)? { get set}
-    var presentRegister: (() -> Void)? { get set }
+    var saveData: (() -> Void)? { get set }
+    var getHorarioId: ((String)->Void)? {get set}
+    var showToast: ((String)->Void)? {get set}
+    var hideViews: (()->Void)?{get set}
 }
 
 class EventDetailViewModel: EventDetailViewModelProtocol {
+    var showToast: ((String) -> Void)?
+    var getHorarioId: ((String)->Void)?
+    var hideViews: (()->Void)?
+    var showTitles: ((EventDetailTitles) -> Void)?
+
+    var loadDatasources: (([Horario]) -> Void)?
     
-    func saveData(id:String,horarioId:String,acompanantes:Int) {
-        
+    var expandView: (() -> Void)?
+    var saveData: (() -> Void)?
+    var loadBuffets : (([[String]]) -> Void)?
+    var listHorarios = [Horario]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var progress = CustomProgress()
+    func setHorario(horarioId: String) {
+        getHorarioId?(horarioId)
     }
+    
+    func saveData(clienteId:String,horarioId:String,nroAcom:String){
+        progress = appDelegate.progressDialog
+        progress.showProgress()
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postGuardarEvento)
+        dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
+        dominioUrl = dominioUrl?.appending("horarioId", value: horarioId)
+        dominioUrl = dominioUrl?.appending("nroAcom", value: nroAcom)
+        
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     print(json)
+                     let data = json.stringValue.data(using: .utf8)
+                     do {
+                         // make sure this JSON is in the format we expect
+                         if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                             // try to read out a string array
+                            let resultado = json["resultado"] as! String
+                            
+                            if(resultado == "200"){
+                                self.showToast?("Registrado correctamente")
+                                self.hideViews?()
+                                self.progress.hideProgress()
+                             }else {
+                                self.showToast?("Ya se encuentra registrado")
+                                self.progress.hideProgress()
+                             }
+                             
+                         }
+                     } catch let error as NSError {
+                        self.progress.hideProgress()
+                         print("Failed to load: \(error.localizedDescription)")
+                     }
+                     
+                     
+                    break
+                case.failure(let error):
+                   self.progress.hideProgress()
+                    print(error)
+                    break
+                }
+                
+            }
+    }
+    
     
     func onStart(clienteId: String,fechaIngreso : String,nombreEvento :String,eventoId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadEvento)
@@ -104,16 +170,8 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
             }
     }
     
-    //(@Query("clienteId") clienteId: String, @Query("fechaIngreso") fechaIngreso : String,@Query("nombreEvento") nombreEvento :String, @Query("eventoId") eventoId: String)
-    var showTitles: ((EventDetailTitles) -> Void)?
-
-    var loadDatasources: (([Horario]) -> Void)?
     
-    var expandView: (() -> Void)?
-    var presentRegister: (() -> Void)?
-    var loadBuffets : (([[String]]) -> Void)?
-    var listHorarios = [Horario]()
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     func viewDidLoad(eventoId:Int) {
         let titles = EventDetailTitles()
         showTitles?(titles)
@@ -124,7 +182,7 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
             
         case.success(let value):
                      let json = JSON(value)
-                     print(json)
+                     print("horario",json)
                      let data = json.stringValue.data(using: .utf8)
                      do {
                          // make sure this JSON is in the format we expect
@@ -226,7 +284,7 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     }
     
     func tapRegister() {
-        presentRegister?()
+        saveData?()
     }
 
 }

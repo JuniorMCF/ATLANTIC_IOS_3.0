@@ -15,15 +15,27 @@ protocol AgendaViewModelProtocol {
     func viewDidLoad()
     func deleteData(eventoRegistroId:String,clienteId:String)
     func didEventSelected(event:Event)
+    func reloadData(data:[Event])
     // Outputs
     
     var showTitles: ((ProfileTitles) -> Void)? { get set }
     var presentEventDetail:((Event)->Void)? {get set}
     var loadDatasources: ((BreakfastDatasources) -> Void)?{get set}
     var presentToast: ((String)->Void)?{get set}
+    var presentReloadData:(([Event])->Void)?{get set}
 }
 
 class AgendaViewModel: AgendaViewModelProtocol {
+    var showTitles: ((ProfileTitles) -> Void)?
+    var presentEventDetail:((Event)->Void)?
+    var loadDatasources: ((BreakfastDatasources) -> Void)?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var progress :CustomProgress!
+    var presentReloadData:(([Event])->Void)?
+    func reloadData(data:[Event]) {
+        presentReloadData?(data)
+    }
+    
     var presentToast: ((String)->Void)?
     
     func deleteData(eventoRegistroId: String, clienteId: String) {
@@ -37,7 +49,7 @@ class AgendaViewModel: AgendaViewModelProtocol {
             
         case.success(let value):
                      let json = JSON(value)
-                     print(json)
+                     print("datos",json)
                      self.presentToast?("datos actualizados correctamente")
 
                     break
@@ -51,11 +63,7 @@ class AgendaViewModel: AgendaViewModelProtocol {
     }
     
     
-    var showTitles: ((ProfileTitles) -> Void)?
-    var presentEventDetail:((Event)->Void)?
-    var loadDatasources: ((BreakfastDatasources) -> Void)?
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var progress :CustomProgress!
+   
     func viewDidLoad() {
         let datasources = BreakfastDatasources()
         
