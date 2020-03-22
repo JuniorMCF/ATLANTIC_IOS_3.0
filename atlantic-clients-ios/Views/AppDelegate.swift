@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var progressDialog : CustomProgress!
     var customLogout: CustomLogout!
     var customEvent : CustomEvent!
+    var delAgenda : DelAgenda!
     var initDate : String!
     //switch
     var navigationController : UINavigationController!
