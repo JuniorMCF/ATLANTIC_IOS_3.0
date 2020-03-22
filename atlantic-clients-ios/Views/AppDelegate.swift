@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import IQKeyboardManagerSwift
 import UserNotifications
+import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,11 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var progressDialog : CustomProgress!
     var customLogout: CustomLogout!
     var customEvent : CustomEvent!
+    var initDate : String!
     //switch
     var navigationController : UINavigationController!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        initDate = Utils().getFechaActual()
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
         
@@ -54,13 +58,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Messaging.messaging().delegate = self as MessagingDelegate
         application.registerForRemoteNotifications()
         
-        	
-        
         
         return true
     }
-
     
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        
+        if(!Constants().getLogin()){
+            return
+        }
+        let queue = DispatchQueue(label: "com.test.api", qos: .background, attributes: .concurrent)
+
+        let finishDate = Utils().getFechaActual()
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarIngreso)
+        
+        dominioUrl = dominioUrl?.appending("clienteId", value: usuario.clienteId)
+        dominioUrl = dominioUrl?.appending("fechaIngreso", value: initDate)
+        dominioUrl = dominioUrl?.appending("fechaSalida", value: finishDate)
+        
+        
+        let url = dominioUrl!.absoluteString
+        
+        //Constants().postAgregarIngreso
+        
+            
+        AF.request(url ,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON(queue: queue){response in
+            
+                print(response)
+           
+            }
+        
+    }
+
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("aca 12")
+        return true
+    }
+    
+    
+   
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
        // If you are receiving a notification message while your app is in the background,
        // this callback will not be fired till the user taps on the notification launching the application.
@@ -108,6 +144,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
+
+
 
 
 @available(iOS 10, *)
@@ -276,19 +314,7 @@ extension ViewController: UNUserNotificationCenterDelegate {
         completionHandler([.alert, .badge, .sound])
     }
 
-    // For handling tap and user actions
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-
-        switch response.actionIdentifier {
-        case "action1":
-            print("Action First Tapped")
-        case "action2":
-            print("Action Second Tapped")
-        default:
-            break
-        }
-        completionHandler()
-    }
+    
 
 }
 

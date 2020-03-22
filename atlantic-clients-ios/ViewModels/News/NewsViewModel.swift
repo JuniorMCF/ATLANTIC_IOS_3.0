@@ -138,122 +138,137 @@ class NewsViewModel: NewsViewModelProtocol {
                                 let responseBenefits = json["beneficiosList"] as! NSArray
                                 let responseTorneos = json["torneosList"] as! NSArray
                                 
-                                var sorteoList = [Sorteo]()
-                                var benefitsList = [Benefits]()
-                                var torneosList = [Tournament]()
-                                //sorteo list
-                                for data in responseSorteo{
-                                    let value = JSON(data)
-                                    print(value)
+                                if(responseSorteo.count == 0 && responseBenefits.count == 0 && responseTorneos.count == 0){
+                                    var sorteoList = [Sorteo]()
                                     let sorteo = Sorteo()
-                                    promotionDay.tipo.append("sorteos")
-                                    sorteo.logoUrl = value["logo"].stringValue
-                                    sorteo.clienteId = value["cliente_d"].intValue
-                                    sorteo.fecha = value["fecha"].stringValue
-                                    sorteo.fechaActualizacion = value["fecha_actualizacion"].stringValue
-                                    sorteo.fechaproxima = value["fecha_proxima"].stringValue
-                                    sorteo.fechaProximaSorteo = value["fecha_proxima_texto"].stringValue
-                                    sorteo.fechaTexto = value["fecha_texto"].stringValue
-                                    let fotos = value["fotos"].arrayValue
-                                    for data in fotos{
-                                        print("data",data)
-                                        let val = JSON(data)
-                                        let foto = Foto()
-                                        foto.foto = val["foto"].stringValue
-                                        foto.esPrincipal = val["esPrincipal"].boolValue
-                                        sorteo.fotos.append(foto)
-                                    }
-                                    sorteo.nombreSorteo = value["nombre"].stringValue
-                                    sorteo.opciones = value["opciones"].intValue
-                                    sorteo.opcionesFalta = value["opciones_falta"].intValue
-                                    sorteo.promocionId = value["promocion_id"].intValue
-                                    sorteo.puntos = value["puntos"].intValue
-                                    sorteo.puntosFalta = value["puntos_falta"].intValue
                                     sorteoList.append(sorteo)
-                                }
-                                for item in sorteoList{
-                                    //promotionDay.tipo.append("sorteo")
-                                    promotionDay.list.append(item)
-                                }
-                                //benefits list
-                                for data in responseBenefits{
-                                    let value = JSON(data)
-                                    let benefit = Benefits()
-                                    promotionDay.tipo.append("beneficios")
-                                    //benefit.fotos = fotos
-                                    benefit.nombre = value["nombre"].stringValue
-                                    benefit.descripcion = value["descripcion"].stringValue
-                                    benefit.tipo  = value["tipo"].stringValue
-                                    benefit.cliente_id  = value["cliente_id"].intValue
-                                    benefit.promocion_id  = value["promocion_id"].intValue
-                                    benefit.logo  = value["logo"].stringValue
-                                    benefit.puntos  = value["puntos"].intValue
-                                    benefit.puntos_falta  = value["puntos_falta"].intValue
-                                    benefit.puntos_minimo  = value["puntos_minimo"].intValue
-                                    benefit.premio = value["premio"].doubleValue
-                                    benefit.premio_falta  = value["premio_falta"].doubleValue
-                                    benefit.posicion  = value["posicion"].intValue
-                                    benefit.carrera_pendiente  = value["carrera_pendiente"].boolValue
-                                    benefit.carrera_participa  = value["carrera_participa"].boolValue
-                                    benefit.carrera_es_domingo  = value["carrera_es_domingo"].boolValue
-                                    benefit.carrera_hay  = value["carrera_hay"].boolValue
-                                    benefit.fechaTexto  = value["fecha_texto"].stringValue
-                                    benefit.fechaProximaTexto = value["fecha_proxima_texto"].stringValue
-                                    benefit.estado  = value["estado"].intValue
-                                    benefit.tipoMoneda  = value["tipoMoneda"].stringValue
-                                    benefit.fecha  = value["fecha"].stringValue
-                                    if(value["esCarrera"].stringValue.isEmpty){
-                                        benefit.esCarrera  = nil
-                                    }else{
-                                        benefit.esCarrera  = value["esCarrera"].boolValue
+                                    promotionDay.list.append(sorteoList)
+                                    let new = News()
+                                    new.title = "Promociones del día"
+                                    new.promotionDay = promotionDay
+                                    new.isEmpty = true
+                                    self.datasources.dailys = new
+                                    self.verifyResponse()
+                                }else{
+                                    var sorteoList = [Sorteo]()
+                                    var benefitsList = [Benefits]()
+                                    var torneosList = [Tournament]()
+                                    //sorteo list
+                                    for data in responseSorteo{
+                                        let value = JSON(data)
+                                        print(value)
+                                        let sorteo = Sorteo()
+                                        promotionDay.tipo.append("sorteos")
+                                        sorteo.logoUrl = value["logo"].stringValue
+                                        sorteo.clienteId = value["cliente_d"].intValue
+                                        sorteo.fecha = value["fecha"].stringValue
+                                        sorteo.fechaActualizacion = value["fecha_actualizacion"].stringValue
+                                        sorteo.fechaproxima = value["fecha_proxima"].stringValue
+                                        sorteo.fechaProximaSorteo = value["fecha_proxima_texto"].stringValue
+                                        sorteo.fechaTexto = value["fecha_texto"].stringValue
+                                        let fotos = value["fotos"].arrayValue
+                                        for data in fotos{
+                                            print("data",data)
+                                            let val = JSON(data)
+                                            let foto = Foto()
+                                            foto.foto = val["foto"].stringValue
+                                            foto.esPrincipal = val["esPrincipal"].boolValue
+                                            sorteo.fotos.append(foto)
+                                        }
+                                        sorteo.nombreSorteo = value["nombre"].stringValue
+                                        sorteo.opciones = value["opciones"].intValue
+                                        sorteo.opcionesFalta = value["opciones_falta"].intValue
+                                        sorteo.promocionId = value["promocion_id"].intValue
+                                        sorteo.puntos = value["puntos"].intValue
+                                        sorteo.puntosFalta = value["puntos_falta"].intValue
+                                        sorteoList.append(sorteo)
                                     }
-                                    
-                                    
-                                    benefit.fechaProxima  = value["fecha_proxima"].stringValue
-                                    benefit.fechaActualizacion  = value["fecha_actualizacion"].stringValue
-                                    
-                                    
-                                    benefitsList.append(benefit)
-                                }
-                                for item in benefitsList{
-                                    //promotionDay.tipo.append("beneficios")
-                                    promotionDay.list.append(item)
-                                }
-                                //torneos list
-                                for data in responseTorneos{
-                                    let value = JSON(data)
-                                    print(value)
-                                    let torneo = Tournament()
-                                    promotionDay.tipo.append("torneos")
-                                    torneo.tipo = value["tipo"].stringValue
-                                    torneo.logo = value["logo"].stringValue
-                                    torneo.nombre = value["nombre"].stringValue
-                                    torneo.cliente_id = value["cliente_id"].stringValue
-                                    torneo.pomocion_id = value["pomocion_id"].intValue
-                                    torneo.posicion = value["posicion"].intValue
-                                    torneo.puntaje = value["puntaje"].intValue
-                                    torneo.premio = value["premio"].doubleValue
-                                    torneo.concluido  = value["concluido"].boolValue
-                                    torneo.fechaTexto = value["fechaTexto"].stringValue
-                                    torneo.fechaProximaTexto = value["fechaProximaTexto"].stringValue
-                                    torneo.fechaProxima = value["fechaProxima"].stringValue
-                                    torneo.fechaActualizacion = value["fechaActualizacion"].stringValue
-                                    
-                                    
-                                    torneosList.append(torneo)
-                                }
-                                for item in torneosList{
-                                   // promotionDay.tipo.append("torneos")
-                                    promotionDay.list.append(item)
-                                }
+                                    for item in sorteoList{
+                                        //promotionDay.tipo.append("sorteo")
+                                        promotionDay.list.append(item)
+                                    }
+                                    //benefits list
+                                    for data in responseBenefits{
+                                        let value = JSON(data)
+                                        let benefit = Benefits()
+                                        promotionDay.tipo.append("beneficios")
+                                        //benefit.fotos = fotos
+                                        benefit.nombre = value["nombre"].stringValue
+                                        benefit.descripcion = value["descripcion"].stringValue
+                                        benefit.tipo  = value["tipo"].stringValue
+                                        benefit.cliente_id  = value["cliente_id"].intValue
+                                        benefit.promocion_id  = value["promocion_id"].intValue
+                                        benefit.logo  = value["logo"].stringValue
+                                        benefit.puntos  = value["puntos"].intValue
+                                        benefit.puntos_falta  = value["puntos_falta"].intValue
+                                        benefit.puntos_minimo  = value["puntos_minimo"].intValue
+                                        benefit.premio = value["premio"].doubleValue
+                                        benefit.premio_falta  = value["premio_falta"].doubleValue
+                                        benefit.posicion  = value["posicion"].intValue
+                                        benefit.carrera_pendiente  = value["carrera_pendiente"].boolValue
+                                        benefit.carrera_participa  = value["carrera_participa"].boolValue
+                                        benefit.carrera_es_domingo  = value["carrera_es_domingo"].boolValue
+                                        benefit.carrera_hay  = value["carrera_hay"].boolValue
+                                        benefit.fechaTexto  = value["fecha_texto"].stringValue
+                                        benefit.fechaProximaTexto = value["fecha_proxima_texto"].stringValue
+                                        benefit.estado  = value["estado"].intValue
+                                        benefit.tipoMoneda  = value["tipoMoneda"].stringValue
+                                        benefit.fecha  = value["fecha"].stringValue
+                                        if(value["esCarrera"].stringValue.isEmpty){
+                                            benefit.esCarrera  = nil
+                                        }else{
+                                            benefit.esCarrera  = value["esCarrera"].boolValue
+                                        }
+                                        
+                                        
+                                        benefit.fechaProxima  = value["fecha_proxima"].stringValue
+                                        benefit.fechaActualizacion  = value["fecha_actualizacion"].stringValue
+                                        
+                                        
+                                        benefitsList.append(benefit)
+                                    }
+                                    for item in benefitsList{
+                                        //promotionDay.tipo.append("beneficios")
+                                        promotionDay.list.append(item)
+                                    }
+                                    //torneos list
+                                    for data in responseTorneos{
+                                        let value = JSON(data)
+                                        print(value)
+                                        let torneo = Tournament()
+                                        promotionDay.tipo.append("torneos")
+                                        torneo.tipo = value["tipo"].stringValue
+                                        torneo.logo = value["logo"].stringValue
+                                        torneo.nombre = value["nombre"].stringValue
+                                        torneo.cliente_id = value["cliente_id"].stringValue
+                                        torneo.pomocion_id = value["pomocion_id"].intValue
+                                        torneo.posicion = value["posicion"].intValue
+                                        torneo.puntaje = value["puntaje"].intValue
+                                        torneo.premio = value["premio"].doubleValue
+                                        torneo.concluido  = value["concluido"].boolValue
+                                        torneo.fechaTexto = value["fechaTexto"].stringValue
+                                        torneo.fechaProximaTexto = value["fechaProximaTexto"].stringValue
+                                        torneo.fechaProxima = value["fechaProxima"].stringValue
+                                        torneo.fechaActualizacion = value["fechaActualizacion"].stringValue
+                                        
+                                        
+                                        torneosList.append(torneo)
+                                    }
+                                    for item in torneosList{
+                                       // promotionDay.tipo.append("torneos")
+                                        promotionDay.list.append(item)
+                                    }
 
 
-                                let new = News()
-                                new.title = "Promociones del día"
-                                new.promotionDay = promotionDay
-                                new.isEmpty = false
-                                self.datasources.dailys = new
-                                self.verifyResponse()
+                                    let new = News()
+                                    new.title = "Promociones del día"
+                                    new.promotionDay = promotionDay
+                                    new.isEmpty = false
+                                    self.datasources.dailys = new
+                                    self.verifyResponse()
+                                }
+                                
+                                
                                 //pasar la noticia
                                 
                              }else {
@@ -287,7 +302,6 @@ class NewsViewModel: NewsViewModelProtocol {
             
         case.success(let value):
                      let json = JSON(value)
-                     print(json)
                      let data = json.stringValue.data(using: .utf8)
                      do {
                          // make sure this JSON is in the format we expect
@@ -299,13 +313,14 @@ class NewsViewModel: NewsViewModelProtocol {
                             if(resultado == "200"){
                                 
                                 let response = json["response"] as! NSArray
-                                
                                 if(response.count == 0){
                                     //getOrquesta
-                                    self.verifyResponse()
+                                    self.getOrquesta(clienteId: clienteId)
+                                    //self.verifyResponse()
                                 }else{
                                     
                                     for data in response{
+                                        
                                         let event = Event()
                                         let value = JSON(data)
                                         event.agendaId = value["agendaId"].intValue
@@ -387,9 +402,16 @@ class NewsViewModel: NewsViewModelProtocol {
                             if(resultado == "200"){
                                 
                                 let response = json["response"] as! NSArray
-                                
+                              //  print(response.count)
                                 if(response.count == 0){
-                                    //getOrquesta
+                                    let benefit = Benefits()
+                                    benefitList.append(benefit)
+                                    let new = News()
+                                    
+                                    new.title = "Regalos de la semana"
+                                    new.benefitList = benefitList
+                                    new.isEmpty = true
+                                    self.datasources.gifts = new
                                     self.verifyResponse()
                                 }else{
                                     
@@ -493,6 +515,67 @@ class NewsViewModel: NewsViewModelProtocol {
             progress.hideProgress()
             loadDatasources?(datasources)
         }
+    }
+    
+    
+    func getOrquesta(clienteId: String){
+        
+        let parametersPD = ["idCliente": (clienteId as NSString).intValue] as [String : Any]
+        
+        AF.request(Constants().urlBase+Constants().getOrquesta ,method: .get,parameters: parametersPD,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
+        switch response.result{
+            
+        case.success(let value):
+                     let json = JSON(value)
+                     let data = json.stringValue.data(using: .utf8)
+                     do {
+                         // make sure this JSON is in the format we expect
+                         if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                             // try to read out a string array
+                            let resultado = json["resultado"] as! String
+                             if(resultado == "200"){
+                                //let response = json["response"] as! NSArray
+                                let response = json["response"] as! String
+                                var eventList = [Event]()
+                                let event = Event()
+                                let new = News()
+                                eventList.append(event)
+                                new.title = "Orquesta de la semana"
+                                new.orquesta = response
+                                new.eventWeek = eventList
+                                //new.benefitList = benefitList
+                                new.isEmpty = true
+                                self.datasources.events = new
+                                self.verifyResponse()
+                             }else{
+                                var eventList = [Event]()
+                                let event = Event()
+                                let new = News()
+                                new.title = "Orquesta de la semana"
+                                new.orquesta = ""
+                                new.eventWeek = eventList
+                                //new.benefitList = benefitList
+                                new.isEmpty = true
+                                self.datasources.events = new
+                                self.verifyResponse()
+                            }
+
+                             
+                         }
+                     } catch let error as NSError {
+                         print("Failed to load: \(error.localizedDescription)")
+                        
+                     }
+                     
+                    break
+                case.failure(let error):
+                    print(error)
+                    
+                    break
+                }
+                
+            }
+        
     }
     
 }

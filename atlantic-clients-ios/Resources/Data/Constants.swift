@@ -35,6 +35,7 @@ class Constants {
     var getPromocionesDia = "PromocionesDia"
     var getEventosSemana = "EventosSemana"
     var getBeneficiosSemana = "BeneficiosSemana"
+
     
     //metodo POST
     var postValidarDni = "ValidarDni"

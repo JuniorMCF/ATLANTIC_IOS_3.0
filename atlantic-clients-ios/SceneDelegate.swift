@@ -7,17 +7,18 @@
 //
 
 import UIKit
-
+import Alamofire
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    var initDate : String!
+    var usuario : Usuario!
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        initDate = Utils().getFechaActual()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -52,6 +53,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        if(!Constants().getLogin()){
+            return
+        }
+        print(usuario.clienteId)
+        let queue = DispatchQueue(label: "com.test.api", qos: .background, attributes: .concurrent)
+
+        let finishDate = Utils().getFechaActual()
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarIngreso)
+        
+        dominioUrl = dominioUrl?.appending("clienteId", value: usuario.clienteId)
+        dominioUrl = dominioUrl?.appending("fechaIngreso", value: initDate)
+        dominioUrl = dominioUrl?.appending("fechaSalida", value: finishDate)
+        
+        
+        let url = dominioUrl!.absoluteString
+        
+        //Constants().postAgregarIngreso
+        
+            
+        AF.request(url ,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON(queue: queue){response in
+            
+                print(response)
+           
+            }
+        
+        print("background scene")
     }
 
 

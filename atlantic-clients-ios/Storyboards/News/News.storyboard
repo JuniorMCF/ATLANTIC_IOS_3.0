@@ -43,7 +43,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="promo1" translatesAutoresizingMaskIntoConstraints="NO" id="aGc-0P-FUF">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGc-0P-FUF">
                                                                             <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,7 +93,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="214" height="120"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daily1" id="pS7-ZE-gIT">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casino" id="pS7-ZE-gIT">
                                                                             <rect key="frame" x="0.0" y="0.0" width="214" height="100"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,7 +199,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="214" height="120"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="beS-MI-1Ra">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casino" id="beS-MI-1Ra">
                                                                             <rect key="frame" x="0.0" y="0.0" width="214" height="100"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -315,8 +315,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="daily1" width="279" height="164"/>
-        <image name="ic_home" width="33.5" height="31"/>
-        <image name="promo1" width="417" height="213"/>
+        <image name="casino" width="150" height="130.5"/>
+        <image name="ic_home" width="21.666666030883789" height="29.333333969116211"/>
     </resources>
 </document>

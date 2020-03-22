@@ -47,7 +47,9 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
         
         if collectionView == giftsCollectionView {
             let benefit = giftsWeeks.benefitList[indexPath.row]
-            
+            if giftsWeeks.isEmpty {
+                return
+            }
             let storyboard = UIStoryboard(name: "AllBenefits", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "AllBenefitsID") as! AllBenefitsViewController
             viewController.modalPresentationStyle = .fullScreen
@@ -58,6 +60,11 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
         
          if collectionView == eventsCollectionView {
             let event = eventWeeks.eventWeek[indexPath.row]
+            
+            if eventWeeks.isEmpty{
+                return
+            }
+            
             if eventWeeks.eventWeek.count == 0 {
                 return
             }else {
@@ -72,7 +79,12 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
         
         
         if collectionView == dailyCollectionView {
+            if(dailyPromotions.isEmpty){
+                return
+            }
             let tipo = dailyPromotions.promotionDay.tipo[indexPath.row]
+            
+            
             if(tipo.caseInsensitiveCompare("sorteos") == .orderedSame){
                 let sorteo = dailyPromotions.promotionDay.list[indexPath.row] as! Sorteo
                 
@@ -237,6 +249,12 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dailyPromotionsID", for: indexPath) as! NewsCollectionViewCell
             
             let dominio = "http://clienteatlantic.azurewebsites.net/admin/upload/promocion/"
+            
+            if(dailyPromotions.isEmpty){
+               cell.dailyPromotionLabel.text = ""
+            }
+            else{
+             
             let tipo = dailyPromotions.promotionDay.tipo[indexPath.row]
             
             if(tipo.caseInsensitiveCompare("sorteos") == .orderedSame){
@@ -296,7 +314,7 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
                  }
                 cell.dailyPromotionLabel.fontSizeScaleFamily(family: "Avenir-Medium", size: 14)
             }
-            
+            }
             
             return cell
         }
@@ -304,38 +322,66 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
         else if collectionView == eventsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsID", for: indexPath) as! NewsCollectionViewCell
             
-            let dominio = "http://clienteatlantic.azurewebsites.net/admin/upload/evento/"
-            let event = eventWeeks.eventWeek[indexPath.row]
-            cell.dailyPromotionLabel.text = event.nombreCorto
             
+            if(eventWeeks.isEmpty){
             
-            
-            for fotos in event.fotos{
-                var k = 0
-                print(fotos)
-                if(fotos.esPrincipal){
-                    AF.request(dominio + fotos.foto).responseImage { response in
-                               
-                                   switch response.result {
-                                         case .success(let value):
-                                           cell.imageView.image = value
-                                           //cell?.promotionsImage.image = value
-                                           //cell?.configure()
-                                         case .failure(let error):
-                                             print(error)
-                                             
-                                         }
+                cell.dailyPromotionLabel.text = "Orquesta"
+                let dominioOrquesta = "http://clienteatlantic.azurewebsites.net/admin/upload/orquesta/"
+               
+                AF.request(dominioOrquesta + eventWeeks.orquesta).responseImage { response in
+                           
+                               switch response.result {
+                                     case .success(let value):
+                                       cell.imageView.image = value
+                                       //cell?.promotionsImage.image = value
+                                       //cell?.configure()
+                                     case .failure(let error):
+                                         print(error)
+                                         
+                                     }
 
-                    }
-                    
-                    break
                 }
-                k += 1
+                
+                
+            }else{
+                let dominio = "http://clienteatlantic.azurewebsites.net/admin/upload/evento/"
+                let event = eventWeeks.eventWeek[indexPath.row]
+                cell.dailyPromotionLabel.text = event.nombreCorto
+                
+                
+                
+                for fotos in event.fotos{
+                    var k = 0
+                    print(fotos)
+                    if(fotos.esPrincipal){
+                        AF.request(dominio + fotos.foto).responseImage { response in
+                                   
+                                       switch response.result {
+                                             case .success(let value):
+                                               cell.imageView.image = value
+                                               //cell?.promotionsImage.image = value
+                                               //cell?.configure()
+                                             case .failure(let error):
+                                                 print(error)
+                                                 
+                                             }
+
+                        }
+                        
+                        break
+                    }
+                    k += 1
+                }
             }
+            
             
             return cell
          }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "giftsID", for: indexPath) as! NewsCollectionViewCell
+            
+            if(giftsWeeks.isEmpty){
+               cell.dailyPromotionLabel.text = ""
+            }else{
             
              let dominio = "http://clienteatlantic.azurewebsites.net/admin/upload/promocion/"
             
@@ -356,7 +402,7 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
                                   }
 
              }
-            
+            }
              return cell
         }
             

@@ -130,7 +130,15 @@ class LoginViewModel: LoginViewModelProtocol {
                                                     usuario.fechaNac = value["fechaNac"].stringValue
                                                     usuario.nivel = value["nivel"].stringValue
                                                 }
-                                                self.appDelegate.usuario = usuario
+                                                if #available(iOS 13.0, *) {
+                                                    let scene = UIApplication.shared.connectedScenes.first
+                                                    if let sd : SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                                                        sd.usuario = usuario
+                                                    }
+                                                    
+                                                } 
+                                               self.appDelegate.usuario = usuario
+                                                
                                                 Constants().saveUsername(username: dni)
                                                 Constants().savePassword(password: password)
                                                 Constants().saveTerminos(terminoState: true)
