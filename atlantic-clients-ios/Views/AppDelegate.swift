@@ -57,14 +57,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Messaging.messaging().delegate = self as MessagingDelegate
         application.registerForRemoteNotifications()
-        
-        
+        print("data actualizada")
+        print(Constants().getNotify())
+       
         return true
     }
     
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        initDate = Utils().getFechaActual()
+        print("app foreground")
+        
+    }
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
+        var finished = false
+        var bgTask: UIBackgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: 0);
+        bgTask = application.beginBackgroundTask(withName:"MyBackgroundTask", expirationHandler: {() -> Void in
+            if bgTask != UIBackgroundTaskIdentifier.invalid {
+                // Do something to stop our background task or the app will be killed
+                finished = true
+            }
+        })
+     
         
         if(!Constants().getLogin()){
+            // Indicate that it is complete
+            application.endBackgroundTask(bgTask)
+            bgTask = UIBackgroundTaskIdentifier.invalid
             return
         }
         let queue = DispatchQueue(label: "com.test.api", qos: .background, attributes: .concurrent)
@@ -79,21 +98,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let url = dominioUrl!.absoluteString
         
-        //Constants().postAgregarIngreso
-        
+      
+            AF.request(url ,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON(queue : queue){response in
             
-        AF.request(url ,method: .post,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON(queue: queue){response in
-            
-                print(response)
-           
+                  print(response)
+             
             }
+        
+        
+    
+        
+
+    
         
     }
 
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print("aca 12")
-        return true
-    }
     
     
    
@@ -110,6 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          print("Message ID: \(messageID)")
        }
        // Print full message.
+        Constants().saveNotify(isActive: true)
        print(userInfo)
     }
     
@@ -133,12 +153,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          }
      
        
-     Constants().saveNotify(isActive: false)
+     
      //self.notification()
       // Print full message.
      print(userInfo)
-
-      completionHandler(UIBackgroundFetchResult.newData)
+      Constants().saveNotify(isActive: true)
+     
+        
+     completionHandler(UIBackgroundFetchResult.newData)
     }
     
     
@@ -156,12 +178,12 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                               willPresent notification: UNNotification,
     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
     let userInfo = notification.request.content.userInfo
-    print("notificacion llego 1 \(userInfo)")
+    //print("notificacion llego 1 \(userInfo)")
     // With swizzling disabled you must let Messaging know about the message, for Analytics
     // Messaging.messaging().appDidReceiveMessage(userInfo)
     
     if UIApplication.shared.applicationState == .active { // In iOS 10 if app is in foreground do nothing.
-
+        print("app en foreground")
        /* let tipo = userInfo["tipo"] as! String
         let notification = userInfo["notification"] as! String
         if(tipo == "L"){
@@ -181,7 +203,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
          rootViewController.pushViewController(vc!, animated: true)*/
         completionHandler([.alert, .badge, .sound])
     } else { // If app is not active you can show banner, sound and badge.
-        
+        print("app en minimizado")
       /*  let userId = userInfo["gcm.notification.userId"] as! String
           let message = userInfo["gcm.notification.message"] as! String
           let messageId = userInfo["gcm.message_id"] as! String
@@ -210,7 +232,6 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
              
              rootViewController.pushViewController(vc!, animated: true)*/
           
-          print("aca modificamos las notificaciones")
           // Change this to your preferred presentation option
           completionHandler([.alert, .badge, .sound])
         
@@ -251,33 +272,6 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 
     completionHandler()
   }
-    
-    func notification(){
-        print("aca 1")
-    
-          let center = UNUserNotificationCenter.current()
-
-            let content = UNMutableNotificationContent()
-            content.title = "Late wake up call"
-            content.body = "The early bird catches the worm, but the second mouse gets the cheese."
-            
-            content.userInfo = ["customData": "fizzbuzz"]
-            content.sound = UNNotificationSound.default
-            
-            /*var dateComponents = DateComponents()
-            dateComponents.hour = 10
-            dateComponents.minute = 30*/
-            //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-             
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
-            center.add(request)
-        
-      
-        
-        
-    }
-    
-    
     
     
 }

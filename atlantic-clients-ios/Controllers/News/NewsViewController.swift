@@ -52,6 +52,12 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
        bind()
         viewModel.viewDidLoad(clienteId:appDelegate.usuario.clienteId,nivelId:appDelegate.usuario.nivel)
          
+        if let items = self.tabBarController?.tabBar.items as NSArray? {
+            let tabItem = items.object(at: 3) as! UITabBarItem
+            tabItem.badgeValue = " "
+            tabItem.badgeColor = UIColor.init(red: 251/255, green: 204/255, blue: 52/255, alpha: 1)
+        }
+        
     }
     
     func showTutorial(){
