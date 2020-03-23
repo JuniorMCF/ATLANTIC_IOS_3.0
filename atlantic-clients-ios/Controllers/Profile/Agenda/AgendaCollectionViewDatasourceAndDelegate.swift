@@ -12,10 +12,12 @@ class AgendaCollectionViewDatasourceAndDelegate: NSObject {
     private var items: [Event] = []
     private var viewModel: AgendaViewModelProtocol
     private var viewParent: AgendaViewController
+    private var index = -1
     init(items: [Event],viewModel: AgendaViewModelProtocol,viewParent: AgendaViewController) {
             self.items = items
             self.viewModel = viewModel
             self.viewParent = viewParent
+            
         }
     }
 
@@ -51,19 +53,25 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
                 
             }
         @objc func delAgenda(_ sender: UIButton){
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let alert = DelAgenda(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?")
-            
             let agendaSelectId = items[sender.tag].agendaId
-            viewModel.deleteData(eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId))
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            
             for index in 0...items.count-1{
                 if items[index].id == items[sender.tag].id{
-                    items.remove(at:index )
-                    break
+                    self.index = index
                 }
             }
+            
+            
+            appDelegate.delAgenda = DelAgenda(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?",eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId),viewModel: self.viewModel,index:self.index)
+           
+            appDelegate.delAgenda.showProgress()
+            /*
+            let agendaSelectId = items[sender.tag].agendaId
+            viewModel.deleteData(eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId))
+            
             viewModel.reloadData(data:items)
             
-            
+            */
         }
 }

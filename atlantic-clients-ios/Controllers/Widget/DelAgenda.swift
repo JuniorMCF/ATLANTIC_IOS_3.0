@@ -14,28 +14,33 @@ class DelAgenda: UIViewController {
     var viewParent : UIViewController!
     var titleP : String!
     var message : String!
-    var eventDetailViewModel :EventDetailViewModelProtocol =   EventDetailViewModel()
+    var agendaViewModel  :AgendaViewModelProtocol!
     var progressController : DelAgenda!
     var isHome = false
     //variables para enviar
     var id = ""
-    var horarioId = ""
+    var eventoRegistroId = ""
+    var clienteId = ""
     var acompanantes = 0
+    var index = -1
     @IBOutlet var titleProgress: UITextView!
     @IBOutlet var messageProgress: UITextView!
     @IBOutlet var vContainer: UIView!
     @IBOutlet var ok: UIButton!
     @IBOutlet var cancel: UIButton!
-    var tipo = ""
     
     convenience init() {
-        self.init(parent: UIViewController(),title: "", message: "")
+        self.init(parent: UIViewController(),title: "", message: "",eventoRegistroId:"",clienteId:"",viewModel:AgendaViewModel(),index:-1)
     }
 
-    init(parent: UIViewController,title: String, message: String ){
+    init(parent: UIViewController,title: String, message: String ,eventoRegistroId:String,clienteId:String,viewModel:AgendaViewModelProtocol,index:Int){
         self.viewParent = parent
         self.titleP = title
         self.message = message
+        self.eventoRegistroId = eventoRegistroId
+        self.clienteId = clienteId
+        self.agendaViewModel = viewModel
+        self.index = index
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -63,6 +68,7 @@ class DelAgenda: UIViewController {
     }
     
     @IBAction func tapOk(_ sender: Any) {
+        self.agendaViewModel.borrarAgenda(eventoRegistroId: self.eventoRegistroId, clienteId: self.clienteId,index:self.index)
         self.hideProgress()
        
     }
@@ -78,8 +84,10 @@ class DelAgenda: UIViewController {
         
         viewParent.tabBarController?.view.addSubview(progressController.view)
        
-        
+        progressController.agendaViewModel = self.agendaViewModel
         progressController.viewParent = self.viewParent
+        progressController.eventoRegistroId = self.eventoRegistroId
+        progressController.clienteId = self.clienteId
        // viewParent.view.addSubview(progressController.view)
         self.progressController.titleProgress.text = self.titleP
         self.progressController.messageProgress.text = self.message

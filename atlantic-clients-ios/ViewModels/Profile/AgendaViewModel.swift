@@ -13,9 +13,10 @@ protocol AgendaViewModelProtocol {
     
     // Inputs
     func viewDidLoad()
-    func deleteData(eventoRegistroId:String,clienteId:String)
+    func deleteData(eventoRegistroId:String,clienteId:String,index:Int)
     func didEventSelected(event:Event)
     func reloadData(data:[Event])
+    func borrarAgenda(eventoRegistroId: String, clienteId: String,index:Int)
     // Outputs
     
     var showTitles: ((ProfileTitles) -> Void)? { get set }
@@ -23,22 +24,34 @@ protocol AgendaViewModelProtocol {
     var loadDatasources: ((BreakfastDatasources) -> Void)?{get set}
     var presentToast: ((String)->Void)?{get set}
     var presentReloadData:(([Event])->Void)?{get set}
+    var actualizarLista: ((String,String,Int)->Void)?{get set}
+    var removeItemEvent: ((Int)->Void)?{get set}
 }
 
 class AgendaViewModel: AgendaViewModelProtocol {
+    
+    
+    func borrarAgenda(eventoRegistroId: String, clienteId: String,index:Int) {
+        actualizarLista?(eventoRegistroId,clienteId,index)
+    }
+    
+    var actualizarLista: ((String,String,Int)->Void)?
     var showTitles: ((ProfileTitles) -> Void)?
     var presentEventDetail:((Event)->Void)?
     var loadDatasources: ((BreakfastDatasources) -> Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var progress :CustomProgress!
     var presentReloadData:(([Event])->Void)?
+    var presentToast: ((String)->Void)?
+    var removeItemEvent: ((Int)->Void)?
+    
     func reloadData(data:[Event]) {
         presentReloadData?(data)
     }
     
-    var presentToast: ((String)->Void)?
     
-    func deleteData(eventoRegistroId: String, clienteId: String) {
+    
+    func deleteData(eventoRegistroId: String, clienteId: String,index:Int) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postEliminarAgendado)
         dominioUrl = dominioUrl?.appending("eventoRegistroId", value: eventoRegistroId)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -50,8 +63,7 @@ class AgendaViewModel: AgendaViewModelProtocol {
         case.success(let value):
                      let json = JSON(value)
                      print("datos",json)
-                     self.presentToast?("datos actualizados correctamente")
-
+                     self.removeItemEvent?(index)
                     break
                 case.failure(let error):
                    
