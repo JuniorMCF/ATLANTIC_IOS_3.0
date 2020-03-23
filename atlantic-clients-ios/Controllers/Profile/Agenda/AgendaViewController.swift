@@ -25,7 +25,9 @@ class AgendaViewController: UIViewController {
         
         var estimateWidth = 300.0
         var cellMarginSize = 16.0
-        var carbonkit : CarbonTabSwipeNavigationDelegate!
+        var carbonkit : ProfileAgendaViewController!
+        var viewPager: UIView!
+        var index:UInt!
         // MARK: - IBoulets
         
         @IBOutlet weak var collectionView: UICollectionView!
@@ -63,7 +65,27 @@ class AgendaViewController: UIViewController {
         func bind() {
             viewModel.loadDatasources = loadDatasources(datasource:)
             viewModel.presentEventDetail = presentEventDetail(item:)
-            viewModel.presentReloadData = presentReloadData(list:)
+            viewModel.actualizarLista = actualizarLista(eventoRegistroId: clienteId: index:)
+            viewModel.presentToast = show(message:)
+            viewModel.presentReloadData = reloadCarbonKit(eventos:)
+            viewModel.removeItemEvent = removeItemEvent(index:)
+        }
+        func show(message:String){
+            showToast(message: message)
+        }
+        func removeItemEvent(index:Int){
+            for index in 0...items.count-1{
+                if items[index].id == items[index].id{
+                    items.remove(at:index )
+                    break
+                }
+            }
+            reloadCarbonKit(eventos: items)
+        }
+        func actualizarLista(eventoRegistroId:String,clienteId:String,index:Int){
+            //
+            viewModel.deleteData(eventoRegistroId: eventoRegistroId, clienteId: clienteId,index: index)
+            
         }
         func presentReloadData(list:[Event]){
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  list,viewModel: viewModel, viewParent: self)
@@ -90,6 +112,43 @@ class AgendaViewController: UIViewController {
             viewController.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(viewController, animated: true)
         }
+    
+    func reloadCarbonKit(eventos:[Event]){
+            AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  eventos,viewModel: viewModel, viewParent: self)
+            collectionView.dataSource = AgendaCollectionViewDD
+            collectionView.delegate = self
+            self.collectionView.reloadData()
+        
+        
+            var tipoList = [String]()
+            for data in eventos{
+                tipoList.append(data.nombreTipo)
+            }
+        
+        
+            if(tipoList.count == 0){
+                /*let carbonTabSwipeNavigation =  CarbonTabSwipeNavigation ( items : [""], delegate : carbonkit)
+                carbonTabSwipeNavigation.insert(intoRootViewController: carbonkit, andTargetView: viewPager)
+                carbonTabSwipeNavigation.setIndicatorColor(.black)
+                carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
+                carbonTabSwipeNavigation.setSelectedColor(.black)
+                carbonTabSwipeNavigation.toolbar.isTranslucent = true
+                carbonTabSwipeNavigation.toolbar.shadow = true
+                carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
+                let screenSize: CGRect = UIScreen.main.bounds
+                let screenWidth = Int(screenSize.width)
+                let tam = screenWidth
+                carbonTabSwipeNavigation.carbonSegmentedControl?.setWidth(CGFloat(tam), forSegmentAt: 0)*/
+                
+               //
+                carbonkit.removeTabCarbonKit(index: Int(index))
+            
+            }else{
+                
+                carbonkit.reloadTabCarbonKit(index: Int(index))
+                
+            }
+    }
 
     }
 
