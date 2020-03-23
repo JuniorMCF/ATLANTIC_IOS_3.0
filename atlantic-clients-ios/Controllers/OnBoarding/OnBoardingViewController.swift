@@ -23,16 +23,17 @@ class OnBoardingViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var onBoardingCollectioView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
+    var encuesta = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         bind()
         viewModel.viewDidLoad()
     }
     
     func bind() {
         viewModel.showTitles = showTitles(titles:)
-        viewModel.presentFotos = presentFotos(fotoList:)
+        viewModel.presentFotos = presentFotos(fotoList:encuesta:)
         viewModel.presentImages = presentImages(titles:)
     }
     
@@ -50,20 +51,31 @@ class OnBoardingViewController: UIViewController, UICollectionViewDelegate, UICo
         print("gaaa")*/
     }
     
-    func presentFotos(fotoList:[String]){
+    func presentFotos(fotoList:[String], encuesta : String){
+        self.encuesta = encuesta
         for data in fotoList{
-            print(data)
             titleArray.append(data)
         }
         onBoardingCollectioView.reloadData()
-        print("gaaa")
     }
    
     @IBAction func tapSkip(_ sender: Any) {
-        if(Constants().getFirstInit()){
-            containerParent.showTutorial()
-        }
         dismiss(animated: false, completion: nil)
+        encuesta = "https://www.google.com.pe"
+        if(!encuesta.isEmpty){
+            let terminos = Terminos(parent: containerParent, url: encuesta+"?cliente_id="+appDelegate.usuario.clienteId)
+            terminos.encuesta = self.encuesta
+            terminos.showProgress()
+            
+        }
+        
+        else{
+            if(Constants().getFirstInit()){
+                containerParent.showTutorial()
+            }
+        }
+        
+        
         
         
     }

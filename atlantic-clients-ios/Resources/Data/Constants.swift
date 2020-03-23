@@ -83,6 +83,15 @@ class Constants {
         return getPreference().object(forKey:"username" ) as! String
     }
     
+    func saveBody(isActive:Bool,key:String){
+        getPreference().set(isActive,forKey:key)
+        getPreference().synchronize()
+    }
+    
+    func getBody(key:String)->Bool{
+        return getPreference().object(forKey: key) as? Bool ?? false
+    }
+    
     func saveNotify(isActive:Bool){
         getPreference().set(isActive,forKey:"notify")
         getPreference().synchronize()

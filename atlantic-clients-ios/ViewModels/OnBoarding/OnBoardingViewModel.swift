@@ -29,14 +29,14 @@ protocol OnBoardingViewModelProtocol {
     
     var showTitles: ((OnBoardingTitles) -> Void)? { get set }
     var presentImages:(([Route])-> Void)?{get set}
-    var presentFotos: (([String]) -> Void)?{get set}
+    var presentFotos: (([String],String) -> Void)?{get set}
 }
 
 class OnBoardingViewModel: OnBoardingViewModelProtocol {
     
     var showTitles: ((OnBoardingTitles) -> Void)?
     var presentImages: (([Route]) -> Void)?
-    var presentFotos: (([String]) -> Void)?
+    var presentFotos: (([String],String) -> Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var listRutas = [Route]()
     var listFotos = [String]()
@@ -58,14 +58,15 @@ class OnBoardingViewModel: OnBoardingViewModelProtocol {
                            let resultado = json["resultado"] as! String
                             if(resultado == "200"){
                                let response = json["response"] as! NSArray
-                               // jean kk se olvido de hacer bien la webservice para usuario :V
-                               
+                               print(response)
+                               let encuesta = json["encuesta"] as? String ?? ""
+                               print(encuesta)
                                for data in response{
                                   
                                    let value = JSON(data)
                                    self.listFotos.append(value["foto"].stringValue)
                                }
-                               self.presentFotos?(self.listFotos)
+                                self.presentFotos?(self.listFotos,encuesta)
 
                             }else if (resultado == "400")  {
                                 //usuario no existe

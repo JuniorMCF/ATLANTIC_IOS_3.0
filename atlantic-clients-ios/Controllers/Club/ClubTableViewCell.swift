@@ -13,6 +13,7 @@ class ClubTableViewCell: UITableViewCell {
     @IBOutlet weak var title: Label!
     
     @IBOutlet var img: UIImageView!
+    @IBOutlet weak var icNotify: UIImageView!
     
     
     func prepare(category: ClubCategory) {

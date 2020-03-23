@@ -33,6 +33,9 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         
+       // checkNotifications()
+        
+        
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Noticias", message: "Obteniendo noticias ...")
         appDelegate.progressDialog.isHome = true
         
@@ -52,10 +55,47 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
        bind()
         viewModel.viewDidLoad(clienteId:appDelegate.usuario.clienteId,nivelId:appDelegate.usuario.nivel)
          
-        if let items = self.tabBarController?.tabBar.items as NSArray? {
-            let tabItem = items.object(at: 3) as! UITabBarItem
-            tabItem.badgeValue = " "
-            tabItem.badgeColor = UIColor.init(red: 251/255, green: 204/255, blue: 52/255, alpha: 1)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        checkNotifications()
+    }
+    
+    func checkNotifications(){
+        var position = 0
+        let body0 = Constants().getBody(key: "body0")
+        let body1 = Constants().getBody(key: "body1")
+        let body2 = Constants().getBody(key: "body2")
+        let body3 = Constants().getBody(key: "body3")
+        let body4 = Constants().getBody(key: "body4")
+        
+        if(body0){
+            position = 1
+            if let items = self.tabBarController?.tabBar.items as NSArray? {
+                let tabItem = items.object(at: position) as! UITabBarItem
+                tabItem.badgeValue = " "
+                tabItem.badgeColor = UIColor.init(red: 251/255, green: 204/255, blue: 52/255, alpha: 1)
+            }
+        }
+        if(body1 || body2 || body3){
+            print(body1)
+            print(body2)
+            print(body3)
+            print(body1 || body2 || body3)
+            position = 2
+            if let items = self.tabBarController?.tabBar.items as NSArray? {
+                let tabItem = items.object(at: position) as! UITabBarItem
+                tabItem.badgeValue = " "
+                tabItem.badgeColor = UIColor.init(red: 251/255, green: 204/255, blue: 52/255, alpha: 1)
+            }
+        }
+        if(body4){
+            position = 3
+            if let items = self.tabBarController?.tabBar.items as NSArray? {
+                let tabItem = items.object(at: position) as! UITabBarItem
+                tabItem.badgeValue = " "
+                tabItem.badgeColor = UIColor.init(red: 251/255, green: 204/255, blue: 52/255, alpha: 1)
+            }
         }
         
     }

@@ -13,6 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var initDate : String!
     var usuario : Usuario!
+    var clubController : ClubViewController!
+    var tabBarController : MainTabBarViewController!
+    
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -46,6 +49,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        initDate = Utils().getFechaActual()
+        if(tabBarController != nil){
+            tabBarController.checkNotifications()
+        }
+        if(clubController != nil){
+            clubController.reloadData()
+        }
+        print("app foreground")
     }
 
     @available(iOS 13.0, *)

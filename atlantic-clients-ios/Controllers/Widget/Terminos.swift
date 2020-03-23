@@ -14,7 +14,7 @@ class Terminos: UIViewController
 {
 
         var viewParent : UIViewController!
-
+        var encuesta = ""
         //variables para enviar
         var url = ""
      
@@ -23,7 +23,15 @@ class Terminos: UIViewController
         @IBOutlet var webView: WKWebView!
         
     @IBAction func close(_ sender: Any) {
-        self.hideProgress()
+        if(!encuesta.isEmpty){
+            self.hideProgress()
+            if(Constants().getFirstInit()){
+                (viewParent as! NewsViewController).showTutorial()
+            }
+        }else{
+            self.hideProgress()
+        }
+        
     }
     
     
@@ -55,6 +63,10 @@ class Terminos: UIViewController
            
             controller.modalPresentationStyle = .overFullScreen
             controller.url = self.url
+            controller.encuesta = self.encuesta
+            controller.viewParent = self.viewParent
+            
+           // present(controller, animated: false, completion: nil)
             //viewParent.present(controller, animated: false, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
             viewParent.navigationController?.present(controller, animated: false, completion: {
                 controller.url = self.url
@@ -63,7 +75,7 @@ class Terminos: UIViewController
     }
                
         func hideProgress(){
-
+            //self.view.removeFromSuperview()
             self.dismiss(animated: false, completion: nil)
         }
         

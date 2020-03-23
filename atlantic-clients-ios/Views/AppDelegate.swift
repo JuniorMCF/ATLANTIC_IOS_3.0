@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var customEvent : CustomEvent!
     var delAgenda : DelAgenda!
     var initDate : String!
+    var tabBarController : MainTabBarViewController!
+    var clubController : ClubViewController!
     //switch
     var navigationController : UINavigationController!
     
@@ -58,14 +60,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Messaging.messaging().delegate = self as MessagingDelegate
         application.registerForRemoteNotifications()
-        print("data actualizada")
-        print(Constants().getNotify())
        
         return true
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         initDate = Utils().getFechaActual()
+        tabBarController.checkNotifications()
+        if(clubController != nil){
+            clubController.reloadData()
+        }
         print("app foreground")
         
     }
@@ -151,14 +155,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
      if let message = userInfo["gcm.notification.message"] {
            print("Message : \(message)")
+        
          }
      
-       
+        if UIApplication.shared.applicationState == .active {
+            print("app en foreground")
+            let body = userInfo["body"] as? String ?? ""
+            
+            if(!body.isEmpty){
+                if(Int(body)! < 5){
+                    var position = 0
+                             if(Int(body) == 0){
+                                 position = 1
+                             }
+                             if(Int(body) == 1 || Int(body) == 2 || Int(body) == 3){
+                                 position = 2
+                                if(clubController != nil){
+                                    clubController.reloadData()
+                                }
+                             }
+                             if(Int(body) == 4){
+                                 position = 3
+                             }
+                            Constants().saveBody(isActive: true, key: "body"+body)
+                             
+                             if let items = tabBarController.tabBar.items as NSArray? {
+                                 let tabItem = items.object(at: position) as! UITabBarItem
+                                 tabItem.badgeValue = " "
+                                 tabItem.badgeColor = UIColor.init(red: 251/255, green: 204/255, blue: 52/255, alpha: 1)
+                             }
+                         }
+                         
+                     }
+       }
      
+        if UIApplication.shared.applicationState == .background {
+            print("app en background")
+            let body = userInfo["body"] as! String
+                    
+            print("body"+body)
+                    
+            Constants().saveBody(isActive: true, key: "body"+body)
+            
+        }
+
      //self.notification()
       // Print full message.
      print(userInfo)
-      Constants().saveNotify(isActive: true)
      
         
      completionHandler(UIBackgroundFetchResult.newData)
@@ -203,7 +246,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
          
          rootViewController.pushViewController(vc!, animated: true)*/
         completionHandler([.alert, .badge, .sound])
-    } else { // If app is not active you can show banner, sound and badge.
+    }
+    if UIApplication.shared.applicationState == .background { // If app is not active you can show banner, sound and badge.
         print("app en minimizado")
       /*  let userId = userInfo["gcm.notification.userId"] as! String
           let message = userInfo["gcm.notification.message"] as! String
