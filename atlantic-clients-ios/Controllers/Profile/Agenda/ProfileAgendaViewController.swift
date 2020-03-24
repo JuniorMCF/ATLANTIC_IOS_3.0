@@ -14,6 +14,7 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
     var viewModel : ProfileAgendaViewModelProtocol = ProfileAgendaViewModel()
     var items : EventDetailPreview!
     var keys = [String]()
+    var position : UInt = 0
     @IBOutlet weak var searchAgend: UISearchBar!
     @IBOutlet var viewPager: UIView!
     var carbonTabSwipeNavigation : CarbonTabSwipeNavigation!
@@ -22,6 +23,7 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
         bind()
         viewModel.viewDidLoad()
         items = EventDetailPreview()
+        
         if #available(iOS 13.0, *) {
         
             searchAgend.searchBarStyle = .default
@@ -36,16 +38,18 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
             glassIconView?.tintColor = .gray
         }
-        
+        searchAgend.delegate = self
+        searchAgend.placeholder = "Buscar"
         
     }
     func bind(){
         viewModel.showTitles = showTitles(titles:)
+        viewModel.reloadTabs = reloadTabs(titles:)
     }
     
     func showTitles(titles:EventDetailPreview){
 
-        items = titles		
+        items = titles
         if(titles.tipoList.count == 0){
             carbonTabSwipeNavigation =  CarbonTabSwipeNavigation ( items : [""], delegate : self)
             carbonTabSwipeNavigation.insert(intoRootViewController: self, andTargetView: viewPager)
@@ -64,12 +68,7 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
         }else{
             
             for data in titles.tipoList{
-                let encontrado = buscarEnLista(element: data, lista: keys)
-                if(!encontrado){
-                    keys.append(data)
-                }
-                 //keys.append(data)
-                
+               buscarEnLista(element: data)
             }
             carbonTabSwipeNavigation =  CarbonTabSwipeNavigation ( items : keys, delegate : self)
             carbonTabSwipeNavigation.insert(intoRootViewController: self, andTargetView: viewPager)
@@ -82,21 +81,43 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds
             let screenWidth = Int(screenSize.width)
-            let tam = screenWidth/titles.tipoList.count
+            let tam = screenWidth/keys.count
             print(tam)
-            for i in 0...titles.tipoList.count-1 {
+            for i in 0...keys.count-1 {
                 carbonTabSwipeNavigation.carbonSegmentedControl?.setWidth(CGFloat(tam), forSegmentAt: i)
             }
+            
         }
 
     }
-    func buscarEnLista(element:String,lista:[String])->Bool{
-        for data in lista{
-            if element == data {
-                return true
-            }
+    
+    func reloadTabs(titles: EventDetailPreview){
+        items = titles
+        if(carbonTabSwipeNavigation != nil){
+            position = carbonTabSwipeNavigation.currentTabIndex
+            carbonTabSwipeNavigation.setCurrentTabIndex(position, withAnimation: true)
         }
-        return false
+        let screen =  carbonTabSwipeNavigation.viewControllers[position] as! AgendaViewController
+        if(items.list.count > 0){
+            screen.items = items.list[Int(position)]
+        }else{
+            screen.items = [Event]()
+        }
+        screen.reloadData()
+    }
+    
+    func buscarEnLista(element:String){
+        print(keys)
+        print(element)
+        if(keys.count == 0){
+            keys.append(element)
+            return
+        }
+        if( keys.firstIndex(of: element) == nil){
+            keys.append(element)
+            return
+        }
+      
     }
     
     func removeTabCarbonKit(index:Int){
@@ -131,9 +152,9 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
             carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
             let screenSize: CGRect = UIScreen.main.bounds
             let screenWidth = Int(screenSize.width)
-            let tam = screenWidth/items.tipoList.count
+            let tam = screenWidth/keys.count
             print(tam)
-            for i in 0...items.tipoList.count-1 {
+            for i in 0...keys.count-1 {
                 carbonTabSwipeNavigation.carbonSegmentedControl?.setWidth(CGFloat(tam), forSegmentAt: i)
             }
         }
@@ -141,41 +162,24 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
        // self.viewDidLoad()
     }
     func reloadTabCarbonKit(index:Int){
-        
-        if(keys.count == 0){
-            carbonTabSwipeNavigation =  CarbonTabSwipeNavigation ( items : [""], delegate : self)
-            carbonTabSwipeNavigation.insert(intoRootViewController: self, andTargetView: viewPager)
-            carbonTabSwipeNavigation.setIndicatorColor(.black)
-            carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
-            carbonTabSwipeNavigation.setSelectedColor(.black)
-            carbonTabSwipeNavigation.toolbar.isTranslucent = true
-            carbonTabSwipeNavigation.toolbar.shadow = true
-            carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
-            let screenSize: CGRect = UIScreen.main.bounds
-            let screenWidth = Int(screenSize.width)
-            let tam = screenWidth
-            carbonTabSwipeNavigation.carbonSegmentedControl?.setWidth(CGFloat(tam), forSegmentAt: 0)
-
-            
-        }else{
-            carbonTabSwipeNavigation =  CarbonTabSwipeNavigation ( items : keys, delegate : self)
-            carbonTabSwipeNavigation.insert(intoRootViewController: self, andTargetView: viewPager)
-            carbonTabSwipeNavigation.setIndicatorColor(.black)
-            carbonTabSwipeNavigation.setNormalColor(.black, font: UIFont(name: "Avenir-Medium", size: 13.0)!)
-            carbonTabSwipeNavigation.setSelectedColor(.black)
-            carbonTabSwipeNavigation.toolbar.isTranslucent = true
-            carbonTabSwipeNavigation.toolbar.shadow = true
-            
-            carbonTabSwipeNavigation.toolbar.barTintColor = UIColor.white
-            let screenSize: CGRect = UIScreen.main.bounds
-            let screenWidth = Int(screenSize.width)
-            let tam = screenWidth/items.tipoList.count
-            print(tam)
-            for i in 0...items.tipoList.count-1 {
-                carbonTabSwipeNavigation.carbonSegmentedControl?.setWidth(CGFloat(tam), forSegmentAt: i)
-            }
-        }
+        items.list[Int(carbonTabSwipeNavigation.currentTabIndex)].remove(at: index)
     }
+    
+   
+    
+    func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, willMoveAt index: UInt) {
+        let screen = carbonTabSwipeNavigation.viewControllers[index] as! AgendaViewController
+        if(items.list.count > 0){
+            screen.items = items.list[Int(index)]
+            screen.reloadData()
+        }else{
+            screen.items = [Event]()
+            screen.reloadData()
+        }
+        
+    }
+    
+    
     
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         let screen = self.storyboard?.instantiateViewController(withIdentifier: "AgendaID") as! AgendaViewController
@@ -190,3 +194,11 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
 
 }
 
+extension ProfileAgendaViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchBarTextDidChange(searchText)
+        
+    }
+    
+}

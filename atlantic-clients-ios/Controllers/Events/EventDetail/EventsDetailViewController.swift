@@ -56,6 +56,8 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     @IBOutlet weak var assistantLabel: Label!
     @IBOutlet weak var numberssistantLabel: Label!
     @IBOutlet weak var registerButton: Button!
+    
+    @IBOutlet weak var btnBuffet: UIButton!
     private var isOpen = true
     private var sizeCollectionView:CGFloat = 0
     var playerVars : NSDictionary = [
@@ -310,6 +312,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     
     func loadBuffets(buffets: [[String]]){
         print(buffets)
+        self.btnBuffet.isUserInteractionEnabled = true
         buffetCollectionViewDD = BuffetCollectionViewDataAndDelegate(buffets: buffets)
         cvBuffet.dataSource = buffetCollectionViewDD
         cvBuffet.delegate = buffetCollectionViewDD
@@ -320,9 +323,6 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         constraint.isActive = true
         self.view.layoutIfNeeded()
         self.view.setNeedsLayout()
-        
-        
-     
         
     }
     

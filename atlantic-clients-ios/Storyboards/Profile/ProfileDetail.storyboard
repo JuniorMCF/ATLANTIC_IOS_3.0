@@ -54,7 +54,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vS-vf-i7j">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="458.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-VC-EqX" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="35" width="218" height="25"/>
@@ -176,7 +176,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87X-es-fUF" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="383" width="255" height="43"/>
+                                                <rect key="frame" x="32" y="384.5" width="256" height="42"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="tapSaveButton:" destination="MuU-Ce-PT6" eventType="touchUpInside" id="QCu-rr-2IW"/>

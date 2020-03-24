@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var weekEvent = News()
     var promotionDay = PromotionDay()
+    var eventDetailPreview = EventDetailPreview()
     var orquesta = News()
     var benefitWeek = News()
     var gcmMessageIDKey = "gcm.message_id"

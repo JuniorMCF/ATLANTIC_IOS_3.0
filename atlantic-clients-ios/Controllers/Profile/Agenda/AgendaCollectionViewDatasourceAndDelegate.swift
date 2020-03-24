@@ -9,7 +9,7 @@
 import UIKit
 
 class AgendaCollectionViewDatasourceAndDelegate: NSObject {
-    private var items: [Event] = []
+    var items: [Event] = []
     private var viewModel: AgendaViewModelProtocol
     private var viewParent: AgendaViewController
     private var index = -1
@@ -29,7 +29,6 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDelegateFlo
 
 extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            print(items.count)
             return items.count
         }
         
@@ -54,16 +53,12 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
             }
         @objc func delAgenda(_ sender: UIButton){
             let agendaSelectId = items[sender.tag].agendaId
+            let ind = sender.tag
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
-            for index in 0...items.count-1{
-                if items[index].id == items[sender.tag].id{
-                    self.index = index
-                }
-            }
             
             
-            appDelegate.delAgenda = DelAgenda(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?",eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId),viewModel: self.viewModel,index:self.index)
+            appDelegate.delAgenda = DelAgenda(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?",eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId),viewModel: self.viewModel,index:ind)
            
             appDelegate.delAgenda.showProgress()
             /*

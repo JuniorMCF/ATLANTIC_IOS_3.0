@@ -35,7 +35,11 @@ extension BannerCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
         
         let dominio = "http://clienteatlantic.azurewebsites.net/admin/upload/evento/"
         
-
+        if(items[indexPath.row].isEmpty){
+            
+            cell?.bannerImage.contentMode = UIView.ContentMode.scaleAspectFit
+        }
+        
         AF.request(dominio + items[indexPath.row]).responseImage { response in
                    
                        switch response.result {
@@ -43,7 +47,7 @@ extension BannerCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
                                 cell?.bannerImage.image = value
                              case .failure(let error):
                                  print(error)
-                                 
+                                 cell?.bannerImage.image = UIImage(named: "casino")
                              }
 
         }

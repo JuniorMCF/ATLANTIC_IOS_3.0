@@ -61,7 +61,6 @@ class OnBoardingViewController: UIViewController, UICollectionViewDelegate, UICo
    
     @IBAction func tapSkip(_ sender: Any) {
         dismiss(animated: false, completion: nil)
-        encuesta = "https://www.google.com.pe"
         if(!encuesta.isEmpty){
             let terminos = Terminos(parent: containerParent, url: encuesta+"?cliente_id="+appDelegate.usuario.clienteId)
             terminos.encuesta = self.encuesta

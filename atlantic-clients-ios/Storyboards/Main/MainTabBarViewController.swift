@@ -38,7 +38,11 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected view controller")
         let tabBarIndex = self.selectedIndex
-        print(tabBarIndex)
+        
+        tabBarController.selectedIndex = tabBarIndex
+        let navController = tabBarController.selectedViewController as! UINavigationController
+        navController.popToRootViewController(animated: false)
+        
         
         if(tabBarIndex == 1 ){
             Constants().saveBody(isActive: false, key: "body0")

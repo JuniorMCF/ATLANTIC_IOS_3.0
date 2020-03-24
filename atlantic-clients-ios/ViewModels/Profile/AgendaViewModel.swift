@@ -32,7 +32,7 @@ class AgendaViewModel: AgendaViewModelProtocol {
     
     
     func borrarAgenda(eventoRegistroId: String, clienteId: String,index:Int) {
-        actualizarLista?(eventoRegistroId,clienteId,index)
+        deleteData(eventoRegistroId: eventoRegistroId, clienteId: clienteId,index: index)
     }
     
     var actualizarLista: ((String,String,Int)->Void)?

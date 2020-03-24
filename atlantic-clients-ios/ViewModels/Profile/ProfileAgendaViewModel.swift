@@ -17,7 +17,8 @@ protocol ProfileAgendaViewModelProtocol {
     func viewDidLoad()
     
     // Outputs
-    
+    var reloadTabs: ((EventDetailPreview) -> Void)? { get set}
+    func searchBarTextDidChange(_ searchText: String)
     var showTitles: ((EventDetailPreview) -> Void)? { get set }
     var loadDatasources: (([Cobros]) -> Void)?{get set}
 }
@@ -27,7 +28,7 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
 
     var showTitles: ((EventDetailPreview) -> Void)?
     var loadDatasources: (([Cobros]) -> Void)?
-    
+    var reloadTabs : ((EventDetailPreview) -> Void)?
     
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -100,13 +101,14 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
                                 
                                 eventDetailPreview.list = list
                                 eventDetailPreview.tipoList = self.tipoList
-                                
+                                self.appDelegate.eventDetailPreview = eventDetailPreview
                      
                             //enviar data
                                self.showTitles?(eventDetailPreview)
                              }else {
                                 //en otros casos
                                 let eventDetailPreview = EventDetailPreview()
+                                self.appDelegate.eventDetailPreview = eventDetailPreview
                                 //enviar data
                                 self.showTitles?(eventDetailPreview)
                              }
@@ -128,19 +130,29 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
                 
             }
         
-        showTitles?(titles)
+        //showTitles?(titles)
     }
 
     
     func searchBarTextDidChange(_ searchText: String) {
         if searchText.isEmpty {
-            let datasources = appDelegate.cobros
-            loadDatasources?(datasources)
+            let datasources = appDelegate.eventDetailPreview
+            reloadTabs?(datasources)
+            
         } else {
-            var datasources = appDelegate.cobros
-            let filteredDatasource = datasources.filter { $0.nombre.contains(searchText) }
-            datasources = filteredDatasource
-            //reloadDatasource?(datasources)
+            let datasources = appDelegate.eventDetailPreview
+            let eventDetail = EventDetailPreview()
+            var eventList = [[Event]]()
+            var tipo = [String]()
+            for event in datasources.list{
+                let filteredDatasource = event.filter { $0.nombreCorto.lowercased().contains(searchText.lowercased()) }
+                eventList.append(filteredDatasource)
+                
+            }
+            eventDetail.list = eventList
+            eventDetail.tipoList = datasources.tipoList
+            reloadTabs?(eventDetail)
+            //showTitles?(eventDetail)
         }
     }
 }

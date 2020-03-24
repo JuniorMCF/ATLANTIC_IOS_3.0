@@ -88,6 +88,7 @@ class DelAgenda: UIViewController {
         progressController.viewParent = self.viewParent
         progressController.eventoRegistroId = self.eventoRegistroId
         progressController.clienteId = self.clienteId
+        progressController.index = self.index
        // viewParent.view.addSubview(progressController.view)
         self.progressController.titleProgress.text = self.titleP
         self.progressController.messageProgress.text = self.message

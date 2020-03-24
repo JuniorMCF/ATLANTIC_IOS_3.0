@@ -48,29 +48,30 @@
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-kQ-4QB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.5914942782" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="160" id="WGn-vY-0OK"/>
                                                                 </constraints>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VJB-lN-j8T">
-                                                                    <size key="itemSize" width="310" height="165"/>
+                                                                    <size key="itemSize" width="320" height="160"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCellID" id="e9F-iw-hM3" customClass="BannerCollectionViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="0.0" width="310" height="165"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="310" height="165"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-6d-mCO">
-                                                                                    <rect key="frame" x="0.0" y="2" width="310" height="160"/>
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-6d-mCO">
+                                                                                    <rect key="frame" x="0.0" y="2" width="320" height="160"/>
                                                                                 </imageView>
                                                                             </subviews>
                                                                         </view>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstItem="h5k-6d-mCO" firstAttribute="top" secondItem="e9F-iw-hM3" secondAttribute="top" constant="2" id="DAG-fd-5ww"/>
                                                                             <constraint firstAttribute="bottom" secondItem="h5k-6d-mCO" secondAttribute="bottom" constant="3" id="W2C-RM-h4A"/>
@@ -180,7 +181,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-es-Ne8">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGb-YK-NcW">
+                                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGb-YK-NcW">
                                                                 <rect key="frame" x="252" y="4" width="20" height="10"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="6pC-L1-jUO"/>
@@ -279,7 +280,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDY-J3-F1I" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="36" width="272" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="36" width="272" height="23.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -445,6 +446,7 @@
                         <outlet property="assistantLabel" destination="73B-c6-NMp" id="FcL-yp-dUM"/>
                         <outlet property="bannerCollectionView" destination="8tJ-kQ-4QB" id="dJU-sB-EIX"/>
                         <outlet property="bannerPageControl" destination="Jwp-gm-Zze" id="SFC-8O-phI"/>
+                        <outlet property="btnBuffet" destination="FGb-YK-NcW" id="y8G-Ej-SRu"/>
                         <outlet property="buffetTitleLabel" destination="x8n-nH-8RU" id="Nse-dr-huh"/>
                         <outlet property="cvBuffet" destination="na1-lE-PoS" id="jP6-vc-FvG"/>
                         <outlet property="dateLabel" destination="17Z-hn-FaV" id="1LW-R2-YCA"/>
