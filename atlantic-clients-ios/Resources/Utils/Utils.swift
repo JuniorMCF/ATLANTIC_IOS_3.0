@@ -98,27 +98,44 @@ class Utils{
     }
     
     
-    func saveEvent(title:String, fecha: NSString){
-        let fecha2 = fecha.doubleValue
-        var date = Date(timeIntervalSince1970: TimeInterval(fecha2/1000))
-        date = date.addingTimeInterval(60*60*8)
-        let store = EKEventStore()
-        store.requestAccess(to: .event, completion: {(granted, error) in
-            if(!granted) { return}
-            let event = EKEvent(eventStore: store)
-            event.title = title
-            event.startDate = date
-            event.endDate = event.startDate.addingTimeInterval(5*60)
-            event.calendar = store.defaultCalendarForNewEvents
-            do {
-                try store.save(event, span: .thisEvent, commit: true)
-                
-                print("Save data Successful")
-            } catch{
-                
-            }
-            
-        })
+    func saveEvent(title:String, fecha: NSString, parent : UIViewController){
+        
+         let progress = CustomProgress(parent: parent, title: "Recordatorio", message: "Añadiendo Recordatorio")
+                progress.showProgress()
+                let fecha2 = fecha.doubleValue
+                var date = Date(timeIntervalSince1970: TimeInterval(fecha2/1000))
+                date = date.addingTimeInterval(60*60*15)
+                let store = EKEventStore()
+                store.requestAccess(to: .event, completion: {(granted, error) in
+                    if(!granted) {
+                        return}
+                    let event = EKEvent(eventStore: store)
+                    event.title = title
+                    event.startDate = date
+                    event.endDate = event.startDate.addingTimeInterval(5*60)
+                    event.calendar = store.defaultCalendarForNewEvents
+                    do {
+                        try store.save(event, span: .thisEvent, commit: true)
+                       //
+                        print("Save data Successful")
+                        DispatchQueue.main.async {
+                             parent.showToast(message: "Recordatorio añadido con exito")
+                             progress.hideProgress()
+                           
+                        }
+                        
+                    } catch{
+                      //
+                         DispatchQueue.main.async {
+                            parent.showToast(message: "Error al añadir recordatorio")
+                            progress.hideProgress()
+                            
+                        }
+                    }
+                    
+                })
+        
+       
     }
     func listToString(list:[String])->String{
         var toString = "{"
@@ -244,7 +261,9 @@ extension URL {
 }
 
 
+
 extension UILabel{
+    
     @IBInspectable var fontSizeScale: CGFloat{
         get{
             return self.fontSizeScale
@@ -303,7 +322,16 @@ extension UITextField{
         self.font = UIFont(name: family, size: FinalSize)
     }
     
-    
+    func setBottomBorder(withColor color: UIColor)
+    {
+        self.borderStyle = UITextField.BorderStyle.none
+        self.backgroundColor = UIColor.clear
+        let width: CGFloat = 1.0
+
+        let borderLine = UIView(frame: CGRect(x: 0, y: self.frame.height - width, width: self.frame.width, height: width))
+        borderLine.backgroundColor = color
+        self.addSubview(borderLine)
+    }
     
 }
 
@@ -406,26 +434,63 @@ extension UITextField{
     }
 }
 
+@IBDesignable class InsetLabel: UILabel {
+    @IBInspectable var topInset: CGFloat = 0.0
+    @IBInspectable var leftInset: CGFloat = 0.0
+    @IBInspectable var bottomInset: CGFloat = 0.0
+    @IBInspectable var rightInset: CGFloat = 0.0
+
+    var insets: UIEdgeInsets {
+        get {
+            return UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        }
+        set {
+            topInset = newValue.top
+            leftInset = newValue.left
+            bottomInset = newValue.bottom
+            rightInset = newValue.right
+        }
+    }
+
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.inset(by: insets))
+    }
+
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        var adjSize = super.sizeThatFits(size)
+        adjSize.width += leftInset + rightInset
+        adjSize.height += topInset + bottomInset
+
+        return adjSize
+    }
+
+    override var intrinsicContentSize: CGSize {
+        var contentSize = super.intrinsicContentSize
+        contentSize.width += leftInset + rightInset
+        contentSize.height += topInset + bottomInset
+
+        return contentSize
+    }
+}
 
 extension UIViewController {
 
 func showToast(message : String) {
-    let large = CGFloat(message.count*10)
-    print(large)
-    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - large/2, y: self.view.frame.size.height-self.view.frame.size.height/10, width: large, height: 35))
-    toastLabel.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-    toastLabel.textColor = UIColor.black
-    toastLabel.textAlignment = .center;
-    toastLabel.text = message
-    toastLabel.alpha = 1.0
-    toastLabel.layer.cornerRadius = 10;
-    toastLabel.clipsToBounds  =  true
-    toastLabel.font = UIFont(name: "IranSansMobile", size: 18)
-    self.view.addSubview(toastLabel)
+    
+    let storyboard = UIStoryboard(name: "Toast", bundle: Bundle.main)
+    let navViewController = storyboard.instantiateViewController(withIdentifier: "toast") as! ToastViewController
+    navViewController.message = message
+    navViewController.modalPresentationStyle = .overCurrentContext
+    if(self.tabBarController != nil){
+        self.tabBarController?.view.addSubview(navViewController.view)
+    }else{
+        self.view.addSubview(navViewController.view)
+    }
+    //self.view.superview?.addSubview(navViewController.view)
     UIView.animate(withDuration: 4.0, delay: 1.0, options: .curveEaseOut, animations: {
-         toastLabel.alpha = 0.0
+        navViewController.view.alpha = 0.0
     }, completion: {(isCompleted) in
-        toastLabel.removeFromSuperview()
+        navViewController.view.removeFromSuperview()
     })
 } }
 

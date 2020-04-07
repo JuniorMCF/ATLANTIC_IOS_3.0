@@ -20,6 +20,7 @@ class NotifyViewController: UIViewController {
     var position = -1
     override func viewDidLoad() {
         super.viewDidLoad()
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Notificaciones", message: "Obteniendo notificaciones...")
         bind()
         viewModel.viewDidLoad()
     }

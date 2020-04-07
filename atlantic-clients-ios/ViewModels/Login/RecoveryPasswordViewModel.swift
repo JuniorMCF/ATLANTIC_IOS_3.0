@@ -22,17 +22,21 @@ protocol RecoveryPasswordViewModelProtocol {
     var showTitles: (([String]) -> Void)? { get set }
     var showToast: ((String)->Void)?{get set}
     var presentForgotPassword:(()->Void)?{get set}
+    var passwordRecovery:(()->Void)?{get set}
 }
 
 class RecoveryPasswordViewModel: RecoveryPasswordViewModelProtocol {
     var showToast: ((String) -> Void)?
     
     var showTitles: (([String]) -> Void)?
+    var passwordRecovery:(()->Void)?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func recoveryPassword(clienteId:String,password1:String,password2:String) {
         
         if(!password1.isEmpty && !password2.isEmpty && password1.count == 4 && password2.count == 4){
             if(password1 == password2){
+                appDelegate.progressDialog.showProgress()
                 let user_pass = Utils().MD5(string: password1)
                 var dominioUrl = URL(string: Constants().urlBase+Constants().postUpdatePassword)
                 dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -44,18 +48,19 @@ class RecoveryPasswordViewModel: RecoveryPasswordViewModelProtocol {
                 switch response.result{
                     
                 case.success(let value):
-                             let json = JSON(value)
-                             print(json)
-                             let resultado = json["resultado"].stringValue
-                             let response = json["response"].stringValue
-                             if(resultado == "200"){
-                                self.showToast?(response)
+                            let json = JSON(value).boolValue
+                             if(json){
+                                self.showToast?("Contraseña cambiada con exito")
+                                self.passwordRecovery?()
+                             }else{
+                                self.showToast?("Error: intentelo nuevamente")
                              }
-                             
+                             self.appDelegate.progressDialog.hideProgress()
 
                             break
                         case.failure(let error):
-                           
+                            self.showToast?("Error de conexión")
+                             self.appDelegate.progressDialog.hideProgress()
                             print(error)
                             break
                         }

@@ -30,7 +30,6 @@ class TourneyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Torneos", message: "Obteniendo torneos ...")
-        appDelegate.progressDialog.isHome = true
         bind()
         viewModel.viewDidLoad()
     }

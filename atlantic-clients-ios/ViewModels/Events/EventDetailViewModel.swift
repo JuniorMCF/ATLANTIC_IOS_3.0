@@ -175,6 +175,7 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     func viewDidLoad(eventoId:Int) {
         let titles = EventDetailTitles()
         showTitles?(titles)
+        appDelegate.progressDialog.showProgress()
         let parameters = ["eventoId": eventoId,"clienteId": appDelegate.usuario.clienteId] as [String : Any]
         print("parameters",parameters)
         AF.request(Constants().urlBase+Constants().getEventoHorario,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
@@ -257,7 +258,7 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
                              }else {
                                 
                              }
-                             
+                            self.appDelegate.progressDialog.hideProgress()
                              
                          }
                      } catch let error as NSError {

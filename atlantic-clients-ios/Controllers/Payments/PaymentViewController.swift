@@ -45,7 +45,6 @@ class PaymentViewController: UIViewController {
         
     
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Cobros", message: "Obteniendo cobros ...")
-        appDelegate.progressDialog.isHome = true
         
         bind()
         var promotionListid : [String] = []

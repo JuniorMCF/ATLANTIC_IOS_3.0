@@ -32,7 +32,7 @@ class NotifyViewModel: NotifyViewModelProtocol {
     func viewDidLoad() {
         let titles = [Notify]()
         showTitles?(titles)
-        
+        appDelegate.progressDialog.showProgress()
         let parameters = ["clienteId":appDelegate.usuario.clienteId]
          
         AF.request(Constants().urlBase+Constants().getGetNotify,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
@@ -65,7 +65,7 @@ class NotifyViewModel: NotifyViewModelProtocol {
                                  //en otros casos
                                  
                               }
-                              
+                            self.appDelegate.progressDialog.hideProgress()
                               
                           }
                       } catch let error as NSError {
@@ -86,7 +86,8 @@ class NotifyViewModel: NotifyViewModelProtocol {
     }
     
     func hideNofity(clienteId:String, notifySelectId:String){
-        
+        appDelegate.progressDialog.message = "Ocultando Notificacion"
+        appDelegate.progressDialog.showProgress()
         var url = URL(string: Constants().urlBase + Constants().postHideNotify)
         url = url?.appending("clienteId", value: clienteId)
         url = url?.appending("notificationId", value: notifySelectId)
@@ -97,10 +98,12 @@ class NotifyViewModel: NotifyViewModelProtocol {
             switch response.result{
             case .success(let value):
                 self.successHideNotify?()
+                self.appDelegate.progressDialog.hideProgress()
                 print(value)
                 break
             case .failure(let error):
                 print(error)
+                self.appDelegate.progressDialog.hideProgress()
                 break
             }
             

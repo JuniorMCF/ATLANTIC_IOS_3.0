@@ -31,6 +31,7 @@ class TrophyLoseViewController: UIViewController {
     @IBOutlet var posicionLabel: Label!
     
     @IBOutlet var puntosLabel: Label!
+    @IBOutlet weak var faltanLabel: Label!
     
     
     @IBOutlet var PuestoTitle: Label!
@@ -45,7 +46,6 @@ class TrophyLoseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate.progressDialog = CustomProgress(parent: self, title: torneo.nombre, message: "Obteniendo Posiciones ...")
-        appDelegate.progressDialog.isHome = true
         bind()
         
         let fechaActual = Utils().getFechaActual()
@@ -103,6 +103,18 @@ class TrophyLoseViewController: UIViewController {
         trophyLoseCollectionView.delegate = trophyLoseCollectionViewDD
         self.category = datasource
         self.trophyLoseCollectionView.reloadData()
+        
+        if(datasource.count > 1){
+            if(torneo.posicion < 1){
+                let puesto = torneo.posicion - 1
+                let puntosFalta = datasource[puesto - 1].puntaje - torneo.puntaje
+                faltanLabel.setSubTitleViewLabelCenterGray(with: "Le faltan "+String(puntosFalta)+" puntos para llegar al puest " + String(puesto))
+                faltanLabel.alpha = 1
+            }
+            else{
+                faltanLabel.alpha = 0
+            }
+        }
     }
     /*
     // MARK: - Navigation

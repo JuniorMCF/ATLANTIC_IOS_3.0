@@ -57,6 +57,11 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     @IBOutlet weak var numberssistantLabel: Label!
     @IBOutlet weak var registerButton: Button!
     
+    @IBOutlet weak var constraintRegButt: NSLayoutConstraint!
+    @IBOutlet weak var constraintAV: NSLayoutConstraint!
+    @IBOutlet weak var constraintTopRegBut: NSLayoutConstraint!
+    @IBOutlet weak var constraintTopAV: NSLayoutConstraint!
+    
     @IBOutlet weak var btnBuffet: UIButton!
     private var isOpen = true
     private var sizeCollectionView:CGFloat = 0
@@ -80,7 +85,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     }
     @IBAction func lessAcompanantes(_ sender: Any) {
         nAcompanantes = (event.nAcompanantes as NSString).integerValue
-        if(total > 0){
+        if(total > 1){
             total -= 1
             numberssistantLabel.text = String(total)
         }
@@ -102,6 +107,8 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Evento", message: "Obteniendo datos...")
+        
         webview.delegate = self
         //webview.load(withVideoId: "M7lc1UVf-VE",playerVars:playerVars as! [AnyHashable : Any])
         bind()
@@ -145,6 +152,16 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         acompanantesView.isUserInteractionEnabled = false
         acompanantesView.alpha = 0.0
         numberssistantLabel.text = String(total)
+        constraintRegButt.constant = 0
+        constraintRegButt.isActive = true
+        constraintAV.constant = 0
+        constraintAV.isActive = true
+        constraintTopRegBut.constant = 0
+        constraintTopRegBut.isActive = true
+        constraintTopAV.constant = 0
+        constraintTopAV.isActive = true
+        self.view.layoutIfNeeded()
+        self.view.setNeedsLayout()
         
         registerButton.isUserInteractionEnabled = false
         registerButton.alpha = 0.0
@@ -259,13 +276,12 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
        
         
         showTitleLabel.setDetailSubTitle(with: titles.showTitle)
-        nameShowLabel.setDetailSub(with: event.tituloShow)
+        nameShowLabel.setDetailSubTitle(with: event.tituloShow)
         showLabel.setDetailSub(with: event.show)
-        
     
-        
+      
         assistantLabel.setDetailSubTitle(with: titles.assistant)
-        numberssistantLabel.setDetailSubTitleCenter(with: "0")
+        numberssistantLabel.setDetailSubTitleCenter(with: "1")
         registerButton.setRemindButton2(with: titles.registerTitle)
         
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MuU-Ce-PT6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MuU-Ce-PT6">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,7 +54,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vS-vf-i7j">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="458.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="451"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-VC-EqX" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="35" width="218" height="25"/>
@@ -146,7 +146,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-Hj-e1c" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-Hj-e1c" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="311" width="272" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="DTh-4p-kQm"/>
@@ -155,10 +155,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aF7-uh-FLZ" customClass="TextFieldDetails" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="336" width="272" height="30"/>
+                                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="asd asd sa dsa dsa dsa dsa dsad sa dsa dsa" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aF7-uh-FLZ" customClass="TextFieldDetails" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="336" width="272" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="hPH-O4-zd4"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="rEO-Sk-VKv"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -175,17 +175,28 @@
                                                     <action selector="tapEditButton:" destination="MuU-Ce-PT6" eventType="touchUpInside" id="1pO-1q-Tyt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87X-es-fUF" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="384.5" width="256" height="42"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87X-es-fUF" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="389" width="256" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="tapSaveButton:" destination="MuU-Ce-PT6" eventType="touchUpInside" id="QCu-rr-2IW"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAA-L9-0Pq" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="336" width="272" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="rVz-Hs-FM1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="87X-es-fUF" secondAttribute="bottom" constant="30" id="1zj-De-d33"/>
+                                            <constraint firstAttribute="bottom" secondItem="87X-es-fUF" secondAttribute="bottom" constant="32" id="1zj-De-d33"/>
+                                            <constraint firstAttribute="trailing" secondItem="AAA-L9-0Pq" secondAttribute="trailing" constant="24" id="2XV-zu-89X"/>
+                                            <constraint firstItem="AAA-L9-0Pq" firstAttribute="top" secondItem="Cav-Hj-e1c" secondAttribute="bottom" id="470-It-XT9"/>
                                             <constraint firstAttribute="trailing" secondItem="Cav-Hj-e1c" secondAttribute="trailing" constant="24" id="4uT-He-GJ6"/>
                                             <constraint firstItem="SbC-VC-EqX" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="24" id="5iP-US-GnV"/>
                                             <constraint firstAttribute="trailing" secondItem="YLn-cA-PIs" secondAttribute="trailing" constant="24" id="6UR-jK-RxE"/>
@@ -193,7 +204,8 @@
                                             <constraint firstAttribute="trailing" secondItem="P06-Xs-DCF" secondAttribute="trailing" constant="24" id="9wU-E2-cQF"/>
                                             <constraint firstItem="YLn-cA-PIs" firstAttribute="top" secondItem="reS-w9-MmI" secondAttribute="bottom" id="BpS-Jb-FrP"/>
                                             <constraint firstItem="Cav-Hj-e1c" firstAttribute="top" secondItem="WZq-Jm-5kk" secondAttribute="bottom" id="DIl-E8-rUt"/>
-                                            <constraint firstAttribute="trailing" secondItem="87X-es-fUF" secondAttribute="trailing" constant="29" id="EPw-ba-Vml"/>
+                                            <constraint firstItem="AAA-L9-0Pq" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="24" id="E3i-WT-hvm"/>
+                                            <constraint firstAttribute="trailing" secondItem="87X-es-fUF" secondAttribute="trailing" constant="32" id="EPw-ba-Vml"/>
                                             <constraint firstItem="YCh-HM-OjH" firstAttribute="top" secondItem="P06-Xs-DCF" secondAttribute="bottom" id="I1V-tZ-EoO"/>
                                             <constraint firstItem="P06-Xs-DCF" firstAttribute="top" secondItem="p5f-rd-Yf9" secondAttribute="bottom" id="JJ7-FD-GMj"/>
                                             <constraint firstItem="YLn-cA-PIs" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="24" id="JLq-AY-YxL"/>
@@ -205,9 +217,10 @@
                                             <constraint firstAttribute="trailing" secondItem="W1p-oQ-PT7" secondAttribute="trailing" constant="24" id="Ncf-y5-M8U"/>
                                             <constraint firstItem="W1p-oQ-PT7" firstAttribute="leading" secondItem="SbC-VC-EqX" secondAttribute="trailing" constant="24" id="OXG-mB-pK2"/>
                                             <constraint firstItem="reS-w9-MmI" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="24" id="QKV-Ez-rs2"/>
+                                            <constraint firstItem="87X-es-fUF" firstAttribute="top" secondItem="AAA-L9-0Pq" secondAttribute="bottom" constant="19" id="QnB-2v-d39"/>
                                             <constraint firstAttribute="trailing" secondItem="ZAE-M6-iTM" secondAttribute="trailing" constant="24" id="Rba-Ie-nMR"/>
                                             <constraint firstItem="reS-w9-MmI" firstAttribute="top" secondItem="wTx-W1-EZI" secondAttribute="bottom" id="SfM-aM-X5N"/>
-                                            <constraint firstItem="87X-es-fUF" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="29" id="VtZ-CN-mAM"/>
+                                            <constraint firstItem="87X-es-fUF" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="32" id="VtZ-CN-mAM"/>
                                             <constraint firstItem="W1p-oQ-PT7" firstAttribute="top" secondItem="6vS-vf-i7j" secondAttribute="top" constant="20" id="WFP-tZ-ofj"/>
                                             <constraint firstItem="Cav-Hj-e1c" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="24" id="WR9-wZ-hxq"/>
                                             <constraint firstItem="WZq-Jm-5kk" firstAttribute="top" secondItem="YCh-HM-OjH" secondAttribute="bottom" id="Whu-yh-iN4"/>
@@ -217,7 +230,6 @@
                                             <constraint firstItem="ZAE-M6-iTM" firstAttribute="top" secondItem="SbC-VC-EqX" secondAttribute="bottom" constant="1" id="gTo-OR-4Zs"/>
                                             <constraint firstItem="aF7-uh-FLZ" firstAttribute="top" secondItem="Cav-Hj-e1c" secondAttribute="bottom" id="iAq-IB-5Wy"/>
                                             <constraint firstItem="wTx-W1-EZI" firstAttribute="top" secondItem="CAr-NF-Ahw" secondAttribute="bottom" id="irN-yJ-bM8"/>
-                                            <constraint firstItem="87X-es-fUF" firstAttribute="height" secondItem="6vS-vf-i7j" secondAttribute="height" multiplier="0.094382" id="kc8-yG-Mzo"/>
                                             <constraint firstAttribute="trailing" secondItem="WZq-Jm-5kk" secondAttribute="trailing" constant="24" id="kqJ-F8-mS8"/>
                                             <constraint firstAttribute="trailing" secondItem="aF7-uh-FLZ" secondAttribute="trailing" constant="24" id="l0Z-7U-ARx"/>
                                             <constraint firstItem="ZAE-M6-iTM" firstAttribute="leading" secondItem="6vS-vf-i7j" secondAttribute="leading" constant="24" id="lGq-5b-dQg"/>
@@ -256,6 +268,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="Cav-Hj-e1c" id="q4A-tD-Eqf"/>
+                        <outlet property="addressText" destination="AAA-L9-0Pq" id="rlh-iq-r1q"/>
                         <outlet property="addressTextField" destination="aF7-uh-FLZ" id="Rp2-Ak-ed1"/>
                         <outlet property="birthdateLabel" destination="CAr-NF-Ahw" id="QAv-m1-0jW"/>
                         <outlet property="birthdateTextField" destination="wTx-W1-EZI" id="yUR-8j-vpX"/>

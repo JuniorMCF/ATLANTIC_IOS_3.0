@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Toast View Controller-->
+        <scene sceneID="iXR-bV-8Q3">
+            <objects>
+                <viewController restorationIdentifier="toast" storyboardIdentifier="toast" id="geC-Pf-ToM" customClass="ToastViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="dxe-dt-Mp7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziW-sk-Yub">
+                                <rect key="frame" x="20" y="800" width="374" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="265" translatesAutoresizingMaskIntoConstraints="NO" id="atf-iD-ayT" userLabel="Label" customClass="InsetLabel" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="151.33333333333334" y="-0.66666666666662877" width="71.333333333333343" height="33.333333333333336"/>
+                                        <color key="backgroundColor" white="0.88464642018779316" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="8JQ-F5-wKT"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" id="oKZ-LD-Tf0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSizeScale">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="atf-iD-ayT" firstAttribute="centerX" secondItem="ziW-sk-Yub" secondAttribute="centerX" id="Vvn-qZ-jV1"/>
+                                    <constraint firstItem="atf-iD-ayT" firstAttribute="centerY" secondItem="ziW-sk-Yub" secondAttribute="centerY" id="nfy-Bo-dH7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ziW-sk-Yub" firstAttribute="height" secondItem="dxe-dt-Mp7" secondAttribute="height" multiplier="0.0357143" id="16R-xe-Oyi"/>
+                            <constraint firstItem="eSZ-XC-fQC" firstAttribute="bottom" secondItem="ziW-sk-Yub" secondAttribute="bottom" constant="30" id="5y1-vV-D48"/>
+                            <constraint firstItem="ziW-sk-Yub" firstAttribute="leading" secondItem="eSZ-XC-fQC" secondAttribute="leading" constant="20" id="8Hm-uG-saa"/>
+                            <constraint firstItem="ziW-sk-Yub" firstAttribute="width" secondItem="dxe-dt-Mp7" secondAttribute="width" multiplier="0.903382" id="tGs-9x-kFa"/>
+                            <constraint firstItem="eSZ-XC-fQC" firstAttribute="trailing" secondItem="ziW-sk-Yub" secondAttribute="trailing" constant="20" id="uc7-FN-jNN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eSZ-XC-fQC"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtMessage" destination="atf-iD-ayT" id="fAw-7F-C0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="liA-KJ-hXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+</document>

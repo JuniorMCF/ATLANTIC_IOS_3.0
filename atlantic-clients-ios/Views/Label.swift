@@ -24,16 +24,14 @@ class Label: UILabel {
     
     public func setTitleViewLabel(with setText: String) {
         textColor = .white
-        font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
-        fontSizeScale = 18
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 15)
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
     }
     public func setTitleForgotViewLabel(with setText: String) {
         textColor = .black
-        
-        font = UIFont(name: "Avenir-Roman", size: 18)!
+        fontSizeScaleFamily(family: "Avenir-Roman", size: 18)
         text = setText
         textAlignment = .left
         //numberOfLines   = 0
@@ -52,7 +50,7 @@ class Label: UILabel {
     public func setSubTitleViewLabelRedCenter(with setText: String) {
         textColor   = .red
         text        = setText
-        font = UIFont(name: "Avenir-Medium", size: 18)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 18)
         textAlignment = .center
     }
     public func setSubTitleViewLabelCenter(with setText: String) {
@@ -64,13 +62,13 @@ class Label: UILabel {
     public func setSubTitleViewLabelCenterGray(with setText: String) {
            textColor   = .gray
            text        = setText
-           font = UIFont(name: "Avenir-Medium", size: 15)!
+           fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
            textAlignment = .center
        }
     public func setSubTitleViewLabelCenterLarge(with setText: String) {
-        textColor   = .black
+        textColor   = .gray
         text        = setText
-        font = UIFont(name: "Avenir-Medium", size: 25)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
         textAlignment = .center
     }
     
@@ -86,19 +84,19 @@ class Label: UILabel {
     public func setTitleCardLabel(with setText: String) {
         textColor   = .gray
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         textAlignment = .center
     }
     
     public func setTitleProfileLabel(with setText: String) {
         textColor   = .gray
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
     }
     
     public func setDinnerTitle(with setText: String) {
         textColor = .white
-        font = UIFont(name: "Avenir-Black", size: 23)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 23)
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
@@ -107,13 +105,13 @@ class Label: UILabel {
     public func setDinnerSubTitle(with setText: String) {
         textColor   = .white
         text        = setText
-        font = UIFont(name: "Avenir-Black", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 13)
         textAlignment = .center
     }
     
     public func setDetailTitle(with setText: String) {
         textColor = .black
-        font = UIFont(name: "Avenir-Black", size: 16)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 16)
         text = setText
         textAlignment = .left
         //numberOfLines   = 0
@@ -141,26 +139,26 @@ class Label: UILabel {
     public func setDetailSubTitleCenter(with setText: String) {
         textColor   = .black
         text        = setText
-        font = UIFont(name: "HelveticaNeue-Bold", size: 16)!
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 16)
         textAlignment = .center
     }
     
     public func setDetailSub(with setText: String) {
-        textColor   = .black
+        textColor   = .darkGray
         text        = setText
-        font = UIFont(name: "HelveticaNeue", size: 15)!
+        fontSizeScaleFamily(family: "HelveticaNeue", size: 15)
         textAlignment = .left
     }
     
     public func setClubTitle(with setText: String) {
         textColor   = .white
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 17)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 17)
     }
     public func setClubTitle2(with setText: String) {
         textColor   = .white
         text        = setText
-        font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 15)
         textAlignment = .left
     }
     
@@ -173,14 +171,15 @@ class Label: UILabel {
     public func setRafflesTitle(with setText: String) {
         textColor   = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 20)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
+       // font        = UIFont(name: "Avenir-Medium", size: 20)!
         textAlignment = .left
     }
     public func setRafflesTitleGoldCenter(with setText: String) {
         textColor   = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         text        = setText
         //font        = UIFont(name: "Avenir-Medium", size: 28)!
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 24)
         textAlignment = .center
     }
     
@@ -206,7 +205,7 @@ class Label: UILabel {
     public func setRafflesSubTitleCenter(with setText: String) {
        textColor   = .black
        text        = setText
-       font        = UIFont(name: "Avenir-Medium", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
        textAlignment = .center
     
    }
@@ -220,7 +219,7 @@ class Label: UILabel {
     public func setRafflesSubCenter(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 15)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         textAlignment = .center
     }
     public func setRafflesSubUnderline(with setText: String) {
@@ -239,7 +238,7 @@ class Label: UILabel {
     public func setCategoryTitle(with setText: String) {
         textColor   = .white
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 25)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 25)
         textAlignment = .center
         
     }
@@ -247,14 +246,14 @@ class Label: UILabel {
     public func setCategorySubTitle(with setText: String) {
         textColor   = .white
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .center
     }
     
     public func setCategoryPoints(with setText: String) {
         textColor   = .white
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
     }
     
     public func setBenefitDetailTitle(with setText: String) {
@@ -273,13 +272,13 @@ class Label: UILabel {
     public func setmessageSub(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .center
     }
     
     public func setCareerTitle(with setText: String) {
         textColor = .gray
-        font = UIFont(name: "Avenir-Black", size: 23)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 23)
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
@@ -288,20 +287,20 @@ class Label: UILabel {
     public func setCareerSub(with setText: String) {
         textColor   = .gray
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 13)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .center
     }
     
     public func setCareerSubTitle(with setText: String) {
         textColor   = .black
         text        = setText
-        font        = UIFont(name: "Avenir-Medium", size: 17)!
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 17)
         textAlignment = .center
     }
     
     public func setAwardTitle(with setText: String) {
         textColor = .black
-        font = UIFont(name: "Avenir-Black", size: 23)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 23)
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
@@ -309,14 +308,14 @@ class Label: UILabel {
     
     public func setPositionTitleGold(with setText: String) {
         textColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
-        font = UIFont(name: "Avenir-Black", size: 50)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 50)
         text = setText
         textAlignment = .center
         //numberOfLines   = 0
     }
     public func setPositionTitle(with setText: String) {
         textColor = .black
-           font = UIFont(name: "Avenir-Black", size: 50)!
+        fontSizeScaleFamily(family: "Avenir-Black", size: 50)
            text = setText
            textAlignment = .center
            //numberOfLines   = 0

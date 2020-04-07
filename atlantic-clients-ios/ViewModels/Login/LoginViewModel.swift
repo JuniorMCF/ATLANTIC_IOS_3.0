@@ -40,6 +40,7 @@ protocol LoginViewModelProtocol {
     var presentForgotPassword:(()->Void)?{get set}
     var changeTerminos:((Bool)->Void)?{get set}
     var presentSetData:((String,String)->Void)?{get set}
+    var showToastMessage : ((String)->Void)?{get set}
 }
 
 class LoginViewModel: LoginViewModelProtocol {
@@ -55,6 +56,7 @@ class LoginViewModel: LoginViewModelProtocol {
     var presentForgotPassword: (() -> Void)?
     var changeTerminos: ((Bool) -> Void)?
     var presentSetData: ((String,String) -> Void)?
+    var showToastMessage : ((String)->Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func viewDidLoad() {
@@ -84,12 +86,16 @@ class LoginViewModel: LoginViewModelProtocol {
         let isLogin = Constants().getLogin()
         
         if(terminos == true){
-                tapTerminos(estado: true)
+                //tapTerminos(estado: true)
                 if(dni == "" || password == ""){
                     if(dni == ""){
+                        self.showToastMessage?("Longitud minima 8")
+                        return
                         //return ingrese campo
                     }
                     if(password == ""){
+                        self.showToastMessage?("Campo requerido")
+                        return
                         //return ingrese password
                     }
                 }else{
@@ -143,15 +149,17 @@ class LoginViewModel: LoginViewModelProtocol {
                                                 Constants().savePassword(password: password)
                                                 Constants().saveTerminos(terminoState: true)
                                                 Constants().saveLogin(isLogin: true)
-                                                
                                                 self.progressDialog.hideProgress()
                                                 self.presentOnboarding?()
+                                                self.tapTerminos(estado: true)
                                                 
                                              }else if (resultado == "400")  {
                                                 self.progressDialog.hideProgress()
                                                  //usuario no existe
+                                                self.showToastMessage?("Usuario no existe")
                                              }else if (resultado == "401" ){
                                                 self.progressDialog.hideProgress()
+                                                self.showToastMessage?("Contraseña Incorrecta")
                                                  //clave incorrecta
                                              }
                                            
@@ -172,7 +180,8 @@ class LoginViewModel: LoginViewModelProtocol {
                             }
                 }
         }else{
-             tapTerminos(estado: false)
+             showToastMessage?("Tiene que aceptar las politicas de privacidad")
+             //tapTerminos(estado: false)
         }
         
         

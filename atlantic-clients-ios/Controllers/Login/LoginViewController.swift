@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     var splash : SplashLoginViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Login", message: "Iniciando Sesión ...")
         appDelegate.progressDialog.isHome = false
         splash = SplashLoginViewController(parent: self)
@@ -49,6 +50,14 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.dniTextField.text = ""
         self.passwordTextField.text = ""
+        
+        
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+            
+        self.navigationController?.navigationBar.shadowImage = nil
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     
     
@@ -58,7 +67,7 @@ class LoginViewController: UIViewController {
         viewModel.presentRegister = presentRegister
         viewModel.presentForgotPassword = presentForgotPassword
         viewModel.changeTerminos = changeTerminos(estado:)
-       
+        viewModel.showToastMessage = showToastMessage(message:)
         viewModel.presentSetData = presentSetData(user: password:)
     }
     func presentSetData(user:String,password:String){
@@ -88,25 +97,28 @@ class LoginViewController: UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainID")
         
         
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
-        
-        
-        
-        
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
     
+    
+    func showToastMessage(message:String){
+        self.showToast(message: message)
+    }
+    
+    
     func presentRegister() {
-        let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        let navViewController = storyboard.instantiateViewController(withIdentifier: "NavRegisterID")
-        navViewController.modalPresentationStyle = .fullScreen
-        present(navViewController, animated: false, completion: nil)
+        let storyboard = UIStoryboard(name: "Register", bundle: Bundle.main)
+        let navViewController = storyboard.instantiateViewController(withIdentifier: "RegisterID")
+        navViewController.modalPresentationStyle = .overCurrentContext
+        self.navigationController?.pushViewController(navViewController, animated: true)
+        //present(navViewController, animated: true, completion: nil)
     }
     func presentForgotPassword(){
         let storyboard = UIStoryboard(name: "ForgotPassword", bundle: nil)
         let navViewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordID")
-        navViewController.modalPresentationStyle = .fullScreen
-        self.present(navViewController, animated: false)
+        
+        self.navigationController?.pushViewController(navViewController, animated: true)
+       // self.present(navViewController, animated: true)
     }
     
     // MARK: - Private Functions

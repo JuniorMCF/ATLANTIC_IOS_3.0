@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 protocol AtlanticDerby4ViewModelProtocol{
     //funciones de entrada
-     func viewDidLoad()
+    func viewDidLoad(nombre:String)
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String)
     //variables de salida
     var loadDataSources:(([String])->Void)?{get set}
@@ -36,12 +36,9 @@ class AtlanticDerby4ViewModel : AtlanticDerby4ViewModelProtocol{
         case.success(let value):
                      let json = JSON(value)
                      print("statistics",json)
-                     
                      //self.presentToast?("datos actualizados correctamente")
-
                     break
                 case.failure(let error):
-                   
                     print(error)
                     break
                 }
@@ -49,10 +46,17 @@ class AtlanticDerby4ViewModel : AtlanticDerby4ViewModelProtocol{
             }
     }
     
-    func viewDidLoad(){
-        let list = ["1er puesto: $50","2do puesto: $20","3er puesto: $10"]
+    func viewDidLoad(nombre:String){
+        if(nombre.lowercased().contains("diamante")){
+           let list = ["1er puesto: $100","2do puesto: $40","3er puesto: $20"]
+           loadDataSources?(list)
+           presentTitles?(list)
+        }else{
+            let list = ["1er puesto: $50","2do puesto: $20","3er puesto: $10"]
+            loadDataSources?(list)
+            presentTitles?(list)
+        }
         
-        loadDataSources?(list)
-        presentTitles?(list)
+        
     }
 }

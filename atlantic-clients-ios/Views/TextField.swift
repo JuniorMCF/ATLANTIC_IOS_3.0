@@ -30,9 +30,24 @@ class TextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+   
+    var padding = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 5)
+    
+    @IBInspectable var padd: Bool{
+        get{
+            return self.padd
+        }set{
+            if(newValue){
+                 padding = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 5)
+            }else{
+                padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+            }
+           
+        }
+    }
     
     //Pading Placeholder textfield
-    let padding = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 5)
+    //let padding = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 5)
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
@@ -119,16 +134,18 @@ class TextField: UITextField {
         autocorrectionType = .no
         returnKeyType = .next
         borderStyle = .none
+       
         //Reducir
     }
     public func setDNIStyleSucessRegister(with placeHolder: String) {
         //DNI
         textColor = .white
         
-        font = UIFont(name: "HelveticaNeue-Bold", size: 17)!
+       // font = UIFont(name: "HelveticaNeue-Bold", size: 17)!
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 17)
         attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         keyboardType = .numberPad
-        textAlignment = .center
+        
         autocorrectionType = .no
         returnKeyType = .next
         borderStyle = .none
@@ -157,7 +174,7 @@ class TextField: UITextField {
         textColor = .white
         //font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
       
-        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 18)
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 17)
         attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         keyboardType = .alphabet
         isSecureTextEntry = true
@@ -194,7 +211,7 @@ class TextField: UITextField {
            //Password
            textColor = .white
            
-           font = UIFont(name: "HelveticaNeue-Bold", size: 18)!
+           fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 17)
            attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
            keyboardType = .alphabet
            isSecureTextEntry = true

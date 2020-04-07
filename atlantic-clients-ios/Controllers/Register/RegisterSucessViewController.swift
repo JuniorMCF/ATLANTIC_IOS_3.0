@@ -19,7 +19,7 @@ class RegisterSucessViewController: UIViewController {
     @IBOutlet var advertenciaTextArea: UITextView!
     @IBOutlet var confirmPasswordTextField: TextField!
     @IBOutlet var registerButton: Button!
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
     
@@ -27,6 +27,7 @@ class RegisterSucessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Registro", message: "Registrando usuario...")
         bind()
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -51,7 +52,8 @@ class RegisterSucessViewController: UIViewController {
     func pushRegisterUser(response:String){
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginID")
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
+        /*self.navigationController?.pushViewController(viewController, animated: true)*/
     }
     
     

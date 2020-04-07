@@ -22,7 +22,7 @@ class RegisterDocumentViewController: UIViewController {
     
     let pickerData: [String] = ["DNI", "Pasaporte", "Carnet de extranjeria"]
     
-
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     @IBAction func onBackLogin(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
@@ -31,7 +31,18 @@ class RegisterDocumentViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Registro", message: "Validando datos...")
+        
         addTapGesture()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+            
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
         
         let thePicker = UIPickerView()
        
@@ -44,7 +55,7 @@ class RegisterDocumentViewController: UIViewController {
         bind()
         viewModel.viewDidLoad()
     }
-    
+   
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.pushRegisterPassword = pushRegisterPassword

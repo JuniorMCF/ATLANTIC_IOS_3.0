@@ -67,8 +67,8 @@ class PositionDetailViewController: UIViewController {
         postTitleLabel.setRafflesSubCenter(with: titles.postTitle)
         winTitleLabel.setAwardTitle(with: titles.winTitle)
         postTitleLabel.setRafflesSubCenter(with: titles.postTitle)
-        
-        winLabel.setAwardTitle(with: "$ \(torneo.premio)0")
+        let pay = String(format: "%.0f", torneo.premio)
+        winLabel.setAwardTitle(with: "$ \(pay)")
 
         
         payTitle.setRemindButton(with: titles.payTittle)

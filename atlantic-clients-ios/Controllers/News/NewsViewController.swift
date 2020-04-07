@@ -34,12 +34,16 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     override func viewDidLoad() {
         
        // checkNotifications()
-        
+        if appDelegate.progressDialog != nil{
+            appDelegate.progressDialog.hideProgress()
+        }
         
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Noticias", message: "Obteniendo noticias ...")
         appDelegate.progressDialog.isHome = true
-        
         super.viewDidLoad()
+        bind()
+        viewModel.viewDidLoad(clienteId:appDelegate.usuario.clienteId,nivelId:appDelegate.usuario.nivel)
+        
         definesPresentationContext = true
         //imagenes iniciales
         tabBarController?.tabBar.tintColor = UIColor.white
@@ -50,10 +54,12 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         viewController.containerParent = self
         viewController.modalPresentationStyle = .overFullScreen
         
-        present(viewController, animated: false, completion: nil)
+        self.tabBarController?.present(viewController, animated: false, completion: nil)
         
-       bind()
-        viewModel.viewDidLoad(clienteId:appDelegate.usuario.clienteId,nivelId:appDelegate.usuario.nivel)
+        //present(viewController, animated: false, completion: nil)
+       
+        
+       
          
     }
     
@@ -78,10 +84,6 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
             }
         }
         if(body1 || body2 || body3){
-            print(body1)
-            print(body2)
-            print(body3)
-            print(body1 || body2 || body3)
             position = 2
             if let items = self.tabBarController?.tabBar.items as NSArray? {
                 let tabItem = items.object(at: position) as! UITabBarItem

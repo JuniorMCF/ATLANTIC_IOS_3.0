@@ -18,7 +18,6 @@ class EventsViewController: UIViewController, CarbonTabSwipeNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Eventos", message: "Obteniendo eventos ...")
-        appDelegate.progressDialog.isHome = true
         
         bind()
         viewModel.viewDidLoad()

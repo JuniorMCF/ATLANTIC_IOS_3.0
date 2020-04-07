@@ -75,8 +75,7 @@ class Button: UIButton {
     public func setLinkButton(with title: String) {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont(name: "Avenir-Medium", size: 15)!
-        fontSizeScale = 12
+        titleLabel?.fontSizeScaleFamily(family: "Avenir-Black", size: 12)
         titleLabel?.textAlignment = .left
         titleLabel?.attributedText = NSAttributedString(string: title, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         backgroundColor = .none

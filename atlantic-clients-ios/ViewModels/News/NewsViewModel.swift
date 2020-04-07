@@ -65,6 +65,26 @@ class NewsViewModel: NewsViewModelProtocol {
         
         //banner Imagenes Noticia
         progress.showProgress()
+        var dominioUrl = URL(string: Constants().urlBase+Constants().postSetToken)
+        dominioUrl = dominioUrl?.appending("clienteId", value: appDelegate.usuario.clienteId)
+        dominioUrl = dominioUrl?.appending("token", value: appDelegate.token)
+        dominioUrl = dominioUrl?.appending("sistemaOperativo", value: "ios")
+        let url = dominioUrl!.absoluteString
+        
+        AF.request(url,method: .post, parameters: nil, encoding: URLEncoding.default,
+                   headers: nil).responseJSON{response in
+                    switch response.result{
+                        
+                    case.success(let value):
+                        print(value)
+                        break
+                    case .failure(let error):
+                        print(error)
+                        break
+                    }
+                    
+        }
+        
         
         AF.request(Constants().urlBase+Constants().getImagenNoticia ,method: .get,parameters: nil,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
                     switch response.result{

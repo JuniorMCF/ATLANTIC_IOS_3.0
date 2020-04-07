@@ -105,7 +105,7 @@ class AllBenefitsViewController: UIViewController {
     
     @IBAction func CreateReminder(_ sender: Any) {
         let fecha = (benefit.fecha as NSString)
-        Utils().saveEvent(title: benefit.nombre, fecha: fecha)
+        Utils().saveEvent(title: benefit.nombre, fecha: fecha,parent: self)
         
     }
     
@@ -157,14 +157,7 @@ class AllBenefitsViewController: UIViewController {
             
             underLineView.alpha = 1.0
             remindButton2.setRemindButton(with: titles.reminderTitle)
-            //moviendo las vistas
-            /*vHidden.alpha = 0
-            vHidden.frame = CGRect(x: 0 , y: self.vHidden.layer.position.y, width: self.vHidden.frame.width, height: 0)
-            let alturahidden = vHidden.frame.height
-            buttonView.frame = CGRect(x: 0 , y:  self.vHidden.layer.position.y, width: self.buttonView.frame.width, height: self.buttonView.frame.height)
             
-            viewParentHidden.frame =  CGRect(x: 0 , y: self.viewParentHidden.layer.position.y, width: self.viewParentHidden.frame.width, height: self.viewParentHidden.frame.height-alturahidden)
-            */
             let fecha = (benefit.fechaActualizacion as NSString).doubleValue
             let date = Date(timeIntervalSince1970: TimeInterval(fecha/1000.0))
             //transformar el formato de fecha  dd/MM/yy    y   la hora  hh:mm
@@ -271,7 +264,7 @@ class AllBenefitsViewController: UIViewController {
 
                         titlePuntosLabel.setSubTitleViewLabel(with: "Posición: "+String(benefit.posicion))
                         puntosLabel.setSubTitleViewLabel(with: "Usted obtuvo:")
-                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Ha Ganado: "+String(benefit.premio))
+                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está Ganado: "+String(benefit.premio))
                         leFaltanLabel.setSubTitleViewLabel(with: " ")
                     
                         if(benefit.posicion != nil) {
@@ -295,7 +288,7 @@ class AllBenefitsViewController: UIViewController {
             if(benefitMoneda.caseInsensitiveCompare("soles") == .orderedSame){
                 leFaltanLabel.setSubTitleViewLabelCenter(with: "Le faltan "+String(benefit.puntos_falta)+" puntos para ganar: S/"+String(benefit.premio_falta.intValue))
                 let tipoBenefit = benefit.nombre
-                if(!(tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
+                if((tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
                     haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está ganando $"+String(benefit.premio.intValue))
                 }else{
                     haGanadoLabel.setSubTitleViewLabelRedCenter(with:"Ha ganado S/"+String(benefit.premio.intValue))
@@ -305,7 +298,7 @@ class AllBenefitsViewController: UIViewController {
             }else if(benefitMoneda.caseInsensitiveCompare("dólares") == .orderedSame){
                 leFaltanLabel.setSubTitleViewLabelCenter(with: "Le faltan "+String(benefit.puntos_falta)+" puntos para ganar: $"+String(benefit.premio_falta.intValue))
                 let tipoBenefit = benefit.nombre
-                if(!(tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
+                if((tipoBenefit.caseInsensitiveCompare("Top 100") == .orderedSame)){
                     let benefitMoneda = benefit.tipoMoneda
                     if(benefitMoneda.caseInsensitiveCompare("soles") == .orderedSame){
                        haGanadoLabel.setSubTitleViewLabelRedCenter(with: "Está ganando S/"+String(benefit.premio.intValue))

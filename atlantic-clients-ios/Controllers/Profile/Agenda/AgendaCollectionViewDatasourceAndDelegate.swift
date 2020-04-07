@@ -21,9 +21,9 @@ class AgendaCollectionViewDatasourceAndDelegate: NSObject {
         }
     }
 
-extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDelegateFlowLayout {
+extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width*0.92,  height: collectionView.frame.height/6)
+        return CGSize(width: collectionView.frame.width - 10,  height: collectionView.frame.height/5)
     }
 }
 

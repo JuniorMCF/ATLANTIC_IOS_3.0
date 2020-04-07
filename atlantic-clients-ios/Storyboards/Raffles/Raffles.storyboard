@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aoa-Ns-SmT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aoa-Ns-SmT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lyj-Nm-Br2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="35" sectionFooterHeight="35" translatesAutoresizingMaskIntoConstraints="NO" id="Lyj-Nm-Br2">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -27,18 +27,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-ben1" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-3Y-jwD">
-                                                    <rect key="frame" x="107.5" y="20" width="160" height="106"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-ben1" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-3Y-jwD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="160" id="9oe-NW-f5m"/>
-                                                        <constraint firstAttribute="height" constant="100" id="YyF-Sk-k2y"/>
+                                                        <constraint firstAttribute="width" constant="375" id="9oe-NW-f5m"/>
+                                                        <constraint firstAttribute="height" constant="146" id="YyF-Sk-k2y"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NY4-3Y-jwD" firstAttribute="centerX" secondItem="iq2-8t-hgm" secondAttribute="centerX" id="8ql-ZO-Gfr"/>
-                                                <constraint firstItem="NY4-3Y-jwD" firstAttribute="top" secondItem="iq2-8t-hgm" secondAttribute="top" constant="20" id="CmY-Wx-4WN"/>
-                                                <constraint firstAttribute="bottom" secondItem="NY4-3Y-jwD" secondAttribute="bottom" constant="20" id="FX0-n3-cJn"/>
+                                                <constraint firstItem="NY4-3Y-jwD" firstAttribute="top" secondItem="iq2-8t-hgm" secondAttribute="top" id="CmY-Wx-4WN"/>
+                                                <constraint firstAttribute="bottom" secondItem="NY4-3Y-jwD" secondAttribute="bottom" id="FX0-n3-cJn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

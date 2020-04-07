@@ -61,7 +61,12 @@ class AgendaCollectionViewCell: UICollectionViewCell {
             let myComponents = myCalendar!.components(.weekday, from: date)
             let weekDay = myComponents.weekday
             fechaLabel.setTextNormal2(with: Utils().getDia(weekDay: weekDay!)+" "+txtFecha)
-            acompanantesButton.setFirstButton3(with: event.nAcompanantes+" Acompañantes")
+            if(event.nAcompanantes.elementsEqual("1")){
+                acompanantesButton.setFirstButton3(with: event.nAcompanantes+" Acompañante")
+            }else{
+                acompanantesButton.setFirstButton3(with: event.nAcompanantes+" Acompañantes")
+            }
+            
         }else{
             self.foto.image = UIImage(named: "img_desayuno")
             buffeteTitleLabel.setTextNormal(with: "Almuerzo buffet")

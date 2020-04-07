@@ -22,7 +22,7 @@ class TextFieldDetails: UITextField {
     
 public func setTextFieldStyle(with setText: String) {
     text = setText
-    font = UIFont(name: "Avenir-Medium", size: 15)!
+    fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
     autocorrectionType = .no
     borderStyle = .none
 }

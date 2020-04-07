@@ -59,7 +59,7 @@ class BreakfastViewController: UIViewController {
         flow.minimumInteritemSpacing = 10
         flow.minimumLineSpacing = 10
         let width = (collectionView.frame.width - 10) / 2
-        flow.itemSize = CGSize(width: width, height: width)
+        flow.itemSize = CGSize(width: width, height: width * 1.35)
     }
 
     func bind() {
@@ -88,6 +88,8 @@ extension BreakfastViewController: UICollectionViewDelegateFlowLayout {
     
     
 }
+
+
 extension BreakfastViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.didBreakfastSelected(items[indexPath.row])

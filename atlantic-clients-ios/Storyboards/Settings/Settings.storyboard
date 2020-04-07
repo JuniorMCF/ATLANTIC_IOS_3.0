@@ -82,7 +82,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gjn-lu-RdT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Configuración" id="hTh-jB-gG6"/>
+                    <navigationItem key="navigationItem" title="Configuración" id="hTh-jB-gG6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="RLa-eP-liX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="activeLabel" destination="GOj-RR-VRU" id="mVz-mq-NRp"/>
                         <outlet property="changePasswordLabel" destination="qIM-fz-npz" id="Ktn-iz-pEB"/>

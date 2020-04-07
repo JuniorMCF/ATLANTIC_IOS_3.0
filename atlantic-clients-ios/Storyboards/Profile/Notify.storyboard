@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-112" y="-25"/>
         </scene>
-        <!--Notify View Controller-->
+        <!--Notificaciones-->
         <scene sceneID="QRi-Ch-1V7">
             <objects>
                 <viewController storyboardIdentifier="NotifyID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y2P-Wl-8oI" customClass="NotifyViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +129,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Eb-W3-DpK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vJr-Eq-Qkf"/>
+                    <navigationItem key="navigationItem" title="Notificaciones" id="vJr-Eq-Qkf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="b6W-3C-bXK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="agendaCollectionView" destination="kdl-Oz-YXj" id="ucT-iR-1i1"/>
                         <outlet property="btnHideNotification" destination="LCN-6z-lEH" id="bk0-eK-Iip"/>

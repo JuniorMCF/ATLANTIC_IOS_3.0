@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XfH-Th-FRv">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XfH-Th-FRv">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,29 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SZd-yW-Qb2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="35" sectionFooterHeight="35" translatesAutoresizingMaskIntoConstraints="NO" id="SZd-yW-Qb2">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="20" indentationWidth="10" reuseIdentifier="TourneyCellID" rowHeight="146" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-xF-CxL" customClass="TourneyTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="146"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbz-xF-CxL" translatesAutoresizingMaskIntoConstraints="NO" id="hDL-EA-1da">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbz-xF-CxL" translatesAutoresizingMaskIntoConstraints="NO" id="hDL-EA-1da">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-ben1" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-FO-gWu">
-                                                    <rect key="frame" x="124" y="20" width="126" height="65"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-FO-gWu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="106" id="Lst-YF-3sf"/>
-                                                        <constraint firstAttribute="width" constant="215" id="rhH-w6-VLp"/>
+                                                        <constraint firstAttribute="height" constant="146" id="Lst-YF-3sf"/>
+                                                        <constraint firstAttribute="width" constant="375" id="rhH-w6-VLp"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="9aW-FO-gWu" firstAttribute="centerX" secondItem="hDL-EA-1da" secondAttribute="centerX" id="Pvc-ux-ABL"/>
-                                                <constraint firstAttribute="bottom" secondItem="9aW-FO-gWu" secondAttribute="bottom" constant="20" id="h9F-gR-gJg"/>
-                                                <constraint firstItem="9aW-FO-gWu" firstAttribute="top" secondItem="hDL-EA-1da" secondAttribute="top" constant="20" id="t3W-fJ-dc0"/>
+                                                <constraint firstAttribute="bottom" secondItem="9aW-FO-gWu" secondAttribute="bottom" id="h9F-gR-gJg"/>
+                                                <constraint firstItem="9aW-FO-gWu" firstAttribute="top" secondItem="hDL-EA-1da" secondAttribute="top" id="t3W-fJ-dc0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,7 +88,4 @@
             <point key="canvasLocation" x="61.600000000000001" y="61.619190404797607"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="img-ben1" width="160" height="100"/>
-    </resources>
 </document>

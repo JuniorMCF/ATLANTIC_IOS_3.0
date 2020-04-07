@@ -48,16 +48,21 @@ class CustomProgress: UIViewController {
     func showProgress(){
         let storyboard = UIStoryboard(name: "CustomProgress", bundle: nil)
         progressController = (storyboard.instantiateViewController(withIdentifier: "customProgress") as! CustomProgress)
-       
-        progressController.modalPresentationStyle = .overFullScreen
-        
+        if(isHome){
+            progressController.modalPresentationStyle = .overCurrentContext
+            
+        }
+        else{
+            progressController.modalPresentationStyle = .overFullScreen
+        }
+        self.isHome = false
        /* if(isHome){
             viewParent.tabBarController?.view.addSubview(progressController.view)
         }else{
             viewParent.view.addSubview(progressController.view)
         }*/
         
-        
+        progressController.isHome = isHome
        // viewParent.view.addSubview(progressController.view)
         //self.progressController.titleProgress.text = self.titleP
         //self.progressController.messageProgress.text = self.message

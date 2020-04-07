@@ -96,7 +96,7 @@ class AgendaViewController: UIViewController {
            
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel,viewParent: self)
             collectionView.dataSource = AgendaCollectionViewDD
-            collectionView.delegate = self
+            collectionView.delegate = AgendaCollectionViewDD
             self.collectionView.reloadData()
             progress.hideProgress()
             

@@ -54,8 +54,9 @@ class RafflesDreamViewController: UIViewController {
     }
     
     @IBAction func createReminderButton(_ sender: Any) {
+       
         let fecha = (sorteo.fecha as NSString)
-        Utils().saveEvent(title: sorteo.nombreSorteo, fecha: fecha)
+        Utils().saveEvent(title: sorteo.nombreSorteo, fecha: fecha,parent: self)
     }
     
     @IBAction func rightCV(_ sender: Any) {
@@ -108,7 +109,7 @@ class RafflesDreamViewController: UIViewController {
     
     
     func showTitles(titles: RafflesDreamTitles) {
-        let dominio = "https://clienteatlantic.azurewebsites.net/admin/upload/promocion/"
+        
         if(sorteo.fotos[0].foto == "" || sorteo.fotos[0].foto.isEmpty){
             let image = UIImage(named: "casino")
             let imageView = UIImageView(image: image)
@@ -117,22 +118,7 @@ class RafflesDreamViewController: UIViewController {
             imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             self.headerView.addSubview(imageView)
         }else{
-           /* AF.request(dominio + sorteo.fotos[0].foto).responseImage { response in
-                       
-                           switch response.result {
-                                 case .success(let value):
-                                    let image = value
-                                    let imageView = UIImageView(image: image)
-                                    imageView.contentMode = .scaleAspectFill
-                                    imageView.frame = self.headerView.frame
-                                    /*imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]*/
-                                    self.headerView.addSubview(imageView)
-                                 case .failure(let error):
-                                     print(error)
-                                     
-                                 }
-
-            }*/
+           
             
         }
         

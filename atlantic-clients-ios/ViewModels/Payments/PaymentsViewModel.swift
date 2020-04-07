@@ -150,7 +150,7 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
             loadDatasources?(datasources)
         } else {
             var datasources = appDelegate.cobros
-            let filteredDatasource = datasources.filter { $0.nombre.contains(searchText) }
+            let filteredDatasource = datasources.filter { $0.nombre.lowercased().contains(searchText.lowercased()) }
             datasources = filteredDatasource
             reloadDatasource?(datasources)
         }

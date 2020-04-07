@@ -30,11 +30,10 @@ class AtlanticDerby4ViewController: UIViewController {
         bind()
         let fechaActual = Utils().getFechaActual()
         viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
-        viewModel.viewDidLoad()
-        // Do any additional setup after loading the view.
+        viewModel.viewDidLoad(nombre: benefit.nombre)
+        
     }
     func bind(){
-        
         viewModel.loadDataSources = loadDatasources(datasources:)
         viewModel.presentTitles = presentTitles(data:)
     }
@@ -67,22 +66,9 @@ class AtlanticDerby4ViewController: UIViewController {
         terminos.showProgress()
     }
     func loadDatasources(datasources: [String]) {
-        ad4CollectionViewDD = AD4CollectionViewDelegateAndDatasource(items: datasources,
-                                                                     viewModel:viewModel)
+        ad4CollectionViewDD = AD4CollectionViewDelegateAndDatasource(items: datasources,viewModel:viewModel)
         AD4CollectionView.dataSource = ad4CollectionViewDD
         AD4CollectionView.delegate = ad4CollectionViewDD
-        //data = datasources
-
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

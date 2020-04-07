@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var clubController : ClubViewController!
     //switch
     var navigationController : UINavigationController!
+    var token = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -328,7 +329,8 @@ extension AppDelegate:MessagingDelegate{
         
       let tokenPush = fcmToken
       print("Firebase registration token: \(fcmToken)")
-        
+      
+      self.token = tokenPush
 
       let dataDict:[String: String] = ["token": fcmToken]
       NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)

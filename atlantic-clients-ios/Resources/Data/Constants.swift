@@ -46,14 +46,15 @@ class Constants {
     var postUpdatePassword = "updatePassword"
     var postAddSesion = "addSesion"
     var postUpdateSession = "updateSession"
-    var postSetToken = "setToken"
+    var postSetToken = "GuardarToken"
     var postConfigNotificacion = "ConfigNotificacion"
     var postAgregarIngreso = "agregarIngreso"
     var postAgregarActividadPromocion = "agregarActividadPromocion"
     var postAgregarActividadEvento = "agregarActividadEvento"
     var postAgregarActividadCobro = "agregarActividadCobro"
     var postHideNotify = "HideNotify"
-    
+    var postObtenerCodigo = "ObtenerCodigo"
+    var postVerificarCodigo = "VerificarCodigo"
  
     //variable para guardar datos en rom
     var preferences : UserDefaults? = nil

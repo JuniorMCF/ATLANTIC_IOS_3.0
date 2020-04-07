@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5GP-kO-g4o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5GP-kO-g4o">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +11,15 @@
         <!--Navigation Controller-->
         <scene sceneID="Lxg-yp-Zyh">
             <objects>
-                <navigationController navigationBarHidden="YES" id="5GP-kO-g4o" sceneMemberID="viewController">
+                <navigationController id="5GP-kO-g4o" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Rf-jE-g9G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.4549019608" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="lC1-ah-pin" kind="relationship" relationship="rootViewController" id="Ed2-nW-ZXa"/>
@@ -80,21 +86,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-5h-VyW" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="174" y="600" width="188" height="40"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-5h-VyW" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="148" y="600" width="220" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="uLH-yj-dgL"/>
-                                            <constraint firstAttribute="width" constant="188" id="yii-Pk-apB"/>
+                                            <constraint firstAttribute="width" constant="220" id="yii-Pk-apB"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="tapForgotPassword" destination="lC1-ah-pin" eventType="touchUpInside" id="gWv-EC-iVc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7N-Bj-HEl" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="600" width="136" height="40"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7N-Bj-HEl" customClass="Button" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="600" width="138" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="136" id="SgW-RU-829"/>
+                                            <constraint firstAttribute="width" constant="151" id="SgW-RU-829"/>
                                             <constraint firstAttribute="height" constant="40" id="SpT-ah-NqV"/>
                                         </constraints>
                                         <state key="normal" title="crear usuario"/>
@@ -143,9 +149,9 @@
                                     <constraint firstItem="clL-X7-coS" firstAttribute="leading" secondItem="LSL-xm-2nF" secondAttribute="leading" constant="55" id="IYn-Fs-bqk"/>
                                     <constraint firstItem="bXc-oE-mhc" firstAttribute="top" secondItem="W0D-WR-cnx" secondAttribute="bottom" constant="25" id="IpK-RD-qTg"/>
                                     <constraint firstAttribute="bottom" secondItem="Z7N-Bj-HEl" secondAttribute="bottom" constant="27" id="J4M-tH-smB"/>
-                                    <constraint firstItem="zKP-5h-VyW" firstAttribute="leading" secondItem="Z7N-Bj-HEl" secondAttribute="trailing" constant="23" id="Lgj-UZ-kXp"/>
+                                    <constraint firstItem="zKP-5h-VyW" firstAttribute="leading" secondItem="Z7N-Bj-HEl" secondAttribute="trailing" constant="-5" id="Lgj-UZ-kXp"/>
                                     <constraint firstAttribute="trailing" secondItem="VOE-ra-dDK" secondAttribute="trailing" constant="86" id="PRU-SI-3GZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="zKP-5h-VyW" secondAttribute="trailing" constant="13" id="Pmf-wz-dZO"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKP-5h-VyW" secondAttribute="trailing" constant="7" id="Pmf-wz-dZO"/>
                                     <constraint firstItem="N8f-KB-PE5" firstAttribute="top" secondItem="VOE-ra-dDK" secondAttribute="bottom" constant="33" id="RlB-7j-vs0"/>
                                     <constraint firstItem="ncf-JE-hi0" firstAttribute="leading" secondItem="LSL-xm-2nF" secondAttribute="leading" constant="55" id="UWa-Pb-CiH"/>
                                     <constraint firstItem="zKP-5h-VyW" firstAttribute="top" secondItem="uZz-yF-g69" secondAttribute="bottom" constant="110" id="WM0-GD-heZ"/>
@@ -154,7 +160,7 @@
                                     <constraint firstItem="uZz-yF-g69" firstAttribute="height" secondItem="LSL-xm-2nF" secondAttribute="height" multiplier="0.029985" id="cCR-Ou-nBO"/>
                                     <constraint firstItem="W0D-WR-cnx" firstAttribute="top" secondItem="LSL-xm-2nF" secondAttribute="top" constant="100" id="dbZ-fS-FRS"/>
                                     <constraint firstItem="Z7N-Bj-HEl" firstAttribute="height" secondItem="LSL-xm-2nF" secondAttribute="height" multiplier="0.05997" id="eA7-Up-Y3k"/>
-                                    <constraint firstItem="uZz-yF-g69" firstAttribute="leading" secondItem="Z7N-Bj-HEl" secondAttribute="trailing" constant="-78" id="eXn-jF-v3Z"/>
+                                    <constraint firstItem="uZz-yF-g69" firstAttribute="leading" secondItem="Z7N-Bj-HEl" secondAttribute="trailing" constant="-93" id="eXn-jF-v3Z"/>
                                     <constraint firstItem="clL-X7-coS" firstAttribute="height" secondItem="LSL-xm-2nF" secondAttribute="height" multiplier="0.0449775" id="gpJ-gI-TLT"/>
                                     <constraint firstItem="uZz-yF-g69" firstAttribute="top" secondItem="VOE-ra-dDK" secondAttribute="bottom" constant="33" id="hUQ-46-0KM"/>
                                     <constraint firstItem="W0D-WR-cnx" firstAttribute="height" secondItem="LSL-xm-2nF" secondAttribute="height" multiplier="0.149925" id="hdU-qx-gNl"/>
@@ -181,7 +187,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nk8-bK-a2X"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fZn-wq-Jny"/>
+                    <navigationItem key="navigationItem" id="fZn-wq-Jny">
+                        <barButtonItem key="backBarButtonItem" title=" " id="eXn-kO-e9o"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="dniTextField" destination="ncf-JE-hi0" id="w4u-Nd-Lc1"/>
                         <outlet property="forgotPasswordButton" destination="zKP-5h-VyW" id="zEE-bl-dKK"/>

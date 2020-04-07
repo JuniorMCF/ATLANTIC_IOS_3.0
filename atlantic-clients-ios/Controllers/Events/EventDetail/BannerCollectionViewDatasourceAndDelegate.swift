@@ -54,9 +54,18 @@ extension BannerCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
         cell?.configure()
         return cell!
     }
+    
+    
+}
+
+extension BannerCollectionViewDatasourceAndDelegate: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
 }
 
 extension BannerCollectionViewDatasourceAndDelegate: UICollectionViewDelegate {
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard scrollView.tag == 0 else { return }

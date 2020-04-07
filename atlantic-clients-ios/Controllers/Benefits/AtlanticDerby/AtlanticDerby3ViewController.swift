@@ -45,6 +45,19 @@ class AtlanticDerby3ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func saveRecordatory(_ sender: Any) {
+        let fecha = (benefit.fechaProxima as NSString)
+        Utils().saveEvent(title: benefit.nombre, fecha: fecha,parent: self)
+        
+    }
+    
+    @IBAction func goPayment(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Payments", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PaymentsID") as! PaymentViewController
+        viewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(viewController, animated: false)
+    }
+    
     func bind(){
         
         viewModel.loadDataSources = loadDatasources(datasources:)

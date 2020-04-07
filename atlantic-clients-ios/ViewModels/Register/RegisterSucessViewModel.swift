@@ -25,7 +25,7 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
     var showToast: ((String) -> Void)?
     
     var pushRegisterUser: ((String)->Void)?
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func registerUser(dni: String, number: String, password: String,repeatpass: String) {
 
@@ -49,7 +49,7 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
 
         if(!repeatpass.isEmpty && !password.isEmpty && repeatpass == password  && !number.isEmpty && !repeatpass.isEmpty){
         
-        
+            appDelegate.progressDialog.showProgress()
         let user_pass = Utils().MD5(string : password)
         var dominioUrl = URL(string: Constants().urlBase+Constants().postRegistro)
             dominioUrl = dominioUrl?.appending("dni", value: dni)
@@ -65,7 +65,7 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
                          let resultado = json["resultado"].stringValue
                          let response = json["response"].stringValue
                          if(resultado == "200"){
-                            
+                            self.showToast?(response)
                             self.pushRegisterUser?(response)
                            
                          }else {
@@ -77,7 +77,7 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
                             //en otros casos
                             
                          }
-                         
+                         self.appDelegate.progressDialog.hideProgress()
                         break
                     case.failure(let error):
                        self.showToast?("Error: revise su conexión e intentelo nuevamente")

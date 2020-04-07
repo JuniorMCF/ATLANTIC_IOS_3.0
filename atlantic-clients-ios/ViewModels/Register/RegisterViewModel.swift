@@ -44,7 +44,7 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
     var loadPickerData: ((PickerData) -> Void)?
     var showTitles: ((RegisterDocumentTitles) -> Void)?
     var pushRegisterPassword: ((String) -> Void)?
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     func viewDidLoad() {
         let titles = RegisterDocumentTitles()
         showTitles?(titles)
@@ -57,9 +57,9 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
     
     func tapNext(dni:String) {
         if(dni == ""){
-            
+            self.showToast?("Ingrese dni")
         }else{
-            
+            appDelegate.progressDialog.showProgress()
             var dominioUrl = URL(string: Constants().urlBase+Constants().postValidarDni)
             dominioUrl = dominioUrl?.appending("dni", value: dni)
             let url = dominioUrl!.absoluteString
@@ -77,14 +77,14 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
                            
                          }else {
                             if(resultado == "400"){
-                                self.showToast?(response)
+                                self.showToast?("Usuario no registrado, acérquese al counter de Atlantic City Club")
                             }else{
                                self.showToast?(response)
                             }
                             //en otros casos
                             
                          }
-
+                         self.appDelegate.progressDialog.hideProgress()
                          
                         break
                     case.failure(let error):

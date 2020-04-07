@@ -18,7 +18,8 @@ class ClubTableViewCell: UITableViewCell {
     
     func prepare(category: ClubCategory) {
         title.setClubTitle(with: category.title)
-        title.font = UIFont.boldSystemFont(ofSize: 16.0)
+        
+        title.fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 16)
         img.image = UIImage(named: category.image)
     }
 

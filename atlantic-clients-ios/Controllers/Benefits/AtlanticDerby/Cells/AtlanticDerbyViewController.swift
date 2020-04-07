@@ -34,6 +34,14 @@ class AtlanticDerbyViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func saveRecordatory(_ sender: Any) {
+        let fecha = (benefit.fecha as NSString)
+        Utils().saveEvent(title: benefit.nombre, fecha: fecha,parent: self)
+    }
+    
+    
+    
     func bind(){
         titleLabel.setRafflesTitleGoldCenter(with: benefit.nombre)
         fechaLabel.setBenefitDetailTitleCenter(with: "Fecha: "+benefit.fechaTexto)

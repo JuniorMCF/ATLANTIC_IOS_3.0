@@ -29,7 +29,7 @@ class AllBenefitsCollectionViewDelegateAndDatasource: NSObject {
 
 extension AllBenefitsCollectionViewDelegateAndDatasource: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.pageControl.currentPage = self.items.count
+        self.pageControl.currentPage = 0
         return items.count
     }
         

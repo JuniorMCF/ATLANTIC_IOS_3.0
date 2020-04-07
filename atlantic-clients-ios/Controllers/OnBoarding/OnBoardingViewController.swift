@@ -65,7 +65,6 @@ class OnBoardingViewController: UIViewController, UICollectionViewDelegate, UICo
             let terminos = Terminos(parent: containerParent, url: encuesta+"?cliente_id="+appDelegate.usuario.clienteId)
             terminos.encuesta = self.encuesta
             terminos.showProgress()
-            
         }
         
         else{

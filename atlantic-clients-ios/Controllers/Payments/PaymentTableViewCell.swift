@@ -22,6 +22,8 @@ class PaymentTableViewCell: UITableViewCell {
         titleLabel.text = payment.nombre
         stateTitleLabel.text = "Estado: "
         
+        payment.premio = String(format: "%.0f", (payment.premio as NSString).floatValue)
+ 
         if(payment.puesto == "" ){
             if(payment.tipoMoneda == "soles"){
                 payLabel.text = "S/ " + payment.premio + " " + payment.tipoMoneda
@@ -47,7 +49,7 @@ class PaymentTableViewCell: UITableViewCell {
                 if(payment.puesto == "0" || payment.puesto == "null" || payment.puesto == "" || payment.puesto.isEmpty){
                     payLabel.text = payment.premio + " " + payment.tipoMoneda
                 }else{
-                    payLabel.text = payment.puesto + "° Puesto - S/ " + payment.premio + " " + payment.tipoMoneda
+                    payLabel.text = payment.puesto + "° Puesto - $/ " + payment.premio + " " + payment.tipoMoneda
                 }
 
             }

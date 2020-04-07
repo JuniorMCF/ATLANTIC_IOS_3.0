@@ -36,6 +36,9 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
     var eventHashMap : [String: [Event]] = ["":[Event]()]
     var tipoList : [String] = []
     func viewDidLoad() {
+        
+        appDelegate.progressDialog.showProgress()
+        
         let titles = EventDetailPreview()
         let parameters = ["clienteId":appDelegate.usuario.clienteId]
         
@@ -112,7 +115,7 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
                                 //enviar data
                                 self.showTitles?(eventDetailPreview)
                              }
-                             
+                            self.appDelegate.progressDialog.hideProgress()
                            
                              
                          }

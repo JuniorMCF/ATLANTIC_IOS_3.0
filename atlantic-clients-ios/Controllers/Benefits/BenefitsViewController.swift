@@ -29,8 +29,7 @@ class BenefitsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appDelegate.progressDialog = CustomProgress(parent: self, title: "Beneficios", message: "Obteniendo beneficios ...")
-        appDelegate.progressDialog.isHome = true
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Beneficios", message: "Obteniendo beneficios ...")        
         bind()
         viewModel.viewDidLoad()
         

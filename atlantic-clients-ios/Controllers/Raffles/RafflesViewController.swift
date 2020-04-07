@@ -30,7 +30,6 @@ class RafflesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Sorteos", message: "Obteniendo sorteos ...")
-        appDelegate.progressDialog.isHome = true
         
         bind()
         viewModel.viewDidLoad()

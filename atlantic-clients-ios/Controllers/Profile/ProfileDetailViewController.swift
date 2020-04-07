@@ -33,6 +33,9 @@ class ProfileDetailViewController: UIViewController {
     @IBOutlet weak var addressLabel: Label!
     @IBOutlet weak var addressTextField: TextFieldDetails!
     @IBOutlet weak var saveButton: Button!
+    private var constraint : NSLayoutConstraint!
+    @IBOutlet weak var addressText: UILabel!
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
@@ -87,19 +90,7 @@ class ProfileDetailViewController: UIViewController {
     
     func showTitles(titles: DetailTitles) {
         let usuario = appDelegate.usuario
-        let dominio = "https://wsclienteapp.azurewebsites.net/admin/upload/fotos/"
-        AF.request(dominio + usuario.clienteId + ".JPEG").responseImage { response in
-                   
-                       switch response.result {
-                             case .success(let value):
-                                self.profileImageView.image = value
-                             case .failure(let error):
-                                 print(error)
-                                 
-                             }
-
-        }
-        
+       
         nameLabel.setTitleProfileLabel(with: titles.nameTitle)
         nameTextField.setTextFieldStyle(with: usuario.nombre)
         birthdateLabel.setTitleProfileLabel(with: titles.birthdateTitle)
@@ -122,9 +113,14 @@ class ProfileDetailViewController: UIViewController {
         emailTextField.setTextFieldStyle(with: usuario.email)
         addressLabel.setTitleProfileLabel(with: titles.addressTitle)
         addressTextField.setTextFieldStyle(with: usuario.direccion)
+        addressText.text = usuario.direccion
+        addressText.fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         saveButton.setRemindButton(with: titles.saveTitle)
     }
     func allowModify(){
+        addressText.alpha = 0
+        addressTextField.alpha = 1
+        addressText.text = addressTextField.text!
         let usuario = appDelegate.usuario
         editButton.isUserInteractionEnabled = false
         nameTextField.isUserInteractionEnabled = false
@@ -134,8 +130,13 @@ class ProfileDetailViewController: UIViewController {
         emailTextField.isUserInteractionEnabled =  true
         addressTextField.isUserInteractionEnabled =  true
         saveButton.isUserInteractionEnabled =  true
+        constraint.constant = 40
+        constraint.isActive = true
+        self.view.layoutIfNeeded()
+        self.view.setNeedsLayout()
+        
         saveButton.alpha = 1.0
-       
+        
  
         
         birthdateTextField.setBorderBottom()
@@ -146,6 +147,8 @@ class ProfileDetailViewController: UIViewController {
         
     }
     func denyModify(){
+        addressText.alpha = 1
+        addressTextField.alpha = 0
         let usuario = appDelegate.usuario
         editButton.isUserInteractionEnabled = true
         nameTextField.isUserInteractionEnabled = false
@@ -163,8 +166,12 @@ class ProfileDetailViewController: UIViewController {
         emailTextField.delBorderBottom()
         addressTextField.delBorderBottom()
         
-        
+        constraint = self.saveButton.heightAnchor.constraint(equalToConstant: 0)
+        constraint.isActive = true
+        self.view.layoutIfNeeded()
+        self.view.setNeedsLayout()
         saveButton.alpha = 0.0
+        
     }
     
     
@@ -173,6 +180,7 @@ class ProfileDetailViewController: UIViewController {
         
     }
     @IBAction func tapSaveButton(_ sender: Any) {
+        
         viewModel.saveProfile(celular:phoneTextField.text!, direccion:addressTextField.text!, fechaNac:birthdateTextField.text!, email:emailTextField.text!, clienteId :appDelegate.usuario.clienteId)
     }
     private func addTapGesture() {

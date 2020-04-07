@@ -18,8 +18,12 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
     @IBOutlet weak var searchAgend: UISearchBar!
     @IBOutlet var viewPager: UIView!
     var carbonTabSwipeNavigation : CarbonTabSwipeNavigation!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Agenda", message: "Obteniendo eventos")
+        
         bind()
         viewModel.viewDidLoad()
         items = EventDetailPreview()
