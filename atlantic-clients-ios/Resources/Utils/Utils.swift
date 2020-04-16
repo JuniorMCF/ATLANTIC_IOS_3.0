@@ -492,6 +492,7 @@ func showToast(message : String) {
     }, completion: {(isCompleted) in
         navViewController.view.removeFromSuperview()
     })
+    print("aca")
 } }
 
 extension Date {
