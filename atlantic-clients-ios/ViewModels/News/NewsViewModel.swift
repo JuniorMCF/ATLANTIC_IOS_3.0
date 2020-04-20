@@ -192,7 +192,7 @@ class NewsViewModel: NewsViewModelProtocol {
                                             let val = JSON(data)
                                             let foto = Foto()
                                             foto.foto = val["foto"].stringValue
-                                            foto.esPrincipal = val["esPrincipal"].boolValue
+                                            foto.esPrincipal = val["es_principal"].boolValue
                                             sorteo.fotos.append(foto)
                                         }
                                         sorteo.nombreSorteo = value["nombre"].stringValue
