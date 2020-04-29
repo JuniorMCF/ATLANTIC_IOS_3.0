@@ -34,6 +34,10 @@ class TourneyViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        appDelegate.progressDialog = CustomProgress(parent: self, title: "Torneos", message: "Obteniendo torneos ...")
+    }
+    
     func bind() {
         viewModel.loadDatasources = loadDatasources
         viewModel.presentTourneyCategory = presentTourneyCategory

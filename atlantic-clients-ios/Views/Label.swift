@@ -60,13 +60,13 @@ class Label: UILabel {
         textAlignment = .center
     }
     public func setSubTitleViewLabelCenterGray(with setText: String) {
-           textColor   = .gray
+           textColor   = .darkGray
            text        = setText
-           fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
+           fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
            textAlignment = .center
        }
     public func setSubTitleViewLabelCenterLarge(with setText: String) {
-        textColor   = .gray
+        textColor   = .darkGray
         text        = setText
         fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
         textAlignment = .center
@@ -148,6 +148,13 @@ class Label: UILabel {
         text        = setText
         fontSizeScaleFamily(family: "HelveticaNeue", size: 15)
         textAlignment = .left
+    }
+    
+    public func setDetailSubDark(with setText: String) {
+        textColor   = .black
+        text        = setText
+        fontSizeScaleFamily(family: "HelveticaNeue-Bold", size: 15)
+        textAlignment = .center
     }
     
     public func setClubTitle(with setText: String) {
@@ -265,7 +272,7 @@ class Label: UILabel {
     public func setBenefitDetailTitleCenter(with setText: String) {
         textColor   = .black
         text        = setText
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 20)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 18)
         textAlignment = .center
     }
     
@@ -300,7 +307,15 @@ class Label: UILabel {
     
     public func setAwardTitle(with setText: String) {
         textColor = .black
-        fontSizeScaleFamily(family: "Avenir-Black", size: 23)
+        fontSizeScaleFamily(family: "Avenir-Black", size: 40)
+        text = setText
+        textAlignment = .center
+        //numberOfLines   = 0
+    }
+    
+    public func setAwardTitle2(with setText: String) {
+        textColor = .black
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 23)
         text = setText
         textAlignment = .center
         //numberOfLines   = 0

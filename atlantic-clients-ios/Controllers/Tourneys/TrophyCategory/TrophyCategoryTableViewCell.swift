@@ -15,7 +15,7 @@ class TrophyCategoryTableViewCell: UITableViewCell {
     
     func prepare(trophyCategory: Tournament) {
         trophyImageView.image = UIImage(named: trophyCategory.logo)
-        levelTitle.setDetailSub(with: trophyCategory.nombre)
+        levelTitle.setDetailSubDark(with: trophyCategory.nombre)
     }
 
     override func awakeFromNib() {

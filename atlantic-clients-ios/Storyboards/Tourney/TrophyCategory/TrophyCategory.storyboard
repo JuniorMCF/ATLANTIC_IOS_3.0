@@ -11,7 +11,7 @@
         <!--TORNEOS DOMINGO-->
         <scene sceneID="uQm-Rk-efB">
             <objects>
-                <viewController storyboardIdentifier="TrophyCategoryID" id="KE0-MM-t2s" customClass="TrophyCategoryViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrophyCategoryID" id="KE0-MM-t2s" customClass="TrophyCategoryViewController" customModule="Atlantic_Clientes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2NL-vi-Tfq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,32 +21,42 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrophyCategoryCellID" rowHeight="157" id="YHI-Hw-owK" customClass="TrophyCategoryTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrophyCategoryCellID" rowHeight="157" id="YHI-Hw-owK" customClass="TrophyCategoryTableViewCell" customModule="Atlantic_Clientes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHI-Hw-owK" id="IeW-52-dJG">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHI-Hw-owK" translatesAutoresizingMaskIntoConstraints="NO" id="IeW-52-dJG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="f5o-hv-PNe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f5o-hv-PNe">
+                                                    <rect key="frame" x="-69" y="-6" width="459" height="131"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="320" id="ssM-RS-veL"/>
+                                                        <constraint firstAttribute="height" constant="130" id="t0u-wM-g9O"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-Gx-jTq" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="90" y="138" width="141" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-Gx-jTq" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
+                                                    <rect key="frame" x="90" y="133" width="139" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="I0l-Gx-jTq" secondAttribute="bottom" constant="4" id="Vro-68-gMn"/>
-                                                <constraint firstItem="f5o-hv-PNe" firstAttribute="centerX" secondItem="IeW-52-dJG" secondAttribute="centerX" id="gHs-lD-EIE"/>
-                                                <constraint firstItem="I0l-Gx-jTq" firstAttribute="centerX" secondItem="IeW-52-dJG" secondAttribute="centerX" id="iYb-a7-hf1"/>
+                                                <constraint firstItem="f5o-hv-PNe" firstAttribute="top" secondItem="IeW-52-dJG" secondAttribute="top" constant="-6" id="3I4-9e-pZd"/>
+                                                <constraint firstAttribute="trailing" secondItem="I0l-Gx-jTq" secondAttribute="trailing" constant="91" id="Sew-DK-Ua1"/>
+                                                <constraint firstItem="I0l-Gx-jTq" firstAttribute="leading" secondItem="IeW-52-dJG" secondAttribute="leading" constant="90" id="UEN-le-rUg"/>
+                                                <constraint firstAttribute="bottom" secondItem="f5o-hv-PNe" secondAttribute="bottom" constant="32" id="VqA-2J-aLt"/>
+                                                <constraint firstAttribute="bottom" secondItem="I0l-Gx-jTq" secondAttribute="bottom" constant="3.5" id="etf-vE-bvq"/>
+                                                <constraint firstItem="f5o-hv-PNe" firstAttribute="centerX" secondItem="IeW-52-dJG" secondAttribute="centerX" id="gss-UN-YFT"/>
                                                 <constraint firstItem="I0l-Gx-jTq" firstAttribute="top" secondItem="f5o-hv-PNe" secondAttribute="bottom" constant="8" id="kjd-g1-72Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="IeW-52-dJG" secondAttribute="bottom" id="Orm-PX-yhw"/>
+                                            <constraint firstItem="IeW-52-dJG" firstAttribute="top" secondItem="YHI-Hw-owK" secondAttribute="top" id="QEy-6L-6IM"/>
+                                            <constraint firstItem="IeW-52-dJG" firstAttribute="centerX" secondItem="YHI-Hw-owK" secondAttribute="centerX" id="kCK-N5-eGM"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="levelTitle" destination="I0l-Gx-jTq" id="fvI-KJ-8t4"/>
                                             <outlet property="trophyImageView" destination="f5o-hv-PNe" id="6KM-2E-xC8"/>
@@ -54,7 +64,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOG-I5-LHp" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                 <rect key="frame" x="7" y="537" width="297" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -65,7 +65,7 @@ class PositionDetailViewController: UIViewController {
         positionTitleLabel.setRafflesSubCenter(with: "Usted ocupa el puesto:")
         positionLabel.setPositionTitleGold(with: "\(torneo.posicion)°")
         postTitleLabel.setRafflesSubCenter(with: titles.postTitle)
-        winTitleLabel.setAwardTitle(with: titles.winTitle)
+        winTitleLabel.setAwardTitle2(with: titles.winTitle)
         postTitleLabel.setRafflesSubCenter(with: titles.postTitle)
         let pay = String(format: "%.0f", torneo.premio)
         winLabel.setAwardTitle(with: "$ \(pay)")

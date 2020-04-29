@@ -104,7 +104,7 @@ class Utils{
                 progress.showProgress()
                 let fecha2 = fecha.doubleValue
                 var date = Date(timeIntervalSince1970: TimeInterval(fecha2/1000))
-                date = date.addingTimeInterval(60*60*15)
+                date = date.addingTimeInterval(60*60*13)
                 let store = EKEventStore()
                 store.requestAccess(to: .event, completion: {(granted, error) in
                     if(!granted) {
@@ -487,7 +487,7 @@ func showToast(message : String) {
         self.view.addSubview(navViewController.view)
     }
     //self.view.superview?.addSubview(navViewController.view)
-    UIView.animate(withDuration: 4.0, delay: 1.0, options: .curveEaseOut, animations: {
+    UIView.animate(withDuration: 5.0, delay: 0.5, options: .curveEaseOut, animations: {
         navViewController.view.alpha = 0.0
     }, completion: {(isCompleted) in
         navViewController.view.removeFromSuperview()

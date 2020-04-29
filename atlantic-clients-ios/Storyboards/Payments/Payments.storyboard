@@ -11,7 +11,7 @@
         <!--Mis Cobros-->
         <scene sceneID="slT-cB-sG8">
             <objects>
-                <viewController storyboardIdentifier="PaymentsID" id="BMy-aT-bvq" customClass="PaymentViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentsID" id="BMy-aT-bvq" customClass="PaymentViewController" customModule="Atlantic_Clientes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6OP-IC-1Aj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,18 +25,18 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="brm-Tc-H0H">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="5" sectionFooterHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="brm-Tc-H0H">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCellID" rowHeight="120" id="6Fj-iX-PxE" customClass="PaymentTableViewCell" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCellID" rowHeight="120" id="6Fj-iX-PxE" customClass="PaymentTableViewCell" customModule="Atlantic_Clientes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Fj-iX-PxE" id="Xma-0d-E5W">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fc-f5-h9d">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fc-f5-h9d">
                                                     <rect key="frame" x="12" y="20" width="120" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="5mW-Pj-3jR"/>
@@ -44,21 +44,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-s6-vr4">
-                                                    <rect key="frame" x="144" y="20" width="219" height="80"/>
+                                                    <rect key="frame" x="144" y="34" width="219" height="51"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwP-ry-da3" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="219" height="26.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwP-ry-da3" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="219" height="17"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="fontSizeScale">
-                                                                    <real key="value" value="14"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-1b-eu4" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="26.5" width="219" height="27"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-1b-eu4" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="17" width="219" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -69,10 +64,10 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RL-Pq-rfS">
-                                                            <rect key="frame" x="0.0" y="53.5" width="219" height="26.5"/>
+                                                            <rect key="frame" x="0.0" y="34" width="219" height="17"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-is-WWQ" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="4.5" width="48.5" height="17.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-is-WWQ" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="48.5" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="lfv-cu-gPy"/>
                                                                     </constraints>
@@ -85,8 +80,8 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxX-wY-20A" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
-                                                                    <rect key="frame" x="51" y="4.5" width="35.5" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxX-wY-20A" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
+                                                                    <rect key="frame" x="51" y="0.0" width="35.5" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="mD7-ae-Rct"/>
                                                                     </constraints>
@@ -104,8 +99,8 @@
                                                             <constraints>
                                                                 <constraint firstItem="UFo-is-WWQ" firstAttribute="leading" secondItem="9RL-Pq-rfS" secondAttribute="leading" id="4wq-za-gbs"/>
                                                                 <constraint firstItem="UFo-is-WWQ" firstAttribute="centerY" secondItem="9RL-Pq-rfS" secondAttribute="centerY" id="AuK-hz-WDB"/>
-                                                                <constraint firstItem="UFo-is-WWQ" firstAttribute="top" secondItem="9RL-Pq-rfS" secondAttribute="top" constant="4.5" id="IOz-ET-e7K"/>
-                                                                <constraint firstAttribute="bottom" secondItem="UFo-is-WWQ" secondAttribute="bottom" constant="4.5" id="ecq-PG-Idt"/>
+                                                                <constraint firstItem="UFo-is-WWQ" firstAttribute="top" secondItem="9RL-Pq-rfS" secondAttribute="top" id="IOz-ET-e7K"/>
+                                                                <constraint firstAttribute="bottom" secondItem="UFo-is-WWQ" secondAttribute="bottom" id="ecq-PG-Idt"/>
                                                                 <constraint firstItem="WxX-wY-20A" firstAttribute="centerY" secondItem="9RL-Pq-rfS" secondAttribute="centerY" id="lg7-eS-aMV"/>
                                                                 <constraint firstItem="WxX-wY-20A" firstAttribute="leading" secondItem="UFo-is-WWQ" secondAttribute="trailing" constant="2.5" id="qyg-1y-xYG"/>
                                                             </constraints>
@@ -115,11 +110,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="hqU-s6-vr4" firstAttribute="leading" secondItem="5Fc-f5-h9d" secondAttribute="trailing" constant="12" id="4y7-fi-YYE"/>
-                                                <constraint firstAttribute="bottom" secondItem="hqU-s6-vr4" secondAttribute="bottom" constant="20" id="8ek-TK-LmK"/>
+                                                <constraint firstAttribute="bottom" secondItem="hqU-s6-vr4" secondAttribute="bottom" constant="35" id="Bc0-1H-U9j"/>
                                                 <constraint firstItem="5Fc-f5-h9d" firstAttribute="leading" secondItem="Xma-0d-E5W" secondAttribute="leading" constant="12" id="HCa-jJ-YkD"/>
                                                 <constraint firstAttribute="trailing" secondItem="hqU-s6-vr4" secondAttribute="trailing" constant="12" id="Ugg-4i-f6b"/>
-                                                <constraint firstItem="hqU-s6-vr4" firstAttribute="top" secondItem="Xma-0d-E5W" secondAttribute="top" constant="20" id="e0d-He-ZYW"/>
+                                                <constraint firstItem="hqU-s6-vr4" firstAttribute="top" secondItem="Xma-0d-E5W" secondAttribute="top" constant="34" id="e0d-He-ZYW"/>
                                                 <constraint firstItem="5Fc-f5-h9d" firstAttribute="centerY" secondItem="Xma-0d-E5W" secondAttribute="centerY" id="kCd-gZ-0Wq"/>
+                                                <constraint firstItem="hqU-s6-vr4" firstAttribute="centerY" secondItem="Xma-0d-E5W" secondAttribute="centerY" constant="-0.5" id="lxf-th-amZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

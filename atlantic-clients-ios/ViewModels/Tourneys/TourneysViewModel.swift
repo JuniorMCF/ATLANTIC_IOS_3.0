@@ -161,7 +161,7 @@ class TourneyViewModel: TourneyViewModelProtocol {
         let parameters = ["tipo":tipo,"id":id]
         
         progress = appDelegate.progressDialog
-        progress.showProgress()
+	        progress.showProgress()
         AF.request(Constants().urlBase+Constants().getTorneosTipo,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON{(response) in
             switch response.result{
                 

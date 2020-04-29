@@ -88,6 +88,9 @@ class TrophyLoseViewController: UIViewController {
         puntosLabel.setSubTitleViewLabelCenterGray(with: "Tiene hasta el momento "+String(torneo.puntaje)+" puntos")
         posicionLabel.setSubTitleViewLabelCenterLarge(with: ""+String(torneo.posicion)+"°")
         terminosLabel.setRafflesSubUnderline(with: "Ver términos y condiciones")
+        
+       
+        
         terminosLabel.isUserInteractionEnabled = true
         terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
 
@@ -98,6 +101,17 @@ class TrophyLoseViewController: UIViewController {
     }
     
     func loadDatasources(datasource: [TournamentTable]) {
+        
+        if(torneo.posicion > 1 ){
+                let puesto = torneo.posicion - 1
+            let puntosFalta = datasource[puesto - 1].puntaje - torneo.puntaje
+                faltanLabel.alpha = 1
+            faltanLabel.setSubTitleViewLabelCenterGray(with: "le faltan " + String(puntosFalta) + " para llegar al puesto " + String(puesto))
+                   
+               }else{
+                   faltanLabel.alpha = 0
+               }
+        
         trophyLoseCollectionViewDD = TrophyLoseCollectionViewDatasourceAndDelegate(items: datasource, viewModel: viewModel,pos: self.torneo.posicion)
         trophyLoseCollectionView.dataSource = trophyLoseCollectionViewDD
         trophyLoseCollectionView.delegate = trophyLoseCollectionViewDD

@@ -20,6 +20,9 @@ class PaymentTableViewCell: UITableViewCell {
     
     func prepare(payment: Cobros) {
         titleLabel.text = payment.nombre
+        titleLabel.fontSizeScale = 14.0
+        titleLabel.font = UIFont.boldSystemFont(ofSize: titleLabel.font.pointSize)
+        
         stateTitleLabel.text = "Estado: "
         
         payment.premio = String(format: "%.0f", (payment.premio as NSString).floatValue)

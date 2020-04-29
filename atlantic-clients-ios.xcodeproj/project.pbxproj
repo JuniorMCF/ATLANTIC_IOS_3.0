@@ -383,7 +383,7 @@
 		798F882D2408B5710020517F /* PositionDetail40.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PositionDetail40.storyboard; sourceTree = "<group>"; };
 		79C29EC0241D903600CB30C3 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		79C29EC2241D908000CB30C3 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
-		8428024223E379FB002FB622 /* atlantic-clients-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atlantic-clients-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8428024223E379FB002FB622 /* Atlantic Clientes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atlantic Clientes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8428024723E379FB002FB622 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8428024C23E379FC002FB622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8428024E23E37A0A002FB622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -766,7 +766,7 @@
 		8428024323E379FB002FB622 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8428024223E379FB002FB622 /* atlantic-clients-ios.app */,
+				8428024223E379FB002FB622 /* Atlantic Clientes.app */,
 				8428025823E37A0B002FB622 /* atlantic-clients-iosTests.xctest */,
 				8428026323E37A0B002FB622 /* atlantic-clients-iosUITests.xctest */,
 			);
@@ -1658,7 +1658,7 @@
 			);
 			name = "atlantic-clients-ios";
 			productName = "atlantic-clients-ios";
-			productReference = 8428024223E379FB002FB622 /* atlantic-clients-ios.app */;
+			productReference = 8428024223E379FB002FB622 /* Atlantic Clientes.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8428025723E37A0B002FB622 /* atlantic-clients-iosTests */ = {
@@ -2299,16 +2299,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Atlantic Clientes";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2321,16 +2321,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Atlantic Clientes";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

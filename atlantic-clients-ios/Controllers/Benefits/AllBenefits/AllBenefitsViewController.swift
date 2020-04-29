@@ -347,6 +347,7 @@ class AllBenefitsViewController: UIViewController {
     func notInteractive(){
         vHidden.isUserInteractionEnabled = false
         buttonView.isUserInteractionEnabled = false
+        buttonView.alpha = 0
         titlePuntosLabel.isUserInteractionEnabled = false
         puntosLabel.isUserInteractionEnabled = false
         winLabel.isUserInteractionEnabled = false
