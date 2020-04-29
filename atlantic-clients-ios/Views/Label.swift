@@ -111,7 +111,7 @@ class Label: UILabel {
     
     public func setDetailTitle(with setText: String) {
         textColor = .black
-        fontSizeScaleFamily(family: "Avenir-Black", size: 16)
+        fontSizeScaleFamily(family: "Avenir-Black", size: 15)
         text = setText
         textAlignment = .left
         //numberOfLines   = 0
@@ -121,7 +121,7 @@ class Label: UILabel {
     public func setDetailSubTitle(with setText: String) {
         textColor   = .black
         text        = setText
-        fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
+        fontSizeScaleFamily(family: "Avenir-Medium", size: 13)
         textAlignment = .left
     }
     public func setTextNormal(with setText: String) {

@@ -487,7 +487,7 @@ func showToast(message : String) {
         self.view.addSubview(navViewController.view)
     }
     //self.view.superview?.addSubview(navViewController.view)
-    UIView.animate(withDuration: 5.0, delay: 0.5, options: .curveEaseOut, animations: {
+    UIView.animate(withDuration: 6.0, delay: 0.5, options: .curveEaseOut, animations: {
         navViewController.view.alpha = 0.0
     }, completion: {(isCompleted) in
         navViewController.view.removeFromSuperview()

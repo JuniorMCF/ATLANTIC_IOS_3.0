@@ -11,4 +11,5 @@ import Foundation
 class FotoEvent{
     var foto  = ""
     var esPrincipal = false
+    var pos = 0
 }

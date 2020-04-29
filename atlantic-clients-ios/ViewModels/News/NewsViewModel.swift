@@ -363,7 +363,7 @@ class NewsViewModel: NewsViewModelProtocol {
                                         for foto in fotos{
                                             let photos = FotoEvent()
                                             let value = JSON(foto)
-                                            photos.esPrincipal = value["esPrincipal"].boolValue
+                                            photos.esPrincipal = value["es_principal"].boolValue
                                             photos.foto = value["foto"].stringValue
                                             event.fotos.append(photos)
                                         }

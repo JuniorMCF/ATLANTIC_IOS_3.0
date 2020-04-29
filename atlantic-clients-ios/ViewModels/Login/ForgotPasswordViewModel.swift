@@ -87,6 +87,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
     func getPhone(dni:String,tipo:Int) {
         
         if(dni.count>=8 && dni.count <= 12){
+            appDelegate.progressDialog.message = "Verificando Usuario..."
             appDelegate.progressDialog.showProgress()
                    var dominioUrl = URL(string: Constants().urlBase+Constants().getObtenerTelefono)
                    dominioUrl = dominioUrl?.appending("dni", value:dni)
@@ -106,6 +107,9 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
                                          // try to read out a string array
                                         let resultado = json["resultado"] as! String
                                          if(resultado == "200"){
+                                            self.appDelegate.progressDialog.hideProgress()
+                                            self.appDelegate.progressDialog.message = "Enviando código de verificación..."
+                                            self.appDelegate.progressDialog.showProgress()
                                             //showToast?()
                                             let response = json["response"] as! [String:String]
                                             var celular = ""

@@ -29,7 +29,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     var tipo = "1"
     var selectHorario = ""
     var nAcompanantes = 0
-    var total = 0//total de acompañantes seleccionados
+    var total = 1//total de acompañantes seleccionados
     // MARK: - IBoulets
     var horariolist : [Horario] = []
     @IBOutlet weak var cvBuffet: UICollectionView!

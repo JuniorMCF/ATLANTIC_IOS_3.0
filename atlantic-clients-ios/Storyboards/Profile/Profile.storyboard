@@ -11,7 +11,7 @@
         <!--ATLANTIC CITY CLUB-->
         <scene sceneID="134-SR-eXp">
             <objects>
-                <viewController id="IfV-ak-Y7r" customClass="ProfileViewController" customModule="atlantic_clients_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IfV-ak-Y7r" customClass="ProfileViewController" customModule="Atlantic_Clientes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xCT-pi-IkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="ktm-4T-GA2"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-qY-ADO" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-qY-ADO" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="4.5" width="271" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -67,7 +67,7 @@
                                                     <constraint firstAttribute="width" constant="20" id="wb7-WW-yzr"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-gD-Yj6" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-gD-Yj6" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="4.5" width="271" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -96,7 +96,7 @@
                                                     <constraint firstAttribute="height" constant="24" id="wMZ-FO-BaJ"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UP-Yf-5v5" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UP-Yf-5v5" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="4.5" width="267" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -113,7 +113,7 @@
                                             <constraint firstItem="2UP-Yf-5v5" firstAttribute="centerY" secondItem="0Uf-nj-0qc" secondAttribute="centerY" id="t1R-ba-cIl"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFf-ny-waV" customClass="View" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFf-ny-waV" customClass="View" customModule="Atlantic_Clientes" customModuleProvider="target">
                                         <rect key="frame" x="32" y="162" width="311" height="4"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -130,7 +130,7 @@
                                                     <constraint firstAttribute="height" constant="24" id="zit-QI-cE9"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKo-oN-uyG" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKo-oN-uyG" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="4.5" width="267" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -158,7 +158,7 @@
                                                     <constraint firstAttribute="height" constant="24" id="77E-7P-SxI"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwZ-An-11t" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwZ-An-11t" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="4.5" width="267" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -186,7 +186,7 @@
                                                     <constraint firstAttribute="width" constant="24" id="e1l-cM-Icn"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-Lx-xzc" customClass="Label" customModule="atlantic_clients_ios" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-Lx-xzc" customClass="Label" customModule="Atlantic_Clientes" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="4.5" width="267" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>

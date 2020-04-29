@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import AlamofireImage
 class BreakfastViewController: UIViewController {
     
     // Mark: - ViewModel
@@ -23,7 +24,7 @@ class BreakfastViewController: UIViewController {
     var breakfast: [Breakfast] = []
     var items = [Event]()
     var tipo = ""
-    
+    var fotoList : [UIImage]!
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
     
@@ -68,11 +69,54 @@ class BreakfastViewController: UIViewController {
     }
     
     func loadDatasources(datasource:BreakfastDatasources) {
+        fotoList = []
+        for _ in 0 ..< items.count{
+            fotoList.append(Image())
+        }
         BreakfastCollectionViewDD = BreakfastCollectionViewDatasourceAndDelegate(items:  items)
+        BreakfastCollectionViewDD.fotoList = fotoList
         collectionView.dataSource = BreakfastCollectionViewDD
         collectionView.delegate = self
         self.breakfast = datasource.items
         self.collectionView.reloadData()
+        
+        
+        var count = 0
+        for data in items{
+            
+            for foto in data.fotos{
+                
+                if foto.esPrincipal{
+                    foto.foto = foto.foto.replacingOccurrences(of: "\"", with: "")
+                    foto.pos = count
+                    
+                    count += 1
+                    print(count)
+                    print(self.items.count)
+                    if (foto.foto == ""){
+                        fotoList.append(UIImage(named: "img_desayuno")!)
+                    }else{
+                        let dominio = "https://clienteatlantic.azurewebsites.net/admin/upload/evento/"
+                        AF.request(dominio + foto.foto).responseImage { response in
+                                   
+                                       switch response.result {
+                                             case .success(let value):
+                                                
+                                                self.fotoList[foto.pos] = value
+                                                if(count == self.items.count){
+                                                    self.BreakfastCollectionViewDD.fotoList = self.fotoList
+                                                    self.collectionView.reloadData()
+                                                }
+                                             case .failure(let error):
+                                                 print(error)
+                                                 
+                                             }
+                        }
+                    }
+                    break;
+                }
+            }
+        }
     }
     func presentEventDetail(item:Event){
         let storyboard = UIStoryboard(name: "EventDetail", bundle: nil)

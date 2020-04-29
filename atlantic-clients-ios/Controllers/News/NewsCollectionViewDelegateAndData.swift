@@ -348,11 +348,11 @@ extension NewsCollectionViewDelegateAndData: UICollectionViewDataSource {
                 let event = eventWeeks.eventWeek[indexPath.row]
                 cell.dailyPromotionLabel.text = event.nombreCorto
                 
-                
-                
+                print(event)
                 for fotos in event.fotos{
                     var k = 0
-                    print(fotos)
+                    print(fotos.esPrincipal)
+                    print(dominio+fotos.foto)
                     if(fotos.esPrincipal){
                         AF.request(dominio + fotos.foto).responseImage { response in
                                    

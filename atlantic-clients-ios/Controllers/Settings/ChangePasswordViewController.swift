@@ -53,9 +53,10 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
         viewModel.backPressed = backPressed
     }
     func backPressed(){
-        let storyBoard = UIStoryboard(name: "Settings", bundle: nil)
+        self.navigationController?.popViewController(animated: true)
+       /* let storyBoard = UIStoryboard(name: "Settings", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "SettingsID")
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.pushViewController(viewController, animated: true)*/
     }
     func showTitles(titles:[String]){
         

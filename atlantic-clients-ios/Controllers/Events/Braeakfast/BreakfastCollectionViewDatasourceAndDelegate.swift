@@ -13,7 +13,7 @@ import AlamofireImage
 import SwiftyJSON
 class BreakfastCollectionViewDatasourceAndDelegate: NSObject {
     private var items: [Event] = []
-    
+    var fotoList : [UIImage]!
     init(items: [Event]) {
         self.items = items
     }
@@ -29,16 +29,12 @@ extension BreakfastCollectionViewDatasourceAndDelegate: UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
-        let breakfast = items[indexPath.row].fotos
-        var foto = ""
-        for data in breakfast{
-            if(data.esPrincipal == true){
-                foto = data.foto
-            }
+        if(fotoList.count > 0){
+            cell.imageBreakfast.image = fotoList[indexPath.row]
         }
-
+        cell.tituloBreakfast.text = items[indexPath.row].nombreCorto
         
-        cell.prepare(foto: foto,event:items[indexPath.row])
+       
         return cell
             
         }
