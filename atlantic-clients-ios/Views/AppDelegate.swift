@@ -72,7 +72,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(clubController != nil){
             clubController.reloadData()
         }
-        print("app foreground")
+        print("app foreground 1")
+        
+    
+        
         
     }
     

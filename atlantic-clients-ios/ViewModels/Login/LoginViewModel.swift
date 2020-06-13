@@ -80,6 +80,75 @@ class LoginViewModel: LoginViewModelProtocol {
             self.changeTerminos?(true)
         }
     }
+    
+    func getNov(){
+        self.tapTerminos(estado: true)
+        
+        let dominioUrl = Constants().urlBase+Constants().getNovedades
+        let parameters = ["idCliente":self.appDelegate.usuario.clienteId]
+        AF.request(dominioUrl ,method: .get,parameters: parameters,encoding: URLEncoding.default,headers:nil).responseJSON(completionHandler: { response in
+            
+            switch response.result{
+                
+            case.success(let value):
+                         let json = JSON(value)
+                         let data = json.stringValue.data(using: .utf8)
+                         do {
+                             if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                                let cobros = json["cobros"] as! Bool
+                                let sorteo = json["sorteo"] as! Bool
+                                let beneficio = json["beneficio"] as! Bool
+                                let torneo = json["torneo"] as! Bool
+                                let eventos = json["eventos"] as! Bool
+                                
+                                var body = "0"
+                                
+                                if(cobros){
+                                    body = "0"
+                                    Constants().saveBody(isActive: true, key: "body"+body)
+                                }
+                                if(sorteo){
+                                    body = "1"
+                                    Constants().saveBody(isActive: true, key: "body"+body)
+                                }
+                                if(beneficio){
+                                    body = "2"
+                                    Constants().saveBody(isActive: true, key: "body"+body)
+                                }
+                                if(torneo){
+                                    body = "3"
+                                    Constants().saveBody(isActive: true, key: "body"+body)
+                                }
+                                if(eventos){
+                                    body = "4"
+                                    Constants().saveBody(isActive: true, key: "body"+body)
+                                }
+                                
+                                 self.progressDialog.hideProgress()
+                                 self.presentOnboarding?()
+                             }
+                         } catch let error as NSError {
+                            self.progressDialog.hideProgress()
+                            self.presentOnboarding?()
+                             print("Failed to load: \(error.localizedDescription)")
+                         }
+                         
+                        break
+                    case.failure(let error):
+                        self.progressDialog.hideProgress()
+                        self.presentOnboarding?()
+                        print(error)
+                        break
+                    }
+              /*print(response)
+              let result = JSON(response)
+              print("data aca")
+              print(result)
+              */
+              
+	        })
+        
+    }
 
     
     func tapLogin(dni:String,password:String,terminos:Bool) {
@@ -149,9 +218,7 @@ class LoginViewModel: LoginViewModelProtocol {
                                                 Constants().savePassword(password: password)
                                                 Constants().saveTerminos(terminoState: true)
                                                 Constants().saveLogin(isLogin: true)
-                                                self.progressDialog.hideProgress()
-                                                self.presentOnboarding?()
-                                                self.tapTerminos(estado: true)
+                                                self.getNov()
                                                 
                                              }else if (resultado == "400")  {
                                                 self.progressDialog.hideProgress()

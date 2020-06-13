@@ -122,8 +122,8 @@
 		84657C2A2406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84657C292406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift */; };
 		846BAB91240D89A700FE8E0E /* BuffetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAB8F240D89A600FE8E0E /* BuffetCell.swift */; };
 		846BAB92240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BAB90240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift */; };
-		846C7929243AD6850092F4E6 /* RafflesDream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C7928243AD6840092F4E6 /* RafflesDream.storyboard */; };
 		846C792B243AD7160092F4E6 /* AllBenefits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C792A243AD7160092F4E6 /* AllBenefits.storyboard */; };
+		846CFE562467251600DC42A3 /* RafflesDream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846CFE552467251500DC42A3 /* RafflesDream.storyboard */; };
 		849BEC4724217D9400082366 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BEC4624217D9300082366 /* WebKit.framework */; };
 		84B62C86241AC757006E5EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */; };
 		84ED4FEC23E37F050010D378 /* Club.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ED4F2F23E37F050010D378 /* Club.storyboard */; };
@@ -414,8 +414,8 @@
 		84657C292406D15D00FB2378 /* NewsCollectionViewDelegateAndData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewDelegateAndData.swift; sourceTree = "<group>"; };
 		846BAB8F240D89A600FE8E0E /* BuffetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffetCell.swift; sourceTree = "<group>"; };
 		846BAB90240D89A700FE8E0E /* BuffetCollectionViewDataAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuffetCollectionViewDataAndDelegate.swift; sourceTree = "<group>"; };
-		846C7928243AD6840092F4E6 /* RafflesDream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RafflesDream.storyboard; path = ../../../../../../.Trash/RafflesDream.storyboard; sourceTree = "<group>"; };
 		846C792A243AD7160092F4E6 /* AllBenefits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllBenefits.storyboard; sourceTree = "<group>"; };
+		846CFE552467251500DC42A3 /* RafflesDream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RafflesDream.storyboard; sourceTree = "<group>"; };
 		849BEC4624217D9300082366 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		84B62C84241AC515006E5EA4 /* atlantic-clients-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "atlantic-clients-ios.entitlements"; sourceTree = "<group>"; };
 		84B62C85241AC757006E5EA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1285,10 +1285,10 @@
 		84ED4F4523E37F050010D378 /* RafflesDetail */ = {
 			isa = PBXGroup;
 			children = (
+				846CFE552467251500DC42A3 /* RafflesDream.storyboard */,
 				84ED4F4623E37F050010D378 /* RafflesDetail.storyboard */,
 				84ED4F4723E37F050010D378 /* RafflesDreams.storyboard */,
 				84ED4F4823E37F050010D378 /* Reminder.storyboard */,
-				846C7928243AD6840092F4E6 /* RafflesDream.storyboard */,
 			);
 			path = RafflesDetail;
 			sourceTree = "<group>";
@@ -1641,9 +1641,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8428024123E379FB002FB622 /* atlantic-clients-ios */ = {
+		8428024123E379FB002FB622 /* Atlantic Clientes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8428026C23E37A0B002FB622 /* Build configuration list for PBXNativeTarget "atlantic-clients-ios" */;
+			buildConfigurationList = 8428026C23E37A0B002FB622 /* Build configuration list for PBXNativeTarget "Atlantic Clientes" */;
 			buildPhases = (
 				6A66B8C2C5A1F3E29CDE6B70 /* [CP] Check Pods Manifest.lock */,
 				8428023E23E379FB002FB622 /* Sources */,
@@ -1656,7 +1656,7 @@
 			);
 			dependencies = (
 			);
-			name = "atlantic-clients-ios";
+			name = "Atlantic Clientes";
 			productName = "atlantic-clients-ios";
 			productReference = 8428024223E379FB002FB622 /* Atlantic Clientes.app */;
 			productType = "com.apple.product-type.application";
@@ -1736,7 +1736,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8428024123E379FB002FB622 /* atlantic-clients-ios */,
+				8428024123E379FB002FB622 /* Atlantic Clientes */,
 				8428025723E37A0B002FB622 /* atlantic-clients-iosTests */,
 				8428026223E37A0B002FB622 /* atlantic-clients-iosUITests */,
 			);
@@ -1756,8 +1756,8 @@
 				84ED4FEF23E37F050010D378 /* PositionDetail.storyboard in Resources */,
 				84ED501423E37F050010D378 /* News~.storyboard in Resources */,
 				84ED501823E37F050010D378 /* OnBoarding.storyboard in Resources */,
-				846C7929243AD6850092F4E6 /* RafflesDream.storyboard in Resources */,
 				84ED500F23E37F050010D378 /* More~.storyboard in Resources */,
+				846CFE562467251600DC42A3 /* RafflesDream.storyboard in Resources */,
 				7964E3D92409C4E80043DD67 /* ProfileAgenda.storyboard in Resources */,
 				84ED4FF123E37F050010D378 /* Tourneys.storyboard in Resources */,
 				796429C1240DC5BD0076265A /* CustomLogout.storyboard in Resources */,
@@ -2140,12 +2140,12 @@
 /* Begin PBXTargetDependency section */
 		8428025A23E37A0B002FB622 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8428024123E379FB002FB622 /* atlantic-clients-ios */;
+			target = 8428024123E379FB002FB622 /* Atlantic Clientes */;
 			targetProxy = 8428025923E37A0B002FB622 /* PBXContainerItemProxy */;
 		};
 		8428026523E37A0B002FB622 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8428024123E379FB002FB622 /* atlantic-clients-ios */;
+			target = 8428024123E379FB002FB622 /* Atlantic Clientes */;
 			targetProxy = 8428026423E37A0B002FB622 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2299,14 +2299,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
 				PRODUCT_NAME = "Atlantic Clientes";
 				SWIFT_VERSION = 5.0;
@@ -2321,14 +2321,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
 				PRODUCT_NAME = "Atlantic Clientes";
 				SWIFT_VERSION = 5.0;
@@ -2354,7 +2354,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atlantic-clients-ios.app/atlantic-clients-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atlantic Clientes.app/Atlantic Clientes";
 			};
 			name = Debug;
 		};
@@ -2376,7 +2376,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atlantic-clients-ios.app/atlantic-clients-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atlantic Clientes.app/Atlantic Clientes";
 			};
 			name = Release;
 		};
@@ -2432,7 +2432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8428026C23E37A0B002FB622 /* Build configuration list for PBXNativeTarget "atlantic-clients-ios" */ = {
+		8428026C23E37A0B002FB622 /* Build configuration list for PBXNativeTarget "Atlantic Clientes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8428026D23E37A0B002FB622 /* Debug */,

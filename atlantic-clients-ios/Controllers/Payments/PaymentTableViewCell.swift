@@ -52,7 +52,7 @@ class PaymentTableViewCell: UITableViewCell {
                 if(payment.puesto == "0" || payment.puesto == "null" || payment.puesto == "" || payment.puesto.isEmpty){
                     payLabel.text = payment.premio + " " + payment.tipoMoneda
                 }else{
-                    payLabel.text = payment.puesto + "° Puesto - $/ " + payment.premio + " " + payment.tipoMoneda
+                    payLabel.text = payment.puesto + "° Puesto - $ " + payment.premio + " " + payment.tipoMoneda
                 }
 
             }

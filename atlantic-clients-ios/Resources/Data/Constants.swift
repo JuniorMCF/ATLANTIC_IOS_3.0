@@ -49,6 +49,7 @@ class Constants {
     var postSetToken = "GuardarToken"
     var postConfigNotificacion = "ConfigNotificacion"
     var postAgregarIngreso = "agregarIngreso"
+    var getNovedades = "Novedades"
     var postAgregarActividadPromocion = "agregarActividadPromocion"
     var postAgregarActividadEvento = "agregarActividadEvento"
     var postAgregarActividadCobro = "agregarActividadCobro"
