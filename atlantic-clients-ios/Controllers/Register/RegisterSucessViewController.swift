@@ -51,9 +51,10 @@ class RegisterSucessViewController: UIViewController {
     }
     func pushRegisterUser(response:String){
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginID")
-        self.navigationController?.popToRootViewController(animated: true)
-        /*self.navigationController?.pushViewController(viewController, animated: true)*/
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginID") as! LoginViewController
+        viewController.state = true
+       // self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     

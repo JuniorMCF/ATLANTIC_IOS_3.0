@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     var viewModel: LoginViewModelProtocol! = LoginViewModel()
     var progressController : CustomProgress!
     // MARK: - IBOulet
-
+    var state = false
     @IBOutlet var titleLabel: Label!
     @IBOutlet var dniTextField: TextField!
     @IBOutlet var passwordTextField: TextField!
@@ -47,7 +47,9 @@ class LoginViewController: UIViewController {
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
+        
         self.dniTextField.text = ""
         self.passwordTextField.text = ""
         
@@ -57,6 +59,10 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = nil
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        if(state){
+            self.showToast(message: "Usuario registrado con exito")
+        }
         
     }
     
