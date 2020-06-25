@@ -20,7 +20,7 @@ class Terminos: UIViewController
      
         @IBOutlet var vContainer: UIView!
         
-        @IBOutlet var webView: WKWebView!
+    @IBOutlet weak var wkWebView: WKWebView!
         
     @IBAction func close(_ sender: Any) {
         if(!encuesta.isEmpty){
@@ -53,7 +53,7 @@ class Terminos: UIViewController
         override func viewDidLoad() {
             super.viewDidLoad()
             let request = URLRequest(url: URL(string: self.url)!)
-            self.webView.load(request)
+            self.wkWebView.load(request)
         }
 
         

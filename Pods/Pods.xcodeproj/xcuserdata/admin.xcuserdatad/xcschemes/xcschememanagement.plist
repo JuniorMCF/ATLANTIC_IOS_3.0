@@ -29,22 +29,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseAnalyticsInterop.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FirebaseCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>FirebaseCoreDiagnostics.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FirebaseCoreDiagnosticsInterop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -109,12 +99,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-atlantic-clients-ios-atlantic-clients-iosUITests.xcscheme</key>
+		<key>Pods-Atlantic Clientes-atlantic-clients-iosUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-atlantic-clients-ios.xcscheme</key>
+		<key>Pods-Atlantic Clientes.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

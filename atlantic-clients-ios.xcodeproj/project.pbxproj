@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		124E4D5FD7E93BDE583692F9 /* Pods_atlantic_clients_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D8D7EF4858B67EE0F3C9A1 /* Pods_atlantic_clients_iosTests.framework */; };
-		70ADA76D08E260AB90AEC163 /* Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C303BB2828CC779798283D4C /* Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework */; };
+		23BFA0BF4F232D037C471B84 /* Pods_Atlantic_Clientes_atlantic_clients_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC87A2C2D43C6F6BEA67DA4 /* Pods_Atlantic_Clientes_atlantic_clients_iosUITests.framework */; };
+		5BAAA01A7E61A584A4CD2DCC /* Pods_Atlantic_Clientes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B19847766170A3A16BEA6B /* Pods_Atlantic_Clientes.framework */; };
 		7944D8EA23EB5DD6007A4033 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944D8E923EB5DD6007A4033 /* Constants.swift */; };
 		7944D8EC23EB5F5F007A4033 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944D8EB23EB5F5F007A4033 /* User.swift */; };
 		7944D8EE23EB5F68007A4033 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944D8ED23EB5F68007A4033 /* UserData.swift */; };
@@ -251,7 +252,6 @@
 		84ED509D23E382EF0010D378 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4ED023E37F050010D378 /* Button.swift */; };
 		84ED509F23E382EF0010D378 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428024723E379FB002FB622 /* SceneDelegate.swift */; };
 		84ED50A423E3832B0010D378 /* BenefitsCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4F9523E37F050010D378 /* BenefitsCategoryViewModel.swift */; };
-		84ED50A823E383CB0010D378 /* Pods_atlantic_clients_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ED50A723E383CB0010D378 /* Pods_atlantic_clients_ios.framework */; };
 		84ED50A923E384F20010D378 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4F6A23E37F050010D378 /* MainTabBarViewController.swift */; };
 		84ED50AA23E385230010D378 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4F6323E37F050010D378 /* ItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -289,9 +289,13 @@
 /* Begin PBXFileReference section */
 		06114461E21531A2903A6829 /* Pods-atlantic-clients-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-iosTests/Pods-atlantic-clients-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		119617D62D937129AB3B157B /* Pods_atlantic_clients_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atlantic_clients_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2FB5E930DD83A0FD699C9A /* Pods-Atlantic Clientes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlantic Clientes.release.xcconfig"; path = "Target Support Files/Pods-Atlantic Clientes/Pods-Atlantic Clientes.release.xcconfig"; sourceTree = "<group>"; };
 		41D8D7EF4858B67EE0F3C9A1 /* Pods_atlantic_clients_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atlantic_clients_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		463DBD9E2751AE55B0FD752A /* Pods-atlantic-clients-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-ios.debug.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-ios/Pods-atlantic-clients-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		4AC87A2C2D43C6F6BEA67DA4 /* Pods_Atlantic_Clientes_atlantic_clients_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlantic_Clientes_atlantic_clients_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C604C837D7047D5BBF88B1D /* Pods-atlantic-clients-ios-atlantic-clients-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-ios-atlantic-clients-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-ios-atlantic-clients-iosUITests/Pods-atlantic-clients-ios-atlantic-clients-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		52B19847766170A3A16BEA6B /* Pods_Atlantic_Clientes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlantic_Clientes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3228817DF7A24463B4059F /* Pods-Atlantic Clientes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlantic Clientes.debug.xcconfig"; path = "Target Support Files/Pods-Atlantic Clientes/Pods-Atlantic Clientes.debug.xcconfig"; sourceTree = "<group>"; };
 		7944D8E923EB5DD6007A4033 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7944D8EB23EB5F5F007A4033 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7944D8ED23EB5F68007A4033 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -551,11 +555,11 @@
 		84ED4FA023E37F050010D378 /* BreakfastViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakfastViewModel.swift; sourceTree = "<group>"; };
 		84ED4FA223E37F050010D378 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		84ED4FA723E37F050010D378 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
-		84ED50A723E383CB0010D378 /* Pods_atlantic_clients_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_atlantic_clients_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F0654FDC6973BD6973707D /* Pods-atlantic-clients-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-ios.release.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-ios/Pods-atlantic-clients-ios.release.xcconfig"; sourceTree = "<group>"; };
 		BD94F110A15C194CB84A7B3A /* Pods-atlantic-clients-ios-atlantic-clients-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-ios-atlantic-clients-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-ios-atlantic-clients-iosUITests/Pods-atlantic-clients-ios-atlantic-clients-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C303BB2828CC779798283D4C /* Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB779B2CEDCD34B09EF450BC /* Pods-atlantic-clients-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atlantic-clients-iosTests.release.xcconfig"; path = "Target Support Files/Pods-atlantic-clients-iosTests/Pods-atlantic-clients-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		CEF2C68B211C17BBC3C6446A /* Pods-Atlantic Clientes-atlantic-clients-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlantic Clientes-atlantic-clients-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-Atlantic Clientes-atlantic-clients-iosUITests/Pods-Atlantic Clientes-atlantic-clients-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D72023CDEBBA201BD17C7E25 /* Pods-Atlantic Clientes-atlantic-clients-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlantic Clientes-atlantic-clients-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Atlantic Clientes-atlantic-clients-iosUITests/Pods-Atlantic Clientes-atlantic-clients-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -564,7 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849BEC4724217D9400082366 /* WebKit.framework in Frameworks */,
-				84ED50A823E383CB0010D378 /* Pods_atlantic_clients_ios.framework in Frameworks */,
+				5BAAA01A7E61A584A4CD2DCC /* Pods_Atlantic_Clientes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +584,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70ADA76D08E260AB90AEC163 /* Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework in Frameworks */,
+				23BFA0BF4F232D037C471B84 /* Pods_Atlantic_Clientes_atlantic_clients_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +600,10 @@
 				BD94F110A15C194CB84A7B3A /* Pods-atlantic-clients-ios-atlantic-clients-iosUITests.release.xcconfig */,
 				06114461E21531A2903A6829 /* Pods-atlantic-clients-iosTests.debug.xcconfig */,
 				CB779B2CEDCD34B09EF450BC /* Pods-atlantic-clients-iosTests.release.xcconfig */,
+				5D3228817DF7A24463B4059F /* Pods-Atlantic Clientes.debug.xcconfig */,
+				2B2FB5E930DD83A0FD699C9A /* Pods-Atlantic Clientes.release.xcconfig */,
+				D72023CDEBBA201BD17C7E25 /* Pods-Atlantic Clientes-atlantic-clients-iosUITests.debug.xcconfig */,
+				CEF2C68B211C17BBC3C6446A /* Pods-Atlantic Clientes-atlantic-clients-iosUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1630,10 +1638,10 @@
 			isa = PBXGroup;
 			children = (
 				849BEC4624217D9300082366 /* WebKit.framework */,
-				84ED50A723E383CB0010D378 /* Pods_atlantic_clients_ios.framework */,
 				119617D62D937129AB3B157B /* Pods_atlantic_clients_ios.framework */,
-				C303BB2828CC779798283D4C /* Pods_atlantic_clients_ios_atlantic_clients_iosUITests.framework */,
 				41D8D7EF4858B67EE0F3C9A1 /* Pods_atlantic_clients_iosTests.framework */,
+				52B19847766170A3A16BEA6B /* Pods_Atlantic_Clientes.framework */,
+				4AC87A2C2D43C6F6BEA67DA4 /* Pods_Atlantic_Clientes_atlantic_clients_iosUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1864,7 +1872,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-atlantic-clients-ios-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Atlantic Clientes-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1886,7 +1894,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-atlantic-clients-ios-atlantic-clients-iosUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Atlantic Clientes-atlantic-clients-iosUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1899,15 +1907,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atlantic-clients-ios-atlantic-clients-iosUITests/Pods-atlantic-clients-ios-atlantic-clients-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Atlantic Clientes-atlantic-clients-iosUITests/Pods-Atlantic Clientes-atlantic-clients-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atlantic-clients-ios-atlantic-clients-iosUITests/Pods-atlantic-clients-ios-atlantic-clients-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Atlantic Clientes-atlantic-clients-iosUITests/Pods-Atlantic Clientes-atlantic-clients-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atlantic-clients-ios-atlantic-clients-iosUITests/Pods-atlantic-clients-ios-atlantic-clients-iosUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Atlantic Clientes-atlantic-clients-iosUITests/Pods-Atlantic Clientes-atlantic-clients-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3236F6426E0370C795F114F /* [CP] Embed Pods Frameworks */ = {
@@ -1916,15 +1924,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atlantic-clients-ios/Pods-atlantic-clients-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Atlantic Clientes/Pods-Atlantic Clientes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-atlantic-clients-ios/Pods-atlantic-clients-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Atlantic Clientes/Pods-Atlantic Clientes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atlantic-clients-ios/Pods-atlantic-clients-ios-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Atlantic Clientes/Pods-Atlantic Clientes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2294,19 +2302,19 @@
 		};
 		8428026D23E37A0B002FB622 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 463DBD9E2751AE55B0FD752A /* Pods-atlantic-clients-ios.debug.xcconfig */;
+			baseConfigurationReference = 5D3228817DF7A24463B4059F /* Pods-Atlantic Clientes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
 				PRODUCT_NAME = "Atlantic Clientes";
 				SWIFT_VERSION = 5.0;
@@ -2316,19 +2324,19 @@
 		};
 		8428026E23E37A0B002FB622 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2F0654FDC6973BD6973707D /* Pods-atlantic-clients-ios.release.xcconfig */;
+			baseConfigurationReference = 2B2FB5E930DD83A0FD699C9A /* Pods-Atlantic Clientes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "atlantic-clients-ios/atlantic-clients-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = V7SRS4DXGN;
 				INFOPLIST_FILE = "atlantic-clients-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlantic.clientes.ios;
 				PRODUCT_NAME = "Atlantic Clientes";
 				SWIFT_VERSION = 5.0;
@@ -2382,7 +2390,7 @@
 		};
 		8428027323E37A0B002FB622 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C604C837D7047D5BBF88B1D /* Pods-atlantic-clients-ios-atlantic-clients-iosUITests.debug.xcconfig */;
+			baseConfigurationReference = D72023CDEBBA201BD17C7E25 /* Pods-Atlantic Clientes-atlantic-clients-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2402,7 +2410,7 @@
 		};
 		8428027423E37A0B002FB622 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD94F110A15C194CB84A7B3A /* Pods-atlantic-clients-ios-atlantic-clients-iosUITests.release.xcconfig */;
+			baseConfigurationReference = CEF2C68B211C17BBC3C6446A /* Pods-Atlantic Clientes-atlantic-clients-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
