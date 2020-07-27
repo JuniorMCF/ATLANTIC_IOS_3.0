@@ -1,11 +1,3 @@
-//
-//  TrophyDetailCollectionViewDatasourceAndDelegate.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/10/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

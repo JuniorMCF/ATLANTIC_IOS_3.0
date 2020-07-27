@@ -1,6 +1,8 @@
 import UIKit
 import MaterialComponents.MaterialActivityIndicator
-
+/**
+ Progress dialog custom, muestra mensajes en pantalla.
+ */
 class CustomProgress: UIViewController {
     
     var viewParent : UIViewController!
@@ -16,7 +18,13 @@ class CustomProgress: UIViewController {
     convenience init() {
         self.init(parent: UIViewController(),title: "", message: "")
     }
-
+    /**
+     Inicializaacion del customprogress
+     - Parameters:
+        - parent: Viewcontroller donde se inflara la vista
+        - message : Mensaje a mostrar en el custom progress
+        - title : Titulo del custom progress
+     */
     init(parent: UIViewController,title: String, message: String) {
         self.viewParent = parent
         self.titleP = title
@@ -28,6 +36,9 @@ class CustomProgress: UIViewController {
         super.init(coder: coder)
     }
     
+    /**
+     Configuracion inicial del customprogress
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
        let activityIndicator = MDCActivityIndicator()
@@ -44,7 +55,9 @@ class CustomProgress: UIViewController {
     
  
 
-    
+    /**
+     Muestra el progress en pantalla.
+     */
     func showProgress(){
         let storyboard = UIStoryboard(name: "CustomProgress", bundle: nil)
         progressController = (storyboard.instantiateViewController(withIdentifier: "customProgress") as! CustomProgress)
@@ -56,29 +69,23 @@ class CustomProgress: UIViewController {
             progressController.modalPresentationStyle = .overFullScreen
         }
         self.isHome = false
-       /* if(isHome){
-            viewParent.tabBarController?.view.addSubview(progressController.view)
-        }else{
-            viewParent.view.addSubview(progressController.view)
-        }*/
+   
         
         progressController.isHome = isHome
-       // viewParent.view.addSubview(progressController.view)
-        //self.progressController.titleProgress.text = self.titleP
-        //self.progressController.messageProgress.text = self.message
         viewParent.navigationController?.present(progressController, animated: false, completion: {
             self.progressController.titleProgress.text = self.titleP
             self.progressController.messageProgress.text = self.message
         })
     }
     
+    /**
+    *Oculta el progress en pantalla.
+    */
     func hideProgress(){
         if(progressController != nil){
             progressController.dismiss(animated: false, completion: nil)
-             //progressController.view.removeFromSuperview()
         }
         
-        //progressController.dismiss(animated: false, completion: nil)
     }
     
     

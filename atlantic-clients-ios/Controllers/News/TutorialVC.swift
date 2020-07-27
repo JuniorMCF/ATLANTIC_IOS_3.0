@@ -1,11 +1,3 @@
-//
-//  TutorialVC.swift
-//  atlantic-clients-ios
-//
-//  Created by admin on 2/25/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class TutorialVC: UIViewController {
@@ -44,9 +36,10 @@ class TutorialVC: UIViewController {
             btnSaltar.alpha = 1
             btnSaltar.isUserInteractionEnabled = true
         }
-        // Do any additional setup after loading the view.
     }
-    
+    /**
+     Muestra los botones siguiente y saltar del tutorial
+     */
     func showButtons(){
         if(position == 0){
             btnSiguiente.alpha = 0
@@ -62,14 +55,5 @@ class TutorialVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

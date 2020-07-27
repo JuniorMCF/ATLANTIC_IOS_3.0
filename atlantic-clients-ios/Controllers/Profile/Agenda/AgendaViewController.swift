@@ -1,11 +1,3 @@
-//
-//  AgendaViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/28/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 import CarbonKit
 class AgendaViewController: UIViewController {
@@ -63,6 +55,9 @@ class AgendaViewController: UIViewController {
             flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
         }
 
+        /**
+        Inicializa el viewmodel.
+        */
         func bind() {
             viewModel.loadDatasources = loadDatasources(datasource:)
             viewModel.presentEventDetail = presentEventDetail(item:)
@@ -71,27 +66,49 @@ class AgendaViewController: UIViewController {
             viewModel.presentReloadData = reloadCarbonKit(eventos:)
             viewModel.removeItemEvent = removeItemEvent(index:)
         }
+        /**
+        Muestra un mensaje en la pantalla
+        */
         func show(message:String){
             showToast(message: message)
         }
+        /**
+        Remueve un evento de una categoria
+        - Parameters:
+            - index: Posicion de la categoria
+        */
         func removeItemEvent(index:Int){
             items.remove(at: index)
             self.indexAgend = index
             reloadCarbonKit(eventos: items)
         }
+        /**
+        Notifica al viewmodel para modificar la lista de categoria de eventos
+        - Parameters:
+            - eventoRegistroId : id del evento
+            - clienteId: id del cliente
+            - index : posicion de la categoria
+        */
         func actualizarLista(eventoRegistroId:String,clienteId:String,index:Int){
             //
             viewModel.deleteData(eventoRegistroId: eventoRegistroId, clienteId: clienteId,index: index)
             
         }
+        /**
+        Actualiza la data del viewcontroller
+        */
         func presentReloadData(list:[Event]){
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  list,viewModel: viewModel, viewParent: self)
             collectionView.dataSource = AgendaCollectionViewDD
             collectionView.delegate = self
             self.collectionView.reloadData()
-            
         }
         
+        /**
+        Cargar la data traida desde el servidor y lo posiciona en un collectionview
+        - Parameters:
+            - datasource: objeto BreakfastDatasources
+        */
         func loadDatasources(datasource:BreakfastDatasources) {
            
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  items,viewModel: viewModel,viewParent: self)
@@ -101,6 +118,12 @@ class AgendaViewController: UIViewController {
             progress.hideProgress()
             
         }
+    
+        /**
+        Dirige a la pantalla de detalle de eventos.
+        - Parameters:
+            - item: datos del evento seleccionoado
+        */
         func presentEventDetail(item:Event){
             let storyboard = UIStoryboard(name: "EventDetail", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "EventDetailID") as! EventsDetailViewController
@@ -117,7 +140,11 @@ class AgendaViewController: UIViewController {
         }
         
     }
-    
+    /**
+     Actualiza la data de las categorias
+     - Parameters:
+        - eventos: lista de eventos
+     */
     func reloadCarbonKit(eventos:[Event]){
        
             AgendaCollectionViewDD = AgendaCollectionViewDatasourceAndDelegate(items:  eventos,viewModel: viewModel, viewParent: self)

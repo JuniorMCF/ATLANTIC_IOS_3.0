@@ -71,7 +71,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     @IBAction func tapRegister(_ sender: Any) {
         if(selectHorario != ""){
-            appDelegate.customEvent = CustomEvent(parent: self,title: "Eventos", message: "Esta seguro que se quiere registrar en este evento")
+            appDelegate.customEvent = CustomEventAlert(parent: self,title: "Eventos", message: "Esta seguro que se quiere registrar en este evento")
             appDelegate.customEvent.showProgress()
         }else{
             show(message: "Seleccione Horario")

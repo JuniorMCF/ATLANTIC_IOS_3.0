@@ -1,11 +1,3 @@
-//
-//  TrophyDetailViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/10/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class TrophyDetailViewController: UIViewController {
@@ -51,7 +43,9 @@ class TrophyDetailViewController: UIViewController {
     @objc private func tapPositionView() {
         viewModel.tapPosition()
     }
-    
+    /**
+     Inicializa los cells del viewcontroller
+     */
     func prepare() {
         // Flow Promotions
         let flow = UICollectionViewFlowLayout()
@@ -61,6 +55,9 @@ class TrophyDetailViewController: UIViewController {
         positionsCollectionView.collectionViewLayout = flow
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         
         viewModel.showTitles = showTitles(titles: )
@@ -68,6 +65,11 @@ class TrophyDetailViewController: UIViewController {
         viewModel.presentPositionDetail = presentPositionDetail
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles: TrophyDetailTitles) {
         
         stateLabel.setCategorySubTitle(with: titles.stateTitle)
@@ -82,6 +84,11 @@ class TrophyDetailViewController: UIViewController {
         titleAwardsLabel.setCategorySubTitle(with: titles.titleAwards)
     }
     
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un collectionview
+     - Parameters:
+        - datasource: objeto positionsDatasource
+    */
     func loadDatasources(datasource: PositionsDatasource) {
         TrophyDetailCollectionViewDD = TrophyDetailCollectionViewDatasourceAndDelegate(items: datasource.items, viewModel: viewModel)
         positionsCollectionView.dataSource = TrophyDetailCollectionViewDD
@@ -89,6 +96,9 @@ class TrophyDetailViewController: UIViewController {
         self.positionsCollectionView.reloadData()
     }
     
+    /**
+     Dirige a la vista de detalles de posicion
+     */
     func presentPositionDetail() {
         let storyboard = UIStoryboard(name: "PositionDetail", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PositionDetailID")

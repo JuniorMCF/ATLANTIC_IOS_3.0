@@ -1,11 +1,3 @@
-//
-//  ClubViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/7/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class ClubViewController: UIViewController {
@@ -43,7 +35,6 @@ class ClubViewController: UIViewController {
     }
     
     
-    
     func reloadData(){
         clubTableViewDD.items.removeAll()
         clubTableView.reloadData()
@@ -51,11 +42,17 @@ class ClubViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    /**
+     Inicializar el viewmodel
+     */
     func bind() {
         viewModel.loadDatasources = loadDatasources
         viewModel.presentClubCategory = presentClubCategory
     }
     
+    /**
+     Cargar la data traida desde el servidor y lo posiciona en un tableView.
+     */
     func loadDatasources(datasource: ClubDatasources) {
         clubTableViewDD = ClubTableViewDatasourceAndDelegate(items: datasource.items, viewModel: viewModel)
         clubTableView.dataSource = clubTableViewDD
@@ -64,6 +61,11 @@ class ClubViewController: UIViewController {
         self.clubTableView.reloadData()
     }
     
+    /**
+     Redirige a los diferentes ViewControllers deacuerdo a donde se haya dado click (Sorteo/Beneficios/Torneos)
+     - Parameters:
+        - type: categoria seleccionada
+     */
     func presentClubCategory(type: ClubCategoryTypes) {
         switch type {
             case .sorteo:
@@ -102,6 +104,9 @@ class ClubViewController: UIViewController {
         }
     }
     
+    /**
+    Verifica si hay un nuevo Sorteo, Beneficio, Torneo y muestra un icono en caso afirmativo
+     */
     func checkNotify(){
         let body1 = Constants().getBody(key: "body1")
         let body2 = Constants().getBody(key: "body2")
@@ -111,9 +116,6 @@ class ClubViewController: UIViewController {
             self.tabBarItem.badgeValue = nil
             self.tabBarController?.viewControllers?[2].tabBarItem.badgeValue = nil
            
-            
-            print()
-            print("aca")
         }
     }
 

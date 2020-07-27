@@ -1,11 +1,3 @@
-//
-//  LoginViewModel.swift
-//  clients-ios
-//
-//  Created by Cristian Palomino on 7/20/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -65,6 +57,9 @@ class LoginViewModel: LoginViewModelProtocol {
         showTitles?(titles)
         
     }
+    /**
+        Comprueba si el usuario esta logueado.
+    */
     func isLoggin(){
         let value = Constants().getLogin()
         
@@ -73,6 +68,9 @@ class LoginViewModel: LoginViewModelProtocol {
             self.tapLogin(dni: Constants().getUsername(), password: Constants().getPassword(), terminos: true)
         }
     }
+    /**
+    Activa / desactiva el checkbox de terminos
+     */
     func tapTerminos(estado:Bool) {
         if(estado == true){
             self.changeTerminos?(false)
@@ -80,6 +78,10 @@ class LoginViewModel: LoginViewModelProtocol {
             self.changeTerminos?(true)
         }
     }
+    
+    /**
+     Verifica si hay nuevas promociones, cobros, sorteos, torneos, eventos, beneficios y muestra un icono en caso afirmativo.
+     */
     
     func getNov(){
         self.tapTerminos(estado: true)
@@ -140,16 +142,19 @@ class LoginViewModel: LoginViewModelProtocol {
                         print(error)
                         break
                     }
-              /*print(response)
-              let result = JSON(response)
-              print("data aca")
-              print(result)
-              */
+          
               
 	        })
         
     }
 
+    /**
+     Verifica si las credenciales de inicio de sesion son correctas, en caso afirmativo loguea al usuario y obtiene la data del usuario.
+     - Parameters:
+        - dni: usuario del cliente.
+        - password : contraseña del cliente.
+        - terminos : acepto terminos ( true / false)
+     */
     
     func tapLogin(dni:String,password:String,terminos:Bool) {
         let isLogin = Constants().getLogin()

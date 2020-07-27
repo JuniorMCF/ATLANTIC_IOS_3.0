@@ -1,11 +1,3 @@
-//
-//  CarrerViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/14/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class CareerViewController: UIViewController {
@@ -49,11 +41,19 @@ class CareerViewController: UIViewController {
         viewModel.tapCareerResult()
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentCareerResult = presentCareerResult
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles: CareerTitles) {
         
         titleLabel.setCareerTitle(with: titles.title)
@@ -67,6 +67,9 @@ class CareerViewController: UIViewController {
         
     }
     
+    /**
+     Dirigirse a la pantalla de resultados de la carrera
+     */
     func presentCareerResult() {
         let storyboard = UIStoryboard(name: "CareerResults", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CareerResultsID")

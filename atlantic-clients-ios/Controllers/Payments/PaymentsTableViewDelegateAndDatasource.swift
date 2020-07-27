@@ -1,16 +1,11 @@
-//
-//  File.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/1/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import AlamofireImage
 import Alamofire
 import SwiftyJSON
+/**
+TableView que contiene los elementos de payment
+*/
 class PaymentsTableViewDelegateAndDatasource: NSObject {
     private var items: [Cobros] = []
 
@@ -18,7 +13,9 @@ class PaymentsTableViewDelegateAndDatasource: NSObject {
         self.items = items
     }
 }
-
+/**
+TableView DataSource
+*/
 extension PaymentsTableViewDelegateAndDatasource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count

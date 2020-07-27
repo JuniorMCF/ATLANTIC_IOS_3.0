@@ -1,11 +1,3 @@
-//
-//  RafflesDetailViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class RafflesDetailViewController: UIViewController {
@@ -35,17 +27,27 @@ class RafflesDetailViewController: UIViewController {
         bind()
         viewModel.viewDidLoad()
     }
-    
+    /**
+    Notifica al viewmodel para crear un recordatorio en la agenda del telefono
+    */
     @IBAction func createReminderButton(_ sender: Any) {
         viewModel.tapCreateReminder()
     }
     
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentCreateReminder = presentCreateReminder
 
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulo de todos los elementos
+    */
     func showTitles(titles: RafflesDetailTitles) {
         //esta vista no se infla
         titleLabel.setRafflesTitle(with: sorteo.nombreSorteo)
@@ -58,6 +60,9 @@ class RafflesDetailViewController: UIViewController {
         necesaryPointsLabel.setRafflesSub(with: titles.necesaryPoints)
     }
     
+    /**
+     Muestra la vista para guardar los recordatorios
+     */
     func presentCreateReminder() {
         let storyboard = UIStoryboard(name: "Reminder", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ReminderID")
@@ -65,6 +70,9 @@ class RafflesDetailViewController: UIViewController {
         self.present(viewController, animated: false, completion: nil)
     }
     
+    /**
+    retorna al viewController anterior
+    */
     func dismisViewController() {
         dismiss(animated: true, completion: nil)
     }

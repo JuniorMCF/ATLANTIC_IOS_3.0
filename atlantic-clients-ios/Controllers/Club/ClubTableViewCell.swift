@@ -1,13 +1,7 @@
-//
-//  ClubTableViewCell.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/7/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
-
+/**
+ Cell del TableView del club
+ */
 class ClubTableViewCell: UITableViewCell {
     
     @IBOutlet weak var title: Label!
@@ -25,13 +19,11 @@ class ClubTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 

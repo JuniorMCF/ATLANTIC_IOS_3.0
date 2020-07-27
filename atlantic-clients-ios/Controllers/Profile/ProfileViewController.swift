@@ -1,11 +1,3 @@
-//
-//  ProfileViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/1/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class ProfileViewController: UIViewController {
@@ -28,7 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logOutView: UIView!
     @IBOutlet weak var logOutLabel: Label!
  
-    var customLogout : CustomLogout!
+    var customLogout : CustomLogoutAlert!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +40,7 @@ class ProfileViewController: UIViewController {
     }
     @objc private func tapTerms(){
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
-        terminos.showProgress()
+        terminos.showTerms()
     }
     
     @objc private func tapProfile() {
@@ -60,7 +52,7 @@ class ProfileViewController: UIViewController {
     }
     
     @objc private func tapLogOut() {
-        appDelegate.customLogout = CustomLogout(parent: self,title: "Atlantic", message: "¿Desea cerrar sesión?",tipo:"profileLogout")
+        appDelegate.customLogout = CustomLogoutAlert(parent: self,title: "Atlantic", message: "¿Desea cerrar sesión?",tipo:"profileLogout")
         appDelegate.customLogout.showProgress()
     }
     @objc private func tapNotify(){
@@ -69,6 +61,9 @@ class ProfileViewController: UIViewController {
     @objc private func tapAgenda(){
         viewModel.pushAgenda()
     }
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.pushProfileDetail = pushProfileDetail
@@ -77,7 +72,11 @@ class ProfileViewController: UIViewController {
         viewModel.presentNotify = presentNotify
         viewModel.presentAgenda = presentAgenda
     }
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles: ProfileTitles) {
         profileLabel.setSubTitleViewLabel(with: titles.profilePlaceHolder)
         diaryLabel.setSubTitleViewLabel(with: titles.diaryPlaceHolder)
@@ -87,28 +86,34 @@ class ProfileViewController: UIViewController {
         logOutLabel.setSubTitleViewLabel(with: titles.logOutPlaceHolder)
         
     }
-    
+    /**
+     Dirige hacia la pantalla de perfil
+     */
     func pushProfileDetail() {
         let storyBoard = UIStoryboard(name: "ProfileDetail", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "ProfileDetailID")
         self.navigationController?.pushViewController(viewController, animated: false)
     }
-    
+    /**
+    Dirige hacia la pantalla de configuracion
+    */
     func pushSettings() {
         let storyBoard = UIStoryboard(name: "Settings", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "SettingsID")
         self.navigationController?.pushViewController(viewController, animated: true)
         
-//        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "SettingsID")
-//        present(viewController, animated: false, completion: nil)
     }
+    /**
+    Dirige hacia la pantalla de notificaciones
+    */
     func presentNotify(){
         let storyBoard = UIStoryboard(name: "Notify", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "NotifyID")
         self.navigationController?.pushViewController(viewController, animated: false)
     }
-    
+    /**
+    Dirige hacia la pantalla de login
+    */
     func presentLogin() {
      
         /*if let destinationViewController = self.navigationController?.viewControllers
@@ -135,6 +140,9 @@ class ProfileViewController: UIViewController {
         
         
     }
+    /**
+    Dirige hacia la pantalla de agenda
+    */
     func presentAgenda(){
         let storyBoard = UIStoryboard(name: "ProfileAgenda", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "ProfileAgendaID")

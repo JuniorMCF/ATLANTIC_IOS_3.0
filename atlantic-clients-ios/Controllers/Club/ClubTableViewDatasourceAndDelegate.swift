@@ -1,14 +1,8 @@
-//
-//  ClubTableViewDatasourceAndDelegate.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/7/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
-
+/**
+ TableView que contiene los elementos de club del app
+ */
 class ClubTableViewDatasourceAndDelegate: NSObject {
     
      var items: [ClubCategory] = []
@@ -19,12 +13,15 @@ class ClubTableViewDatasourceAndDelegate: NSObject {
         self.viewModel = viewModel
     }
 }
-
+/**
+ TableView DataSource
+ */
 extension ClubTableViewDatasourceAndDelegate: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClubCellID") as? ClubTableViewCell else {
             return UITableViewCell()
@@ -47,6 +44,9 @@ extension ClubTableViewDatasourceAndDelegate: UITableViewDataSource {
     }
 }
 
+/**
+ TableView Delegate
+ */
 extension ClubTableViewDatasourceAndDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectClub(indexPath)

@@ -1,11 +1,3 @@
-//
-//  NewsViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/28/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
@@ -66,7 +58,9 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     override func viewWillAppear(_ animated: Bool) {
         checkNotifications()
     }
-    
+    /**
+    Muestra un icono si hay un cobro, sorteo, beneficio, torneo, evento nuevo
+     */
     func checkNotifications(){
         var position = 0
         let body0 = Constants().getBody(key: "body0")
@@ -101,6 +95,10 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         }
         
     }
+    
+    /**
+     Muestra el tutorial del app
+     */
     
     func showTutorial(){
         let showCasePrincipal = BubbleShowCase(target: view, arrowDirection: .upAndDown)
@@ -191,12 +189,18 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         
         
     }
-    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles:)
         viewModel.loadDatasources = loadDatasources(datasources:)
     }
-    
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un collectionview
+    - Parameters:
+        - datasource: objeto NewsDatasources
+    */
     func loadDatasources(datasources: NewsDatasources) {
         promotionsCollectionViewDD = PromotionsCollectionViewDelegateAndDatasource(items: datasources.promotions,pageControl: promotionsPageControl)
         promotionsCollectionView.dataSource = promotionsCollectionViewDD
@@ -227,7 +231,11 @@ class NewsViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         giftsLabel.text =  datasources.gifts.title
         
     }
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles: NewsTitles) {
         
         dailyPromotionsLabel.setSubTitleViewLabel(with: imagesDaylies.title)

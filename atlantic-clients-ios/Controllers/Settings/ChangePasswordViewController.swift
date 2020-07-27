@@ -1,15 +1,7 @@
-//
-//  RecoveryPasswordViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/14/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
-
+    // Mark: - ViewModel
     var viewModel : ChangePasswordViewModelProtocol = ChangePasswordViewModel()
     
     var newPassword :String = ""
@@ -32,9 +24,9 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var newPasswordLabel: Label!
     @IBOutlet var newPasswordTextField: TextField!
     
-    @IBOutlet var check1: UIButton!// 4 digitos
+    @IBOutlet var check1: UIButton!
     @IBOutlet var check1Label: Label!
-    @IBOutlet var check2: UIButton!// que contenga un numero
+    @IBOutlet var check2: UIButton!
     @IBOutlet var check2Label: Label!
     
     @IBOutlet var repeatNewPasswordLabel: Label!
@@ -45,19 +37,22 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         bind()
         viewModel.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     func bind(){
         viewModel.showTitles = showTitles(titles:)
         viewModel.showToast = show(message:)
         viewModel.backPressed = backPressed
     }
+    /**
+     Retorna a la vista anterior
+     */
     func backPressed(){
         self.navigationController?.popViewController(animated: true)
-       /* let storyBoard = UIStoryboard(name: "Settings", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "SettingsID")
-        self.navigationController?.pushViewController(viewController, animated: true)*/
     }
+    
+    /**
+    Proporciona estilo a los elementos de la vista.
+    */
     func showTitles(titles:[String]){
         
         //tap gestures
@@ -73,6 +68,10 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
         repeatNewPasswordTextField.setPassword(with: "" )
         changePasswordButton.setFirstButton(with: titles[3])
     }
+    
+    /**
+     Detecta cambios en los textfield de contraseña y otorga un estilo deacuerdo a la condicion
+     */
     @objc func textFieldDidChange(_ textField: UITextField) {
         var numbers = 0
         self.newPassword = newPasswordTextField.text!
@@ -102,16 +101,24 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
         
     }
     
-    
+    /**
+    Notifica al viewmodel para cambiar la contraseña
+     */
     @IBAction func tapChangePassword(_ sender: Any) {
         viewModel.changePassword(beforePassword: beforePasswordTextField.text!, newPassword: newPasswordTextField.text!,confirmPassword: repeatNewPasswordTextField.text!,condition1: condition1,condition2: condition2)
         
     }
     
+    /**
+     Muestra un mensaje en pantalla.
+     */
     func show(message:String){
         showToast(message: message)
     }
     
+    /**
+     Muestra/Oculta la contraseña del textfield password
+     */
     @IBAction func eyePassword(_ sender: Any) {
         if(stateEye == 0){
             eye1.setImage(UIImage(named: "ic_eye_active"), for: .normal)
@@ -123,7 +130,9 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
             beforePasswordTextField.isSecureTextEntry = true
         }
     }
-    
+    /**
+    Muestra/Oculta la contraseña del textfield newPassword
+    */
     @IBAction func eyeNewPassword(_ sender: Any) {
         if(stateEye2 == 0){
             eye2.setImage(UIImage(named: "ic_eye_active"), for: .normal)
@@ -135,7 +144,9 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
             newPasswordTextField.isSecureTextEntry = true
         }
     }
-    
+    /**
+    Muestra/Oculta la contraseña del textfield confirmNewPassword
+    */
     @IBAction func eyeConfirmPassword(_ sender: Any) {
         if(stateEye3 == 0){
             eye3.setImage(UIImage(named: "ic_eye_active"), for: .normal)
@@ -147,14 +158,6 @@ class ChangePasswordViewController: UIViewController,UITextFieldDelegate {
             repeatNewPasswordTextField.isSecureTextEntry = true
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

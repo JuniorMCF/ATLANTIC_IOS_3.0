@@ -756,10 +756,10 @@ public class BubbleShowCase: UIView {
             arrow2.translatesAutoresizingMaskIntoConstraints = false
             bubble.addSubview(arrow2)
             
-            let bottom2 = NSLayoutConstraint(item: arrow2, attribute: .bottom, relatedBy: .equal, toItem: bubble, attribute: .bottom, multiplier: 1, constant: arrowSize)
-            let centerX2 = NSLayoutConstraint(item: arrow2, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: -arrowSize)
-            let height2 = NSLayoutConstraint(item: arrow2, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: arrowSize)
-            let width2 = NSLayoutConstraint(item: arrow2, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 2 * arrowSize)
+            let bottom2 = NSLayoutConstraint(item: arrow2!, attribute: .bottom, relatedBy: .equal, toItem: bubble, attribute: .bottom, multiplier: 1, constant: arrowSize)
+            let centerX2 = NSLayoutConstraint(item: arrow2!, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: -arrowSize)
+            let height2 = NSLayoutConstraint(item: arrow2!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: arrowSize)
+            let width2 = NSLayoutConstraint(item: arrow2!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 2 * arrowSize)
             
             bubble.addConstraint(bottom2)
             addConstraint(centerX2)
@@ -770,10 +770,10 @@ public class BubbleShowCase: UIView {
             path2.addLine(to: CGPoint(x: 2 * arrowSize, y:  0))
             path2.addLine(to: CGPoint(x: arrowSize, y: arrowSize))
         case .leftAndRight:
-            let centerY = NSLayoutConstraint(item: arrow, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: -arrowSize)
-            let leading = NSLayoutConstraint(item: arrow, attribute: .leading, relatedBy: .equal, toItem: bubble, attribute: .leading, multiplier: 1, constant: -arrowSize)
-            let height = NSLayoutConstraint(item: arrow, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 2 * arrowSize)
-            let width = NSLayoutConstraint(item: arrow, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: arrowSize)
+            let centerY = NSLayoutConstraint(item: arrow!, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: -arrowSize)
+            let leading = NSLayoutConstraint(item: arrow!, attribute: .leading, relatedBy: .equal, toItem: bubble, attribute: .leading, multiplier: 1, constant: -arrowSize)
+            let height = NSLayoutConstraint(item: arrow!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 2 * arrowSize)
+            let width = NSLayoutConstraint(item: arrow!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: arrowSize)
             
             bubble.addConstraint(leading)
             addConstraint(centerY)

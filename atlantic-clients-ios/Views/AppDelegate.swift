@@ -31,9 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     //customProgress
     var progressDialog : CustomProgress!
-    var customLogout: CustomLogout!
-    var customEvent : CustomEvent!
-    var delAgenda : DelAgenda!
+    var customLogout: CustomLogoutAlert!
+    var customEvent : CustomEventAlert!
+    var delAgenda : DelAgendaAlert!
     var initDate : String!
     var tabBarController : MainTabBarViewController!
     var clubController : ClubViewController!

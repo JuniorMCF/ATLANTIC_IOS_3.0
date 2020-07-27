@@ -1,11 +1,3 @@
-//
-//  TourneyViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -38,12 +30,20 @@ class TourneyViewController: UIViewController {
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Torneos", message: "Obteniendo torneos ...")
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.loadDatasources = loadDatasources
         viewModel.presentTourneyCategory = presentTourneyCategory
         viewModel.presentGranPrixDetail = presentGranPrixDetail
     }
     
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un collectionview
+     - Parameters:
+        - datasource: objeto TournamentDetails
+    */
     func loadDatasources(datasource: [TournamentDetails]) {
         tourneyTableViewDD = TourneyTableViewDatasourceAndDelegate(items: datasource, viewModel: viewModel)
         tourneyTableView.dataSource = tourneyTableViewDD
@@ -52,9 +52,14 @@ class TourneyViewController: UIViewController {
         self.tourneyTableView.reloadData()
     }
     
+    /**
+     Dirigirse a la pantalla de categorias de torneos, detalle de torneos
+     - Parameters:
+        - tipo: tipo de torneo
+        - isList : es una lista de torneos? (true / false)
+     */
     func presentTourneyCategory(tipo:String,isList:Bool) {
-        /*
-         */
+        
         switch isList {
         case true:
             let storyboard = UIStoryboard(name: "TrophyCategory", bundle: nil)
@@ -72,10 +77,11 @@ class TourneyViewController: UIViewController {
             
             viewModel.didSelectGranPrix(tipo: tipo, id: String(self.appDelegate.usuario.clienteId))
             
-            
-        
         }
     }
+    /**
+    Dirigirse a la pantalla de categorias de torneos, detalle de torneos
+    */
     func presentGranPrixDetail(torneos:[Tournament]){
         
         let tournament = torneos[0]

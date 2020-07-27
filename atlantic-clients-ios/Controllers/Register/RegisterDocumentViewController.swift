@@ -1,15 +1,8 @@
-//
-//  RegisterViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/26/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class RegisterDocumentViewController: UIViewController {
     
+    // MARK: - ViewModel
     var viewModel: RegisterDocumentViewModelProtocol! = RegisterViewModel()
     
     // MARK: - IBOulets
@@ -49,22 +42,29 @@ class RegisterDocumentViewController: UIViewController {
         thePicker.dataSource = self
         thePicker.delegate = self
         
-        
-        
-        
         bind()
         viewModel.viewDidLoad()
     }
-   
+    
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.pushRegisterPassword = pushRegisterPassword
         viewModel.showToast = toast(message:)
     }
+    /**
+    Mostrar un mensaje en pantalla.
+    */
     func toast(message:String){
          self.showToast(message: message)
     }
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulo de todos los elementos
+    */
     func showTitles(titles: RegisterDocumentTitles) {
         titleLabel.setTitleViewLabel(with: titles.screenTitle)
         docNumberLabel.setClubTitle2(with: titles.docNumberTitle)
@@ -74,9 +74,11 @@ class RegisterDocumentViewController: UIViewController {
     
     }
     
+    /**
+     Retornar a la pantalla de password
+     */
+    
     func pushRegisterPassword(dni:String) {
-        
-        
         let storyBoard = UIStoryboard(name: "Register", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "RegisterSuccessID") as! RegisterSucessViewController
         viewController.dni = dni

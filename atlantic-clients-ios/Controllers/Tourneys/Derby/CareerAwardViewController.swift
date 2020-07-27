@@ -1,11 +1,3 @@
-//
-//  CareerAwardViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/14/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class CareerAwardViewController: UIViewController {
@@ -44,6 +36,9 @@ class CareerAwardViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentPayments = presentPayments
@@ -53,6 +48,11 @@ class CareerAwardViewController: UIViewController {
         viewModel.tapPayments()
     }
     
+    /**
+       Proporciona estilo a los elementos de la vista.
+       - Parameters:
+          - titles : titulo de todos los elementos
+       */
     func showTitles(titles: CareerAwardTitles) {
         
         titleLabel.setAwardTitle(with: titles.title)
@@ -68,7 +68,9 @@ class CareerAwardViewController: UIViewController {
         remindButton.setRemindButton(with: titles.reminderTitle)
         
     }
-    
+    /**
+     Dirigirse a la ventana de pagos
+     */
     func presentPayments() {
         navigationController?.popToRootViewController(animated: true)
         //navigationController?.tabBarController?.selectedIndex = 2

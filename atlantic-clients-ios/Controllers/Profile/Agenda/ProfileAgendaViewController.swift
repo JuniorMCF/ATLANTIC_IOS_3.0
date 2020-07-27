@@ -1,11 +1,3 @@
-//
-//  ProfileAgendaViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/28/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 import CarbonKit
 
@@ -46,11 +38,18 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
         searchAgend.placeholder = "Buscar"
         
     }
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.showTitles = showTitles(titles:)
         viewModel.reloadTabs = reloadTabs(titles:)
     }
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles:EventDetailPreview){
 
         items = titles
@@ -94,7 +93,11 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
         }
 
     }
-    
+    /**
+     Recarga las categorias de eventos y muestra los elementos de cada uno de ellos
+     - Parameters:
+        - titles: elemento que contiene los detalles de los eventos
+     */
     func reloadTabs(titles: EventDetailPreview){
         items = titles
         if(carbonTabSwipeNavigation != nil){
@@ -110,6 +113,11 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
         screen.reloadData()
     }
     
+    /**
+     Busca un elemento de la agenda
+     - Parameters:
+        - element: palabra clave para buscar
+     */
     func buscarEnLista(element:String){
         print(keys)
         print(element)
@@ -124,6 +132,11 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
       
     }
     
+    /**
+     Remueve una categoria en caso no existan eventos en ella
+     - Parameters:
+        - index: Posicion de la categoria
+     */
     func removeTabCarbonKit(index:Int){
         
         items.list.remove(at: Int(carbonTabSwipeNavigation.currentTabIndex))
@@ -165,12 +178,19 @@ class ProfileAgendaViewController: UIViewController , CarbonTabSwipeNavigationDe
        //carbonTabSwipeNavigation.setCurrentTabIndex(0, withAnimation: false)
        // self.viewDidLoad()
     }
+    /**
+     Recarga una categoria
+     - Parameters:
+        - index: posicion de la categoria
+     */
     func reloadTabCarbonKit(index:Int){
         items.list[Int(carbonTabSwipeNavigation.currentTabIndex)].remove(at: index)
     }
     
    
-    
+    /**
+     Navegacion entre categorias
+     */
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, willMoveAt index: UInt) {
         let screen = carbonTabSwipeNavigation.viewControllers[index] as! AgendaViewController
         if(items.list.count > 0){

@@ -1,21 +1,14 @@
-//
-//  DelAgenda.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/22/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
 
 import UIKit
 import MaterialComponents.MaterialActivityIndicator
 
-class DelAgenda: UIViewController {
+class DelAgendaAlert: UIViewController {
     
     var viewParent : UIViewController!
     var titleP : String!
     var message : String!
     var agendaViewModel  :AgendaViewModelProtocol!
-    var progressController : DelAgenda!
+    var progressController : DelAgendaAlert!
     var isHome = false
     //variables para enviar
     var id = ""
@@ -78,7 +71,7 @@ class DelAgenda: UIViewController {
     }
     func showProgress(){
         let storyboard = UIStoryboard(name: "DelAgenda", bundle: nil)
-        progressController = (storyboard.instantiateViewController(withIdentifier: "delAgendaID") as! DelAgenda)
+        progressController = (storyboard.instantiateViewController(withIdentifier: "delAgendaID") as! DelAgendaAlert)
        
         progressController.modalPresentationStyle = .overFullScreen
         
@@ -89,29 +82,16 @@ class DelAgenda: UIViewController {
         progressController.eventoRegistroId = self.eventoRegistroId
         progressController.clienteId = self.clienteId
         progressController.index = self.index
-       // viewParent.view.addSubview(progressController.view)
         self.progressController.titleProgress.text = self.titleP
         self.progressController.messageProgress.text = self.message
-       /* viewParent.navigationController?.present(progressController, animated: false, completion: {
-            self.progressController.titleProgress.text = self.titleP
-            self.progressController.messageProgress.text = self.message
-        })*/
+   
     }
     
     func hideProgress(){
         
         self.view.removeFromSuperview()
       
-        //progressController.dismiss(animated: false, completion: nil)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

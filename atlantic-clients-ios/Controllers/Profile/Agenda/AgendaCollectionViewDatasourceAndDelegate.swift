@@ -1,11 +1,3 @@
-//
-//  AgendaCollectionViewDatasourceAndDelegate.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/10/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class AgendaCollectionViewDatasourceAndDelegate: NSObject {
@@ -58,9 +50,9 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
             
             
             
-            appDelegate.delAgenda = DelAgenda(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?",eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId),viewModel: self.viewModel,index:ind)
+            appDelegate.delAgenda = DelAgendaAlert(parent: viewParent, title: "Agenda", message: "¿Está seguro de Eliminar este evento de su agenda?",eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId),viewModel: self.viewModel,index:ind)
            
-            appDelegate.delAgenda.showProgress()
+            appDelegate.delAgenda.showAlert()
             /*
             let agendaSelectId = items[sender.tag].agendaId
             viewModel.deleteData(eventoRegistroId: String(agendaSelectId), clienteId: String(appDelegate.usuario.clienteId))

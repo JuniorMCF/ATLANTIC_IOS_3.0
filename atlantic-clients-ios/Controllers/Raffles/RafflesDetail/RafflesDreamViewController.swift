@@ -1,11 +1,3 @@
-//
-//  RafflesDreamViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import AlamofireImage
@@ -53,11 +45,18 @@ class RafflesDreamViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    /**
+    Crea un recordatorio en la agenda del telefono
+     */
+    
     @IBAction func createReminderButton(_ sender: Any) {
        
         let fecha = (sorteo.fecha as NSString)
         Utils().saveEvent(title: sorteo.nombreSorteo, fecha: fecha,parent: self)
     }
+    /**
+     Muestra la siguiente foto del Slider
+     */
     
     @IBAction func rightCV(_ sender: Any) {
         if(posicion < fotos.count-1){
@@ -70,7 +69,9 @@ class RafflesDreamViewController: UIViewController {
         }
         
     }
-    
+    /**
+    Muestra la foto anterior del Slider
+    */
     @IBAction func leftCV(_ sender: Any) {
         if(posicion > 0){
             let lastSection = collectionView.numberOfSections - 1
@@ -81,13 +82,20 @@ class RafflesDreamViewController: UIViewController {
             posicion -= 1
         }
     }
-    
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentCreateReminder = presentCreateReminder
         loadDatasources(datasource: sorteo.fotos)
         
     }
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un tableView.
+     - Parameters:
+        - datasource: Lista de fotos
+    */
     func loadDatasources(datasource: [Foto]) {
         if(datasource.count == 1){
             pageControl.isUserInteractionEnabled = false
@@ -107,7 +115,11 @@ class RafflesDreamViewController: UIViewController {
         self.collectionView.reloadData()
     }
     
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulo de todos los elementos
+    */
     func showTitles(titles: RafflesDreamTitles) {
         
         if(sorteo.fotos[0].foto == "" || sorteo.fotos[0].foto.isEmpty){
@@ -154,7 +166,7 @@ class RafflesDreamViewController: UIViewController {
     }
     @objc func tapTerminos(){
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
-        terminos.showProgress()
+        terminos.showTerms()
     }
     func presentCreateReminder() {
         let storyboard = UIStoryboard(name: "Reminder", bundle: nil)
@@ -163,6 +175,9 @@ class RafflesDreamViewController: UIViewController {
         self.present(viewController, animated: false, completion: nil)
     }
     
+    /**
+     retorna al viewController anterior
+     */
     func dismisViewController() {
         dismiss(animated: true, completion: nil)
     }

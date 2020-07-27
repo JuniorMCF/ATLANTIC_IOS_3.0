@@ -1,16 +1,11 @@
-//
-//  AgendaViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/26/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class NotifyViewController: UIViewController {
+    // Mark: - ViewModel
     var viewModel: NotifyViewModelProtocol! = NotifyViewModel()
+    //Mark: - DataSource
     private var agendaCollectionViewDD: NotifyDatasourceAndDelegate!
+    // Mark: - Properties
     var agendaList = [Notify]()
     @IBOutlet var agendaCollectionView: UICollectionView!
     @IBOutlet weak var btnHideNotification: UIButton!
@@ -24,6 +19,9 @@ class NotifyViewController: UIViewController {
         bind()
         viewModel.viewDidLoad()
     }
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.loadDatasources = loadDatasources(datasource:)
         viewModel.showTitles = showTitles(items:)
@@ -32,7 +30,11 @@ class NotifyViewController: UIViewController {
     func showTitles(items: [Notify]){
         
     }
-    
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un collectionview
+     - Parameters:
+        - datasource: lista de notificaciones
+    */
     func loadDatasources(datasource: [Notify]) {
         agendaCollectionViewDD = NotifyDatasourceAndDelegate(items: datasource, viewModel: viewModel, parentView: self)
         agendaCollectionView.dataSource = agendaCollectionViewDD
@@ -46,6 +48,9 @@ class NotifyViewController: UIViewController {
         viewModel.hideNofity(clienteId: appDelegate.usuario.clienteId, notifySelectId: notifySelectId)
     }
     
+    /**
+    Muestra la opcion para ocultar la notificacion.
+     */
     func showViewOption(posX:CGFloat, posY:CGFloat,notifySelectID: String,position:Int){
         self.notifyView.alpha = 1
         self.notifyView.isUserInteractionEnabled = true
@@ -65,7 +70,9 @@ class NotifyViewController: UIViewController {
         self.notifyView.alpha = 0
         self.notifyView.isUserInteractionEnabled = false
     }
-    
+    /**
+    Actualiza la lista de notificaciones luego de remover una.
+     */
     func successHideNotify(){
         self.notifyView.alpha = 0
         self.notifyView.isUserInteractionEnabled = false

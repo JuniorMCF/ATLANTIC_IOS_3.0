@@ -1,11 +1,3 @@
-//
-//  PaymentViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/31/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class PaymentViewController: UIViewController {
@@ -60,10 +52,17 @@ class PaymentViewController: UIViewController {
         paymentSearchBar.placeholder = "Buscar"
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
+       
     func bind() {
         viewModel.loadDatasources = loadDatasources(datasource:)
         viewModel.reloadDatasource = loadDatasources(datasource:)
     }
+    /**
+     Cargar la data traida desde el servidor y lo posiciona en un tableView.
+     */
     
     func loadDatasources(datasource:[Cobros]) {
         paymentsTableViewDD = PaymentsTableViewDelegateAndDatasource(items: datasource)
@@ -71,12 +70,17 @@ class PaymentViewController: UIViewController {
         self.payments = datasource
         self.paymentsTableView.reloadData()
     }
+    /**
+     Recarga los elementos del tableview
+     */
     
     func reloadDatasource(datasource: [Cobros]) {
         self.payments = datasource
         self.paymentsTableView.reloadData()
     }
-    
+    /**
+     Accion click sobre una vista
+     */
     private func addTapGesture() {
         view.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(view.endEditing(_:)))
@@ -86,7 +90,9 @@ class PaymentViewController: UIViewController {
 }
 
 extension PaymentViewController: UISearchBarDelegate {
-    
+    /**
+     Notifica al viewmodel para buscar un cobro
+     */
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.searchBarTextDidChange(searchText)
     }

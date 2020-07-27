@@ -1,18 +1,11 @@
-//
-//  Terminos.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/16/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 import WebKit
 import MaterialComponents.MaterialActivityIndicator
-
+/**
+ Webview que muestra los terminos del app
+ */
 class Terminos: UIViewController
 {
-
         var viewParent : UIViewController!
         var encuesta = ""
         //variables para enviar
@@ -22,14 +15,17 @@ class Terminos: UIViewController
         
     @IBOutlet weak var wkWebView: WKWebView!
         
+    /**
+    Cerrar webview.
+     */
     @IBAction func close(_ sender: Any) {
         if(!encuesta.isEmpty){
-            self.hideProgress()
+            self.hideTerms()
             if(Constants().getFirstInit()){
                 (viewParent as! NewsViewController).showTutorial()
             }
         }else{
-            self.hideProgress()
+            self.hideTerms()
         }
         
     }
@@ -38,7 +34,12 @@ class Terminos: UIViewController
         convenience init() {
             self.init(parent: UIViewController(),url: "")
         }
-
+    /**
+    Inicializacion del webview terminos.
+     - Parameters:
+        - parent: ViewController donde se mostrara el webview.
+        - url: Url de los terminos del app.
+     */
         init(parent: UIViewController,url:String ){
             self.viewParent = parent
             self.url = url
@@ -56,8 +57,10 @@ class Terminos: UIViewController
             self.wkWebView.load(request)
         }
 
-        
-        func showProgress(){
+        /**
+        Muestra la pagina web de los terminos en el WebView
+        */
+        func showTerms(){
             let storyboard = UIStoryboard(name: "Terminos", bundle: nil)
             let controller = (storyboard.instantiateViewController(withIdentifier: "TerminosID") as! Terminos)
            
@@ -66,18 +69,18 @@ class Terminos: UIViewController
             controller.encuesta = self.encuesta
             controller.viewParent = self.viewParent
             
-           // present(controller, animated: false, completion: nil)
-            //viewParent.present(controller, animated: false, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
             viewParent.navigationController?.present(controller, animated: false, completion: {
                 controller.url = self.url
-               // self.progressController.messageProgress.text = self.message
+
             })
     }
-               
-        func hideProgress(){
-            //self.view.removeFromSuperview()
-            self.dismiss(animated: false, completion: nil)
-        }
+    
+    /**
+    Oculta el WebView
+    */
+    func hideTerms(){
+        self.dismiss(animated: false, completion: nil)
+    }
         
         
 

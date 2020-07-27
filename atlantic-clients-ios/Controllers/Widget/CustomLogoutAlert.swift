@@ -1,49 +1,48 @@
-
 import UIKit
 import MaterialComponents.MaterialActivityIndicator
+
 /**
-Custom Alert view muestra una alerta con un estilo personalizado.
-*/
-class CustomEventAlert: UIViewController {
+ Custom Alert view muestra una alerta con un estilo personalizado.
+ */
+
+class CustomLogoutAlert: UIViewController {
     
     var viewParent : UIViewController!
     var titleP : String!
     var message : String!
-    var eventDetailViewModel :EventDetailViewModelProtocol =   EventDetailViewModel()
-    var progressController : CustomEventAlert!
+    var progressController : CustomLogoutAlert!
     var isHome = false
-    //variables para enviar
-    var id = ""
-    var horarioId = ""
-    var acompanantes = 0
+
     @IBOutlet var titleProgress: UITextView!
     @IBOutlet var messageProgress: UITextView!
     @IBOutlet var vContainer: UIView!
-    @IBOutlet var ok: UIButton!
-    @IBOutlet var cancel: UIButton!
+    @IBOutlet var ok: Button!
+    @IBOutlet var cancel: Button!
     var tipo = ""
     
     convenience init() {
-        self.init(parent: UIViewController(),title: "", message: "")
+        self.init(parent: UIViewController(),title: "", message: "",tipo: "")
     }
+
     /**
     Inicializacion del customAlert.
      - Parameters:
         - parent: ViewController donde se inflara la vista.
         - title: Titulo del alert.
         - message: Mensaje que mostrara el alert.
+        - tipo: Estilo del alert.
      */
-    init(parent: UIViewController,title: String, message: String ){
+    init(parent: UIViewController,title: String, message: String,tipo:String) {
         self.viewParent = parent
         self.titleP = title
         self.message = message
+        self.tipo = tipo
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
     /**
     Configuracion inicial del CustomAlert.
     */
@@ -65,14 +64,30 @@ class CustomEventAlert: UIViewController {
         cancel.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         cancel.layer.cornerRadius = 15.0
     }
+    
     /**
-    Accion al dar click en Aceptar.
-    */
+     Accion al dar click en Aceptar.
+     */
     @IBAction func tapOk(_ sender: Any) {
-        let parent = self.viewParent as! EventsDetailViewController
-        parent.viewModel.saveData?()
-        self.hideProgress()
-        //
+        print(self.tipo)
+        Constants().saveLogin(isLogin: false)
+        Constants().saveUsername(username: "")
+        Constants().savePassword(password: "")
+        Constants().saveTerminos(terminoState: false)
+        
+        if let destinationViewController = self.viewParent.parent?.navigationController?.viewControllers
+            
+            .filter(
+                
+                {$0.classForCoder == LoginViewController.self})
+            
+            .first {
+            
+            self.viewParent.parent?.navigationController?.popToViewController(destinationViewController, animated: false)
+            
+        }
+        
+        
     }
     /**
     Accion al dar click en cancelar..
@@ -84,32 +99,24 @@ class CustomEventAlert: UIViewController {
     /**
     Mostrar el Alert en la pantalla.
     */
+    
     func showProgress(){
-        let storyboard = UIStoryboard(name: "CustomEvent", bundle: nil)
-        progressController = (storyboard.instantiateViewController(withIdentifier: "customEvent") as! CustomEventAlert)
+        let storyboard = UIStoryboard(name: "CustomLogout", bundle: nil)
+        progressController = (storyboard.instantiateViewController(withIdentifier: "customLogout") as! CustomLogoutAlert)
        
         progressController.modalPresentationStyle = .overFullScreen
-        
-        viewParent.tabBarController?.view.addSubview(progressController.view)
-       
-        
         progressController.viewParent = self.viewParent
-       // viewParent.view.addSubview(progressController.view)
+        viewParent.tabBarController?.view.addSubview(progressController.view)
+        
         self.progressController.titleProgress.text = self.titleP
         self.progressController.messageProgress.text = self.message
-       /* viewParent.navigationController?.present(progressController, animated: false, completion: {
-            self.progressController.titleProgress.text = self.titleP
-            self.progressController.messageProgress.text = self.message
-        })*/
+     
     }
     /**
     Ocultar el alert.
     */
     func hideProgress(){
-        
         self.view.removeFromSuperview()
-      
-        //progressController.dismiss(animated: false, completion: nil)
     }
     
     

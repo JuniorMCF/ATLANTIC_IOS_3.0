@@ -30,7 +30,7 @@
 		795DDE7C240F3E0D00F4F52E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */; };
 		795DDE80240F418E00F4F52E /* AtlanticDerby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */; };
 		795FDA7124280E24004753D1 /* DelAgenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795FDA7024280E24004753D1 /* DelAgenda.storyboard */; };
-		795FDA7324280F97004753D1 /* DelAgenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FDA7224280F97004753D1 /* DelAgenda.swift */; };
+		795FDA7324280F97004753D1 /* DelAgendaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FDA7224280F97004753D1 /* DelAgendaAlert.swift */; };
 		7960240A23F1B70A00F3BCA8 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240923F1B70A00F3BCA8 /* Tournament.swift */; };
 		7960240C23F201F100F3BCA8 /* Sorteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960240B23F201F100F3BCA8 /* Sorteo.swift */; };
 		796059F92418252800977BD7 /* AgendaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796059F82418252800977BD7 /* AgendaViewModel.swift */; };
@@ -38,8 +38,8 @@
 		7961E09223EB85A5009E8189 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09123EB85A5009E8189 /* Utils.swift */; };
 		7961E09423EBBBC9009E8189 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961E09323EBBBC9009E8189 /* Route.swift */; };
 		7962C3B4241A968600701714 /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7962C3B3241A968600701714 /* ChangePassword.storyboard */; };
-		796429BB240DC3A60076265A /* CustomLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BA240DC3A60076265A /* CustomLogout.swift */; };
-		796429BD240DC3AC0076265A /* CustomEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BC240DC3AC0076265A /* CustomEvent.swift */; };
+		796429BB240DC3A60076265A /* CustomLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BA240DC3A60076265A /* CustomLogoutAlert.swift */; };
+		796429BD240DC3AC0076265A /* CustomEventAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BC240DC3AC0076265A /* CustomEventAlert.swift */; };
 		796429BF240DC5860076265A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796429BE240DC5860076265A /* AppDelegate.swift */; };
 		796429C1240DC5BD0076265A /* CustomLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C0240DC5BC0076265A /* CustomLogout.storyboard */; };
 		796429C3240DC5C30076265A /* CustomEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796429C2240DC5C30076265A /* CustomEvent.storyboard */; };
@@ -87,7 +87,6 @@
 		79758F982401E146003F31AA /* AtlanticDerby5ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79758F972401E146003F31AA /* AtlanticDerby5ViewModel.swift */; };
 		7975A73F2420454B00550FA1 /* Terminos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975A73E2420454B00550FA1 /* Terminos.storyboard */; };
 		7975A7412420455F00550FA1 /* Terminos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975A7402420455F00550FA1 /* Terminos.swift */; };
-		7975A74324205D0000550FA1 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975A74224205D0000550FA1 /* TermsAndConditions.swift */; };
 		797CCE4A23FCA0C90085D61A /* EventDetailPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CCE4923FCA0C90085D61A /* EventDetailPreview.swift */; };
 		797CCE4C23FCA0FF0085D61A /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CCE4B23FCA0FF0085D61A /* EventDetail.swift */; };
 		7983B41223F3A3E20099762D /* Cobros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983B41123F3A3E20099762D /* Cobros.swift */; };
@@ -165,7 +164,6 @@
 		84ED504223E382D60010D378 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4ED923E37F050010D378 /* PaymentTableViewCell.swift */; };
 		84ED504323E382D60010D378 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4EDA23E37F050010D378 /* PaymentViewController.swift */; };
 		84ED504423E382D60010D378 /* PaymentsTableViewDelegateAndDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4EDB23E37F050010D378 /* PaymentsTableViewDelegateAndDatasource.swift */; };
-		84ED504523E382D60010D378 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4EDE23E37F050010D378 /* ReminderViewController.swift */; };
 		84ED504623E382D60010D378 /* RafflesDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4EDF23E37F050010D378 /* RafflesDreamViewController.swift */; };
 		84ED504723E382D60010D378 /* RafflesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4EE023E37F050010D378 /* RafflesDetailViewController.swift */; };
 		84ED504823E382D60010D378 /* RafflesTableViewDatasourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED4EE123E37F050010D378 /* RafflesTableViewDatasourceAndDelegate.swift */; };
@@ -316,7 +314,7 @@
 		795DDE7B240F3E0D00F4F52E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		795DDE7F240F418E00F4F52E /* AtlanticDerby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AtlanticDerby.storyboard; sourceTree = "<group>"; };
 		795FDA7024280E24004753D1 /* DelAgenda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DelAgenda.storyboard; sourceTree = "<group>"; };
-		795FDA7224280F97004753D1 /* DelAgenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelAgenda.swift; sourceTree = "<group>"; };
+		795FDA7224280F97004753D1 /* DelAgendaAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelAgendaAlert.swift; sourceTree = "<group>"; };
 		7960240923F1B70A00F3BCA8 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		7960240B23F201F100F3BCA8 /* Sorteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorteo.swift; sourceTree = "<group>"; };
 		796059F82418252800977BD7 /* AgendaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewModel.swift; sourceTree = "<group>"; };
@@ -324,8 +322,8 @@
 		7961E09123EB85A5009E8189 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7961E09323EBBBC9009E8189 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		7962C3B3241A968600701714 /* ChangePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
-		796429BA240DC3A60076265A /* CustomLogout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogout.swift; sourceTree = "<group>"; };
-		796429BC240DC3AC0076265A /* CustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEvent.swift; sourceTree = "<group>"; };
+		796429BA240DC3A60076265A /* CustomLogoutAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogoutAlert.swift; sourceTree = "<group>"; };
+		796429BC240DC3AC0076265A /* CustomEventAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEventAlert.swift; sourceTree = "<group>"; };
 		796429BE240DC5860076265A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796429C0240DC5BC0076265A /* CustomLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomLogout.storyboard; sourceTree = "<group>"; };
 		796429C2240DC5C30076265A /* CustomEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomEvent.storyboard; sourceTree = "<group>"; };
@@ -373,7 +371,6 @@
 		79758F972401E146003F31AA /* AtlanticDerby5ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlanticDerby5ViewModel.swift; sourceTree = "<group>"; };
 		7975A73E2420454B00550FA1 /* Terminos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Terminos.storyboard; sourceTree = "<group>"; };
 		7975A7402420455F00550FA1 /* Terminos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminos.swift; sourceTree = "<group>"; };
-		7975A74224205D0000550FA1 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		797CCE4923FCA0C90085D61A /* EventDetailPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010EventDetailPreview.swift"; sourceTree = "<group>"; };
 		797CCE4B23FCA0FF0085D61A /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
 		7983B41123F3A3E20099762D /* Cobros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cobros.swift; sourceTree = "<group>"; };
@@ -436,7 +433,6 @@
 		84ED4ED923E37F050010D378 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		84ED4EDA23E37F050010D378 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		84ED4EDB23E37F050010D378 /* PaymentsTableViewDelegateAndDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewDelegateAndDatasource.swift; sourceTree = "<group>"; };
-		84ED4EDE23E37F050010D378 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		84ED4EDF23E37F050010D378 /* RafflesDreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RafflesDreamViewController.swift; sourceTree = "<group>"; };
 		84ED4EE023E37F050010D378 /* RafflesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RafflesDetailViewController.swift; sourceTree = "<group>"; };
 		84ED4EE123E37F050010D378 /* RafflesTableViewDatasourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RafflesTableViewDatasourceAndDelegate.swift; sourceTree = "<group>"; };
@@ -837,11 +833,10 @@
 			children = (
 				845FB7962405C09C001A7BF8 /* CustomProgress.swift */,
 				845FB79A2405ECFE001A7BF8 /* BubbleShowCase.swift */,
-				796429BA240DC3A60076265A /* CustomLogout.swift */,
-				796429BC240DC3AC0076265A /* CustomEvent.swift */,
+				796429BA240DC3A60076265A /* CustomLogoutAlert.swift */,
+				796429BC240DC3AC0076265A /* CustomEventAlert.swift */,
 				7975A7402420455F00550FA1 /* Terminos.swift */,
-				7975A74224205D0000550FA1 /* TermsAndConditions.swift */,
-				795FDA7224280F97004753D1 /* DelAgenda.swift */,
+				795FDA7224280F97004753D1 /* DelAgendaAlert.swift */,
 				845D56AC243BEB1800DAB8B6 /* ToastViewController.swift */,
 			);
 			path = Widget;
@@ -925,7 +920,6 @@
 		84ED4EDD23E37F050010D378 /* RafflesDetail */ = {
 			isa = PBXGroup;
 			children = (
-				84ED4EDE23E37F050010D378 /* ReminderViewController.swift */,
 				84ED4EDF23E37F050010D378 /* RafflesDreamViewController.swift */,
 				84ED4EE023E37F050010D378 /* RafflesDetailViewController.swift */,
 				7964E3C524099BE10043DD67 /* RafflesDreamViewCollectionViewDatasourceAndDelegate.swift */,
@@ -1993,7 +1987,6 @@
 				845FB7972405C09C001A7BF8 /* CustomProgress.swift in Sources */,
 				796DB9F0241598210041790D /* RecoveryPasswordViewController.swift in Sources */,
 				79C29EC3241D908000CB30C3 /* ChangePasswordViewModel.swift in Sources */,
-				7975A74324205D0000550FA1 /* TermsAndConditions.swift in Sources */,
 				84ED509423E382EF0010D378 /* DinnerViewModel.swift in Sources */,
 				7966CC2A2400A1A10023401E /* AD2CollectionViewCell.swift in Sources */,
 				84ED509523E382EF0010D378 /* BreakfastViewModel.swift in Sources */,
@@ -2031,7 +2024,6 @@
 				84ED504323E382D60010D378 /* PaymentViewController.swift in Sources */,
 				796E480723ED208D00E51063 /* News.swift in Sources */,
 				84ED504423E382D60010D378 /* PaymentsTableViewDelegateAndDatasource.swift in Sources */,
-				84ED504523E382D60010D378 /* ReminderViewController.swift in Sources */,
 				84ED504623E382D60010D378 /* RafflesDreamViewController.swift in Sources */,
 				84ED504723E382D60010D378 /* RafflesDetailViewController.swift in Sources */,
 				795DDE74240F3CA900F4F52E /* LoginViewController.swift in Sources */,
@@ -2055,7 +2047,7 @@
 				84ED505323E382D60010D378 /* TrophyDetailViewController.swift in Sources */,
 				795DDE7C240F3E0D00F4F52E /* ProfileViewController.swift in Sources */,
 				84ED505423E382D60010D378 /* CareerResultsViewController.swift in Sources */,
-				796429BB240DC3A60076265A /* CustomLogout.swift in Sources */,
+				796429BB240DC3A60076265A /* CustomLogoutAlert.swift in Sources */,
 				84ED505523E382D60010D378 /* CareerAwardViewController.swift in Sources */,
 				84ED505623E382D60010D378 /* CareerViewController.swift in Sources */,
 				79C29EC1241D903600CB30C3 /* ChangePasswordViewController.swift in Sources */,
@@ -2086,7 +2078,7 @@
 				7944D8EC23EB5F5F007A4033 /* User.swift in Sources */,
 				7964E3D22409B1440043DD67 /* ProfileAgendaViewController.swift in Sources */,
 				84ED506723E382D60010D378 /* BenefitsTableViewDelegateAndDatasource.swift in Sources */,
-				796429BD240DC3AC0076265A /* CustomEvent.swift in Sources */,
+				796429BD240DC3AC0076265A /* CustomEventAlert.swift in Sources */,
 				84ED506823E382D60010D378 /* BenefitsViewController.swift in Sources */,
 				84ED506923E382D60010D378 /* BenefitsTableViewCell.swift in Sources */,
 				798F882424084C330020517F /* TrophyLoseViewModel.swift in Sources */,
@@ -2115,7 +2107,7 @@
 				795DDE77240F3CEB00F4F52E /* ForgotPasswordViewModel.swift in Sources */,
 				79758F942401A16B003F31AA /* AD4CollectionViewDelegateAndDatasource.swift in Sources */,
 				798F8826240859030020517F /* TrophyLoseCollectionViewDatasourceAndDelegate.swift in Sources */,
-				795FDA7324280F97004753D1 /* DelAgenda.swift in Sources */,
+				795FDA7324280F97004753D1 /* DelAgendaAlert.swift in Sources */,
 				84ED507823E382D60010D378 /* OnBoardingCollectionViewCell.swift in Sources */,
 				7968E36723FF4C83007B6D3A /* AtlanticDerby4ViewController.swift in Sources */,
 				845FB79B2405ECFE001A7BF8 /* BubbleShowCase.swift in Sources */,
@@ -2241,6 +2233,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -2294,6 +2287,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;

@@ -1,11 +1,3 @@
-//
-//  PromotionsCollectionViewDelegateAndDatasource.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/29/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import AlamofireImage

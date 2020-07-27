@@ -1,39 +1,41 @@
-//
-//  CustomLogout.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/1/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 import MaterialComponents.MaterialActivityIndicator
-
-class CustomLogout: UIViewController {
+/**
+Custom Alert view muestra una alerta con un estilo personalizado.
+*/
+class CustomEventAlert: UIViewController {
     
     var viewParent : UIViewController!
     var titleP : String!
     var message : String!
-    var progressController : CustomLogout!
+    var eventDetailViewModel :EventDetailViewModelProtocol =   EventDetailViewModel()
+    var progressController : CustomEventAlert!
     var isHome = false
-
+    //variables para enviar
+    var id = ""
+    var horarioId = ""
+    var acompanantes = 0
     @IBOutlet var titleProgress: UITextView!
     @IBOutlet var messageProgress: UITextView!
     @IBOutlet var vContainer: UIView!
-    @IBOutlet var ok: Button!
-    @IBOutlet var cancel: Button!
+    @IBOutlet var ok: UIButton!
+    @IBOutlet var cancel: UIButton!
     var tipo = ""
+    
     convenience init() {
-        self.init(parent: UIViewController(),title: "", message: "",tipo: "")
+        self.init(parent: UIViewController(),title: "", message: "")
     }
-
-    init(parent: UIViewController,title: String, message: String,tipo:String) {
+    /**
+    Inicializacion del customAlert.
+     - Parameters:
+        - parent: ViewController donde se inflara la vista.
+        - title: Titulo del alert.
+        - message: Mensaje que mostrara el alert.
+     */
+    init(parent: UIViewController,title: String, message: String ){
         self.viewParent = parent
         self.titleP = title
         self.message = message
-        self.tipo = tipo
-        //self.ok.setFirstButton(with: "ACEPTAR")
-        //self.cancel.setFirstButton(with:"CANCELAR")
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -41,6 +43,9 @@ class CustomLogout: UIViewController {
         super.init(coder: coder)
     }
     
+    /**
+    Configuracion inicial del CustomAlert.
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
        let activityIndicator = MDCActivityIndicator()
@@ -59,47 +64,35 @@ class CustomLogout: UIViewController {
         cancel.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         cancel.layer.cornerRadius = 15.0
     }
-    
+    /**
+    Accion al dar click en Aceptar.
+    */
     @IBAction func tapOk(_ sender: Any) {
-        print(self.tipo)
-        Constants().saveLogin(isLogin: false)
-        Constants().saveUsername(username: "")
-        Constants().savePassword(password: "")
-        Constants().saveTerminos(terminoState: false)
-        
-        if let destinationViewController = self.viewParent.parent?.navigationController?.viewControllers
-            
-            .filter(
-                
-                {$0.classForCoder == LoginViewController.self})
-            
-            .first {
-            
-            self.viewParent.parent?.navigationController?.popToViewController(destinationViewController, animated: false)
-            
-        }
-        
-        /*let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginID")
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: false, completion: nil)*/
-        
-        
+        let parent = self.viewParent as! EventsDetailViewController
+        parent.viewModel.saveData?()
+        self.hideProgress()
+        //
     }
-    
+    /**
+    Accion al dar click en cancelar..
+    */
     @IBAction func tapCancel(_ sender: Any) {
             self.hideProgress()
     }
+    
+    /**
+    Mostrar el Alert en la pantalla.
+    */
     func showProgress(){
-        let storyboard = UIStoryboard(name: "CustomLogout", bundle: nil)
-        progressController = (storyboard.instantiateViewController(withIdentifier: "customLogout") as! CustomLogout)
+        let storyboard = UIStoryboard(name: "CustomEvent", bundle: nil)
+        progressController = (storyboard.instantiateViewController(withIdentifier: "customEvent") as! CustomEventAlert)
        
         progressController.modalPresentationStyle = .overFullScreen
-        progressController.viewParent = self.viewParent
+        
         viewParent.tabBarController?.view.addSubview(progressController.view)
+       
         
-        
-        
+        progressController.viewParent = self.viewParent
        // viewParent.view.addSubview(progressController.view)
         self.progressController.titleProgress.text = self.titleP
         self.progressController.messageProgress.text = self.message
@@ -108,9 +101,14 @@ class CustomLogout: UIViewController {
             self.progressController.messageProgress.text = self.message
         })*/
     }
-    
+    /**
+    Ocultar el alert.
+    */
     func hideProgress(){
+        
         self.view.removeFromSuperview()
+      
+        //progressController.dismiss(animated: false, completion: nil)
     }
     
     

@@ -1,11 +1,3 @@
-//
-//  RegisterSucessViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/8/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class RegisterSucessViewController: UIViewController {
@@ -53,7 +45,7 @@ class RegisterSucessViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginID") as! LoginViewController
         viewController.state = true
-       // self.navigationController?.popToRootViewController(animated: true)
+      
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -63,17 +55,6 @@ class RegisterSucessViewController: UIViewController {
         
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

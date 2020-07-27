@@ -1,11 +1,3 @@
-//
-//  TrophyCategoryViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/9/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class TrophyCategoryViewController: UIViewController {
@@ -37,12 +29,20 @@ class TrophyCategoryViewController: UIViewController {
         viewModel.viewDidLoad(tipo:tipo,clienteId:appDelegate.usuario.clienteId)
     }
     
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.loadDatasources = loadDatasources(datasource: )
         viewModel.presentTrophyCategory = presentTrophyCategory(tournament: )
         
     }
     
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un tableView.
+     - Parameters:
+        - datasource: Lista de torneos
+    */
     func loadDatasources(datasource: [Tournament]) {
         trophyCategoryTableViewDD = TrophyCategoryTableViewDatasourceAndDelegate(items: datasource, viewModel: viewModel)
         trophyCategoryTableView.dataSource =  trophyCategoryTableViewDD
@@ -59,8 +59,14 @@ class TrophyCategoryViewController: UIViewController {
     }
     @objc func tapTerminos(){
         terminos = Terminos(parent: self, url: "https://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
-        terminos.showProgress()
+        terminos.showTerms()
     }
+    
+    /**
+    Notifica al viewmodel para traer la  data de torneos desde el webservice
+     - Parameters:
+        - tournament: Objeto tournament
+    */
     func presentTrophyCategory(tournament: Tournament) {
         
         if(tournament.concluido){

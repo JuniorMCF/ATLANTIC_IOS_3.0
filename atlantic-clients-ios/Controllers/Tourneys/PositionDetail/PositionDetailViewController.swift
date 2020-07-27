@@ -1,11 +1,3 @@
-//
-//  PositionDetailViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/10/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class PositionDetailViewController: UIViewController {
@@ -51,12 +43,20 @@ class PositionDetailViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: false)
     }
     
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentPayments = presentPayments
         
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles: PositionDetailTitles) {
         nItem.title = torneo.nombre
         
@@ -93,11 +93,13 @@ class PositionDetailViewController: UIViewController {
     }
     @objc func tapTerminos(){
         let terminos = Terminos(parent: self, url:"http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
-        terminos.showProgress()
+        terminos.showTerms()
     }
+    /**
+     retorna a la vista de pagos
+     */
     func presentPayments() {
         navigationController?.popToRootViewController(animated: true)
-        //navigationController?.tabBarController?.selectedIndex = 2
     }
 
 }

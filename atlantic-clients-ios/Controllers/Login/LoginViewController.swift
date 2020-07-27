@@ -1,11 +1,3 @@
-//
-//  LoginViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/16/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -26,6 +18,8 @@ class LoginViewController: UIViewController {
     
     var estadoTerminos = false
     var splash : SplashLoginViewController!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -53,11 +47,8 @@ class LoginViewController: UIViewController {
         self.dniTextField.text = ""
         self.passwordTextField.text = ""
         
-        
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-            
         self.navigationController?.navigationBar.shadowImage = nil
-        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         if(state){
@@ -65,7 +56,9 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
+    /**
+    Inicializar Viewmodel.
+     */
     
     func bind() {
         viewModel.showTitles = showTitles(titles:)
@@ -76,11 +69,21 @@ class LoginViewController: UIViewController {
         viewModel.showToastMessage = showToastMessage(message:)
         viewModel.presentSetData = presentSetData(user: password:)
     }
+    
+    /**
+    Coloca datos en el campo usuario y password.
+    - Parameters:
+        - user: usuario del cliente
+        - password: password del cliente
+    */
+    
     func presentSetData(user:String,password:String){
         dniTextField.text = user
         passwordTextField.text = password
     }
-    
+    /**
+    *Dar estilo a todos los elementos de la pantalla
+    */
     func showTitles(titles: LoginTitles) {
         titleLabel.setTitleViewLabel(with: titles.screenTitle)
         dniTextField.setDNIStyle(with: titles.dniPlaceholder)
@@ -93,25 +96,35 @@ class LoginViewController: UIViewController {
         terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showTerms)))
     }
 
+    /**
+    *Muestra los terminos y condiciones en pantalla
+    */
     @objc func showTerms(){
             let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones.pdf")
-            terminos.showProgress()
+            terminos.showTerms()
         }
+    
+    /**
+    *Loguea al usuario y redirigue a la pantalla principal
+    */
     func presentOnboarding() {
         splash.hideSplash()
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainID")
         
-        
         self.navigationController?.pushViewController(viewController, animated: false)
     }
     
-    
+    /**
+    *Muestra un mensaje en la pantalla
+    */
     func showToastMessage(message:String){
         self.showToast(message: message)
     }
     
-    
+    /**
+     *Redirige a la pantalla de registro
+     */
     func presentRegister() {
         let storyboard = UIStoryboard(name: "Register", bundle: Bundle.main)
         let navViewController = storyboard.instantiateViewController(withIdentifier: "RegisterID")
@@ -119,16 +132,16 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(navViewController, animated: true)
         //present(navViewController, animated: true, completion: nil)
     }
+    /**
+    *Redirige a la pantalla de recuperar password
+    */
     func presentForgotPassword(){
         let storyboard = UIStoryboard(name: "ForgotPassword", bundle: nil)
         let navViewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordID")
         
         self.navigationController?.pushViewController(navViewController, animated: true)
-       // self.present(navViewController, animated: true)
     }
-    
-    // MARK: - Private Functions
-
+ 
     
     
     
@@ -138,10 +151,12 @@ class LoginViewController: UIViewController {
         
         viewModel.tapLogin(dni: dni,password: password,terminos: estadoTerminos)
     }
+    
+  
     @IBAction func tapTerminos(_ sender: Any) {
         viewModel.tapTerminos(estado:estadoTerminos)
     }
-    
+  
     @IBAction func tapNewUser() {
         viewModel.tapNewUSer()
     }
@@ -150,6 +165,9 @@ class LoginViewController: UIViewController {
         viewModel.tapForgotPassword()
     }
     
+    /**
+    *Marca / desmarca el checkbutton de terminos y condiciones
+    */
     func changeTerminos(estado:Bool){
         estadoTerminos = estado
         if(estadoTerminos == true){

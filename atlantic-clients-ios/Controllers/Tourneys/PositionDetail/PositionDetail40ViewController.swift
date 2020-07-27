@@ -1,11 +1,3 @@
-//
-//  PositionDetail40ViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/27/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -56,8 +48,12 @@ class PositionDetail40ViewController: UIViewController {
     }
     @objc func tapTerminos(){
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
-        terminos.showProgress()
+        terminos.showTerms()
     }
+    
+    /**
+     Guarda la hora en que el usuario ingreso a la promocion
+     */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -86,14 +82,6 @@ class PositionDetail40ViewController: UIViewController {
             }
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

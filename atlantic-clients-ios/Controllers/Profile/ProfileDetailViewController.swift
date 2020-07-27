@@ -1,18 +1,10 @@
-//
-//  ProfileDetailViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireImage
 
 class ProfileDetailViewController: UIViewController {
-    
+    //MARK: - ViewModel
     var viewModel: ProfileDetailViewModelProtocol! = ProfileDetailViewModel()
     
     //MARK: - IBOulets
@@ -64,11 +56,16 @@ class ProfileDetailViewController: UIViewController {
         viewModel.viewDidLoad()
         
     }
-    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         viewModel.presentToast = presentToast(response:)
     }
+    /**
+     Muestra un mensaje en pantalla
+     */
     func presentToast(response:String){
         denyModify()
         let date = birthdateTextField.text!
@@ -87,7 +84,11 @@ class ProfileDetailViewController: UIViewController {
         self.showToast(message: response)
     }
     
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+       - titles : titulo de todos los elementos
+    */
     func showTitles(titles: DetailTitles) {
         let usuario = appDelegate.usuario
        
@@ -117,6 +118,9 @@ class ProfileDetailViewController: UIViewController {
         addressText.fontSizeScaleFamily(family: "Avenir-Medium", size: 15)
         saveButton.setRemindButton(with: titles.saveTitle)
     }
+    /**
+    Mostrar y ocultar vistas al aceptar la modificacion del perfil
+     */
     func allowModify(){
         addressText.alpha = 0
         addressTextField.alpha = 1
@@ -146,6 +150,9 @@ class ProfileDetailViewController: UIViewController {
         saveButton.isUserInteractionEnabled =  true
         
     }
+    /**
+    Mostrar y ocultar vistas al denegar la modificacion del perfil
+     */
     func denyModify(){
         addressText.alpha = 1
         addressTextField.alpha = 0

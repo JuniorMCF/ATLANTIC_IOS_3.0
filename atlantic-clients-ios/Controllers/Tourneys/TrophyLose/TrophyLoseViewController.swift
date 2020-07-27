@@ -1,11 +1,3 @@
-//
-//  TrophyLoseViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/27/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class TrophyLoseViewController: UIViewController {
@@ -55,9 +47,20 @@ class TrophyLoseViewController: UIViewController {
         presentTitles(data: torneo)
     }
     
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.loadDatasources = loadDatasources
     }
+    
+    
+    /**
+    Notifica al viewmodel para traer la  data de torneos desde el webservice
+     - Parameters:
+        - data: Objeto tournament
+    */
+    
     func presentTitles(data:Tournament){
         nItem.title = torneo.nombre
         PuestoTitle.text = "Puesto"
@@ -95,11 +98,17 @@ class TrophyLoseViewController: UIViewController {
         terminosLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapTerminos)))
 
     }
+    
     @objc func tapTerminos(){
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
-        terminos.showProgress()
+        terminos.showTerms()
     }
     
+    /**
+    Cargar la data traida desde el servidor y lo posiciona en un tableView.
+     - Parameters:
+        - datasource: Lista de torneos
+    */
     func loadDatasources(datasource: [TournamentTable]) {
         
         if(torneo.posicion > 1 ){
@@ -130,14 +139,5 @@ class TrophyLoseViewController: UIViewController {
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

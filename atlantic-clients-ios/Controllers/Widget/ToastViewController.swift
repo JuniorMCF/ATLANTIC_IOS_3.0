@@ -1,13 +1,7 @@
-//
-//  ToastViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by admin on 4/6/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
-
+/**
+ Vista que muestra un mensaje en pantalla.
+ */
 class ToastViewController: UIViewController {
     @IBOutlet weak var txtMessage: UILabel!
     public var message = ""

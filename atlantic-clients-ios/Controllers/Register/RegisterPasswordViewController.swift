@@ -1,11 +1,3 @@
-//
-//  RegisterPasswordViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/25/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class RegisterPasswordViewController: UIViewController {
@@ -32,11 +24,19 @@ class RegisterPasswordViewController: UIViewController {
         passwordConfirmTextField.returnKeyType = .done
     }
     
+    /**
+    Inicializar el viewmodel
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles:)
         viewModel.presentLogin = presentLogin
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulo de todos los elementos
+    */
     func showTitles(titles: RegisterPasswordTitles) {
         titleLabel.setTitleViewLabel(with: titles.screenTitle)
         phoneTextField.setRegisterStyle(with: titles.phoneNumberPlaceholder)
@@ -46,12 +46,14 @@ class RegisterPasswordViewController: UIViewController {
         registerButton.setFirstButton(with: titles.registerButtonTitle)
     }
     
+    /**
+    Navegar a la pantalla de login
+     */
     func presentLogin() {
         self.navigationController?.dismiss(animated: true, completion: nil)
         //self.navigationController?.popToRootViewController(animated: true)
     }
     
-    // MARK: - Private Functions
     
     @IBAction func tapRegister() {
         viewModel.tapRegister()
