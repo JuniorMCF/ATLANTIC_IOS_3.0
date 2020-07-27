@@ -98,7 +98,7 @@ class OnBoardingViewModel: OnBoardingViewModelProtocol {
                             let resultado = json["resultado"] as! String
                              if(resultado == "200"){
                                 let response = json["response"] as! NSArray
-                                // jean kk se olvido de hacer bien la webservice para usuario :V
+                           
                                 
                                 for data in response{
                                     let route = Route()

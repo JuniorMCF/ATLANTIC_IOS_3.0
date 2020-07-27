@@ -194,7 +194,7 @@ class LoginViewModel: LoginViewModelProtocol {
                                             let resultado = json["resultado"] as! String
                                              if(resultado == "200"){
                                                 let response = json["response"] as! NSArray
-                                                // jean kk se olvido de hacer bien la webservice para usuario :V
+                                              
                                                 let usuario = Usuario()
                                                 
                                                 for data in response{
