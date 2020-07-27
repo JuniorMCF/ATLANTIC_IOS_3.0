@@ -41,11 +41,17 @@ class BenefitsDetailViewModel: BenefitsDetailViewModelProtocol {
     var showTitles: ((BenefitDetailTitles) -> Void)?
     var presentCreateReminder: (() -> Void)?
     
+    /**
+        inicialia la vista
+     */
     func viewDidLoad() {
         let titles = BenefitDetailTitles()
         showTitles?(titles)
     }
     
+    /**
+     crea recordatorio
+     */
     func tapCreateReminder() {
         presentCreateReminder?()
     }

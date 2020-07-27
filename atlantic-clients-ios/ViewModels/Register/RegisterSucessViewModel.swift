@@ -27,6 +27,16 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
     var pushRegisterUser: ((String)->Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    
+        /**
+     realiza el registro de un cliente
+     -Parameters:
+     -dni: dni del cliente
+     -number: numero telefonico del cliente
+     -password: password a registrar
+     -repeatpass:confirmacion del password
+     */
+
     func registerUser(dni: String, number: String, password: String,repeatpass: String) {
 
         if(repeatpass.isEmpty){
@@ -95,6 +105,9 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
     
     var showTitles: (([String]) -> Void)?
     
+    /**
+     prepara la vista de registro
+     */
     func viewDidLoad() {
         var titles = [String]()
         let title1 = "ÚNANSE A NUESTRA GRAN FAMILIA"

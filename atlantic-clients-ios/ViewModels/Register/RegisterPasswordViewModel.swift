@@ -41,7 +41,9 @@ class RegisterPasswordViewModel: RegisterPasswordViewModelProtocol {
         let titles = RegisterPasswordTitles()
         showTitles?(titles)
     }
-    
+    /**
+     ingresa al registro
+     */
     func tapRegister() {
         presentLogin?()
     }

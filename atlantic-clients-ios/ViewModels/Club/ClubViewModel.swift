@@ -1,10 +1,3 @@
-//
-//  ClubViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/7/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
 
 import Foundation
 
@@ -47,6 +40,11 @@ class ClubViewModel: ClubViewModelProtocol {
         loadDatasources?(datasources)
     }
     
+    /**
+        Selecciona el club del banner
+     - Parameters:
+        - indexParh: categoria del club
+     */
     func didSelectClub(_ indexPath: IndexPath) {
         guard let type = ClubCategoryTypes(rawValue: indexPath.row) else { return }
         presentClubCategory?(type)

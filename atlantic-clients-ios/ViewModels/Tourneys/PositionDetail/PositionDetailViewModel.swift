@@ -38,6 +38,16 @@ class PositionDetailViewModel: PositionDetailViewModelProtocol {
     
     var showTitles: ((PositionDetailTitles) -> Void)?
     var presentPayments: (() -> Void)?
+    
+    /**
+       agrega una promocion al cliente
+    - Parameters:
+       - clienteId: id del cliente
+            - fechaIngreso: fecha de ingreso a la promocion
+            - nombrePromocion: nombre de la promocion
+            - promocionId: id de la promocion
+    */
+    
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -71,6 +81,9 @@ class PositionDetailViewModel: PositionDetailViewModelProtocol {
         
     }
     
+    /**
+     presenta los pagos
+     */
     func tapPayments() {
         presentPayments?()
     }

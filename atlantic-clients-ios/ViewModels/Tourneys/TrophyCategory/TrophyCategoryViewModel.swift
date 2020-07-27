@@ -46,6 +46,15 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
     var datasources = [Tournament]()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    
+        /**
+       agrega una promocion al cliente
+    - Parameters:
+       - clienteId: id del cliente
+            - fechaIngreso: fecha de ingreso a la promocion
+            - nombrePromocion: nombre de la promocion
+            - promocionId: id de la promocion
+    */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -78,7 +87,14 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
     
     
     
-    
+    /**
+       obtiene los torneos por tipo
+    - Parameters:
+            - tipo: tipo de torneo
+            - clienteId: id de cliente
+
+    */
+
     func viewDidLoad(tipo:String,clienteId:String) {
         progress = appDelegate.progressDialog!
         progress.showProgress()
@@ -143,6 +159,9 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
              }
     }
     
+    /**
+     obtiene la categoria del torneo
+     */
     func didSelectTrophyCategory(_ indexPath: Tournament) {
        let type = indexPath
         presentTrophyCategory?(type)
@@ -150,6 +169,9 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
 
 }
 
+/**
+ retorna categoria  del torneo
+ */
 enum TrophyCategoryTypes: Int {
     
     case nivel12 = 0

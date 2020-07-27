@@ -29,6 +29,10 @@ class NotifyViewModel: NotifyViewModelProtocol {
     var loadDatasources : (([Notify])-> Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var datasourcce = [Notify]()
+    
+        /**
+     desactiva las notificaiones
+     */
     func viewDidLoad() {
         let titles = [Notify]()
         showTitles?(titles)
@@ -84,7 +88,12 @@ class NotifyViewModel: NotifyViewModelProtocol {
         
         loadDatasources?(titles)
     }
-    
+    /**
+     desactiva las notificaiones
+     -Parameters:
+     -clientId: id del cliente
+     -notifySelectId: id de la notificacion a esconder
+     */
     func hideNofity(clienteId:String, notifySelectId:String){
         appDelegate.progressDialog.message = "Ocultando Notificacion"
         appDelegate.progressDialog.showProgress()

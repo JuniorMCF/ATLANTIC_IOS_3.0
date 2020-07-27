@@ -50,8 +50,13 @@ class AgendaViewModel: AgendaViewModelProtocol {
     }
     
     
-    
-    func deleteData(eventoRegistroId: String, clienteId: String,index:Int) {
+        /**
+        elimina un evento de la agenda
+     - Parameters:
+        - eventoRegistroId: categoria del club
+        - clienteId: id del cliente
+        - index: posicion del evento enla tabla
+     */    func deleteData(eventoRegistroId: String, clienteId: String,index:Int) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postEliminarAgendado)
         dominioUrl = dominioUrl?.appending("eventoRegistroId", value: eventoRegistroId)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)

@@ -42,11 +42,17 @@ class CareerResultViewModel: CareerResultViewModelProtocol {
     var showTitles: ((CareerResultTitles) -> Void)?
     var presentCareerAward: (() -> Void)?
     
+    /**
+     muestra los resultados de las carreras
+     */
     func viewDidLoad() {
         let titles = CareerResultTitles()
         showTitles?(titles)
     }
     
+    /**
+     muestra los premios de las carreras
+     */
     func tapCareerAward() {
         presentCareerAward?()
     }

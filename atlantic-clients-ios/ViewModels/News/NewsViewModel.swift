@@ -52,6 +52,12 @@ class NewsViewModel: NewsViewModelProtocol {
     var countVerify = 0 //cuenta que todas las peticiones por Alamofire se hayan concretado 0: ninguna , 4:todas
     let datasources = NewsDatasources()
     
+    /**
+     obtiene la lista de noticias
+     -Parameters:
+     -clientId: id de cliente
+     -nivelId: nivel de cliente
+     */
     func viewDidLoad(clienteId:String,nivelId:String) {
         progress = appDelegate.progressDialog
         
@@ -61,7 +67,7 @@ class NewsViewModel: NewsViewModelProtocol {
 
         //lista de tamaño 4 con response = 100 , si response = 200 en los 4 se envia la data por el metodo loadDatasource()
         
-        //obteniendo imagenes de las noticias
+        //obteniendo imagenes de las noticias, promociones, eventos semanales
         
         //banner Imagenes Noticia
         progress.showProgress()
@@ -537,7 +543,11 @@ class NewsViewModel: NewsViewModelProtocol {
         }
     }
     
-    
+    /**
+     obtiene la lista de orquestas
+     -Paramters:
+     -clientID: id de cliente
+     */
     func getOrquesta(clienteId: String){
         
         let parametersPD = ["idCliente": (clienteId as NSString).intValue] as [String : Any]

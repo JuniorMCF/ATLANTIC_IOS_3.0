@@ -1,10 +1,4 @@
-//
-//  RafflesDetailViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
+
 
 import Foundation
 
@@ -39,11 +33,16 @@ class RafflesDetailViewModel: RafflesDetailViewModelProtocol {
     var showTitles: ((RafflesDetailTitles) -> Void)?
     var presentCreateReminder: (() -> Void)?
     
+    /**
+        muestra los titulos de los sorteos
+     */
     func viewDidLoad() {
         let titles = RafflesDetailTitles()
         showTitles?(titles)
     }
-    
+    /**
+            crea un recordatorio del torneo
+     */
     func tapCreateReminder() {
         presentCreateReminder?()
     }

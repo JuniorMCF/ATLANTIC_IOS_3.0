@@ -35,6 +35,11 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
     var eventList = [Event]()
     var eventHashMap : [String: [Event]] = ["":[Event]()]
     var tipoList : [String] = []
+    
+    
+    /**
+     obtiene los eventos
+     */
     func viewDidLoad() {
         
         appDelegate.progressDialog.showProgress()

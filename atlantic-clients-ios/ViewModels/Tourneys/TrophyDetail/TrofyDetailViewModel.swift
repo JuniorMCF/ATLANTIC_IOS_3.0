@@ -63,6 +63,9 @@ class TrophyDetailViewModel: TrophyDetailViewModelProtocol {
     var loadDatasources: ((PositionsDatasource) -> Void)?
     var presentPositionDetail: (() -> Void)?
     
+    /**
+     muestra los trofeos
+     */
     func viewDidLoad() {
         
         let titles = TrophyDetailTitles()
@@ -71,6 +74,9 @@ class TrophyDetailViewModel: TrophyDetailViewModelProtocol {
         loadDatasources?(datasource)
     }
     
+    /**
+     muestra las posiciones finales de la carrera
+     */
     func tapPosition() {
         presentPositionDetail?()
     }

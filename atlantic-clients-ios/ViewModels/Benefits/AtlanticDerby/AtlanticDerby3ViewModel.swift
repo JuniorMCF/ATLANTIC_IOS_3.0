@@ -22,6 +22,14 @@ class AtlanticDerby3ViewModel : AtlanticDerby3ViewModelProtocol{
     var loadDataSources: (([Puestos]) -> Void)?
     var presentTitles: (([String]) -> Void)?
     
+        /**
+       agrega una promocion del derby
+     - Parameters:
+               -clienteId: id del cliente
+               -fechaIngreso: fecha que se ejecuta la promocion
+               -nombrePromocion: nombre de la promocion
+               -promocionId: id de la promocion
+     */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -49,7 +57,9 @@ class AtlanticDerby3ViewModel : AtlanticDerby3ViewModelProtocol{
                 
             }
     }
-    
+    /**
+     prepara la vista del derby
+     */
     func viewDidLoad(){
         let list = ["ic_coup_1","ic_coup_2","ic_coup_3"]
         let puesto = Puestos()

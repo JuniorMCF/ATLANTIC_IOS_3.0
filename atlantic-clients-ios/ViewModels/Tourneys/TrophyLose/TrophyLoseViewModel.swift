@@ -30,6 +30,8 @@ class TrophyLoseViewModel: TrophyLoseViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var progress = CustomProgress()
     
+    
+    
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)

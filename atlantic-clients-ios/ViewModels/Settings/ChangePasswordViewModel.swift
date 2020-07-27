@@ -1,10 +1,4 @@
-//
-//  RecoveryPasswordViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/14/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
+
 
 import Foundation
 import Alamofire
@@ -28,6 +22,17 @@ class ChangePasswordViewModel: ChangePasswordViewModelProtocol {
     var showToast: ((String) -> Void)?
     let appDelegate = UIApplication
         .shared.delegate as! AppDelegate
+    
+    
+    /**
+        cambia el password por el password ingresado
+     - Parameters:
+        - beforePassword: antiguo password
+        - newPassword : nuevo password
+        - confirmPassword : nuevo password
+        - condition1 :  la longitud minima es de 4 caracteres
+        - condition2 : el password debe tener almenos 1 numero
+     */
     func changePassword(beforePassword:String,newPassword:String,confirmPassword:String,condition1:Bool,condition2:Bool) {
         if(beforePassword.isEmpty || newPassword.isEmpty || confirmPassword.isEmpty){
             showToast?("Todos los campos son requeridos")
@@ -82,7 +87,10 @@ class ChangePasswordViewModel: ChangePasswordViewModelProtocol {
     
     var showTitles: (([String]) -> Void)?
     
-    
+        
+    /**
+            inicializa los titulos para el cambio de password
+     */
     func viewDidLoad() {
         var titles = [String]()
         titles.append("Contraseña Antigua")

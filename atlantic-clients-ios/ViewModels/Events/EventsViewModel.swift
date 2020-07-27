@@ -37,6 +37,9 @@ class EventsViewModel: EventsViewModelProtocol {
     var eventHashMap : [String: [Event]] = ["":[Event]()]
     var progress : CustomProgress!
     
+    /**
+     obtiene la lista de eventos
+     */
     func viewDidLoad() {
         progress = appDelegate.progressDialog
         let parameters = ["id":appDelegate.usuario.clienteId,"nivelId":appDelegate.usuario.nivel]
@@ -134,10 +137,16 @@ class EventsViewModel: EventsViewModelProtocol {
         loadDatasources?(datasources)
     }
     
+    /**
+     muestra la lista de eventos
+     */
     func tapExpand() {
         expandView?()
     }
     
+    /**
+     registrar el recordatorio del evento
+     */
     func tapRegister() {
         presentRegister?()
     }

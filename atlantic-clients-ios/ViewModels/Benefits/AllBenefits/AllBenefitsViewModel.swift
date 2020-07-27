@@ -36,6 +36,14 @@ protocol AllBenefitsViewModelProtocol {
 }
 
 class AllBenefitsViewModel: AllBenefitsViewModelProtocol {
+    
+    /**
+     lista las promociones
+     - Parameters:
+        -fechaIngreso:fecha al ingresar
+        -nombrePromocion:nombre de la promocion
+        -promocionId: id de promocion
+     */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -67,6 +75,9 @@ class AllBenefitsViewModel: AllBenefitsViewModelProtocol {
     
     var showTitles: ((AllBenefitsTitles) -> Void)?
     
+    /**
+     inicializa la vista
+     */
     func viewDidLoad() {
         let titles = AllBenefitsTitles()
         showTitles?(titles)

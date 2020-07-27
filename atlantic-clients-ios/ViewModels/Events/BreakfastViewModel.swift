@@ -48,10 +48,20 @@ class BreakfastViewModel: BreakfastViewModelProtocol {
     var loadDatasources: ((BreakfastDatasources) -> Void)?
     var presentBreakfastDetail: (() -> Void)?
     
+    /**
+                inicializa la vista
+     */
     func viewDidLoad() {
         let datasources = BreakfastDatasources()
         loadDatasources?(datasources)
     }
+    
+
+    /**
+        retorna la posicion del desayuno eleccionado
+     - Parameters:
+        - indexPath:  desayuno seleccionado
+     */
     
     func didBreakfastSelected(_ indexPath: Event) {
         presentEventDetail?(indexPath)

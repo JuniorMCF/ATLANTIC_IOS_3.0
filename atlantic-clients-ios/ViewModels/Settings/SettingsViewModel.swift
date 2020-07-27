@@ -1,10 +1,4 @@
-//
-//  SettingsViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/9/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
+
 
 import Foundation
 import Alamofire
@@ -37,9 +31,16 @@ class SettingsViewModel: SettingsViewModelProtocol {
         showTitles?(titles)
     }
     
+    /**
+        configura la llegada de las notificaciones
+     - Parameters:
+        - clienteId: id del cliente
+        - isActivo : true  si las notificaciones estan activadas, false en otro caso
+     */
+    
     func changeSettings(clienteId:String,isActivo:Bool) {
         
-       
+        
         var dominioUrl = URL(string: Constants().urlBase+Constants().postConfigNotificacion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
         var estado = ""

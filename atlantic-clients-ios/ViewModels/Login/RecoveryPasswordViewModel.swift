@@ -32,6 +32,13 @@ class RecoveryPasswordViewModel: RecoveryPasswordViewModelProtocol {
     var passwordRecovery:(()->Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    /**
+        cambia el password
+     - Parameters:
+        - clienteId:  id del cliente
+        - password1: password nuevo
+        - password2:  confirmacion password nuevo
+     */
     func recoveryPassword(clienteId:String,password1:String,password2:String) {
         
         if(!password1.isEmpty && !password2.isEmpty && password1.count == 4 && password2.count == 4){
@@ -90,6 +97,9 @@ class RecoveryPasswordViewModel: RecoveryPasswordViewModelProtocol {
 
     var presentForgotPassword: (() -> Void)?
     
+    /**
+                inicializa la vista para el cambio de password
+     */
     func viewDidLoad() {
         var titles = [String]()
         titles.append("INGRESE CONTRASEÑA")

@@ -50,11 +50,16 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
         showTitles?(titles)
     }
 
+    /**
+            selecciona el tipo de documento de identidad a usar
+     */
     func tapDocType() {
         let datasource = PickerData()
         loadPickerData?(datasource)
     }
-    
+    /**
+     verifica si el dni ingresado es correcto
+     */
     func tapNext(dni:String) {
         if(dni == ""){
             self.showToast?("Ingrese dni")

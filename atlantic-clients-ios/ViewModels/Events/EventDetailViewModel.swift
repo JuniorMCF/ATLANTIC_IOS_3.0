@@ -92,6 +92,13 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
         getHorarioId?(horarioId)
     }
     
+    /**
+        registra la cita al evento
+      - Parameters:
+                -clienteId: id del cliente
+                -horarioId: id del horario
+                -nroAcom: numero de acompanantes
+     */
     func saveData(clienteId:String,horarioId:String,nroAcom:String){
         progress = appDelegate.progressDialog
         progress.showProgress()
@@ -171,7 +178,11 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     }
     
     
-    
+    /**
+        obtiene los detalles del evento
+        - Parameters:
+            -eventoId: id del evento
+     */
     func viewDidLoad(eventoId:Int) {
         let titles = EventDetailTitles()
         showTitles?(titles)
@@ -278,12 +289,17 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     }
     
     
-    
+    /**
+     muestra la lista de eventos
+     */
     
     func tapExpand() {
         expandView?()
     }
     
+    /**
+     registra el evento
+     */
     func tapRegister() {
         saveData?()
     }

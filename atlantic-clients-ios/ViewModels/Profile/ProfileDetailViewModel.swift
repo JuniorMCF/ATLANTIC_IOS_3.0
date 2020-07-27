@@ -42,7 +42,15 @@ protocol ProfileDetailViewModelProtocol {
 class ProfileDetailViewModel: ProfileDetailViewModelProtocol {
     var presentToast: ((String) -> Void)?
 
-    
+        /**
+        guarda los datos del cliente en cache
+     - Parameters:
+        - celular: numero de celular del cliente
+             - direccion: direccion del cliente
+             - fechaNac: fecha de nacimiento del cliente
+             - email: correo electronico del cliente
+             - clienteId: id del lciente
+     */
     func saveProfile(celular:String, direccion:String, fechaNac:String, email:String, clienteId :String) {
         
         var dominioUrl = URL(string: Constants().urlBase+Constants().postUpdateUserData)

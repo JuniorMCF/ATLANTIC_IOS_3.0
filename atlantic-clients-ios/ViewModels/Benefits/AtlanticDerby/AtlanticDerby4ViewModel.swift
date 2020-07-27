@@ -21,6 +21,15 @@ protocol AtlanticDerby4ViewModelProtocol{
 class AtlanticDerby4ViewModel : AtlanticDerby4ViewModelProtocol{
     var loadDataSources: (([String]) -> Void)?
     var presentTitles: (([String]) -> Void)?
+    
+        /**
+       agrega una promocion del derby
+     - Parameters:
+               -clienteId: id del cliente
+               -fechaIngreso: fecha que se ejecuta la promocion
+               -nombrePromocion: nombre de la promocion
+               -promocionId: id de la promocion
+     */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -46,6 +55,9 @@ class AtlanticDerby4ViewModel : AtlanticDerby4ViewModelProtocol{
             }
     }
     
+    /**
+     prepara la vista del derby
+     */
     func viewDidLoad(nombre:String){
         if(nombre.lowercased().contains("diamante")){
            let list = ["1er puesto: $100","2do puesto: $40","3er puesto: $20"]
