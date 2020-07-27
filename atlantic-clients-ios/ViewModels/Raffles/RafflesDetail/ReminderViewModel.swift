@@ -41,10 +41,15 @@ class ReminderViewModel: ReminderViewModelProtocol {
         showTitles?(titles)
     }
     
+    /**
+         acepta el recordatorio
+     */
     func tapAccept() {
         dismisViewController?()
     }
-    
+    /**
+        no acepta el recordatorio
+     */
     func tapDecline() {
         dismisViewController?()
     }

@@ -21,6 +21,15 @@ protocol AtlanticDerby5ViewModelProtocol{
 class AtlanticDerby5ViewModel : AtlanticDerby5ViewModelProtocol{
     var loadDataSources: (([String]) -> Void)?
     var presentTitles: (([String]) -> Void)?
+    
+        /**
+       agrega una promocion del derby
+     - Parameters:
+               -clienteId: id del cliente
+               -fechaIngreso: fecha que se ejecuta la promocion
+               -nombrePromocion: nombre de la promocion
+               -promocionId: id de la promocion
+     */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -48,7 +57,9 @@ class AtlanticDerby5ViewModel : AtlanticDerby5ViewModelProtocol{
                 
             }
     }
-    
+    /**
+        prepara la vista del dervy
+     */
     func viewDidLoad(){
         let list = ["ic_coup_1","ic_coup_2","ic_coup_3"]
         loadDataSources?(list)

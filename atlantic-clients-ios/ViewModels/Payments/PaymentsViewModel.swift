@@ -1,10 +1,4 @@
-//
-//  PaymentViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/31/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
+
 
 import Foundation
 import Alamofire
@@ -56,6 +50,14 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var progress : CustomProgress!
     
+    
+    /**
+        obtiene las promociones
+     - Parameters:
+        - clienteId: id del cliente
+        - fecha: fecha de las promociones
+        - promocionIdList: lista de ids de las promociones
+     */
     func onStart(clienteId: String,fecha : String,promocionIdList : [String]) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadCobro)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -82,6 +84,11 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
                 
             }
     }
+    
+    
+    /**
+        obtiene la lista de cobros
+     */
     func viewDidLoad() {
         let parameters = ["id": appDelegate.usuario.clienteId]
         progress = appDelegate.progressDialog
@@ -139,11 +146,14 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
                 }
                 
             }
-        
-        
-        //loadDatasources?(datasources)
-    }
+        }
     
+        
+    /**
+        filtra el texto en el campo de busqueda
+     - Parameters:
+        - searchText: texto ingresado en el campo de busqueda
+     */
     func searchBarTextDidChange(_ searchText: String) {
         if searchText.isEmpty {
             let datasources = appDelegate.cobros

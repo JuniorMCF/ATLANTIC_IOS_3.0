@@ -42,6 +42,14 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
     var showToast: ((String) -> Void)?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    
+    /**
+        verifica si el codigo de recuperacion es correcto
+     - Parameters:
+        - code:  codigo de recuperacion
+        - celular: numero telefonico del cliente
+        - clienteId:  id del cliente
+     */
     func verifyCode(code:String,celular:String,clienteId:String){
         
         if(code.count < 4){
@@ -83,7 +91,12 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
         
         
     }
-    
+        /**
+            obtiene el telefono del usuario
+     - Parameters:
+        - dni:  documento de identidad del cliente
+        - tipo: tipo de documento
+     */
     func getPhone(dni:String,tipo:Int) {
         
         if(dni.count>=8 && dni.count <= 12){
@@ -195,6 +208,9 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
 
     var showTitles: ((ForgotPasswordTitles) -> Void)?
 
+    /**
+                inicializa la vista de recuperacion de password
+     */
     
     func viewDidLoad() {
         let titles = ForgotPasswordTitles()

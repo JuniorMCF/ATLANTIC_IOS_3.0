@@ -1,10 +1,4 @@
-//
-//  RafflesViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/7/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
+
 
 import Foundation
 import Alamofire
@@ -45,6 +39,11 @@ class RafflesViewModel: RafflesViewModelProtocol {
     var listSorteos = [Sorteo]()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var progress : CustomProgress!
+    
+    /**
+        obtiene la lista de sorteos
+            
+     */
     func viewDidLoad() {
         //let datasources = RafflesDatasources()
         progress = appDelegate.progressDialog
@@ -122,12 +121,21 @@ class RafflesViewModel: RafflesViewModelProtocol {
             }
     }
     
+    /**
+        obtiene la categoria del sorteo
+     - Parameters:
+        - indexPath:  sorteo seleccionado
+     */
     func didSelectRaffles(_ indexPath: Sorteo) {
         presentRafflesCategory?(indexPath)
     }
     
 }
 
+
+/**
+    devuelve la categoria del sorteo
+ */
 enum RafflesCategoryTypes: Int {
     
     case sorteoEstelar = 0

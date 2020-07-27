@@ -1,10 +1,4 @@
-//
-//  RafflesDreamViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
+
 
 import Foundation
 import Alamofire
@@ -36,6 +30,7 @@ protocol RafflesDreamViewModelProtocol {
 }
 
 class RafflesDreamViewModel: RafflesDreamViewModelProtocol {
+    
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)

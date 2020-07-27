@@ -40,6 +40,10 @@ class OnBoardingViewModel: OnBoardingViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var listRutas = [Route]()
     var listFotos = [String]()
+    
+    /**
+     obtiene las fotos iniciales 
+     */
     func viewDidLoad() {
         let titles = OnBoardingTitles()
         showTitles?(titles)

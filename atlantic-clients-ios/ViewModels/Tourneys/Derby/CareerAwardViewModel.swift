@@ -44,11 +44,16 @@ class CareerAwardViewModel: CareerAwardViewModelProtocol {
     var showTitles: ((CareerAwardTitles) -> Void)?
     var presentPayments: (() -> Void)?
     
+    /**
+     muestra los titulos de los premios
+     */
     func viewDidLoad() {
         let titles = CareerAwardTitles()
         showTitles?(titles)
     }
-    
+    /**
+     muestra los pagos
+     */
     func tapPayments() {
         presentPayments?()
     }

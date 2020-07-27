@@ -48,7 +48,12 @@ class DinnerViewModel: DinnerViewModelProtocol {
         loadDatasources?(datasources)
     }
     
-    func didDinnerSelected(_ indexPath: IndexPath) {
+    /**
+        retorna la posicion de la comida  eleccionada
+     - Parameters:
+        - indexPath:  comida seleccionado
+     */
+        func didDinnerSelected(_ indexPath: IndexPath) {
         presentDinnerDetail?()
     }
 }

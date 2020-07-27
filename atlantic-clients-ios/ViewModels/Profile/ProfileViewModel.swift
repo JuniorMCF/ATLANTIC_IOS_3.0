@@ -54,20 +54,35 @@ class ProfileViewModel: ProfileViewModelProtocol {
         showTitles?(titles)
     }
     
+    /**
+     abre los detalles de la cuenta
+     */
     func tapProfile() {
         pushProfileDetail?()
     }
-    
+    /**
+     abre opciones adicionales
+     */
     func tapSettings() {
         pushSettings?()
     }
     
+    /**
+     cierra la cuenta activa
+     */
     func tapLogOut() {
         presentLogin?()
     }
+    
+    /**
+        muestra las opciones de las notificaciones
+     */
     func pushNotify(){
         presentNotify?()
     }
+    /**
+     muestra la agenda del cliente
+     */
     func pushAgenda() {
         presentAgenda?()
     }

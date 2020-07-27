@@ -48,6 +48,9 @@ class BenefitsViewModel: BenefitsViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var progress : CustomProgress!
     
+    /**
+     obtiene los beneficios semanales
+     */
     func viewDidLoad() {
         progress = appDelegate.progressDialog
         let parameters = ["id":appDelegate.usuario.clienteId]
@@ -138,12 +141,18 @@ class BenefitsViewModel: BenefitsViewModelProtocol {
         
     }
     
+    /**
+     obtiene la categoria dle beneficio seleccionado
+     */
     func didSelectBenefits(_ indexPath: Benefits) {
         presentBenefit?(indexPath)
     }
     
 }
 
+/**
+ devuelve la categoria del beneficio seleccionado
+ */
 enum BenefitsTypes: Int {
     
     case martesRegalones = 0
