@@ -1,11 +1,3 @@
-//
-//  BreakfastViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/3/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 public struct Breakfast {
@@ -49,7 +41,7 @@ class BreakfastViewModel: BreakfastViewModelProtocol {
     var presentBreakfastDetail: (() -> Void)?
     
     /**
-                inicializa la vista
+    Inicializa la vista
      */
     func viewDidLoad() {
         let datasources = BreakfastDatasources()
@@ -58,9 +50,9 @@ class BreakfastViewModel: BreakfastViewModelProtocol {
     
 
     /**
-        retorna la posicion del desayuno eleccionado
+    Accede al evento seleccionado
      - Parameters:
-        - indexPath:  desayuno seleccionado
+        - indexPath: evento seleccionado
      */
     
     func didBreakfastSelected(_ indexPath: Event) {

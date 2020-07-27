@@ -1,11 +1,3 @@
-//
-//  AtlanticDerby4ViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/20/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class AtlanticDerby4ViewController: UIViewController {
@@ -33,10 +25,21 @@ class AtlanticDerby4ViewController: UIViewController {
         viewModel.viewDidLoad(nombre: benefit.nombre)
         
     }
+    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.loadDataSources = loadDatasources(datasources:)
         viewModel.presentTitles = presentTitles(data:)
     }
+    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
+    
     func presentTitles(data:[String]){
         titleLabel.setRafflesTitleGoldCenter(with: "¡Ya puedes participar en la carrera!")
        
@@ -65,6 +68,12 @@ class AtlanticDerby4ViewController: UIViewController {
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showTerms()
     }
+    
+    /**
+    Carga la tabla de posiciones de la carrera
+    - Parameters:
+       - datasources: lista de posiciones
+    */
     func loadDatasources(datasources: [String]) {
         ad4CollectionViewDD = AD4CollectionViewDelegateAndDatasource(items: datasources,viewModel:viewModel)
         AD4CollectionView.dataSource = ad4CollectionViewDD

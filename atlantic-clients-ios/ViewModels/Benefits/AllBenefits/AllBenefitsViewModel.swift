@@ -1,11 +1,3 @@
-//
-//  AllBenefitsViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/14/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -38,11 +30,12 @@ protocol AllBenefitsViewModelProtocol {
 class AllBenefitsViewModel: AllBenefitsViewModelProtocol {
     
     /**
-     lista las promociones
+    Agrega actividad de la promocion
      - Parameters:
-        -fechaIngreso:fecha al ingresar
-        -nombrePromocion:nombre de la promocion
-        -promocionId: id de promocion
+        - clienteId: id del cliente
+        - fechaIngreso: fecha de ingreso a la promocion
+        - nombrePromocion: nombre de la promocion
+        - promocionId: id de la promocion
      */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
@@ -76,7 +69,7 @@ class AllBenefitsViewModel: AllBenefitsViewModelProtocol {
     var showTitles: ((AllBenefitsTitles) -> Void)?
     
     /**
-     inicializa la vista
+     Inicializa las vistas en el viewcontroller
      */
     func viewDidLoad() {
         let titles = AllBenefitsTitles()

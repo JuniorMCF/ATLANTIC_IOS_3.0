@@ -1,11 +1,3 @@
-//
-//  AtlanticDerby2ViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/20/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class AtlanticDerby2ViewController: UIViewController {
@@ -35,13 +27,22 @@ class AtlanticDerby2ViewController: UIViewController {
         let fechaActual = Utils().getFechaActual()
         viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombrePromocion: benefit.nombre, promocionId: String(benefit.promocion_id))
         viewModel.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         
         viewModel.loadDataSources = loadDatasources(datasources:)
         viewModel.presentTitles = presentTitles(data:)
     }
+    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
     func presentTitles(data:[String]){
         fechaLabel.setBenefitDetailTitleCenter(with: "¡Pronto tendrá más oportunidades de ganar!")
         titleLabel.setBenefitDetailTitleCenter(with: benefit.nombre)
@@ -71,6 +72,12 @@ class AtlanticDerby2ViewController: UIViewController {
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showTerms()
     }
+    
+    /**
+     Carga la tabla de posiciones de la carrera
+     - Parameters:
+        - datasources: lista de posiciones
+     */
     func loadDatasources(datasources: [Puestos]) {
         ad2CollectionViewDD = AD2CollectionViewDelegateAndDatasource(items: datasources,
                                                                      viewModel:viewModel)
@@ -79,14 +86,7 @@ class AtlanticDerby2ViewController: UIViewController {
         //data = datasources
 
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

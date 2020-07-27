@@ -1,11 +1,3 @@
-//
-//  DinnerViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 public struct Dinner {
@@ -49,9 +41,9 @@ class DinnerViewModel: DinnerViewModelProtocol {
     }
     
     /**
-        retorna la posicion de la comida  eleccionada
+    Retorna la posicion del evento seleccionado
      - Parameters:
-        - indexPath:  comida seleccionado
+        - indexPath:  evento  seleccionado
      */
         func didDinnerSelected(_ indexPath: IndexPath) {
         presentDinnerDetail?()

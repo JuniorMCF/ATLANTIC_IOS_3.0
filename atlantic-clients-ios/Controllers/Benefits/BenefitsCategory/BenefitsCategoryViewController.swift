@@ -1,11 +1,3 @@
-//
-//  BenefitsCategoryViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class BenefitsCategoryViewController: UIViewController {
@@ -45,6 +37,9 @@ class BenefitsCategoryViewController: UIViewController {
         benefitsCategoryCollectionView.collectionViewLayout = flow
     }
 
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles:)
         viewModel.loadDatasources = loadDatasources(datasource: )
@@ -52,11 +47,21 @@ class BenefitsCategoryViewController: UIViewController {
         
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
     func showTitles(titles: BenefitsCategoryTitles) {
         spectacularButton.setRemindButton(with: titles.spectacularTitle)
         
     }
     
+    /**
+    Carga la lista de beneficios
+    - Parameters:
+       - datasources: lista de beneficios
+    */
     func loadDatasources(datasource: BenefitsCategoryDatasource) {
         benefitsCategoryCollectionViewDD = BenefitsCategoryCollectionViewDatasourceAndDelegate(items: datasource.items, viewModel: viewModel)
         benefitsCategoryCollectionView.dataSource = benefitsCategoryCollectionViewDD

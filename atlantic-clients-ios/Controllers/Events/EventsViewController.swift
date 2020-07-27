@@ -1,11 +1,3 @@
-//
-//  EventsViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/3/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import CarbonKit
 
@@ -24,11 +16,20 @@ class EventsViewController: UIViewController, CarbonTabSwipeNavigationDelegate {
         
         
     }
+    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.showTitles = showTitles(titles:)
         
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulos de todos los elementos
+    */
     func showTitles(titles:EventDetailPreview){
         items = titles
         if(titles.tipoList.count == 0){

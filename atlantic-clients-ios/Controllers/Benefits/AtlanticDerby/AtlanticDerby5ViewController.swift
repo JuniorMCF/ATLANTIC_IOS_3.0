@@ -1,11 +1,3 @@
-//
-//  AtlanticDerby5ViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/20/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class AtlanticDerby5ViewController: UIViewController {
@@ -36,12 +28,21 @@ class AtlanticDerby5ViewController: UIViewController {
         
         
         viewModel.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.presentTitles = presentTitles(data:)
     }
+    
+    
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+        - data : titulos de todos los elementos
+    */
     func presentTitles(data:[String]){
         navBar.title = "Atlantic Derby"
         if(!(benefit.fechaActualizacion.isEmpty || benefit.fechaActualizacion == "")){//diferente de null or empty
@@ -79,14 +80,6 @@ class AtlanticDerby5ViewController: UIViewController {
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showTerms()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

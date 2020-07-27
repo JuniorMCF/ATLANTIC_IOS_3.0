@@ -1,10 +1,3 @@
-//
-//  DinnerViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
 
 import UIKit
 
@@ -43,11 +36,19 @@ class DinnerViewController: UIViewController {
         dinnerCollectionView.collectionViewLayout = flow
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.loadDatasources = loadDatasources
         viewModel.presentDinnerDetail = presentDinnerDetail
     }
 
+    /**
+    Carga la lista de eventos
+    - Parameters:
+       - datasources: lista de eventos
+    */
     func loadDatasources(datasource: DinnerDatasources) {
         dinnerCollectionViewDD = DinnerCollectionViewDatasourceAndDelegate(items: datasource.items, viewModel: viewModel)
         dinnerCollectionView.dataSource = dinnerCollectionViewDD

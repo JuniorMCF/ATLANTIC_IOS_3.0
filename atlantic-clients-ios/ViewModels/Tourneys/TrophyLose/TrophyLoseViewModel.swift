@@ -1,11 +1,3 @@
-//
-//  TrophyLoseViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/27/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -31,6 +23,14 @@ class TrophyLoseViewModel: TrophyLoseViewModelProtocol {
     var progress = CustomProgress()
     
     
+    /**
+    Agrega la actividad de la promocion
+    - Parameters:
+       - clienteId: id del cliente
+       - fechaIngreso: fecha de ingreso a la promocion
+       - nombrePromocion: nombre de la promocion
+       - promocionId: id de la promocion
+    */
     
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
@@ -60,7 +60,11 @@ class TrophyLoseViewModel: TrophyLoseViewModelProtocol {
             }
     }
     
-    
+    /**
+     Obtiene la tabla del torneo
+     - Parameters:
+        - promocionId: id de la promocion
+     */
     func viewDidLoad(promocionId:String) {
         progress = appDelegate.progressDialog
         progress.showProgress()

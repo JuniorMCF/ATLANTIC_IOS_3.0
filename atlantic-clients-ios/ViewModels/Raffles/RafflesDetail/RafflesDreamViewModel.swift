@@ -1,5 +1,3 @@
-
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -30,7 +28,14 @@ protocol RafflesDreamViewModelProtocol {
 }
 
 class RafflesDreamViewModel: RafflesDreamViewModelProtocol {
-    
+    /**
+     Agrega la actividad de la promocion
+     - Parameters:
+        - clienteId: id del cliente
+        - fechaIngreso: fecha de ingreso a la promocion
+        - nombrePromocion: nombre de la promocion
+        - promocionId: id de la promocion
+     */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)

@@ -1,11 +1,3 @@
-//
-//  BenefitsViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/9/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import Alamofire
@@ -49,7 +41,7 @@ class BenefitsViewModel: BenefitsViewModelProtocol {
     var progress : CustomProgress!
     
     /**
-     obtiene los beneficios semanales
+     Obtiene los beneficios semanales
      */
     func viewDidLoad() {
         progress = appDelegate.progressDialog
@@ -142,7 +134,9 @@ class BenefitsViewModel: BenefitsViewModelProtocol {
     }
     
     /**
-     obtiene la categoria dle beneficio seleccionado
+    Carga la categoria del beneficio seleccionado
+    - Parameters:
+        - indexPath: beneficio seleccionado
      */
     func didSelectBenefits(_ indexPath: Benefits) {
         presentBenefit?(indexPath)
@@ -150,9 +144,6 @@ class BenefitsViewModel: BenefitsViewModelProtocol {
     
 }
 
-/**
- devuelve la categoria del beneficio seleccionado
- */
 enum BenefitsTypes: Int {
     
     case martesRegalones = 0

@@ -1,11 +1,3 @@
-//
-//  ProfileDetailViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -42,14 +34,14 @@ protocol ProfileDetailViewModelProtocol {
 class ProfileDetailViewModel: ProfileDetailViewModelProtocol {
     var presentToast: ((String) -> Void)?
 
-        /**
-        guarda los datos del cliente en cache
+    /**
+    Guarda los datos del cliente en el servidor
      - Parameters:
         - celular: numero de celular del cliente
-             - direccion: direccion del cliente
-             - fechaNac: fecha de nacimiento del cliente
-             - email: correo electronico del cliente
-             - clienteId: id del lciente
+        - direccion: direccion del cliente
+        - fechaNac: fecha de nacimiento del cliente
+        - email: correo electronico del cliente
+        - clienteId: id del lciente
      */
     func saveProfile(celular:String, direccion:String, fechaNac:String, email:String, clienteId :String) {
         

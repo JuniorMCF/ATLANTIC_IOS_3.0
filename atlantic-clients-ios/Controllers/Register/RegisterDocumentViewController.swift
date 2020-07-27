@@ -63,7 +63,7 @@ class RegisterDocumentViewController: UIViewController {
     /**
     Proporciona estilo a los elementos de la vista.
      - Parameters:
-        - titles : titulo de todos los elementos
+        - titles : tituloss de todos los elementos
     */
     func showTitles(titles: RegisterDocumentTitles) {
         titleLabel.setTitleViewLabel(with: titles.screenTitle)

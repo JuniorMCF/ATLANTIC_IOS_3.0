@@ -1,11 +1,3 @@
-//
-//  AtlanticDerby3ViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/20/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class AtlanticDerby3ViewController: UIViewController {
@@ -58,11 +50,21 @@ class AtlanticDerby3ViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: false)
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         
         viewModel.loadDataSources = loadDatasources(datasources:)
         viewModel.presentTitles = presentTitles(data:)
     }
+    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
+    
     func presentTitles(data:[String]){
         
         titleLabel.setRafflesTitleGoldCenter(with: "¡Ha ganado!")
@@ -105,6 +107,12 @@ class AtlanticDerby3ViewController: UIViewController {
         let terminos = Terminos(parent: self, url: "http://clienteatlantic.azurewebsites.net/admin/upload/documento/Terminos_y_condiciones_de_Promocionales.pdf")
         terminos.showTerms()
     }
+    
+    /**
+    Carga la tabla de posiciones de la carrera
+    - Parameters:
+       - datasources: lista de posiciones
+    */
     func loadDatasources(datasources: [Puestos]) {
         ad3CollectionViewDD = AD3CollectionViewDelegateAndDatasource(items: datasources,
                                                                      viewModel:viewModel)
@@ -113,14 +121,6 @@ class AtlanticDerby3ViewController: UIViewController {
         //data = datasources
 
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

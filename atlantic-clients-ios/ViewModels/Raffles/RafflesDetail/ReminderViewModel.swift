@@ -1,11 +1,3 @@
-//
-//  ReminderViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 struct ReminderTitles {
@@ -35,20 +27,22 @@ class ReminderViewModel: ReminderViewModelProtocol {
     
     var showTitles: ((ReminderTitles) -> Void)?
     var dismisViewController: (() -> Void)?
-    
+    /**
+    Cargar los titulos de los elementos de la vista
+     */
     func viewDidLoad() {
         let titles = ReminderTitles()
         showTitles?(titles)
     }
     
     /**
-         acepta el recordatorio
+    Acepta el recordatorio
      */
     func tapAccept() {
         dismisViewController?()
     }
     /**
-        no acepta el recordatorio
+    Deniega el recordatorio
      */
     func tapDecline() {
         dismisViewController?()

@@ -34,14 +34,14 @@ class RafflesDetailViewModel: RafflesDetailViewModelProtocol {
     var presentCreateReminder: (() -> Void)?
     
     /**
-        muestra los titulos de los sorteos
+    muestra los titulos de los sorteos
      */
     func viewDidLoad() {
         let titles = RafflesDetailTitles()
         showTitles?(titles)
     }
     /**
-            crea un recordatorio del torneo
+    crea un recordatorio del torneo
      */
     func tapCreateReminder() {
         presentCreateReminder?()

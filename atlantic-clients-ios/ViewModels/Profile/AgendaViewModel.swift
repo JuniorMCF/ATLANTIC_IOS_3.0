@@ -1,11 +1,3 @@
-//
-//  AgendaViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/10/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -50,13 +42,14 @@ class AgendaViewModel: AgendaViewModelProtocol {
     }
     
     
-        /**
-        elimina un evento de la agenda
+    /**
+    Elimina un evento de la agenda
      - Parameters:
         - eventoRegistroId: categoria del club
         - clienteId: id del cliente
         - index: posicion del evento enla tabla
-     */    func deleteData(eventoRegistroId: String, clienteId: String,index:Int) {
+     */
+    func deleteData(eventoRegistroId: String, clienteId: String,index:Int) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postEliminarAgendado)
         dominioUrl = dominioUrl?.appending("eventoRegistroId", value: eventoRegistroId)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)

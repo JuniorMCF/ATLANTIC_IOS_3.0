@@ -13,7 +13,9 @@ class TutorialVC: UIViewController {
     @IBAction func exitTutorial(_ sender: Any) {
         bubbleCase.exitTutorial()
     }
-    
+    /**
+     Configura la vista inicial del tutorial
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         Constants().saveFistInit(isFirst: false)

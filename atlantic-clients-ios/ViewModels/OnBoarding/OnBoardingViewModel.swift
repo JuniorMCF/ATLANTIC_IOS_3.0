@@ -1,11 +1,3 @@
-//
-//  OnBoardingViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/20/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import Alamofire
@@ -42,7 +34,7 @@ class OnBoardingViewModel: OnBoardingViewModelProtocol {
     var listFotos = [String]()
     
     /**
-     obtiene las fotos iniciales 
+     Obtiene las fotos iniciales del pop up inicial y las rutas de las fotos
      */
     func viewDidLoad() {
         let titles = OnBoardingTitles()

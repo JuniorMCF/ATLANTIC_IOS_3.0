@@ -1,11 +1,3 @@
-//
-//  AD4CollectionViewDelegateAndDatasource.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/22/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class AD4CollectionViewDelegateAndDatasource: NSObject {

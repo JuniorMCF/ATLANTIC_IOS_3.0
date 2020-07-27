@@ -1,11 +1,3 @@
-//
-//  AllBenefitsViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/14/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import AlamofireImage
@@ -109,13 +101,21 @@ class AllBenefitsViewController: UIViewController {
         
     }
     
-    
+    /**
+    Inicializa el viewmodel.
+    */
 
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         loadDatasources(datasource:benefit)
         
     }
+    
+    /**
+    Carga la lista de beneficios
+    - Parameters:
+       - datasources: lista de beneficios
+    */
     func loadDatasources(datasource: Benefits) {
         if(datasource.fotos.count == 1){
             pageControl.isUserInteractionEnabled = false
@@ -134,6 +134,11 @@ class AllBenefitsViewController: UIViewController {
         self.collectionView.reloadData()
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+    - Parameters:
+        - titles : titulos de todos los elementos
+    */
     func showTitles(titles: AllBenefitsTitles) {
         if(benefit.nombre == "Domingos Regalones" || benefit.nombre == "Martes Regalones"){
             //mostramos la vista encima  y anulamos los botones de la vista que se encuentra atras

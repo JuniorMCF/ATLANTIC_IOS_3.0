@@ -41,8 +41,7 @@ class RafflesViewModel: RafflesViewModelProtocol {
     var progress : CustomProgress!
     
     /**
-        obtiene la lista de sorteos
-            
+    Obtiene la lista de sorteos
      */
     func viewDidLoad() {
         //let datasources = RafflesDatasources()
@@ -122,7 +121,7 @@ class RafflesViewModel: RafflesViewModelProtocol {
     }
     
     /**
-        obtiene la categoria del sorteo
+    obtiene la categoria del sorteo
      - Parameters:
         - indexPath:  sorteo seleccionado
      */
@@ -134,7 +133,7 @@ class RafflesViewModel: RafflesViewModelProtocol {
 
 
 /**
-    devuelve la categoria del sorteo
+devuelve la categoria del sorteo
  */
 enum RafflesCategoryTypes: Int {
     

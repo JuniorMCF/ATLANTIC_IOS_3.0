@@ -1,10 +1,3 @@
-//
-//  EventsViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/3/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -38,7 +31,7 @@ class EventsViewModel: EventsViewModelProtocol {
     var progress : CustomProgress!
     
     /**
-     obtiene la lista de eventos
+    Obtiene la lista de eventos del cliente
      */
     func viewDidLoad() {
         progress = appDelegate.progressDialog
@@ -137,16 +130,12 @@ class EventsViewModel: EventsViewModelProtocol {
         loadDatasources?(datasources)
     }
     
-    /**
-     muestra la lista de eventos
-     */
+  
     func tapExpand() {
         expandView?()
     }
     
-    /**
-     registrar el recordatorio del evento
-     */
+    
     func tapRegister() {
         presentRegister?()
     }

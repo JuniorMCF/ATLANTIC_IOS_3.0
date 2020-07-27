@@ -1,11 +1,3 @@
-//
-//  RegisterSucessViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/8/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -30,11 +22,11 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
     
         /**
      realiza el registro de un cliente
-     -Parameters:
-     -dni: dni del cliente
-     -number: numero telefonico del cliente
-     -password: password a registrar
-     -repeatpass:confirmacion del password
+     - Parameters:
+        - dni: dni del cliente
+        - number: numero telefonico del cliente
+        - password: password a registrar
+        - repeatpass: confirmacion del password
      */
 
     func registerUser(dni: String, number: String, password: String,repeatpass: String) {
@@ -106,7 +98,7 @@ class RegisterSucessViewModel: RegisterSucessViewModelProtocol {
     var showTitles: (([String]) -> Void)?
     
     /**
-     prepara la vista de registro
+     Prepara la vista de registro
      */
     func viewDidLoad() {
         var titles = [String]()

@@ -1,11 +1,3 @@
-//
-//  RecoveryPasswordViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/8/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class RecoveryPasswordViewController: UIViewController {
@@ -30,6 +22,9 @@ class RecoveryPasswordViewController: UIViewController {
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.showTitles = showTitles(data: )
         viewModel.showToast = show(message: )
@@ -38,6 +33,12 @@ class RecoveryPasswordViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
     //    self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
     func showTitles(data:[String]){
        // titleLabel.setClubTitle(with: data[0])
         //passwordTextField.setPasswordStyle(with: data[1])
@@ -55,6 +56,9 @@ class RecoveryPasswordViewController: UIViewController {
         repeatPasswordTextField.setBottomBorder(withColor: .black)
         ContinueButton.setFirstButton(with: data[4])
     }
+    /**
+     Muestra un mensaje en pantalla
+     */
     func show(message:String){
         showToast(message: message)
     }

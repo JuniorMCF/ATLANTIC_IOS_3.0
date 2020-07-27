@@ -1,11 +1,3 @@
-//
-//  BreakfastViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/3/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import AlamofireImage
@@ -62,12 +54,20 @@ class BreakfastViewController: UIViewController {
         let width = (collectionView.frame.width - 10) / 2
         flow.itemSize = CGSize(width: width, height: width * 1.35)
     }
-
+    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.loadDatasources = loadDatasources(datasource:)
         viewModel.presentEventDetail = presentEventDetail(item:)
     }
     
+    /**
+    Carga la lista de eventos
+    - Parameters:
+       - datasources: lista de eventos
+    */
     func loadDatasources(datasource:BreakfastDatasources) {
         fotoList = []
         for _ in 0 ..< items.count{
@@ -118,6 +118,11 @@ class BreakfastViewController: UIViewController {
             }
         }
     }
+    /**
+     Dirige hacia los detalles del evento
+     - Parameters:
+        - item: evento seleccionado
+     */
     func presentEventDetail(item:Event){
         let storyboard = UIStoryboard(name: "EventDetail", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "EventDetailID") as! EventsDetailViewController

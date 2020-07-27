@@ -1,11 +1,3 @@
-//
-//  CareerViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/14/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 struct CareerTitles {
@@ -41,7 +33,7 @@ class CareerViewModel: CareerViewModelProtocol {
     var presentCareerResult: (() -> Void)?
     
     /**
-     muestra los titulos delas carreras
+     Muestra los titulos delas carreras
      */
     func viewDidLoad() {
         let titles = CareerTitles()
@@ -49,7 +41,7 @@ class CareerViewModel: CareerViewModelProtocol {
     }
     
     /**
-     muestra los resultados de la carrera
+     Muestra los resultados de la carrera
      */
     func tapCareerResult() {
         presentCareerResult?()

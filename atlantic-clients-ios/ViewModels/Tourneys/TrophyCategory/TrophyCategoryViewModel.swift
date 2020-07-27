@@ -1,11 +1,3 @@
-//
-//  TrophyCategoryViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/9/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -47,14 +39,15 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
-        /**
-       agrega una promocion al cliente
+    /**
+    Agrega la actividad de la promocion
     - Parameters:
-       - clienteId: id del cliente
-            - fechaIngreso: fecha de ingreso a la promocion
-            - nombrePromocion: nombre de la promocion
-            - promocionId: id de la promocion
+        - clienteId: id del cliente
+        - fechaIngreso: fecha de ingreso a la promocion
+        - nombrePromocion: nombre de la promocion
+        - promocionId: id de la promocion
     */
+        
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -88,10 +81,10 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
     
     
     /**
-       obtiene los torneos por tipo
+    Obtiene los torneos por tipo
     - Parameters:
-            - tipo: tipo de torneo
-            - clienteId: id de cliente
+        - tipo: tipo de torneo
+        - clienteId: id de cliente
 
     */
 
@@ -160,7 +153,7 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
     }
     
     /**
-     obtiene la categoria del torneo
+     Obtiene la categoria del torneo
      */
     func didSelectTrophyCategory(_ indexPath: Tournament) {
        let type = indexPath
@@ -170,7 +163,7 @@ class TrophyCategoryViewModel: TrophyCategoryViewModelProtocol {
 }
 
 /**
- retorna categoria  del torneo
+ Retorna categoria  del torneo
  */
 enum TrophyCategoryTypes: Int {
     

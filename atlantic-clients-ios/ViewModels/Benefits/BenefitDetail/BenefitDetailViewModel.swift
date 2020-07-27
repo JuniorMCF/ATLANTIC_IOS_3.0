@@ -1,11 +1,3 @@
-//
-//  BenefitDetailViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 struct BenefitDetailTitles {
@@ -42,7 +34,7 @@ class BenefitsDetailViewModel: BenefitsDetailViewModelProtocol {
     var presentCreateReminder: (() -> Void)?
     
     /**
-        inicialia la vista
+     Inicializa las vistas
      */
     func viewDidLoad() {
         let titles = BenefitDetailTitles()
@@ -50,7 +42,7 @@ class BenefitsDetailViewModel: BenefitsDetailViewModelProtocol {
     }
     
     /**
-     crea recordatorio
+     Crea recordatorio en la agenda del celular
      */
     func tapCreateReminder() {
         presentCreateReminder?()

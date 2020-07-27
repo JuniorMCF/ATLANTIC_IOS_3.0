@@ -1,11 +1,3 @@
-//
-//  TrofyDetailViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/10/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 struct TrophyDetailTitles {
@@ -64,7 +56,7 @@ class TrophyDetailViewModel: TrophyDetailViewModelProtocol {
     var presentPositionDetail: (() -> Void)?
     
     /**
-     muestra los trofeos
+     Muestra los elementos de la pantalla
      */
     func viewDidLoad() {
         
@@ -75,7 +67,7 @@ class TrophyDetailViewModel: TrophyDetailViewModelProtocol {
     }
     
     /**
-     muestra las posiciones finales de la carrera
+     Muestra las posiciones finales de la carrera
      */
     func tapPosition() {
         presentPositionDetail?()

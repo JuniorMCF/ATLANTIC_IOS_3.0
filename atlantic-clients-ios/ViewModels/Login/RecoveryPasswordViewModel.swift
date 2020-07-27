@@ -1,11 +1,3 @@
-//
-//  RecoveryPasswordViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 3/8/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -33,7 +25,7 @@ class RecoveryPasswordViewModel: RecoveryPasswordViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     /**
-        cambia el password
+    Cambia el password del cliente
      - Parameters:
         - clienteId:  id del cliente
         - password1: password nuevo
@@ -98,7 +90,7 @@ class RecoveryPasswordViewModel: RecoveryPasswordViewModelProtocol {
     var presentForgotPassword: (() -> Void)?
     
     /**
-                inicializa la vista para el cambio de password
+     Inicializa la vista para el cambio de password
      */
     func viewDidLoad() {
         var titles = [String]()

@@ -1,11 +1,3 @@
-//
-//  PositionDetailViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/10/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -40,12 +32,12 @@ class PositionDetailViewModel: PositionDetailViewModelProtocol {
     var presentPayments: (() -> Void)?
     
     /**
-       agrega una promocion al cliente
+    Agrega la actividad de la promocion
     - Parameters:
-       - clienteId: id del cliente
-            - fechaIngreso: fecha de ingreso a la promocion
-            - nombrePromocion: nombre de la promocion
-            - promocionId: id de la promocion
+        - clienteId: id del cliente
+        - fechaIngreso: fecha de ingreso a la promocion
+        - nombrePromocion: nombre de la promocion
+        - promocionId: id de la promocion
     */
     
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
@@ -82,7 +74,7 @@ class PositionDetailViewModel: PositionDetailViewModelProtocol {
     }
     
     /**
-     presenta los pagos
+     Presenta los pagos
      */
     func tapPayments() {
         presentPayments?()

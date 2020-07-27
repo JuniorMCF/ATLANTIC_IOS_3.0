@@ -1,11 +1,3 @@
-//
-//  ProfileAgendaViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/28/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -38,8 +30,9 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
     
     
     /**
-     obtiene los eventos
-     */
+    Obtiene los eventos registrados en la agenda y los muestra en pantalla
+    */
+    
     func viewDidLoad() {
         
         appDelegate.progressDialog.showProgress()
@@ -141,7 +134,11 @@ class ProfileAgendaViewModel: ProfileAgendaViewModelProtocol {
         //showTitles?(titles)
     }
 
-    
+    /**
+    Busca entre todos los eventos de la agenda por palabra clave
+     - Parameters:
+        - searchText: palabra clave
+     */
     func searchBarTextDidChange(_ searchText: String) {
         if searchText.isEmpty {
             let datasources = appDelegate.eventDetailPreview

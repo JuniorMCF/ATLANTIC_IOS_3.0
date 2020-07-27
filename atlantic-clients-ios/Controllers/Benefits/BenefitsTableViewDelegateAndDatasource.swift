@@ -1,11 +1,3 @@
-//
-//  BenefitsTableViewDelegateAndDatasource.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/9/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import Alamofire

@@ -1,11 +1,3 @@
-//
-//  DinnerCollectionViewCell.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class DinnerCollectionViewCell: UICollectionViewCell {
@@ -17,7 +9,6 @@ class DinnerCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //Initialization code
     }
     
     func prepare(dinner: Dinner) {

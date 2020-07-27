@@ -24,11 +24,19 @@ class RegisterSucessViewController: UIViewController {
         viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    /**
+    Inicializa el viewmodel.
+    */
     func bind(){
         viewModel.pushRegisterUser = pushRegisterUser(response: )
         viewModel.showToast = show(response:)
         viewModel.showTitles = showTitles(data:)
     }
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
     func showTitles(data:[String]){
         titleLabel.setTitleViewLabel(with: data[0])
         dniTextField.setDNIStyleSucessRegister(with: data[1])
@@ -38,9 +46,15 @@ class RegisterSucessViewController: UIViewController {
         confirmPasswordTextField.setPasswordStyle(with: data[4])
         registerButton.setFirstButton(with: "Registrarse")
     }
+    /**
+     Muestra un mensaje en pantalla
+     */
     func show(response:String){
         self.showToast(message: response)
     }
+    /**
+     Retorna a la pantalla de login
+     */
     func pushRegisterUser(response:String){
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginID") as! LoginViewController

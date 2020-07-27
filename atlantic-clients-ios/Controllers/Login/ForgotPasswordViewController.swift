@@ -1,11 +1,3 @@
-//
-//  ForgotPasswordViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/1/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import UIKit
 
 class ForgotPasswordViewController: UIViewController {
@@ -81,7 +73,9 @@ class ForgotPasswordViewController: UIViewController {
     }
     
    
-    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles:)
         viewModel.showToast = show(message:)
@@ -89,7 +83,9 @@ class ForgotPasswordViewController: UIViewController {
         viewModel.presentRecoveryPassword = presentRecoveryPassword
     }
     
-    
+    /**
+     Redirige a la pantalla de recuperar contraseña
+     */
     func presentRecoveryPassword(){
         let storyboard = UIStoryboard(name: "ForgotPassword", bundle: nil)
         let navViewController = storyboard.instantiateViewController(withIdentifier: "RecoveryPasswordID") as! RecoveryPasswordViewController
@@ -108,6 +104,7 @@ class ForgotPasswordViewController: UIViewController {
         pasaporte.isUserInteractionEnabled = true
         pasaporte.alpha = 1.0
     }
+    
     func hideDropdown(){
         dropdownView.isUserInteractionEnabled = false
         dropdownView.alpha = 0.0
@@ -117,6 +114,11 @@ class ForgotPasswordViewController: UIViewController {
         pasaporte.alpha = 0.0
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - data : titulos de todos los elementos
+    */
     func showTitles(titles: ForgotPasswordTitles) {
         
         documentType.setTitleForgotViewLabel(with: titles.screenTitle)
@@ -132,9 +134,15 @@ class ForgotPasswordViewController: UIViewController {
         
         
     }
+    /**
+     Muestra un mensaje en pantalla
+     */
     func show(message:String){
         showToast(message: message)
     }
+    /**
+     Muestra la pantalla para recuperar la contraseña
+     */
     func presentForgotPassword(celular:String,clienteId:String){
         ventana = 1
        documentType.setTitleForgotViewLabel(with: "CÓDIGO DE VERIFICACIÓN")
@@ -161,15 +169,6 @@ class ForgotPasswordViewController: UIViewController {
         navViewController.modalPresentationStyle = .fullScreen
         present(navViewController, animated: false, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

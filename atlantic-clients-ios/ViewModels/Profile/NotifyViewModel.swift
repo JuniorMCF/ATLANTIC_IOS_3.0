@@ -1,11 +1,3 @@
-//
-//  AgendaViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/26/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -30,8 +22,8 @@ class NotifyViewModel: NotifyViewModelProtocol {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var datasourcce = [Notify]()
     
-        /**
-     desactiva las notificaiones
+    /**
+     Obtiene las notificaciones del usuario
      */
     func viewDidLoad() {
         let titles = [Notify]()
@@ -89,10 +81,10 @@ class NotifyViewModel: NotifyViewModelProtocol {
         loadDatasources?(titles)
     }
     /**
-     desactiva las notificaiones
-     -Parameters:
-     -clientId: id del cliente
-     -notifySelectId: id de la notificacion a esconder
+     Oculta las notificaciones del usuario
+     - Parameters:
+        - clientId: id del cliente
+        - notifySelectId: id de la notificacion a ocultar
      */
     func hideNofity(clienteId:String, notifySelectId:String){
         appDelegate.progressDialog.message = "Ocultando Notificacion"

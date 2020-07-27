@@ -1,11 +1,3 @@
-//
-//  BreakfastCollectionViewDatasourceAndDelegate.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/3/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import Alamofire

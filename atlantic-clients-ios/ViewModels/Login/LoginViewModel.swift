@@ -58,7 +58,7 @@ class LoginViewModel: LoginViewModelProtocol {
         
     }
     /**
-        Comprueba si el usuario esta logueado.
+    Comprueba si el usuario esta logueado.
     */
     func isLoggin(){
         let value = Constants().getLogin()

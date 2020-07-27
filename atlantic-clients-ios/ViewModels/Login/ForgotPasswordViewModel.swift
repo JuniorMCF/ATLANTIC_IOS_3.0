@@ -1,11 +1,3 @@
-//
-//  ForgotPasswordViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/1/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -44,7 +36,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
     
     
     /**
-        verifica si el codigo de recuperacion es correcto
+    verifica si el codigo de recuperacion es correcto
      - Parameters:
         - code:  codigo de recuperacion
         - celular: numero telefonico del cliente
@@ -91,8 +83,8 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
         
         
     }
-        /**
-            obtiene el telefono del usuario
+    /**
+    Obtiene el telefono del usuario
      - Parameters:
         - dni:  documento de identidad del cliente
         - tipo: tipo de documento
@@ -209,7 +201,7 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelProtocol {
     var showTitles: ((ForgotPasswordTitles) -> Void)?
 
     /**
-                inicializa la vista de recuperacion de password
+     Inicializa la vista de recuperacion de password
      */
     
     func viewDidLoad() {

@@ -1,11 +1,3 @@
-//
-//  EventsDetailViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import youtube_ios_player_helper
 class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
@@ -79,6 +71,9 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         
         
     }
+    /**
+     Registra el evento seleccionado
+     */
     func saveData(){
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Evento", message: "Registrando Evento...")
         viewModel.saveData(clienteId : appDelegate.usuario.clienteId,horarioId:selectHorario,nroAcom:String(total))
@@ -100,6 +95,11 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         }
         
     }
+    /**
+     Obtiene el horario seleccionado
+    - Parameters:
+        - horarioId: id del horario seleccionado
+     */
     func getHorarioId(horarioId:String){
         self.selectHorario = horarioId
     }
@@ -110,7 +110,7 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         appDelegate.progressDialog = CustomProgress(parent: self, title: "Evento", message: "Obteniendo datos...")
         
         webview.delegate = self
-        //webview.load(withVideoId: "M7lc1UVf-VE",playerVars:playerVars as! [AnyHashable : Any])
+
         bind()
         let fechaActual = Utils().getFechaActual()
         viewModel.onStart(clienteId: appDelegate.usuario.clienteId, fechaIngreso: fechaActual, nombreEvento: event.nombre, eventoId: String(event.eventoId))
@@ -132,7 +132,9 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         bannerCollectionView.collectionViewLayout.invalidateLayout()
         
     }
-    
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles:)
         viewModel.loadDatasources = loadDatasources(datasources:)
@@ -143,7 +145,9 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         viewModel.hideViews = hideViews
         
     }
-   
+    /**
+    Oculta las vistas
+     */
     func hideViews(){
         moreButton.alpha = 0.0
         moreButton.isUserInteractionEnabled = false
@@ -166,9 +170,15 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         registerButton.isUserInteractionEnabled = false
         registerButton.alpha = 0.0
     }
+    /**
+     Muestra un mensaje en pantalla
+     */
     func show(message:String){
         showToast(message: message)
     }
+    /**
+     Muestra las imagenes en el banner del evento
+     */
     func presentBanner(){
         var fotos = event.fotos
         var listFotos = [String]()
@@ -229,7 +239,11 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         }
     }
     
-    
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulos de todos los elementos
+    */
     func showTitles(titles: EventDetailTitles){
         //metodo para inflar el video con youtube_ios_player_helper
         let streamUrl = event.video
@@ -285,17 +299,13 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
         registerButton.setRemindButton2(with: titles.registerTitle)
         
     }
-
+    
+    /**
+    Carga la lista de horarios
+    - Parameters:
+       - datasources: lista de horarios
+    */
     func loadDatasources(datasources: [Horario]) {
-        /*
-        var horarioslist = [Horario]()
-        let horarios = Horario()
-        horarios.fecha = "2:0"
-        horarioslist.append(horarios)
-        horarioslist.append(horarios)
-        horarioslist.append(horarios)
-        */
-        //horarios collectionview
         horarioCollectionViewDD = HorarioCollectionViewDatasourceAndDelegate(horarios: datasources,viewModel: viewModel)
         horariolist = datasources
         horarioCollectionView.dataSource = horarioCollectionViewDD
@@ -325,7 +335,11 @@ class EventsDetailViewController: UIViewController,YTPlayerViewDelegate  {
        
     }
     
-    
+    /**
+    Carga la lista de buffets
+    - Parameters:
+       - datasources: lista de buffets
+    */
     func loadBuffets(buffets: [[String]]){
         print(buffets)
         self.btnBuffet.isUserInteractionEnabled = true

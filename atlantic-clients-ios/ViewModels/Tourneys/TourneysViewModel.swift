@@ -1,11 +1,3 @@
-//
-//  TourneysViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -53,7 +45,7 @@ class TourneyViewModel: TourneyViewModelProtocol {
     
     
     /**
-     obtiene la informacion de todos los torneos
+     Obtiene la informacion de todos los torneos
      */
     func viewDidLoad() {
         let parameters = ["id":appDelegate.usuario.clienteId]
@@ -159,20 +151,20 @@ class TourneyViewModel: TourneyViewModelProtocol {
     }
     
     /**
-     obtiene la categoria del torneo
-     -Parameters:
-     -tipo: tipo de torneo
-     -isList : verifica si es una lista de torneos
+    Obtiene la categoria del torneo
+    - Parameters:
+        - tipo: tipo de torneo
+        - isList : verifica si es una lista de torneos
      */
     func didSelectTourney(tipo:String,isList:Bool) {
         presentTourneyCategory?(tipo,isList)
     }
     
     /**
-    obtiene los torneos de grandprix
-    -Parameters:
-    -tipo: tipo de torneo
-    -id : id de cliente
+    Obtiene los torneos de grandprix
+    - Parameters:
+     - tipo: tipo de torneo
+     - id : id de cliente
     */
     func didSelectGranPrix(tipo:String,id:String){
         let parameters = ["tipo":tipo,"id":id]
@@ -242,7 +234,7 @@ class TourneyViewModel: TourneyViewModelProtocol {
     }
 }
 /**
-retorna la categoria de los torneos
+Retorna la categoria de los torneos
  */
 
 enum TourneyCategoryTypes: Int {

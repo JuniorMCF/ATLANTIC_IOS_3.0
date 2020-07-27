@@ -1,11 +1,3 @@
-//
-//  EventDetailViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/4/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -93,11 +85,11 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     }
     
     /**
-        registra la cita al evento
-      - Parameters:
-                -clienteId: id del cliente
-                -horarioId: id del horario
-                -nroAcom: numero de acompanantes
+    Registra un evento seleccionado
+    - Parameters:
+        - clienteId: id del cliente
+        - horarioId: id del horario
+        - nroAcom: numero de acompanantes
      */
     func saveData(clienteId:String,horarioId:String,nroAcom:String){
         progress = appDelegate.progressDialog
@@ -148,6 +140,14 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
             }
     }
     
+    /**
+    Agrega actividad del evento
+     - Parameters:
+        - clienteId: id del cliente
+        - fechaIngreso: fecha de ingreso a la promocion
+        - nombreEvento: nombre del evento
+        - eventoId: id del evento
+     */
     
     func onStart(clienteId: String,fechaIngreso : String,nombreEvento :String,eventoId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadEvento)
@@ -179,9 +179,9 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     
     
     /**
-        obtiene los detalles del evento
-        - Parameters:
-            -eventoId: id del evento
+    obtiene los detalles del evento
+    - Parameters:
+        - eventoId: id del evento
      */
     func viewDidLoad(eventoId:Int) {
         let titles = EventDetailTitles()
@@ -289,16 +289,14 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
     }
     
     
-    /**
-     muestra la lista de eventos
-     */
+   
     
     func tapExpand() {
         expandView?()
     }
     
     /**
-     registra el evento
+     Registra el evento
      */
     func tapRegister() {
         saveData?()

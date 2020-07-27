@@ -1,11 +1,3 @@
-//
-//  CareerAwardViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/14/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 struct CareerAwardTitles {
@@ -45,14 +37,14 @@ class CareerAwardViewModel: CareerAwardViewModelProtocol {
     var presentPayments: (() -> Void)?
     
     /**
-     muestra los titulos de los premios
+     Muestra los titulos de los premios
      */
     func viewDidLoad() {
         let titles = CareerAwardTitles()
         showTitles?(titles)
     }
     /**
-     muestra los pagos
+     Muestra los pagos
      */
     func tapPayments() {
         presentPayments?()

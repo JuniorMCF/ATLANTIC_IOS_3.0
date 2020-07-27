@@ -1,11 +1,3 @@
-//
-//  NewsViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/28/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import Alamofire
@@ -53,10 +45,10 @@ class NewsViewModel: NewsViewModelProtocol {
     let datasources = NewsDatasources()
     
     /**
-     obtiene la lista de noticias
-     -Parameters:
-     -clientId: id de cliente
-     -nivelId: nivel de cliente
+     Obtiene la lista de noticias y las muestra en la pantalla
+     - Parameters:
+        - clientId: id de cliente
+        - nivelId: nivel de cliente
      */
     func viewDidLoad(clienteId:String,nivelId:String) {
         progress = appDelegate.progressDialog
@@ -544,9 +536,9 @@ class NewsViewModel: NewsViewModelProtocol {
     }
     
     /**
-     obtiene la lista de orquestas
-     -Paramters:
-     -clientID: id de cliente
+     Obtiene la orquesta de la semana
+     - Parameters:
+        - clientID: id de cliente
      */
     func getOrquesta(clienteId: String){
         

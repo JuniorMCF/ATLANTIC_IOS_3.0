@@ -1,11 +1,3 @@
-//
-//  OnBoardingViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 7/21/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import AlamofireImage
@@ -39,17 +31,13 @@ class OnBoardingViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func showTitles(titles: OnBoardingTitles) {
         skipButton.setSkipButton()
-        //skipButton.setOnBoardButton(with: titles.skitTitle)
-        //nextButton.setOnBoardButton(with: titles.nextTitle)
     }
     func presentImages(titles:[Route]){
-        /*for data in titles{
-            print(data.ruta)
-            titleArray.append(data)
-        }
-        onBoardingCollectioView.reloadData()
-        print("gaaa")*/
+       
     }
+    /**
+     Muestra las fotos iniciales y tambien la encuesta, si esque existe
+     */
     
     func presentFotos(fotoList:[String], encuesta : String){
         self.encuesta = encuesta

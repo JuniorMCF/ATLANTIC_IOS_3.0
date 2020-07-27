@@ -1,11 +1,3 @@
-//
-//  BenefitsViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/9/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class BenefitsViewController: UIViewController {
@@ -35,11 +27,21 @@ class BenefitsViewController: UIViewController {
         
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.loadDatasources = loadDatasources(datasource: )
         viewModel.presentBenefit = presentBenefit(type: )
         
     }
+    
+    
+    /**
+    Carga la lista de beneficios
+    - Parameters:
+       - datasources: lista de beneficios
+    */
     
     func loadDatasources(datasource: [Benefits]) {
         benefitsTableViewDD = BenefitsTableViewDelegateAndDatasource(items: datasource, viewModel: viewModel)
@@ -48,6 +50,12 @@ class BenefitsViewController: UIViewController {
         self.benefits = datasource
         self.benefitsTableView.reloadData()
     }
+    
+    /**
+     Dirige hacia una pantalla especifica, de acuerdo a la condicion del beneficio
+     - Parameters:
+        - type: beneficio seleccionado
+     */
     
     func presentBenefit(type: Benefits) {
         let mr: ComparisonResult = type.tipo.compare("Martes Regalones", options: NSString.CompareOptions.caseInsensitive)

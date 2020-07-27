@@ -1,11 +1,3 @@
-//
-//  ProfileViewModel.swift
-//  clients-ios
-//
-//  Created by Jhona on 8/1/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import Foundation
 
 struct ProfileTitles {
@@ -55,33 +47,33 @@ class ProfileViewModel: ProfileViewModelProtocol {
     }
     
     /**
-     abre los detalles de la cuenta
+     Abre los detalles de la cuenta
      */
     func tapProfile() {
         pushProfileDetail?()
     }
     /**
-     abre opciones adicionales
+     Abre opciones adicionales
      */
     func tapSettings() {
         pushSettings?()
     }
     
     /**
-     cierra la cuenta activa
+     Cierra sesion de la cuenta
      */
     func tapLogOut() {
         presentLogin?()
     }
     
     /**
-        muestra las opciones de las notificaciones
+     Muestra las notificaciones.
      */
     func pushNotify(){
         presentNotify?()
     }
     /**
-     muestra la agenda del cliente
+     Muestra la agenda del cliente
      */
     func pushAgenda() {
         presentAgenda?()

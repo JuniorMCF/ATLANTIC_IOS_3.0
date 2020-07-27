@@ -1,11 +1,3 @@
-//
-//  AtlanticDerby5ViewModel.swift
-//  atlantic-clients-ios
-//
-//  Created by Junior on 2/22/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -22,14 +14,14 @@ class AtlanticDerby5ViewModel : AtlanticDerby5ViewModelProtocol{
     var loadDataSources: (([String]) -> Void)?
     var presentTitles: (([String]) -> Void)?
     
-        /**
-       agrega una promocion del derby
-     - Parameters:
-               -clienteId: id del cliente
-               -fechaIngreso: fecha que se ejecuta la promocion
-               -nombrePromocion: nombre de la promocion
-               -promocionId: id de la promocion
-     */
+    /**
+    Agrega actividad de la promocion
+    - Parameters:
+        - clienteId: id del cliente
+        - fechaIngreso: fecha de ingreso a la promocion
+        - nombrePromocion: nombre de la promocion
+        - promocionId: id de la promocion
+    */
     func onStart(clienteId: String, fechaIngreso: String, nombrePromocion: String, promocionId: String) {
         var dominioUrl = URL(string: Constants().urlBase+Constants().postAgregarActividadPromocion)
         dominioUrl = dominioUrl?.appending("clienteId", value: clienteId)
@@ -58,7 +50,7 @@ class AtlanticDerby5ViewModel : AtlanticDerby5ViewModelProtocol{
             }
     }
     /**
-        prepara la vista del dervy
+     Prepara la vista del derby
      */
     func viewDidLoad(){
         let list = ["ic_coup_1","ic_coup_2","ic_coup_3"]

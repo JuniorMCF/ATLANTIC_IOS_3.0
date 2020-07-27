@@ -51,14 +51,16 @@ class RegisterViewModel: RegisterDocumentViewModelProtocol {
     }
 
     /**
-            selecciona el tipo de documento de identidad a usar
+    Selecciona el tipo de documento de identidad a usar
      */
     func tapDocType() {
         let datasource = PickerData()
         loadPickerData?(datasource)
     }
     /**
-     verifica si el dni ingresado es correcto
+    Verifica si el dni ingresado es correcto
+    - Parameters:
+        - dni: dni del cliente
      */
     func tapNext(dni:String) {
         if(dni == ""){

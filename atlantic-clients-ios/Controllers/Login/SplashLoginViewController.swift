@@ -1,10 +1,3 @@
-//
-//  SplasLoginViewController.swift
-//  atlantic-clients-ios
-//
-//  Created by admin on 3/15/20.
-//  Copyright © 2020 Atlantic City. All rights reserved.
-//
 
 import UIKit
 
@@ -30,7 +23,9 @@ class SplashLoginViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
+    /**
+     Muestra el splash screen
+     */
     func showSplash(){
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
          splashController = (storyboard.instantiateViewController(withIdentifier: "splashLogin") as! SplashLoginViewController)
@@ -41,7 +36,9 @@ class SplashLoginViewController: UIViewController {
          
          
     }
-    
+    /**
+     Oculta el splash screen
+     */
     func hideSplash(){
         if(splashController != nil){
              splashController.view.removeFromSuperview()

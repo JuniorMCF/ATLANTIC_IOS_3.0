@@ -1,5 +1,3 @@
-
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -25,7 +23,7 @@ class ChangePasswordViewModel: ChangePasswordViewModelProtocol {
     
     
     /**
-        cambia el password por el password ingresado
+    cambia el password por el password ingresado
      - Parameters:
         - beforePassword: antiguo password
         - newPassword : nuevo password
@@ -89,7 +87,7 @@ class ChangePasswordViewModel: ChangePasswordViewModelProtocol {
     
         
     /**
-            inicializa los titulos para el cambio de password
+    inicializa los titulos para el cambio de password
      */
     func viewDidLoad() {
         var titles = [String]()

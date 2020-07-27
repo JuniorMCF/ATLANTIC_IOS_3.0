@@ -1,11 +1,3 @@
-//
-//  BenefitDetailViewController.swift
-//  clients-ios
-//
-//  Created by Jhona on 9/8/19.
-//  Copyright © 2019 Jhona Alca. All rights reserved.
-//
-
 import UIKit
 
 class BenefitDetailViewController: UIViewController {
@@ -44,12 +36,20 @@ class BenefitDetailViewController: UIViewController {
         //viewModel.tapCreateReminder()
     }
     
+    /**
+    Inicializa el viewmodel.
+    */
     func bind() {
         viewModel.showTitles = showTitles(titles: )
         //viewModel.presentCreateReminder = presentCreateReminder
         
     }
     
+    /**
+    Proporciona estilo a los elementos de la vista.
+     - Parameters:
+        - titles : titulos de todos los elementos
+    */
     func showTitles(titles: BenefitDetailTitles) {
         
         titleLabel.setRafflesTitle(with: titles.title)

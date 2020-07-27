@@ -1,5 +1,3 @@
-
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -52,7 +50,7 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
     
     
     /**
-        obtiene las promociones
+    obtiene las promociones
      - Parameters:
         - clienteId: id del cliente
         - fecha: fecha de las promociones
@@ -87,7 +85,7 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
     
     
     /**
-        obtiene la lista de cobros
+    obtiene la lista de cobros
      */
     func viewDidLoad() {
         let parameters = ["id": appDelegate.usuario.clienteId]
@@ -150,7 +148,7 @@ class PaymentsViewModel: PaymentsViewModelProtocol {
     
         
     /**
-        filtra el texto en el campo de busqueda
+    filtra el texto en el campo de busqueda
      - Parameters:
         - searchText: texto ingresado en el campo de busqueda
      */
