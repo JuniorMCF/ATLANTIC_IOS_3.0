@@ -61,4 +61,13 @@ extension AgendaCollectionViewDatasourceAndDelegate: UICollectionViewDataSource 
             
             */
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "EventDetail", bundle: nil)
+         let viewController = storyboard.instantiateViewController(withIdentifier: "EventDetailID") as! EventsDetailViewController
+         viewController.event = items[indexPath.row]
+        // viewController.modalPresentationStyle = .fullScreen
+            
+       viewParent.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

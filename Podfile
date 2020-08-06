@@ -25,5 +25,7 @@ target 'Atlantic Clientes' do
   target 'atlantic-clients-iosUITests' do
     # Pods for testing
   end
-
+  pod 'Alamofire', '~> 5.2'
+  pod 'AlamofireImage', '~> 4.1'
+  pod 'SwiftyJSON', '~> 4.0'	
 end

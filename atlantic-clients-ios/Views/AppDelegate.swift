@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var usuario = Usuario()
     var imagenes : [UIImage] = []
-    
     var weekEvent = News()
     var promotionDay = PromotionDay()
     var eventDetailPreview = EventDetailPreview()

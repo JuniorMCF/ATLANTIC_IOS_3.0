@@ -34,19 +34,21 @@ extension RafflesDreamViewCollectionViewDatasourceAndDelegate: UICollectionViewD
         AF.request(dominio + items[indexPath.row].foto).responseImage { response in
                    
                        switch response.result {
+                        
                              case .success(let value):
                                 cell.rafflesDreamImageView.image = value
                                 print(value)
                              case .failure(let error):
                                  print(error)
-                                 
+                        
                              }
-
+            
         }
         
         return cell
-    }
         
+    }
+    
 }
 
 extension RafflesDreamViewCollectionViewDatasourceAndDelegate: UICollectionViewDelegateFlowLayout{
