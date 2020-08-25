@@ -19,7 +19,10 @@ extension HorarioCollectionViewDatasourceAndDelegate: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorarioCellID", for: indexPath) as! HorarioCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorarioCellID", for: indexPath) as? HorarioCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
 
@@ -32,8 +35,6 @@ extension HorarioCollectionViewDatasourceAndDelegate: UICollectionViewDataSource
         }else{
             cell.contentView.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.4549019608, blue: 0.3176470588, alpha: 1)
         }
-        
-        
         cell.hora.setTitle(Date12,for: .normal)
         cell.hora.tintColor = UIColor.white
         cell.layer.cornerRadius = 10
